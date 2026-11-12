@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Patchwork — code review tool</title>
+<meta name="viewport" content="width=1280">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..500;1,6..72,300..500&family=Geist+Mono:wght@400;500;600&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: copy on the left third; the product itself (a perspective-tilted diff with an inline reviewer comment) is the hero and bleeds off the right and bottom edges. */
+:root{
+  --bg:#0b0c0f; --panel:#101216; --line:#1f232a; --txt:#e9e8e4; --mute:#7d838d;
+  --add:#2fa46f; --add-bg:rgba(47,164,111,.13); --del:#e0575b; --del-bg:rgba(224,87,91,.13);
+  --note:#7cc4ff; --serif:'Newsreader',Georgia,serif; --sans:'Geist','Inter',system-ui,sans-serif; --mono:'Geist Mono','JetBrains Mono','DejaVu Sans Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--bg)}
+body{font-family:var(--sans);color:var(--txt);position:relative}
+body::before{content:"";position:absolute;left:520px;top:-200px;width:900px;height:700px;background:radial-gradient(closest-side,rgba(124,196,255,.13),transparent);filter:blur(10px)}
+body::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:22px 22px;mask-image:linear-gradient(100deg,black,transparent 70%);-webkit-mask-image:linear-gradient(100deg,black,transparent 70%)}
+nav{position:absolute;left:56px;right:56px;top:26px;display:flex;align-items:center;gap:34px;font-size:13.5px;z-index:5}
+.logo{font-family:var(--mono);font-weight:600;font-size:15px;display:flex;gap:9px;align-items:center;margin-right:auto}
+.logo svg{display:block}
+nav a{color:var(--mute)}
+.btn{border:1px solid #2b3038;border-radius:7px;padding:8px 14px;color:var(--txt);background:#14171c;font-weight:500}
+.hero{position:absolute;left:56px;top:150px;width:470px;z-index:4}
+.pill{display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:11.5px;color:var(--mute);border:1px solid var(--line);padding:6px 11px;border-radius:99px;margin-bottom:26px;background:#0e1013}
+.pill b{width:7px;height:7px;border-radius:50%;background:var(--add);box-shadow:0 0 8px var(--add)}
+h1{font-family:var(--serif);font-weight:300;font-size:68px;line-height:.98;letter-spacing:-.025em;text-wrap:balance}
+h1 em{font-style:italic;color:var(--note);font-weight:300}
+.sub{margin-top:24px;font-size:16.5px;line-height:1.6;color:#a4a9b1;max-width:420px}
+.cta{margin-top:32px;display:flex;gap:12px;align-items:center}
+.cta .p{background:var(--txt);color:#0b0c0f;font-weight:600;font-size:14.5px;padding:13px 20px;border-radius:8px}
+.cta .s{font-family:var(--mono);font-size:12.5px;color:var(--mute);padding:13px 4px}
+.proof{margin-top:44px;font-size:12px;color:var(--mute);font-family:var(--mono);display:flex;gap:22px}
+.proof span::before{content:"+ ";color:var(--add)}
+.stage{position:absolute;left:520px;top:92px;width:860px;height:760px;perspective:1700px;z-index:3}
+.diff{position:absolute;inset:0;transform:rotateY(-17deg) rotateX(7deg) rotateZ(1.2deg);transform-origin:20% 40%;transform-style:preserve-3d;background:var(--panel);border:1px solid #262b33;border-radius:14px;box-shadow:0 60px 120px -20px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.02) inset,-40px 30px 120px rgba(124,196,255,.07);overflow:hidden}
+.bar{display:flex;align-items:center;gap:12px;height:46px;padding:0 18px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:12.5px;color:var(--mute)}
+.bar i{width:11px;height:11px;border-radius:50%;background:#262b33;display:block}
+.bar b{color:var(--txt);font-weight:500;margin-left:8px}
+.bar .stat{margin-left:auto;display:flex;gap:12px}
+.bar .stat .a{color:var(--add)}.bar .stat .d{color:var(--del)}
+.code{font-family:var(--mono);font-size:13.5px;line-height:26px;padding-top:8px}
+.ln{display:grid;grid-template-columns:48px 48px 24px 1fr;height:26px;white-space:pre}
+.ln>span:nth-child(1),.ln>span:nth-child(2){color:#4a505a;text-align:right;padding-right:12px;font-size:12px}
+.ln>span:nth-child(3){color:var(--mute);text-align:center}
+.ln.a{background:var(--add-bg)}.ln.a>span:nth-child(3){color:var(--add)}
+.ln.d{background:var(--del-bg)}.ln.d>span:nth-child(3){color:var(--del)}
+.k{color:#c792ea}.f{color:#82aaff}.s{color:#c3e88d}.c{color:#5b6270}.n{color:#f78c6c}
+.cmt{margin:8px 0 8px 120px;width:540px;background:#0d1620;border:1px solid rgba(124,196,255,.45);border-radius:10px;padding:14px 16px;font-family:var(--sans);line-height:1.5;box-shadow:0 0 0 4px rgba(124,196,255,.06),0 0 40px rgba(124,196,255,.18);white-space:normal;transform:translateZ(40px)}
+.cmt header{display:flex;align-items:center;gap:9px;font-size:12px;color:var(--note);margin-bottom:7px;font-family:var(--mono)}
+.cmt header svg{display:block}
+.cmt p{font-size:13.5px;color:#cfd6df}
+.cmt code{font-family:var(--mono);font-size:12px;background:#16212e;padding:1px 5px;border-radius:4px;color:var(--note)}
+.cmt .act{display:flex;gap:8px;margin-top:11px;font-size:12px;font-family:var(--mono)}
+.cmt .act span{border:1px solid #2a3f55;padding:5px 10px;border-radius:6px;color:#9fc9ef}
+.cmt .act .y{background:var(--note);color:#06101a;border-color:var(--note);font-weight:600}
+</style>
+</head>
+<body>
+<nav>
+  <div class="logo"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"><rect x="1" y="1" width="9" height="20" rx="2" fill="#e0575b" opacity=".85"/><rect x="12" y="1" width="9" height="20" rx="2" fill="#2fa46f"/><path d="M7 11h8" stroke="#0b0c0f" stroke-width="2"/></svg>patchwork</div>
+  <a>Product</a><a>Changelog</a><a>Pricing</a><a>Docs</a><span class="btn">Install GitHub app</span>
+</nav>
+<section class="hero">
+  <div class="pill"><b></b>Reviewing 1,284 pull requests right now</div>
+  <h1>Review code at the speed you <em>write</em> it.</h1>
+  <p class="sub">Patchwork reads every diff against your repo's history, flags what actually changed behavior, and leaves comments a senior engineer would sign.</p>
+  <div class="cta"><span class="p">Add to GitHub, free</span><span class="s">$ gh extension install patchwork</span></div>
+  <div class="proof"><span>median review 48s</span><span>no code stored</span><span>SOC 2</span></div>
+</section>
+<div class="stage">
+  <div class="diff">
+    <div class="bar"><i></i><i></i><i></i><b>services/billing/retry.ts</b><span>#4417 &nbsp;fix duplicate charge on retry</span><span class="stat"><span class="a">+14</span><span class="d">−6</span></span></div>
+    <div class="code">
+      <div class="ln"><span>41</span><span>41</span><span></span><span><span class="k">export async function</span> <span class="f">chargeWithRetry</span>(order: Order) {</span></div>
+      <div class="ln"><span>42</span><span>42</span><span></span><span>  <span class="k">const</span> key = <span class="f">idempotencyKey</span>(order.id)</span></div>
+      <div class="ln d"><span>43</span><span></span><span>−</span><span>  <span class="k">for</span> (<span class="k">let</span> i = <span class="n">0</span>; i &lt; <span class="n">3</span>; i++) {</span></div>
+      <div class="ln d"><span>44</span><span></span><span>−</span><span>    <span class="k">const</span> res = <span class="k">await</span> <span class="f">stripe.charge</span>(order.total)</span></div>
+      <div class="ln a"><span></span><span>43</span><span>+</span><span>  <span class="k">for</span> (<span class="k">let</span> i = <span class="n">0</span>; i &lt; MAX_TRIES; i++) {</span></div>
+      <div class="ln a"><span></span><span>44</span><span>+</span><span>    <span class="k">const</span> res = <span class="k">await</span> <span class="f">stripe.charge</span>(order.total, { key })</span></div>
+      <div class="cmt">
+        <header><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 0l1.6 5.4L14 7l-5.4 1.6L7 14l-1.6-5.4L0 7l5.4-1.6z" fill="#7cc4ff"/></svg>patchwork · high confidence</header>
+        <p>Good catch adding the key. <code>idempotencyKey</code> hashes <code>order.id</code> only, so a partial refund followed by a new charge on the same order reuses the key and Stripe returns the old result. Include <code>order.revision</code>.</p>
+        <div class="act"><span class="y">Apply suggestion</span><span>Explain</span><span>Dismiss</span></div>
+      </div>
+      <div class="ln"><span>45</span><span>45</span><span></span><span>    <span class="k">if</span> (res.ok) <span class="k">return</span> res</span></div>
+      <div class="ln d"><span>46</span><span></span><span>−</span><span>    <span class="k">await</span> <span class="f">sleep</span>(<span class="n">500</span>)</span></div>
+      <div class="ln a"><span></span><span>46</span><span>+</span><span>    <span class="k">await</span> <span class="f">sleep</span>(<span class="f">backoff</span>(i, { jitter: <span class="k">true</span> }))</span></div>
+      <div class="ln a"><span></span><span>47</span><span>+</span><span>    <span class="f">metrics.incr</span>(<span class="s">"billing.retry"</span>, { attempt: i })</span></div>
+      <div class="ln"><span>47</span><span>48</span><span></span><span>  }</span></div>
+      <div class="ln"><span>48</span><span>49</span><span></span><span>  <span class="k">throw new</span> <span class="f">ChargeFailed</span>(order.id)</span></div>
+      <div class="ln"><span>49</span><span>50</span><span></span><span>}</span></div>
+      <div class="ln"><span>50</span><span>51</span><span></span><span><span class="c">// retries are capped by MAX_TRIES (default 4)</span></span></div>
+      <div class="ln"><span>51</span><span>52</span><span></span><span></span></div>
+      <div class="ln"><span>52</span><span>53</span><span></span><span><span class="k">function</span> <span class="f">backoff</span>(i: <span class="k">number</span>, o: Opts) {</span></div>
+      <div class="ln a"><span></span><span>54</span><span>+</span><span>  <span class="k">const</span> base = Math.<span class="f">min</span>(<span class="n">30000</span>, <span class="n">250</span> * <span class="n">2</span> ** i)</span></div>
+      <div class="ln a"><span></span><span>55</span><span>+</span><span>  <span class="k">return</span> o.jitter ? Math.<span class="f">random</span>() * base : base</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

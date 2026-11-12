@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Overprint — Risograph Biennial</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@800;900&family=Hanken+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: two giant overprinted words stacked and offset, misregistered pink/blue plates, ruled programme list right, taped yellow marquee, printer's marks at the edges. */
+:root{
+  --paper:#f3f2ec; --ink:#14131a; --pink:#ff4fb0; --blue:#2f8cff; --yellow:#ffe21a;
+  --disp:"Big Shoulders Display","Oswald","Arial Narrow",Impact,sans-serif;
+  --sans:"Hanken Grotesk","Inter",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);position:relative}
+canvas#ht{position:absolute;inset:0;width:1280px;height:800px;mix-blend-mode:multiply}
+.word{position:absolute;font-family:var(--disp);font-weight:900;font-size:340px;line-height:.74;letter-spacing:-.01em;text-transform:uppercase;white-space:nowrap;mix-blend-mode:multiply}
+.word.a1{left:34px;top:70px;color:var(--pink)}
+.word.a2{left:52px;top:80px;color:var(--blue)}
+.word.b1{left:236px;top:340px;color:var(--blue)}
+.word.b2{left:218px;top:348px;color:var(--pink)}
+.word.b2,.word.a2{opacity:.92}
+.top{position:absolute;left:44px;right:44px;top:22px;display:flex;justify-content:space-between;font-size:13px;font-weight:600;letter-spacing:.04em;z-index:5}
+.top b{font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.top ul{display:flex;gap:26px;list-style:none}
+.top li:last-child{background:var(--ink);color:var(--paper);padding:3px 12px;margin-top:-3px;border-radius:99px}
+.prog{position:absolute;left:928px;top:92px;width:306px;z-index:5}
+.prog h3{font-size:11px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;margin-bottom:10px;display:flex;justify-content:space-between}
+.prog div.r{display:grid;grid-template-columns:54px 1fr;gap:10px;padding:11px 0 12px;border-top:2px solid var(--ink)}
+.prog .d{font-family:var(--disp);font-weight:900;font-size:26px;line-height:.9;color:var(--blue)}
+.prog .d s{display:block;text-decoration:none;font-family:var(--sans);font-weight:600;font-size:10px;letter-spacing:.12em;color:var(--ink);margin-top:3px}
+.prog .t{font-weight:800;font-size:15px;line-height:1.2}
+.prog .t small{display:block;font-weight:400;font-size:12.5px;margin-top:2px;opacity:.8}
+.prog div.r:nth-child(odd) .d{color:var(--pink)}
+.stick{position:absolute;left:1070px;top:488px;width:150px;height:150px;border-radius:50%;background:var(--ink);color:var(--yellow);display:grid;place-items:center;text-align:center;font-family:var(--disp);font-weight:900;font-size:36px;line-height:.88;transform:rotate(-12deg);z-index:6;text-transform:uppercase}
+.stick small{display:block;font-family:var(--sans);font-weight:800;font-size:11px;letter-spacing:.16em;margin-top:6px;color:var(--paper)}
+.band{position:absolute;left:-40px;right:-40px;top:652px;height:78px;background:var(--yellow);transform:rotate(-3.2deg);z-index:7;overflow:hidden;display:flex;align-items:center;white-space:nowrap;border-top:3px solid var(--ink);border-bottom:3px solid var(--ink)}
+.band p{font-family:var(--disp);font-weight:900;font-size:58px;letter-spacing:.01em;text-transform:uppercase;animation:mq 22s linear infinite}
+.band p i{font-style:normal;color:var(--pink);margin:0 18px;-webkit-text-stroke:0}
+@keyframes mq{to{transform:translateX(-50%)}}
+.side{position:absolute;right:12px;top:260px;writing-mode:vertical-rl;font-size:11px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;z-index:5}
+.marks{position:absolute;left:0;bottom:0;right:0;height:54px;z-index:8;display:flex;align-items:center;gap:0;padding:0 44px}
+.sw{width:30px;height:20px;border:1px solid var(--ink)}
+.marks span{font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;margin-left:22px}
+.reg{position:absolute;z-index:6}
+.grain{position:absolute;inset:0;z-index:9;pointer-events:none;mix-blend-mode:multiply;opacity:.5}
+@media (prefers-reduced-motion:reduce){.band p{animation:none}}
+</style>
+</head>
+<body>
+<canvas id="ht" width="1280" height="800"></canvas>
+
+<div class="word a1">Over</div><div class="word a2">Over</div>
+<div class="word b1">Print</div><div class="word b2">Print</div>
+
+<div class="top"><b>Risograph Biennial · Lisboa · 14–22 March</b><ul><li>Programme</li><li>Artists</li><li>Press room</li><li>Tickets (7)</li></ul></div>
+
+<div class="prog">
+  <h3><span>Opening week</span><span>5 of 31</span></h3>
+  <div class="r"><div class="d">14<s>MAR</s></div><div class="t">Ten Thousand Dots<small>Rui Calçada · Hall A · 3 inks</small></div></div>
+  <div class="r"><div class="d">15<s>MAR</s></div><div class="t">Slow Ink, Late Paper<small>Estúdio Papoila · Mezzanine</small></div></div>
+  <div class="r"><div class="d">17<s>MAR</s></div><div class="t">Wrong Colour, Right Place<small>Ines Abreu · Cellar</small></div></div>
+  <div class="r"><div class="d">19<s>MAR</s></div><div class="t">One Drum, Four Hundred Zines<small>Tipografia Viva · Hall B</small></div></div>
+  <div class="r"><div class="d">22<s>MAR</s></div><div class="t">The Misprint Auction<small>All proceeds to the ink fund</small></div></div>
+</div>
+
+<div class="stick"><div>Free<br>entry<small>ALL 9 DAYS</small></div></div>
+<div class="side">3 inks · 1 paper · 0 mistakes (some)</div>
+
+<svg class="reg" style="left:1218px;top:14px" width="40" height="40" viewBox="-20 -20 40 40"><circle r="10" fill="none" stroke="#14131a" stroke-width="1.5"/><circle r="5" fill="none" stroke="#14131a" stroke-width="1.5"/><path d="M-18 0H18M0 -18V18" stroke="#14131a" stroke-width="1.5"/></svg>
+<svg class="reg" style="left:8px;top:700px" width="40" height="40" viewBox="-20 -20 40 40"><circle r="10" fill="none" stroke="#14131a" stroke-width="1.5"/><circle r="5" fill="#14131a"/><path d="M-18 0H18M0 -18V18" stroke="#14131a" stroke-width="1.5"/></svg>
+
+<div class="band"><p id="mq"></p></div>
+<div class="marks"><div class="sw" style="background:var(--pink)"></div><div class="sw" style="background:var(--blue)"></div><div class="sw" style="background:var(--yellow)"></div><div class="sw" style="background:#7a3fa5"></div><div class="sw" style="background:var(--ink)"></div><span>Plate 1 pink · Plate 2 blue · Plate 3 yellow · registration ±3 mm</span></div>
+
+<svg class="grain" width="1280" height="800"><filter id="g"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="5"/><feColorMatrix values="0 0 0 0 .1  0 0 0 0 .1  0 0 0 0 .1  0 0 0 .55 -.15"/></filter><rect width="100%" height="100%" filter="url(#g)"/></svg>
+
+<script>
+(function(){
+  var t='Risograph Biennial <i>✺</i> 14–22 March <i>✺</i> Lisboa <i>✺</i> Free entry <i>✺</i> ';
+  document.getElementById('mq').innerHTML=t+t+t+t;
+  var c=document.getElementById('ht'),g=c.getContext('2d');
+  function halftone(cx,cy,R,col,step,ang,fn){
+    g.fillStyle=col;var ca=Math.cos(ang),sa=Math.sin(ang);
+    for(var u=-R*1.5;u<R*1.5;u+=step)for(var v=-R*1.5;v<R*1.5;v+=step){
+      var x=cx+u*ca-v*sa,y=cy+u*sa+v*ca,d=Math.hypot(x-cx,y-cy);if(d>R)continue;
+      var k=fn(x,y,d,R);if(k<=0.03)continue;g.beginPath();g.arc(x,y,step*.62*Math.min(1,k),0,6.283);g.fill();}
+  }
+  // yellow halftone sun behind OVER
+  halftone(600,330,300,'#ffe21a',12,0.26,function(x,y,d,R){return 1-d/R*0.6});
+  // blue shaded sphere right
+  halftone(1090,610,190,'#2f8cff',10,0.5,function(x,y,d,R){var lx=(x-1000)/R,ly=(y-520)/R;return Math.max(0,Math.min(1,0.15+(lx+ly)*.5+0.3))});
+  // pink band left bottom
+  halftone(140,560,180,'#ff3fa4',10,0.8,function(x,y,d,R){return Math.max(0,1-d/R)*1.2});
+})();
+</script>
+</body>
+</html>

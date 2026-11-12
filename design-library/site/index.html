@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Library</title>
+<meta name="description" content="A private library of web design styles: browse by category, vibe and keyword.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231b1a17'/%3E%3Cpath d='M16 6l10 10-10 10L6 16z' fill='%23f3eee3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#grid">Skip to designs</a>
+
+<header class="top">
+  <div class="top__bar">
+    <span class="mono">◆ Design Library</span>
+    <span class="mono dim">private / local / <span id="stat-line">…</span></span>
+  </div>
+  <div class="top__main">
+    <div>
+      <h1 class="display">Design <em>Library</em></h1>
+      <p class="lede">Web design styles worth stealing from. Browse by category, narrow by vibe, trace anything by keyword.</p>
+    </div>
+    <form class="search" role="search" onsubmit="return false">
+      <label class="mono" for="q">Search</label>
+      <div class="search__box">
+        <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="halftone, serif, dark, AI tools…">
+        <kbd aria-hidden="true">/</kbd>
+      </div>
+    </form>
+  </div>
+</header>
+
+<main>
+  <nav class="filters" aria-label="Filters">
+    <ul class="chips" id="cats" aria-label="Categories"></ul>
+    <div class="vibes">
+      <span class="mono dim vibes__label" id="vibe-label">Vibe</span>
+      <ul class="chips chips--vibe" id="vibes" aria-labelledby="vibe-label"></ul>
+      <div class="match" id="match" role="group" aria-label="Vibe matching" hidden>
+        <button type="button" data-m="any" aria-pressed="true">any</button><button type="button" data-m="all" aria-pressed="false">all</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="intro" id="intro" hidden aria-live="polite"></section>
+
+  <div class="status mono" aria-live="polite">
+    <span id="count"></span>
+    <button type="button" class="linkbtn" id="clear" hidden>clear filters ✕</button>
+  </div>
+
+  <section class="grid" id="grid" aria-label="Designs"></section>
+  <div class="empty" id="empty" hidden>
+    <p class="display">Nothing here.</p>
+    <p class="mono dim">No design matches those filters.</p>
+    <button type="button" class="btn" id="empty-clear">Clear filters</button>
+  </div>
+</main>
+
+<footer class="foot mono dim">
+  <span>◆ Design Library</span>
+  <span>←  →  navigate · Esc close · / search</span>
+</footer>
+
+<dialog id="modal" aria-labelledby="m-title">
+  <div class="m">
+    <header class="m__bar">
+      <div class="m__crumb mono"><span class="m__diamond" aria-hidden="true">◆</span> <span id="m-cat"></span> <span class="dim" id="m-idx"></span></div>
+      <div class="m__nav">
+        <button type="button" class="iconbtn" id="m-prev" aria-label="Previous design (←)">←</button>
+        <button type="button" class="iconbtn" id="m-next" aria-label="Next design (→)">→</button>
+        <button type="button" class="iconbtn" id="m-close" aria-label="Close (Esc)">✕</button>
+      </div>
+    </header>
+    <div class="m__body">
+      <div class="m__media">
+        <div class="stage" id="stage">
+          <img id="m-img" alt="">
+          <div class="stage__frame" id="frame-wrap" hidden></div>
+        </div>
+        <div class="m__actions">
+          <button type="button" class="btn btn--ink" id="m-live" aria-pressed="false">Open live mockup</button>
+          <a class="btn" id="m-tab" target="_blank" rel="noopener">Open in new tab ↗</a>
+          <a class="btn" id="m-png" target="_blank" rel="noopener">Full-size image ↗</a>
+        </div>
+      </div>
+      <div class="m__info">
+        <p class="mono dim" id="m-desc"></p>
+        <h2 class="display" id="m-title"></h2>
+        <p class="m__summary" id="m-summary"></p>
+        <h3 class="mono h">Keywords</h3><ul class="pills" id="m-keys"></ul>
+        <h3 class="mono h">Vibes</h3><ul class="pills pills--vibe" id="m-vibes"></ul>
+        <h3 class="mono h">Palette <span class="dim">· click to copy</span></h3><ul class="swatches" id="m-pal"></ul>
+        <h3 class="mono h">Fonts</h3><dl class="fonts" id="m-fonts"></dl>
+        <h3 class="mono h">Best for</h3><ul class="pills pills--plain" id="m-best"></ul>
+        <h3 class="mono h">How to build it</h3><p class="m__how" id="m-how"></p>
+        <h3 class="mono h" id="m-refs-h">References</h3><ul class="refs" id="m-refs"></ul>
+      </div>
+    </div>
+  </div>
+</dialog>
+<div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js"></script>
+</body>
+</html>

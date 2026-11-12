@@ -1,0 +1,247 @@
+{
+  "category": {
+    "id": "sticker-riot",
+    "name": "Sticker Riot",
+    "tagline": "chunky borders x collage x loud color",
+    "description": "Loud, tactile and unapologetically young. Thick outlines, hard offset shadows, die-cut stickers and saturated candy colors turn a hero into a pinboard. Use it for creative studios, merch, food and community brands that want to be remembered, not admired from a distance.",
+    "vibes": [
+      "playful",
+      "bold",
+      "youthful",
+      "creative"
+    ],
+    "accent": "#ff2f92"
+  },
+  "designs": [
+    {
+      "id": "gumdrop-bureau",
+      "name": "Gumdrop Bureau",
+      "descriptor": "neo-brutalism x indie studio",
+      "summary": "A cream dot-grid page where every element wears a 3px black outline and a hard shadow. Tilted project cards, a highlighted headline word and crossing marquee ribbons give a web studio an instantly friendly voice.",
+      "keywords": [
+        "3px black outlines",
+        "hard offset shadows",
+        "tilted bordered cards",
+        "crossing marquee belts",
+        "dot-grid paper",
+        "highlighter headline word",
+        "candy accent palette"
+      ],
+      "vibes": [
+        "bold",
+        "playful",
+        "creative",
+        "youthful"
+      ],
+      "best_for": [
+        "web studios",
+        "portfolios",
+        "indie agencies",
+        "creative tools"
+      ],
+      "palette": [
+        "#fff3d4",
+        "#16120f",
+        "#ffd23f",
+        "#ff6fa5",
+        "#5b8cff",
+        "#43e0a0"
+      ],
+      "fonts": {
+        "display": "Bricolage Grotesque",
+        "body": "Bricolage Grotesque",
+        "mono": "DM Mono"
+      },
+      "image": "assets/designs/gumdrop-bureau.png",
+      "mockup": "designs-src/gumdrop-bureau/index.html",
+      "references": [
+        {
+          "title": "Neo-Brutalism landing page shot",
+          "url": "https://dribbble.com/shots/22485202-Neo-Brutalism-Landing-Page-of-DAMN-I-LOVE-INDONESIA",
+          "source": "dribbble"
+        },
+        {
+          "title": "Neubrutalism collection",
+          "url": "https://dribbble.com/jonschker-design/collections/5904505-neubrutalism",
+          "source": "dribbble"
+        },
+        {
+          "title": "Neubrutalism collection (Rebekka Zorn)",
+          "url": "https://dribbble.com/RebekkaZorn/collections/5850498-Neubrutalism",
+          "source": "dribbble"
+        }
+      ],
+      "how_to_build": "Set one border token (3px solid ink) and one shadow token (6px 6px 0 ink) and apply them to nav, buttons, cards and tags so everything reads as the same cut paper. Rotate cards by 2 to 5 degrees and overlap them with absolute positioning. Use a tight negative-tracked heavy grotesk for the headline and wrap one word in an outlined, rotated highlight block. Build the dot grid with a radial-gradient background and the belts with rotated overflow-hidden bars of repeating text and shape bullets."
+    },
+    {
+      "id": "slap-sticker-club",
+      "name": "Slap Sticker Club",
+      "descriptor": "die-cut stickers x grid paper",
+      "summary": "A lilac cutting-mat grid covered in glossy die-cut stickers: a starburst, a smiley, a heart, a lightning bolt. The headline gets a layered pink and ink drop shadow like a vinyl decal.",
+      "keywords": [
+        "white die-cut outlines",
+        "soft sticker shadows",
+        "rotated sticker pile",
+        "cutting-mat grid",
+        "tape strip",
+        "fat rounded display type",
+        "lime and hot pink on lilac"
+      ],
+      "vibes": [
+        "playful",
+        "youthful",
+        "bold",
+        "creative"
+      ],
+      "best_for": [
+        "merch brands",
+        "subscription boxes",
+        "artist shops",
+        "Gen-Z communities"
+      ],
+      "palette": [
+        "#cdb8ff",
+        "#2b1259",
+        "#c8ff3a",
+        "#ff2f92",
+        "#33c6ff",
+        "#ff8a1f"
+      ],
+      "fonts": {
+        "display": "Bagel Fat One",
+        "body": "Figtree",
+        "mono": "Figtree"
+      },
+      "image": "assets/designs/slap-sticker-club.png",
+      "mockup": "designs-src/slap-sticker-club/index.html",
+      "references": [
+        {
+          "title": "Limoni Studio sticker-collage template",
+          "url": "https://www.framer.com/marketplace/templates/limoni-studio/",
+          "source": "other"
+        },
+        {
+          "title": "Brethren Design Co. sticker-led branding",
+          "url": "https://www.stickergiant.com/blog/brethren-design-co",
+          "source": "other"
+        },
+        {
+          "title": "Scrapbook sticker UI trend",
+          "url": "https://trends.daisyui.com/trend/scrapbook-sticker-ui/",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Draw each sticker as inline SVG with the same shape stacked twice: a fat white stroke (stroke-width 16 to 22, round joins) underneath and the colored fill on top, which gives the die-cut border for free. Add two drop-shadow filters (a tight 3px one and a soft 10px one) and rotate each piece. Make the grid with two linear-gradients at 40px. Fake the headline decal with stacked text-shadows: ink outline offsets first, then a hot-pink offset."
+    },
+    {
+      "id": "fry-day-snacks",
+      "name": "Fry Day Snacks",
+      "descriptor": "food truck x flat mascot",
+      "summary": "A tomato-red half and a butter-yellow half split by a scalloped edge, with a smiling fry carton as the hero. Cocoa-brown outlines and a checkerboard floor make a street-food brand feel like a cartoon.",
+      "keywords": [
+        "scalloped split edge",
+        "cocoa outlines",
+        "smiling carton mascot",
+        "checkerboard strip",
+        "stacked text-shadow headline",
+        "dip cups",
+        "price chips"
+      ],
+      "vibes": [
+        "playful",
+        "warm",
+        "bold",
+        "retro"
+      ],
+      "best_for": [
+        "food trucks",
+        "snack brands",
+        "restaurants",
+        "delivery apps"
+      ],
+      "palette": [
+        "#ff4b2b",
+        "#fff0c9",
+        "#3b1409",
+        "#ffc933",
+        "#6fbf45",
+        "#ff9bb8"
+      ],
+      "fonts": {
+        "display": "Rammetto One",
+        "body": "Nunito",
+        "mono": "Nunito"
+      },
+      "image": "assets/designs/fry-day-snacks.png",
+      "mockup": "designs-src/fry-day-snacks/index.html",
+      "references": [
+        {
+          "title": "Gen Z maximalism web style reference",
+          "url": "https://chrislemke.github.io/website_designs/examples/Gen_Z_Maximalism.html",
+          "source": "other"
+        },
+        {
+          "title": "Neo-brutalist sustainable commerce landing template",
+          "url": "https://enter.converge.ai/marketplace/templates/8b2ae80e1edd41028e91b2d697286458",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Split the viewport into two flat color fields and hide the seam with an SVG scalloped path. Keep every object outlined in one dark brown at 6px and use solid, non-blurred offset shadows. Build the headline with several text-shadow layers (outline in 8 directions plus a deep offset). The checkerboard is a repeating-conic-gradient. Draw the carton, fries and cups as simple flat SVG shapes with rounded joins and give the carton a face so the product feels like a character."
+    },
+    {
+      "id": "blobfish-collective",
+      "name": "Blobfish Collective",
+      "descriptor": "flat blobs x bubblegum maximalism",
+      "summary": "Outline-free organic blobs in bubblegum, mint, lavender and tangerine fill the page behind a huge soft italic serif headline. Tilted rounded tiles at the bottom hint at the weekly program.",
+      "keywords": [
+        "outline-free flat blobs",
+        "bubblegum pink ground",
+        "soft wonky italic serif",
+        "tilted rounded tiles",
+        "blobs with faces",
+        "navy pill nav",
+        "confetti squiggles"
+      ],
+      "vibes": [
+        "playful",
+        "friendly",
+        "creative",
+        "youthful"
+      ],
+      "best_for": [
+        "art studios",
+        "community co-ops",
+        "youth programs",
+        "events and festivals"
+      ],
+      "palette": [
+        "#ffcfe3",
+        "#1d1a4d",
+        "#ff7b3b",
+        "#a8f0d0",
+        "#c6b6ff",
+        "#fff09a"
+      ],
+      "fonts": {
+        "display": "Fraunces",
+        "body": "Outfit",
+        "mono": "Outfit"
+      },
+      "image": "assets/designs/blobfish-collective.png",
+      "mockup": "designs-src/blobfish-collective/index.html",
+      "references": [
+        {
+          "title": "Studio Marmalade playful pastel homepage",
+          "url": "https://app.superdesign.dev/library/studio-marmalade-make-brands-people-smile-about",
+          "source": "other"
+        },
+        {
+          "title": "Gen Z maximalism style reference",
+          "url": "https://chrislemke.github.io/website_designs/examples/Gen_Z_Maximalism.html",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Paint one full-bleed SVG of hand-placed blob paths (cubic curves, no strokes) behind the content and keep the type centered above it. Use Fraunces with SOFT 100 and WONK 1 at weight 800 italic for the headline so the letters look squishy; put the lightest word on a navy text-shadow for contrast. Navigation is a single fully rounded navy bar. Bottom tiles use 44px radii and alternate small rotations."
+    }
+  ]
+}

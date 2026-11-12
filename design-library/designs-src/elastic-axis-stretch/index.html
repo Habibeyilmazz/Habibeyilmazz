@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Elastic Axis Type Foundry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Martian+Mono:wght@300..500&display=swap" rel="stylesheet">
+<style>
+/* Layout: narrow left rail with info, right two-thirds a stack of one word set at five widths on the variable width axis, each line fitted to the column */
+:root{
+  --lilac:#c9b8ff; --ink:#0b0a12; --paper:#f6f3ff; --acid:#d9ff3f;
+  --disp:'Archivo','Arial Narrow',sans-serif; --mono:'Martian Mono','Courier New',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--lilac);color:var(--ink);font-family:var(--disp)}
+.rail{position:absolute;left:0;top:0;bottom:0;width:372px;padding:28px 32px 28px 36px;display:flex;flex-direction:column;border-right:2px solid var(--ink)}
+.logo{font-family:var(--disp);font-weight:900;font-stretch:125%;font-size:22px;letter-spacing:-.02em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+.logo i{display:flex;gap:2px;align-items:center}
+.logo i b{display:block;width:5px;background:var(--ink)}
+nav{margin-top:26px;display:flex;flex-direction:column;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;font-weight:400}
+nav a{padding:9px 0;border-top:1.5px solid var(--ink);display:flex;justify-content:space-between}
+nav a:last-child{border-bottom:1.5px solid var(--ink)}
+nav a span{opacity:.6}
+.intro{margin-top:auto}
+.intro h2{font-weight:800;font-stretch:75%;font-size:46px;line-height:.98;letter-spacing:-.01em;text-transform:uppercase}
+.intro p{margin-top:14px;font-size:15px;line-height:1.45;font-weight:420;font-stretch:100%;max-width:300px}
+.btns{display:flex;gap:10px;margin-top:20px}
+.btns a{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;padding:13px 16px;border:2px solid var(--ink);font-weight:500;text-decoration:none;color:var(--ink)}
+.btns a.p{background:var(--ink);color:var(--lilac)}
+.stack{position:absolute;left:372px;top:0;right:0;bottom:0;padding:20px 34px 0 32px}
+.line{display:block;text-transform:uppercase;white-space:nowrap;line-height:.8;font-weight:800;letter-spacing:-.01em;margin-bottom:4px;transform-origin:left top}
+.meta{display:flex;justify-content:space-between;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;border-top:1.5px solid var(--ink);padding-top:5px;margin-bottom:5px;font-weight:400}
+.meta b{font-weight:500}
+.sel{position:absolute;right:34px;bottom:26px;display:flex;gap:0;font-family:var(--mono);font-size:11px;text-transform:uppercase;border:2px solid var(--ink);background:var(--acid);font-weight:500}
+.sel div{padding:10px 14px;border-right:2px solid var(--ink)}
+.sel div:last-child{border-right:0;background:var(--ink);color:var(--acid)}
+</style></head><body>
+<div class="rail">
+  <div class="logo"><i><b style="height:8px"></b><b style="height:16px"></b><b style="height:24px"></b><b style="height:16px"></b><b style="height:8px"></b></i>Elastic Axis</div>
+  <nav><a>Typefaces <span>14</span></a><a>Variable tester <span>&rarr;</span></a><a>Licensing <span>&rarr;</span></a><a>Journal <span>06</span></a><a>Cart <span>0</span></a></nav>
+  <div class="intro">
+    <h2>Type that bends to the layout.</h2>
+    <p>An independent foundry for variable fonts. One file, one licence, every width from 62 to 125 and every weight from hairline to black.</p>
+    <div class="btns"><a class="p" href="#">Test the axes</a><a href="#">Buy Elastico</a></div>
+  </div>
+</div>
+<div class="stack" id="stack"></div>
+<div class="sel"><div>wght 800</div><div>wdth 62&ndash;125</div><div>Elastico VF</div></div>
+<script>
+const rows=[[62,900],[85,800],[110,500],[125,250]];
+const st=document.getElementById('stack');
+const colW=1280-372-32-34;
+const word='Elastico';
+document.fonts.load("800 100px Archivo").then(()=>document.fonts.ready).then(()=>{
+rows.forEach(([wd,wg],i)=>{
+  const m=document.createElement('div');m.className='meta';
+  m.innerHTML='<span>Line 0'+(i+1)+'</span><span><b>wdth '+wd+'</b> &nbsp; wght '+wg+'</span>';
+  st.appendChild(m);
+  const l=document.createElement('span');l.className='line';l.textContent=word;
+  l.style.fontVariationSettings="'wdth' "+wd+",'wght' "+wg;
+  l.style.fontSize='100px';l.style.display='inline-block';
+  l.style.fontStretch=wd+'%';l.style.fontWeight=wg;
+  st.appendChild(l);
+  // fit width then cap height
+  let w=l.getBoundingClientRect().width;
+  let fs=100*colW/w;
+  l.style.fontSize=fs+'px';l.style.display='block';
+});
+});
+</script>
+</body></html>

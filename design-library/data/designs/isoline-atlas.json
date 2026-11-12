@@ -1,0 +1,233 @@
+{
+  "category": {
+    "id": "isoline-atlas",
+    "name": "Isoline Atlas",
+    "tagline": "contour line art x enterprise type",
+    "description": "Data as texture: topographic and isobar line art, radial charts and big tabular numerals used as the hero image itself. Suits climate, risk, health and governance products that want to feel rigorous but look unlike a generic dashboard.",
+    "vibes": [
+      "data-driven",
+      "serious",
+      "modern",
+      "geometric"
+    ],
+    "accent": "#ff5a1f"
+  },
+  "designs": [
+    {
+      "id": "isoline-highwater",
+      "name": "Highwater Contours",
+      "descriptor": "topographic line art x climate risk",
+      "summary": "A pale green paper field covered in generated elevation contours, with flood-zone lines and fills in signal orange and a floating readout panel.",
+      "keywords": [
+        "generated contour lines",
+        "orange flood zone",
+        "pale sage paper",
+        "elevation callout pin",
+        "mono coordinates",
+        "floating data panels"
+      ],
+      "vibes": [
+        "data-driven",
+        "serious",
+        "modern",
+        "light"
+      ],
+      "best_for": [
+        "climate risk",
+        "insurance",
+        "geospatial tools",
+        "urban planning"
+      ],
+      "palette": [
+        "#e3eae4",
+        "#0f3322",
+        "#7a9a86",
+        "#ff5a1f"
+      ],
+      "fonts": {
+        "display": "Instrument Sans",
+        "body": "Instrument Sans",
+        "mono": "JetBrains Mono"
+      },
+      "image": "assets/designs/isoline-highwater.png",
+      "mockup": "designs-src/isoline-highwater/index.html",
+      "references": [
+        {
+          "title": "Topographic contour component (Framer)",
+          "url": "https://www.framer.com/community/marketplace/components/topographic-contour/",
+          "source": "other"
+        },
+        {
+          "title": "Topolines, contour line art from real elevation data",
+          "url": "https://dev.to/topolines/i-built-a-web-tool-that-turns-real-elevation-data-into-topographic-contour-line-art-svg-png-132m",
+          "source": "other"
+        },
+        {
+          "title": "Climate Intelligence landing page design",
+          "url": "https://contra.com/p/gmArRZFb-climate-intelligence-landing-page-design",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Generate the terrain in a canvas: sum a few dozen Gaussian bumps plus a carved river valley into a scalar grid, then run marching squares at evenly spaced levels and stroke each segment, making every fifth level heavier. Colour the levels inside the flood band orange and add a blurred orange fill below the threshold. Fade the left side with a paper-coloured gradient so the headline stays clean, and float small panels with a light blur on the right."
+    },
+    {
+      "id": "quorum-ledger-type",
+      "name": "Quorum Ledger",
+      "descriptor": "swiss grid x governance software",
+      "summary": "A white hairline-ruled page where a 196px tabular numeral and a small ledger table are the hero, with one yellow highlighter stroke as the only colour.",
+      "keywords": [
+        "giant tabular numeral",
+        "hairline grid frame",
+        "yellow highlighter stroke",
+        "serif italic accent",
+        "ledger table with micro bars",
+        "ruler tick margin"
+      ],
+      "vibes": [
+        "corporate",
+        "serious",
+        "minimal",
+        "editorial"
+      ],
+      "best_for": [
+        "board software",
+        "compliance",
+        "legal tech",
+        "enterprise SaaS"
+      ],
+      "palette": [
+        "#ffffff",
+        "#0b0c0e",
+        "#6b6f78",
+        "#d9dbe0",
+        "#ffdf2b"
+      ],
+      "fonts": {
+        "display": "Inter Tight",
+        "body": "Inter Tight",
+        "mono": "IBM Plex Mono"
+      },
+      "image": "assets/designs/quorum-ledger-type.png",
+      "mockup": "designs-src/quorum-ledger-type/index.html",
+      "references": [
+        {
+          "title": "Editorial enterprise SaaS landing page (template reference)",
+          "url": "https://enter.converge.ai/page/en-US/hub/e0b0304486824dbba7cde04b8f1bfa33-v-bb1c23a9",
+          "source": "other"
+        },
+        {
+          "title": "Webflow Enterprise page review (SaaSFrame)",
+          "url": "https://saasframe.io/examples/webflow-enterprise-page",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Draw the layout with 1px #d9dbe0 rules only: an outer frame, a nav rule, a vertical split and a four-column footer strip. Set the headline in Inter Tight 600 at 92px with -0.055em tracking and switch the last phrase to an italic serif. Make the highlighter with linear-gradient(transparent 58%, yellow 58% 90%, transparent 90%) on the inline element. Use font-variant-numeric: tabular-nums for the big number and every table column."
+    },
+    {
+      "id": "isobar-grid",
+      "name": "Isobar Grid",
+      "descriptor": "pressure line art x energy weather",
+      "summary": "A midnight-blue weather chart of pale isobars and wind ticks around a coral low-pressure centre, with a thin serif headline and a forecast readout.",
+      "keywords": [
+        "pale blue isobar lines",
+        "wind direction ticks",
+        "single coral marker",
+        "light serif headline",
+        "mono pressure labels",
+        "midnight navy ground"
+      ],
+      "vibes": [
+        "serious",
+        "elegant",
+        "dark",
+        "data-driven"
+      ],
+      "best_for": [
+        "energy trading",
+        "weather services",
+        "utilities",
+        "climate research"
+      ],
+      "palette": [
+        "#091a33",
+        "#0d2444",
+        "#a9cdf5",
+        "#e9f1fb",
+        "#ff7a59"
+      ],
+      "fonts": {
+        "display": "Newsreader",
+        "body": "Instrument Sans",
+        "mono": "DM Mono"
+      },
+      "image": "assets/designs/isobar-grid.png",
+      "mockup": "designs-src/isobar-grid/index.html",
+      "references": [
+        {
+          "title": "Climate Pulse, dark navy line-chart template (Kombai)",
+          "url": "https://kombai.com/gallery/inspirations/climate-pulse/",
+          "source": "other"
+        },
+        {
+          "title": "Pentagram, CTrees data identity",
+          "url": "https://pentagram.com/work/ctrees",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Define a pressure field as a baseline of 1013 plus a few Gaussians (one deep low), run marching squares at 2 hPa intervals and make every 8 hPa line brighter and labelled. Add a coarse grid of short wind ticks that rotate around the low's centre. Keep the whole palette to pale blue on navy, with a single coral ring on the low as the only warm colour. Mask the left third with a navy gradient so the light serif headline reads cleanly."
+    },
+    {
+      "id": "pulsewell-rings",
+      "name": "Pulsewell Rings",
+      "descriptor": "radial year chart x hospital capacity",
+      "summary": "A blush page with a huge radial chart of 365 daily spokes bleeding off the right edge, surge days in coral and a bed-count pill at its centre.",
+      "keywords": [
+        "365-spoke radial chart",
+        "coral surge spikes",
+        "blush and burgundy palette",
+        "teal occupancy ring",
+        "chunky serif headline",
+        "frosted floating chips"
+      ],
+      "vibes": [
+        "warm",
+        "friendly",
+        "data-driven",
+        "modern"
+      ],
+      "best_for": [
+        "healthcare operations",
+        "hospital analytics",
+        "public health",
+        "capacity planning"
+      ],
+      "palette": [
+        "#fff0ec",
+        "#3a0f22",
+        "#f2553d",
+        "#0f7f78",
+        "#f8d9d2"
+      ],
+      "fonts": {
+        "display": "Young Serif",
+        "body": "Figtree",
+        "mono": "Spline Sans Mono"
+      },
+      "image": "assets/designs/pulsewell-rings.png",
+      "mockup": "designs-src/pulsewell-rings/index.html",
+      "references": [
+        {
+          "title": "Healthy Dashboard Concept (Dribbble tag listing)",
+          "url": "https://dribbble.com/UnArshia/tags/fluent-design",
+          "source": "dribbble"
+        },
+        {
+          "title": "Climate visualizations for the people, Probable Futures",
+          "url": "https://www.mapbox.com/blog/climate-visualizations-for-the-people-probable-futures",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Generate the chart in an inline SVG with JavaScript: for each day of the year, draw a line from an inner radius at angle = day/365 * 2pi, with length scaled by a seasonal curve times a weekly rhythm, and colour days above a threshold coral. Add dashed concentric guide rings and month labels outside the spokes. Offset the SVG so it bleeds off the right edge, and place a dark pill with the headline number at its centre."
+    }
+  ]
+}

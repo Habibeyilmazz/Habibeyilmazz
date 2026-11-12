@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Gumdrop Bureau</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#fff3d4;--ink:#16120f;--sun:#ffd23f;--bubble:#ff6fa5;--sky:#5b8cff;--mint:#43e0a0;--tomato:#ff5b3a;
+--display:'Bricolage Grotesque','Arial Black',Impact,sans-serif;--mono:'DM Mono',ui-monospace,Menlo,monospace;
+--bw:3px;--sh:6px 6px 0 var(--ink)}
+*{box-sizing:border-box;margin:0}
+html,body{width:1280px;height:800px;overflow:hidden}
+body{background:var(--paper);color:var(--ink);font-family:var(--display);font-weight:500;position:relative;
+background-image:radial-gradient(circle at 1px 1px,rgba(22,18,15,.16) 1.2px,transparent 1.6px);background-size:22px 22px}
+a{color:inherit;text-decoration:none}
+nav{position:absolute;left:40px;right:40px;top:28px;height:64px;display:flex;align-items:center;justify-content:space-between;
+background:#fff;border:var(--bw) solid var(--ink);border-radius:18px;box-shadow:var(--sh);padding:0 14px 0 20px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:24px;letter-spacing:-.02em}
+.gum{width:30px;height:30px;border-radius:50%;background:var(--bubble);border:var(--bw) solid var(--ink);box-shadow:inset -5px -5px 0 rgba(0,0,0,.14)}
+.links{display:flex;gap:6px;font-size:17px;font-weight:800}
+.links a{padding:9px 16px;border-radius:99px;border:2px solid transparent}
+.links a.on{background:var(--sun);border-color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:800 18px var(--display);padding:13px 22px;border:var(--bw) solid var(--ink);border-radius:14px;background:var(--tomato);color:#fff;box-shadow:4px 4px 0 var(--ink)}
+.btn.big{font-size:22px;padding:18px 30px;border-radius:18px;box-shadow:var(--sh);background:var(--sky)}
+.btn.alt{background:#fff;color:var(--ink)}
+.hero{position:absolute;left:40px;top:128px;width:660px}
+.tag{display:inline-block;font:500 14px var(--mono);text-transform:uppercase;letter-spacing:.08em;background:var(--mint);border:2px solid var(--ink);border-radius:99px;padding:6px 14px;transform:rotate(-2deg);box-shadow:3px 3px 0 var(--ink)}
+h1{font-weight:800;font-size:112px;line-height:.9;letter-spacing:-.045em;margin-top:22px}
+h1 .hl{background:var(--sun);padding:0 14px;border:var(--bw) solid var(--ink);border-radius:20px;display:inline-block;transform:rotate(-2.5deg);box-shadow:var(--sh);margin:6px 0}
+h1 .wv{display:inline-block;color:var(--bubble);-webkit-text-stroke:3px var(--ink);paint-order:stroke fill}
+.sub{font-size:22px;line-height:1.35;max-width:520px;margin-top:26px;font-weight:500}
+.cta{display:flex;gap:18px;margin-top:30px}
+.stack{position:absolute;right:48px;top:130px;width:470px;height:520px}
+.card{position:absolute;border:var(--bw) solid var(--ink);border-radius:22px;box-shadow:var(--sh);overflow:hidden;background:#fff}
+.c1{left:0;top:30px;width:300px;height:300px;transform:rotate(-5deg);background:var(--sky)}
+.c2{right:0;top:0;width:260px;height:230px;transform:rotate(4deg);background:var(--bubble)}
+.c3{left:60px;bottom:0;width:360px;height:210px;transform:rotate(-1.5deg);background:var(--mint)}
+.card .lab{position:absolute;left:12px;bottom:12px;background:#fff;border:2px solid var(--ink);border-radius:99px;font:500 13px var(--mono);padding:4px 11px;text-transform:uppercase}
+.card svg{position:absolute;inset:0;width:100%;height:100%}
+.sticker{position:absolute;right:-6px;top:240px;width:132px;height:132px;border-radius:50%;background:var(--sun);border:var(--bw) solid var(--ink);box-shadow:var(--sh);display:grid;place-items:center;text-align:center;font-weight:800;font-size:19px;line-height:1;transform:rotate(12deg);z-index:3}
+.sticker small{display:block;font:500 12px var(--mono);margin-top:4px}
+.belt{position:absolute;left:-20px;right:-20px;bottom:36px;height:68px;background:var(--ink);color:var(--paper);transform:rotate(-1.4deg);display:flex;align-items:center;overflow:hidden;border-top:var(--bw) solid var(--ink)}
+.belt div{white-space:nowrap;font-weight:800;font-size:34px;letter-spacing:-.01em;display:flex;gap:28px;align-items:center}
+.belt i{width:22px;height:22px;display:inline-block;background:var(--sun);border-radius:50%}
+.belt i:nth-of-type(2n){background:var(--bubble);border-radius:5px;transform:rotate(20deg)}
+.belt i:nth-of-type(3n){background:var(--mint);border-radius:0;clip-path:polygon(50% 0,100% 100%,0 100%)}
+.belt2{bottom:100px;background:var(--sun);color:var(--ink);transform:rotate(1.6deg);z-index:0;border-bottom:var(--bw) solid var(--ink);height:56px}
+.belt2 div{font-size:26px}
+</style></head><body>
+<nav>
+  <a class="logo" href="#"><span class="gum"></span>Gumdrop Bureau</a>
+  <div class="links"><a class="on" href="#">Work</a><a href="#">Services</a><a href="#">Zine</a><a href="#">Say hi</a></div>
+  <a class="btn" href="#">Book a call &rarr;</a>
+</nav>
+
+<section class="hero">
+  <span class="tag">Indie web studio / Est. 2019 / Lisbon</span>
+  <h1>Websites that <span class="hl">wave</span> <span class="wv">back.</span></h1>
+  <p class="sub">We design loud, friendly sites for brands that would rather be remembered than be polite. 41 launches, zero beige.</p>
+  <div class="cta"><a class="btn big" href="#">See our work</a><a class="btn big alt" href="#">Get the price list</a></div>
+</section>
+
+<section class="stack">
+  <div class="card c1">
+    <svg viewBox="0 0 300 300"><circle cx="150" cy="130" r="86" fill="#ffd23f" stroke="#16120f" stroke-width="3"/><circle cx="122" cy="116" r="11" fill="#16120f"/><circle cx="178" cy="116" r="11" fill="#16120f"/><path d="M108 150q42 46 84 0" fill="#ff5b3a" stroke="#16120f" stroke-width="3" stroke-linejoin="round"/><path d="M0 250h300" stroke="#16120f" stroke-width="3"/></svg>
+    <span class="lab">Oddjob Oat Milk</span>
+  </div>
+  <div class="card c2">
+    <svg viewBox="0 0 260 230"><rect x="36" y="34" width="188" height="120" rx="14" fill="#fff" stroke="#16120f" stroke-width="3"/><rect x="52" y="52" width="86" height="12" rx="6" fill="#16120f"/><rect x="52" y="76" width="140" height="10" rx="5" fill="#ffd23f" stroke="#16120f" stroke-width="2"/><rect x="52" y="104" width="64" height="30" rx="9" fill="#5b8cff" stroke="#16120f" stroke-width="2.5"/></svg>
+    <span class="lab">Pocket Pals App</span>
+  </div>
+  <div class="card c3">
+    <svg viewBox="0 0 360 210"><g fill="none" stroke="#16120f" stroke-width="3"><rect x="24" y="30" width="96" height="96" rx="48" fill="#fff"/><rect x="138" y="30" width="96" height="96" rx="16" fill="#ff6fa5"/><path d="M252 126l48-96 48 96z" fill="#ffd23f" stroke-linejoin="round"/></g></svg>
+    <span class="lab">Shape Society ID</span>
+  </div>
+  <div class="sticker"><div>41<br>sites<small>and counting</small></div></div>
+</section>
+
+<div class="belt belt2"><div>Brand worlds <i></i> Landing pages <i></i> Illustration <i></i> Motion <i></i> Merch <i></i> Brand worlds <i></i> Landing pages <i></i> Illustration <i></i></div></div>
+<div class="belt"><div>Now booking spring 2027 <i></i> Small teams welcome <i></i> Big ideas welcome <i></i> Now booking spring 2027 <i></i> Small teams welcome <i></i></div></div>
+</body></html>

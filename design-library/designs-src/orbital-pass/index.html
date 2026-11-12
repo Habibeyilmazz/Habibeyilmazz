@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Perigee — ground station API</title>
+<meta name="viewport" content="width=1280">
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Martian+Mono:wdth,wght@75..112,300..500&display=swap" rel="stylesheet">
+<style>
+/* Layout: a hard-left condensed headline against an orbital diagram (tilted rings, satellites, one lit planet) with telemetry callouts on a mono grid. */
+:root{
+  --space:#05060b; --cream:#ece6d8; --burn:#ff7a3d; --cold:#7f98ff; --ring:rgba(150,170,255,.28); --mute:#7b8097;
+  --display:'Big Shoulders Display','Oswald','Arial Narrow',Impact,sans-serif; --mono:'Martian Mono','DejaVu Sans Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--space)}
+body{font-family:var(--mono);color:var(--cream);position:relative;font-stretch:90%}
+svg.orb{position:absolute;left:0;top:0}
+nav{position:absolute;left:56px;right:56px;top:28px;display:flex;align-items:center;gap:34px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;z-index:3}
+.logo{font-family:var(--display);font-weight:900;font-size:26px;letter-spacing:.08em;margin-right:auto;display:flex;align-items:center;gap:10px}
+.logo svg{display:block}
+nav a{color:var(--mute)}
+.btn{border:1px solid var(--cream);padding:10px 16px;color:var(--cream)}
+.hero{position:absolute;left:56px;top:108px;width:560px;z-index:3}
+.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--burn);display:flex;gap:12px;align-items:center;margin-bottom:22px}
+.eyebrow::before{content:"";width:34px;height:1px;background:var(--burn)}
+h1{font-family:var(--display);font-weight:900;font-size:128px;line-height:.84;letter-spacing:-.005em;text-transform:uppercase;color:var(--cream)}
+h1 span{color:var(--burn)}
+.sub{margin-top:26px;font-size:13.5px;line-height:1.75;color:#b4b1a8;max-width:430px;font-weight:300;font-stretch:100%}
+.cta{margin-top:26px;display:flex;gap:0;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+.cta .p{background:var(--burn);color:#1a0a02;padding:16px 24px;font-weight:500}
+.cta .s{border:1px solid #3a3f55;border-left:0;padding:16px 24px;color:var(--cream)}
+.tele{position:absolute;left:56px;right:56px;bottom:0;height:96px;border-top:1px solid #1f2338;display:grid;grid-template-columns:repeat(4,1fr);z-index:3;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.tele div{padding:20px 0 0}
+.tele b{display:block;font-family:var(--display);font-weight:800;font-size:34px;letter-spacing:.02em;color:var(--cream);margin-top:6px}
+.tele b i{font-style:normal;color:var(--burn);font-size:20px;margin-left:5px}
+.call{position:absolute;z-index:3;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--cream);line-height:1.6;white-space:nowrap}
+.call span{color:var(--mute)}
+.call b{color:var(--burn);font-weight:500}
+</style>
+</head>
+<body>
+<svg class="orb" width="1280" height="800" viewBox="0 0 1280 800">
+  <defs>
+    <radialGradient id="pl" cx="32%" cy="30%" r="80%"><stop offset="0" stop-color="#ffe6c8"/><stop offset=".25" stop-color="#ff8a4d"/><stop offset=".62" stop-color="#6a2412"/><stop offset="1" stop-color="#0a0508"/></radialGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ff7a3d" stop-opacity=".34"/><stop offset=".45" stop-color="#ff7a3d" stop-opacity=".07"/><stop offset="1" stop-color="#ff7a3d" stop-opacity="0"/></radialGradient>
+    <linearGradient id="fadeR" x1="0" x2="1"><stop offset="0" stop-color="#05060b" stop-opacity="1"/><stop offset="1" stop-color="#05060b" stop-opacity="0"/></linearGradient>
+    <pattern id="gridp" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#1a1e33" stroke-width="1"/></pattern>
+    <mask id="gm"><rect width="1280" height="800" fill="url(#gmg)"/></mask>
+    <radialGradient id="gmg" cx="76%" cy="50%" r="52%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#gridp)" mask="url(#gm)" opacity=".8"/>
+  <circle cx="920" cy="400" r="330" fill="url(#halo)"/>
+  <!-- orbit rings: tilted ellipses around planet -->
+  <g transform="translate(920 400) rotate(-20)" fill="none">
+    <ellipse rx="150" ry="52" stroke="rgba(255,122,61,.55)" stroke-width="1"/>
+    <ellipse rx="236" ry="82" stroke="var(--ring)" stroke-width="1" stroke-dasharray="2 5"/>
+    <ellipse rx="330" ry="116" stroke="rgba(236,230,216,.4)" stroke-width="1.2"/>
+    <ellipse rx="430" ry="150" stroke="var(--ring)" stroke-width="1"/>
+    <ellipse rx="530" ry="186" stroke="rgba(127,152,255,.16)" stroke-width="1" stroke-dasharray="1 7"/>
+    <!-- ring tick marks on the 330 ring -->
+    <g stroke="rgba(236,230,216,.5)" stroke-width="1">
+      <path d="M330 0h-8M-330 0h8M0 116v-8M0 -116v8"/>
+    </g>
+    <!-- covered arc (active pass) -->
+    <path d="M-330 0A330 116 0 0 1 -60 -114" stroke="var(--burn)" stroke-width="2.4"/>
+    <!-- satellites -->
+    <g>
+      <circle cx="-60" cy="-114" r="5" fill="#ffd2b0"/><circle cx="-60" cy="-114" r="13" stroke="var(--burn)" stroke-width="1"/>
+      <circle cx="236" cy="0" r="3.2" fill="var(--cream)"/>
+      <circle cx="-212" cy="36" r="3.2" fill="var(--cream)"/>
+      <circle cx="388" cy="-62" r="3.6" fill="var(--cream)"/>
+      <circle cx="-405" cy="48" r="3.2" fill="var(--cold)"/>
+      <circle cx="150" cy="0" r="3" fill="var(--burn)"/>
+      <circle cx="502" cy="22" r="2.6" fill="var(--cold)"/>
+    </g>
+  </g>
+  <!-- planet; back half of inner ring hidden by body, front half drawn after -->
+  <circle cx="920" cy="400" r="74" fill="url(#pl)"/>
+  <circle cx="920" cy="400" r="74" fill="none" stroke="rgba(255,190,140,.35)" stroke-width="1"/>
+  <g transform="translate(920 400) rotate(-20)" fill="none"><path d="M-150 0A150 52 0 0 0 150 0" stroke="rgba(255,122,61,.85)" stroke-width="1.4"/></g>
+  <!-- ground station crosshair -->
+  <g stroke="var(--cream)" stroke-width="1" fill="none" opacity=".85"><circle cx="1010" cy="432" r="9"/><path d="M1010 414v10M1010 440v10M992 432h10M1018 432h10"/></g>
+  <path d="M1010 432L1120 520H1220" stroke="rgba(236,230,216,.45)" stroke-dasharray="3 4" fill="none"/>
+  <path d="M846 288L760 190H690" stroke="rgba(255,122,61,.7)" fill="none"/>
+  <rect x="0" y="0" width="720" height="800" fill="url(#fadeR)" opacity=".55"/>
+</svg>
+<nav>
+  <div class="logo"><svg width="26" height="26" viewBox="0 0 26 26" fill="none"><ellipse cx="13" cy="13" rx="12" ry="5" transform="rotate(-25 13 13)" stroke="#ece6d8" stroke-width="1.5"/><circle cx="13" cy="13" r="4.5" fill="#ff7a3d"/></svg>PERIGEE</div>
+  <a>Network</a><a>API</a><a>Pricing</a><a>Mission log</a><span class="btn">Request access</span>
+</nav>
+<section class="hero">
+  <div class="eyebrow">Ground-station-as-a-service · 63 antennas</div>
+  <h1>Pass over<br>every<br><span>horizon.</span></h1>
+  <p class="sub">Book a downlink the way you book a server. One REST call schedules contact windows across 41 sites, so your satellite talks to Earth on every orbit instead of every few.</p>
+  <div class="cta"><span class="p">Book a pass</span><span class="s">Read the API docs</span></div>
+</section>
+<div class="call" style="left:610px;top:166px"><b>PGE-07</b> <span>/ 548 KM / 7.59 KM/S</span><br><span>AOS 14:02:11Z · LOS 14:11:40Z</span></div>
+<div class="call" style="left:1128px;top:512px"><b>SVALBARD</b><br><span>EL 34° · AZ 211°</span></div>
+<div class="tele">
+  <div>Contact time / day<b>74<i>min</i></b></div>
+  <div>Antenna sites<b>41<i>live</i></b></div>
+  <div>Downlink rate<b>1.2<i>Gbps</i></b></div>
+  <div>Booking lead<b>90<i>sec</i></b></div>
+</div>
+</body>
+</html>

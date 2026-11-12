@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Meridian — ASCII planet edge network</title>
+<meta name="viewport" content="width=1280">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;600&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: centered thesis over a planet-horizon made entirely of text characters rising from the bottom edge; PoP latency labels pinned to the globe. */
+:root{
+  --ink:#040810; --ice:#cfeeff; --cyan:#6fd3ff; --deep:#1c4a66; --amber:#ffc46b; --mute:#6f8da1;
+  --display:'Sora','Inter',system-ui,sans-serif; --mono:'DM Mono','DejaVu Sans Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--ink)}
+body{font-family:var(--mono);color:var(--ice);position:relative;background:radial-gradient(ellipse 70% 50% at 50% 100%,#0b2740 0%,#040810 70%)}
+canvas{position:absolute;left:0;top:0}
+nav{position:absolute;top:26px;left:56px;right:56px;display:flex;align-items:center;justify-content:space-between;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;z-index:3}
+.logo{font-family:var(--display);font-weight:600;font-size:17px;letter-spacing:.02em;text-transform:none;display:flex;gap:10px;align-items:center}
+.logo b{display:block;width:20px;height:20px;border:1.5px solid var(--cyan);border-radius:50%;position:relative}
+.logo b::after{content:"";position:absolute;left:50%;top:-4px;bottom:-4px;width:1.5px;background:var(--cyan);transform:translateX(-50%)}
+.links{display:flex;gap:36px;color:var(--mute)}
+.pill{border:1px solid #28506b;border-radius:99px;padding:9px 18px;color:var(--ice);background:rgba(10,30,48,.6)}
+.hero{position:absolute;left:0;right:0;top:96px;text-align:center;z-index:3}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan);display:inline-flex;gap:12px;align-items:center}
+.eyebrow::before,.eyebrow::after{content:"";width:46px;height:1px;background:linear-gradient(to right,transparent,var(--cyan))}
+.eyebrow::after{transform:scaleX(-1)}
+h1{font-family:var(--display);font-weight:200;font-size:66px;line-height:1.02;letter-spacing:-.035em;margin:18px 0 18px;text-wrap:balance}
+h1 b{font-weight:600;background:linear-gradient(90deg,#9fe4ff,#e8f7ff 55%,#9fe4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{font-family:var(--display);font-weight:300;font-size:17px;line-height:1.55;color:#97b2c4;max-width:560px;margin:0 auto}
+.cta{display:flex;gap:14px;justify-content:center;margin-top:26px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.cta .p{background:var(--cyan);color:#03121d;padding:14px 24px;font-weight:500;border-radius:3px}
+.cta .s{border:1px solid #28506b;padding:14px 24px;border-radius:3px;color:var(--ice)}
+.lab{position:absolute;z-index:3;font-size:11.5px;letter-spacing:.06em;color:var(--amber);white-space:nowrap;text-shadow:0 0 10px rgba(255,196,107,.6)}
+.lab b{font-weight:500;color:#ffe3b3;margin-right:6px}
+.lab::before{content:"";position:absolute;left:-22px;top:6px;width:16px;height:1px;background:var(--amber);opacity:.7}
+.lab.r::before{left:auto;right:-22px}
+.tick{position:absolute;bottom:0;left:0;right:0;padding:40px 56px 22px;background:linear-gradient(to top,rgba(4,8,16,.95) 40%,transparent);display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);z-index:3}
+.tick span i{font-style:normal;color:var(--cyan)}
+</style>
+</head>
+<body>
+<canvas id="g" width="1280" height="800"></canvas>
+<nav>
+  <div class="logo"><b></b>meridian</div>
+  <div class="links"><span>Network</span><span>Workers</span><span>Pricing</span><span>Status</span></div>
+  <div class="pill">Dashboard ↗</div>
+</nav>
+<section class="hero">
+  <div class="eyebrow">Edge network · 312 cities · 118 countries</div>
+  <h1>Sit <b>next to</b><br>every user.</h1>
+  <p class="sub">Meridian runs your code and cache in the city your customer is standing in. Median round trip: 11 milliseconds.</p>
+  <div class="cta"><span class="p">Deploy to the edge</span><span class="s">View live latency map</span></div>
+</section>
+<div id="labels"></div>
+<div class="tick"><span>Rendered in <i>ASCII</i> · 7×12 px cells · 41,208 glyphs</span><span>Lat <i>48.8566°N</i> &nbsp; Lon <i>2.3522°E</i></span><span>Rotation <i>0.18°/s</i></span></div>
+<script>
+function draw(){
+  const cv=document.getElementById('g'),x=cv.getContext('2d');
+  const W=1280,H=800,CW=7,CH=12,CX=640,CY=1190,R=720,ROT=0.62;
+  const ramp=" .'`,:;-~+=*xoO#%@";
+  function h3(i,j,k){let h=Math.sin(i*127.1+j*311.7+k*74.7)*43758.5453;return h-Math.floor(h);}
+  function n3(x,y,z){const i=Math.floor(x),j=Math.floor(y),k=Math.floor(z),u=x-i,v=y-j,w=z-k,s=t=>t*t*(3-2*t),a=s(u),b=s(v),c=s(w);
+    const L=(p,q,t)=>p+(q-p)*t;
+    return L(L(L(h3(i,j,k),h3(i+1,j,k),a),L(h3(i,j+1,k),h3(i+1,j+1,k),a),b),L(L(h3(i,j,k+1),h3(i+1,j,k+1),a),L(h3(i,j+1,k+1),h3(i+1,j+1,k+1),a),b),c);}
+  function fbm(x,y,z){return n3(x,y,z)*.5+n3(x*2,y*2,z*2)*.25+n3(x*4,y*4,z*4)*.125+n3(x*8,y*8,z*8)*.0625;}
+  // faint starfield of dots
+  x.fillStyle='#04080f';x.fillRect(0,0,W,H);
+  x.font='500 11px "DM Mono",monospace';x.textBaseline='top';
+  for(let i=0;i<90;i++){x.fillStyle='rgba(160,210,240,'+(0.15+h3(i,1,2)*0.35)+')';x.fillText('.',h3(i,5,3)*W,h3(i,9,1)*H*0.7);}
+  const cosr=Math.cos(ROT),sinr=Math.sin(ROT);
+  for(let cy=0;cy<H;cy+=CH){
+    for(let cx=0;cx<W;cx+=CW){
+      const px=(cx+CW/2-CX)/R,py=(cy+CH/2-CY)/R,d2=px*px+py*py;
+      if(d2>1.0)continue;
+      const pz=Math.sqrt(1-d2);
+      // rotate around y
+      const rx=px*cosr+pz*sinr, rz=-px*sinr+pz*cosr, ry=py;
+      const land=fbm(rx*2.1+4,ry*2.1+2,rz*2.1+7);
+      const isLand=land>0.5;
+      const light=Math.max(0,(-px*0.2-py*0.9+pz*0.55));
+      const rim=Math.pow(1-pz,2.2);
+      let v=isLand?(0.34+(land-0.52)*1.6):(0.1+0.06*n3(rx*18,ry*18,rz*18));
+      v=v*(0.45+light*0.85)+rim*0.55;
+      // grid of meridians
+      const lon=Math.atan2(rx,rz),lat=Math.asin(Math.max(-1,Math.min(1,-ry)));
+      const gl=Math.abs(((lon*180/Math.PI)%15+15)%15-0)<0.9||Math.abs(((lat*180/Math.PI)%15+15)%15)<0.9;
+      if(gl&&!isLand)v+=0.12;
+      v=Math.max(0,Math.min(0.86,v));
+      const ch=ramp[Math.floor(v*ramp.length)];
+      if(ch===' ')continue;
+      const a=0.25+v*0.85;
+      x.fillStyle=isLand?'rgba(111,211,255,'+Math.min(1,a)+')':'rgba(46,112,150,'+Math.min(1,a+.1)+')';
+      if(rim>0.35)x.fillStyle='rgba(207,238,255,'+Math.min(1,a+.15)+')';
+      x.fillText(ch,cx,cy);
+    }
+  }
+  // PoPs: project lon/lat (deg) to screen
+  const pops=[['FRA',8.5,50.1,'11 ms','r'],['LHR',-0.4,51.5,'9 ms','l'],['JFK',-74,40.6,'14 ms','l'],['SIN',103.8,1.3,'16 ms','r'],['GRU',-46.6,-23.5,'22 ms','l'],['NRT',140.4,35.8,'13 ms','r']];
+  const proj=(lo,la)=>{const L=lo*Math.PI/180,P=la*Math.PI/180;let X=Math.cos(P)*Math.sin(L),Y=-Math.sin(P),Z=Math.cos(P)*Math.cos(L);
+    // inverse rotation: shift lon by -ROT
+    const sx=X*cosr-Z*sinr,sz=X*sinr+Z*cosr; return [CX+sx*R,CY+Y*R,sz];};
+  const lab=document.getElementById('labels');
+  const pts=[];
+  pops.forEach(p=>{const q=proj(p[1],p[2]);pts.push(q);
+    if(q[2]<0.05||q[1]<500||q[1]>740)return;
+    x.fillStyle='#ffc46b';x.shadowColor='#ffc46b';x.shadowBlur=14;x.beginPath();x.arc(q[0],q[1],4,0,7);x.fill();
+    x.shadowBlur=0;x.strokeStyle='rgba(255,196,107,.5)';x.lineWidth=1;x.beginPath();x.arc(q[0],q[1],11,0,7);x.stroke();
+    const d=document.createElement('div');d.className='lab '+(p[4]==='r'?'':'r');d.innerHTML='<b>'+p[0]+'</b>'+p[3];
+    d.style.top=(q[1]-8)+'px';
+    if(p[4]==='r')d.style.left=(q[0]+30)+'px'; else d.style.right=(W-q[0]+30)+'px';
+    lab.appendChild(d);
+  });
+  // arcs between visible pops
+  x.strokeStyle='rgba(255,196,107,.45)';x.lineWidth=1;x.setLineDash([3,4]);
+  [[0,1],[1,2],[0,3],[3,5],[0,5]].forEach(([a,b])=>{const A=pts[a],B=pts[b];if(A[2]<0.05||B[2]<0.05)return;
+    const mx=(A[0]+B[0])/2,my=Math.min(A[1],B[1])-70-Math.abs(A[0]-B[0])*0.12;x.beginPath();x.moveTo(A[0],A[1]);x.quadraticCurveTo(mx,my,B[0],B[1]);x.stroke();});
+}
+(document.fonts&&document.fonts.load?Promise.all([document.fonts.load('500 12px "DM Mono"'),document.fonts.ready]).then(draw,draw):draw());
+</script>
+</body>
+</html>

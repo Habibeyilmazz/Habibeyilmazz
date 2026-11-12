@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Meridian Pane — Private Wealth</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: wealth literally layered. Left copy; right a stack of tilted frosted glass panes (allocation, performance, holdings) over a deep teal ocean gradient */
+:root{--deep:#04191d;--teal:#0b3b42;--sea:#13696f;--foam:#bff0e8;--amber:#f2b866;--text:#e9f4f1;--mut:#8fb2ad;--pane:rgba(190,240,232,.09);--edge:rgba(190,240,232,.28);
+--serif:'Fraunces',Georgia,serif;--sans:'Outfit','Helvetica Neue',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--deep);color:var(--text);font-family:var(--sans)}
+.sea{position:absolute;inset:0;background:radial-gradient(900px 600px at 80% 40%,#13767a 0%,rgba(19,118,122,0) 60%),radial-gradient(600px 500px at 62% 100%,#0e4a50 0%,transparent 70%),radial-gradient(500px 400px at 0% 0%,#0b3138,transparent 70%),var(--deep)}
+.orb{position:absolute;border-radius:50%}
+.o1{width:210px;height:210px;left:1050px;top:84px;background:radial-gradient(circle at 35% 30%,#ffd9a0,#f2b866 45%,#c56f2a);filter:blur(1px);box-shadow:0 0 120px rgba(242,184,102,.35)}
+.o2{width:200px;height:200px;left:620px;top:520px;background:radial-gradient(circle at 35% 30%,#6fe0d3,#13767a 60%,#0b3b42);box-shadow:0 0 100px rgba(111,224,211,.25)}
+nav{position:absolute;left:56px;right:56px;top:34px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+.logo{font-family:var(--serif);font-size:24px;font-weight:400;letter-spacing:.01em;display:flex;align-items:center;gap:12px}
+.logo svg{display:block}
+.menu{display:flex;gap:34px;font-size:14px;font-weight:400;color:var(--mut);letter-spacing:.04em}
+.nb{font-size:14px;padding:11px 22px;border:1px solid var(--edge);border-radius:99px;background:rgba(190,240,232,.06);backdrop-filter:blur(10px)}
+.hero{position:absolute;left:56px;top:158px;width:520px;z-index:4}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--amber);display:flex;align-items:center;gap:14px}
+.eyebrow:before{content:"";width:36px;height:1px;background:var(--amber)}
+h1{font-family:var(--serif);font-weight:300;font-size:74px;line-height:1;letter-spacing:-.03em;margin:26px 0 24px;text-wrap:balance}
+h1 em{font-style:italic;font-weight:300;color:var(--foam)}
+p.l{font-size:18px;line-height:1.6;color:var(--mut);font-weight:300;max-width:430px}
+.btns{display:flex;gap:14px;margin-top:34px;font-size:15px;font-weight:500;align-items:center}
+.btns .a{background:var(--amber);color:#2a1a05;padding:16px 28px;border-radius:99px}
+.btns .b{color:var(--foam);display:flex;align-items:center;gap:10px}
+.foot{position:absolute;left:56px;bottom:34px;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);display:flex;gap:40px;z-index:4}
+.foot b{display:block;font-family:var(--serif);font-weight:400;font-size:28px;letter-spacing:0;color:var(--text);text-transform:none;margin-bottom:4px}
+.pane{position:absolute;border-radius:26px;background:var(--pane);border:1px solid var(--edge);backdrop-filter:blur(22px) saturate(1.3);-webkit-backdrop-filter:blur(22px) saturate(1.3);box-shadow:0 1px 0 rgba(255,255,255,.25) inset,0 40px 70px -30px rgba(0,0,0,.6);padding:24px 26px;transform:perspective(1600px) rotateY(-14deg) rotateX(4deg)}
+.pn{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut)}
+.pa{left:700px;top:112px;width:520px;height:236px;z-index:1}
+.pb{left:748px;top:322px;width:480px;height:206px;z-index:2;background:rgba(190,240,232,.12)}
+.pc{left:710px;top:500px;width:520px;height:226px;z-index:3;background:rgba(10,50,56,.55)}
+.row{display:flex;justify-content:space-between;align-items:center}
+.val{font-family:var(--serif);font-weight:300;font-size:40px;letter-spacing:-.02em}
+.val small{font-family:var(--sans);font-size:13px;color:#7ee6bd;margin-left:10px;letter-spacing:.02em}
+.h{display:flex;justify-content:space-between;font-size:14px;padding:11px 0;border-top:1px solid rgba(190,240,232,.14)}
+.h:first-of-type{margin-top:12px}
+.h span:last-child{font-variant-numeric:tabular-nums;color:var(--foam)}
+.h i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:12px}
+</style></head><body>
+<div class="sea"></div><div class="orb o1"></div><div class="orb o2"></div>
+<nav><div class="logo"><svg width="28" height="28" viewBox="0 0 28 28" fill="none" stroke="#bff0e8" stroke-width="1.2"><circle cx="14" cy="14" r="12.5"/><ellipse cx="14" cy="14" rx="5" ry="12.5"/><path d="M1.5 14H26.5"/></svg>Meridian Pane</div>
+<div class="menu"><span>Philosophy</span><span>Portfolios</span><span>Family office</span><span>Insights</span></div>
+<span class="nb">Request an introduction</span></nav>
+
+<section class="hero">
+ <div class="eyebrow">Private wealth, in layers</div>
+ <h1>See every layer of what you <em>own.</em></h1>
+ <p class="l">Property, public markets, private holdings and cash, brought into one translucent view that finally lets you look through your own balance sheet.</p>
+ <div class="btns"><span class="a">Book a private demo</span><span class="b">Read the philosophy <svg width="18" height="10" viewBox="0 0 18 10" fill="none" stroke="#bff0e8"><path d="M0 5H16M12 1l4 4-4 4"/></svg></span></div>
+</section>
+<div class="foot"><div><b>$38bn</b>under advisement</div><div><b>212</b>family offices</div><div><b>Since 2009</b>independent</div></div>
+
+<div class="pane pa">
+ <div class="row"><span class="pn">Allocation</span><span class="pn">Total · USD</span></div>
+ <div style="display:flex;gap:30px;align-items:center;margin-top:14px">
+  <svg viewBox="0 0 120 120" width="120" height="120"><g fill="none" stroke-width="10"><circle cx="60" cy="60" r="48" stroke="rgba(190,240,232,.12)"/><circle cx="60" cy="60" r="48" stroke="#bff0e8" stroke-dasharray="132 302" transform="rotate(-90 60 60)"/><circle cx="60" cy="60" r="48" stroke="#f2b866" stroke-dasharray="78 302" stroke-dashoffset="-136" transform="rotate(-90 60 60)"/><circle cx="60" cy="60" r="48" stroke="#6fe0d3" stroke-dasharray="52 302" stroke-dashoffset="-218" transform="rotate(-90 60 60)"/></g></svg>
+  <div><div class="val">$214.6M</div><div style="font-size:13px;color:var(--mut);margin-top:8px;line-height:1.6">44% Public · 26% Real estate<br>17% Private · 13% Cash</div></div>
+ </div>
+</div>
+
+<div class="pane pb">
+ <div class="row"><span class="pn">Performance · 5 yr</span><span class="val" style="font-size:26px">+8.7%<small>annualised</small></span></div>
+ <svg viewBox="0 0 430 110" width="430" height="86" preserveAspectRatio="none" style="margin-top:6px;display:block">
+  <defs><linearGradient id="f" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#bff0e8" stop-opacity=".35"/><stop offset="1" stop-color="#bff0e8" stop-opacity="0"/></linearGradient></defs>
+  <g stroke="rgba(190,240,232,.14)"><path d="M0 20H430M0 55H430M0 90H430"/></g>
+  <path d="M0 88 C30 84 50 70 80 74 S120 90 150 66 190 50 220 56 260 30 300 38 350 18 430 10 V110 H0Z" fill="url(#f)"/>
+  <path d="M0 88 C30 84 50 70 80 74 S120 90 150 66 190 50 220 56 260 30 300 38 350 18 430 10" fill="none" stroke="#bff0e8" stroke-width="2"/>
+  <path d="M0 92 C60 86 120 84 200 74 S330 54 430 44" fill="none" stroke="#f2b866" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <circle cx="430" cy="10" r="4.5" fill="#bff0e8"/>
+ </svg>
+</div>
+
+<div class="pane pc">
+ <span class="pn">Largest holdings</span>
+ <div class="h"><span><i style="background:#bff0e8"></i>Global equity, passive</span><span>$41.2M</span></div>
+ <div class="h"><span><i style="background:#f2b866"></i>Lisbon &amp; Porto residential</span><span>$27.8M</span></div>
+ <div class="h"><span><i style="background:#6fe0d3"></i>Helix Biotech Fund III</span><span>$18.4M</span></div>
+ <div class="h"><span><i style="background:#8fb2ad"></i>Short-duration treasuries</span><span>$16.0M</span></div>
+</div>
+</body></html>

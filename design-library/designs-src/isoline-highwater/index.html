@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Highwater — Flood Risk Intelligence</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: contour field is the whole page (data as texture). Type sits on the quiet left; instrument panels and elevation callouts float on the right */
+:root{--paper:#e3eae4;--forest:#0f3322;--line:#7a9a86;--water:#ff5a1f;--mut:#51675a;--tile:rgba(244,248,244,.86);
+--sans:'Instrument Sans','Helvetica Neue',Arial,sans-serif;--mono:'JetBrains Mono',ui-monospace,Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--paper);color:var(--forest);font-family:var(--sans)}
+canvas{position:absolute;inset:0}
+.wash{position:absolute;inset:0;background:linear-gradient(90deg,var(--paper) 0%,rgba(227,234,228,.94) 30%,rgba(227,234,228,0) 58%)}
+nav{position:absolute;left:56px;right:56px;top:30px;display:flex;justify-content:space-between;align-items:center;font-size:15px;font-weight:500}
+.logo{font-weight:700;font-size:22px;letter-spacing:-.03em;display:flex;align-items:center;gap:10px}
+.logo svg{display:block}
+.menu{display:flex;gap:30px;color:var(--mut)}
+.nb{background:var(--forest);color:#f1f7f2;padding:12px 20px;border-radius:8px;font-weight:600;font-size:14px}
+.hero{position:absolute;left:56px;top:150px;width:560px}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.eyebrow{color:var(--water);display:flex;align-items:center;gap:10px}
+.eyebrow i{width:18px;height:2px;background:var(--water)}
+h1{font-size:76px;line-height:.95;letter-spacing:-.05em;font-weight:600;margin:24px 0 24px;text-wrap:balance}
+h1 span{color:var(--water)}
+p.l{font-size:19px;line-height:1.5;color:var(--mut);max-width:450px}
+.btns{display:flex;gap:12px;margin-top:32px;font-weight:600;font-size:15px}
+.btns .a{background:var(--water);color:#fff;padding:16px 24px;border-radius:8px}
+.btns .b{border:1.5px solid var(--forest);padding:14.5px 22px;border-radius:8px}
+.panel{position:absolute;background:var(--tile);backdrop-filter:blur(8px);border:1px solid rgba(15,51,34,.18);border-radius:6px;padding:16px 18px}
+.pn{left:884px;top:112px;width:340px}
+.k{color:var(--mut)}
+.big{font-size:44px;font-weight:600;letter-spacing:-.04em;line-height:1;margin-top:10px}
+.big small{font-size:15px;font-weight:500;letter-spacing:0;color:var(--mut);margin-left:6px}
+.bars{display:flex;align-items:flex-end;gap:4px;height:50px;margin-top:14px}
+.bars i{flex:1;background:var(--forest);opacity:.25}
+.bars i.w{background:var(--water);opacity:1}
+.pl{left:884px;top:360px;width:340px}
+.rowk{display:flex;justify-content:space-between;font-size:14px;padding:9px 0;border-bottom:1px solid rgba(15,51,34,.12)}
+.rowk:last-child{border:0;padding-bottom:0}
+.rowk b{font-family:var(--mono);font-weight:500;font-size:13px}
+.call{position:absolute;font-family:var(--mono);font-size:11px;color:var(--forest);background:var(--paper);padding:3px 7px;border:1px solid rgba(15,51,34,.35);letter-spacing:.04em}
+.pin{position:absolute;width:12px;height:12px;border-radius:50%;background:var(--water);box-shadow:0 0 0 6px rgba(255,90,31,.25)}
+.legend{position:absolute;left:56px;bottom:36px;display:flex;gap:34px}
+.legend div b{display:block;font-size:30px;font-weight:600;letter-spacing:-.04em;color:var(--forest)}
+.legend div{font-size:12px;color:var(--mut);font-family:var(--mono);text-transform:uppercase;letter-spacing:.06em}
+.scale{position:absolute;right:56px;bottom:36px;display:flex;align-items:center;gap:12px;color:var(--forest)}
+.scale i{display:block;width:120px;height:8px;border:1.5px solid var(--forest);border-top:0}
+</style></head><body>
+<canvas id="c" width="1280" height="800"></canvas>
+<div class="wash"></div>
+<nav><div class="logo"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#0f3322" stroke-width="1.6"><circle cx="15" cy="15" r="13"/><circle cx="15" cy="15" r="8.5"/><circle cx="15" cy="15" r="4" fill="#ff5a1f" stroke="none"/></svg>Highwater</div>
+<div class="menu"><span>Platform</span><span>Hazard maps</span><span>Insurers</span><span>Municipal</span><span>Methodology</span></div>
+<span class="nb">Check a postcode</span></nav>
+
+<section class="hero">
+ <div class="mono eyebrow"><i></i>Parametric flood risk, 10 m resolution</div>
+ <h1>Know the <span>water</span> before it knows you.</h1>
+ <p class="l">Highwater models rainfall, river and surge on every metre of terrain, so insurers and cities can price and plan for the next hundred-year flood.</p>
+ <div class="btns"><span class="a">Explore the risk map</span><span class="b">For underwriters</span></div>
+</section>
+<div class="legend"><div><b>2.4bn</b>terrain cells modelled</div><div><b>1 in 100</b>return period maps</div><div><b>±0.3 m</b>vertical accuracy</div></div>
+
+<div class="panel pn">
+ <div class="mono k">Selected cell · 51.4821 N, 0.0049 W</div>
+ <div class="big">3.2<small>m above sea</small></div>
+ <div class="bars"><i style="height:16%"></i><i style="height:22%"></i><i style="height:18%"></i><i style="height:30%"></i><i style="height:26%"></i><i style="height:40%"></i><i style="height:48%"></i><i style="height:64%"></i><i class="w" style="height:100%"></i><i class="w" style="height:76%"></i><i style="height:34%"></i><i style="height:24%"></i></div>
+ <div class="mono k" style="display:flex;justify-content:space-between;margin-top:8px;font-size:10px"><span>Jan</span><span>Peak Oct</span><span>Dec</span></div>
+</div>
+<div class="panel pl">
+ <div class="mono k" style="margin-bottom:8px">Flood depth at this address</div>
+ <div class="rowk"><span>1 in 20 years</span><b>0.00 m</b></div>
+ <div class="rowk"><span>1 in 100 years</span><b style="color:var(--water)">0.46 m</b></div>
+ <div class="rowk"><span>1 in 1000 years</span><b style="color:var(--water)">1.12 m</b></div>
+ <div class="rowk"><span>Insurer rating</span><b>BAND C</b></div>
+</div>
+<span class="pin" id="pin"></span><span class="call" id="cl">ELEV 3.2 m</span>
+<div class="scale mono"><i></i>0 — 500 m</div>
+
+<script>
+const cv=document.getElementById('c'),ctx=cv.getContext('2d');
+const W=1280,H=800,S=8,NX=W/S+1,NY=H/S+1;
+// terrain: river valley running diagonally + hills
+function rnd(i){const x=Math.sin(i*127.1)*43758.5453;return x-Math.floor(x)}
+const bumps=[];for(let i=0;i<46;i++)bumps.push([rnd(i*3+1)*1500-100,rnd(i*3+2)*950-80,45+rnd(i*3+3)*150,(rnd(i+9)*2-1)*1]);
+function f(x,y){
+ let v=0;for(const b of bumps){const dx=x-b[0],dy=y-b[1];v+=b[3]*Math.exp(-(dx*dx+dy*dy)/(2*b[2]*b[2]))}
+ v+=0.18*Math.sin(x*.012+y*.008)+0.12*Math.sin(x*.021-y*.017+1.3);
+ // river valley
+ const d=(x*0.55-y*0.84+240);const rv=Math.abs(d-Math.sin(x*.006)*70);
+ v-=1.4*Math.exp(-(rv*rv)/(2*55*55));
+ return v;
+}
+const F=[];for(let j=0;j<NY;j++){F[j]=[];for(let i=0;i<NX;i++)F[j][i]=f(i*S,j*S)}
+function lerp(a,b,l){return (l-a)/(b-a)}
+function march(level){
+ const segs=[];
+ for(let j=0;j<NY-1;j++)for(let i=0;i<NX-1;i++){
+  const tl=F[j][i],tr=F[j][i+1],br=F[j+1][i+1],bl=F[j+1][i];
+  const c=(tl>level?8:0)|(tr>level?4:0)|(br>level?2:0)|(bl>level?1:0);
+  if(c===0||c===15)continue;
+  const x=i*S,y=j*S;
+  const E=[ [x+S*lerp(tl,tr,level),y],[x+S,y+S*lerp(tr,br,level)],[x+S*lerp(bl,br,level),y+S],[x,y+S*lerp(tl,bl,level)] ];
+  const T={1:[[3,2]],2:[[2,1]],3:[[3,1]],4:[[0,1]],5:[[0,3],[2,1]],6:[[0,2]],7:[[0,3]],8:[[0,3]],9:[[0,2]],10:[[0,1],[3,2]],11:[[0,1]],12:[[3,1]],13:[[2,1]],14:[[3,2]]}[c];
+  for(const [a,b] of T)segs.push([E[a],E[b]]);
+ }
+ return segs;
+}
+const lo=-1.6,hi=1.8,N=44;
+for(let k=0;k<=N;k++){
+ const level=lo+(hi-lo)*k/N;
+ const segs=march(level);
+ const major=k%5===0, flood=level<-0.55&&level>-0.95;
+ ctx.beginPath();for(const [a,b] of segs){ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1])}
+ ctx.strokeStyle=flood?'#ff5a1f':'#6f917c';ctx.globalAlpha=flood?0.95:(major?0.85:0.5);ctx.lineWidth=flood?1.6:(major?1.4:0.8);ctx.stroke();
+}
+// flood-zone fill: cells below -0.9
+ctx.globalAlpha=.16;ctx.fillStyle='#ff5a1f';ctx.filter='blur(7px)';
+for(let j=0;j<NY;j++)for(let i=0;i<NX;i++){if(F[j][i]<-0.95)ctx.fillRect(i*S-S/2,j*S-S/2,S,S)}
+ctx.filter='none';ctx.globalAlpha=1;
+// find a pin on the flood edge near the right
+let best=null;for(let j=40;j<95;j++)for(let i=85;i<110;i++){const v=F[j][i];if(Math.abs(v+0.72)<0.02&&!best)best=[i*S,j*S]}
+best=[588,548];
+const pin=document.getElementById('pin'),cl=document.getElementById('cl');
+pin.style.left=(best[0]-6)+'px';pin.style.top=(best[1]-6)+'px';cl.style.left=(best[0]+14)+'px';cl.style.top=(best[1]-30)+'px';
+</script>
+</body></html>

@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Solenne Meridian Charters</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Hanken+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: a tall arched "window" onto a dawn sea, centre-right; headline and itinerary hang either side on deep teal */
+:root{
+  --abyss:#0b2a31; --teal:#124650; --lagoon:#7fc3c0; --blush:#f5c9b2; --pearl:#f7f0e6; --coral:#ee8f6f;
+  --display:'Gilda Display','Cormorant Garamond','Times New Roman',serif;
+  --sans:'Hanken Grotesk','Inter','Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--abyss);color:var(--pearl);font-family:var(--sans)}
+body{background:radial-gradient(ellipse 620px 560px at 720px 420px,#17565f 0%,#0e3640 50%,#0b2a31 100%)}
+header{position:absolute;top:40px;left:64px;right:64px;display:flex;justify-content:space-between;align-items:center;font-size:11px;letter-spacing:.26em;text-transform:uppercase;font-weight:400}
+header .logo{font-family:var(--display);font-size:26px;letter-spacing:.2em}
+header nav{display:flex;gap:38px;opacity:.85}
+header .btn{border:1px solid rgba(247,240,230,.55);padding:12px 22px}
+.arch{position:absolute;left:520px;top:128px;width:400px;height:700px}
+.arch svg{width:100%;height:100%;display:block;overflow:visible}
+h1{position:absolute;left:64px;top:228px;width:440px;font-family:var(--display);font-weight:400;font-size:84px;line-height:1.02;letter-spacing:-.01em}
+h1 span{color:var(--blush)}
+.copy{position:absolute;left:68px;top:508px;width:330px;font-size:15px;line-height:1.7;font-weight:300;color:#bfd3d3}
+.cta{position:absolute;left:68px;top:630px;display:flex;align-items:center;gap:22px}
+.cta a{background:var(--pearl);color:var(--abyss);padding:18px 28px;font-size:11px;letter-spacing:.26em;text-transform:uppercase;font-weight:500}
+.cta small{font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.7;line-height:1.6}
+.itin{position:absolute;left:984px;top:232px;width:232px;font-size:11px;letter-spacing:.2em;text-transform:uppercase}
+.itin h4{font-weight:500;letter-spacing:.3em;color:var(--blush);padding-bottom:14px;border-bottom:1px solid rgba(247,240,230,.25);margin-bottom:6px}
+.itin li{list-style:none;display:grid;grid-template-columns:38px 1fr auto;gap:6px;padding:14px 0;border-bottom:1px solid rgba(247,240,230,.14);align-items:baseline}
+.itin li i{font-style:normal;font-family:var(--display);font-size:17px;letter-spacing:0;color:var(--lagoon)}
+.itin li b{font-weight:400}
+.itin li em{font-style:normal;opacity:.55;font-size:10px;letter-spacing:.14em}
+.sun{position:absolute;left:984px;bottom:56px;width:232px;font-size:11px;letter-spacing:.22em;text-transform:uppercase;line-height:2}
+.sun b{display:block;font-family:var(--display);font-weight:400;font-size:40px;letter-spacing:0;text-transform:none;color:var(--pearl);line-height:1.1}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">SOLENNE</div>
+  <nav><span>Yachts</span><span>Itineraries</span><span>Crew</span><span>Private Islands</span></nav>
+  <div class="btn">Enquire</div>
+</header>
+
+<h1>Sail where<br>the light<br><span>lingers.</span></h1>
+<p class="copy">Crewed sloops and motor yachts for the Amalfi coast and the Cyclades. Seven nights, one captain, no fixed timetable.</p>
+<div class="cta"><a>Plan a charter</a><small>From €38,000<br>per week, crew incl.</small></div>
+
+<div class="arch">
+<svg viewBox="0 0 400 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="clip"><path d="M0 700 V200 A200 200 0 0 1 400 200 V700Z"/></clipPath>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f1a98f"/><stop offset=".25" stop-color="#f8cdb5"/><stop offset=".48" stop-color="#fdeccc"/>
+    </linearGradient>
+    <radialGradient id="sunG" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fffbe9"/><stop offset=".3" stop-color="#ffe8bd" stop-opacity=".9"/><stop offset="1" stop-color="#ffe0b0" stop-opacity="0"/></radialGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8e6dc"/><stop offset=".12" stop-color="#8fcac6"/><stop offset=".55" stop-color="#2f8a90"/><stop offset="1" stop-color="#0f4b56"/>
+    </linearGradient>
+    <linearGradient id="isle" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b9a6a8"/><stop offset="1" stop-color="#8fa5ad"/></linearGradient>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="400" height="700" fill="url(#sky)"/>
+    <circle cx="230" cy="330" r="190" fill="url(#sunG)"/>
+    <circle cx="230" cy="336" r="34" fill="#fffdf3"/>
+    <!-- far islands -->
+    <path d="M0 372 C40 356 70 350 100 360 C118 366 130 372 150 372 Z" fill="url(#isle)" opacity=".85"/>
+    <path d="M290 372 C320 362 350 352 372 358 C384 361 392 366 400 369 L400 372Z" fill="url(#isle)" opacity=".7"/>
+    <rect y="372" width="400" height="330" fill="url(#sea)"/>
+    <g id="glit"></g>
+    <!-- sloop -->
+    <g transform="translate(112 372)">
+      <path d="M0 0 L58 0 L50 9 L8 9Z" fill="#0e2a31"/>
+      <path d="M29 -2 L29 -92 L8 -6Z" fill="#fff8ec"/>
+      <path d="M32 -2 L32 -78 L58 -4Z" fill="#fdeadb"/>
+      <rect x="29" y="-95" width="1.4" height="94" fill="#0e2a31" opacity=".6"/>
+      <path d="M2 11 L56 11" stroke="#fff" opacity=".35"/>
+    </g>
+  </g>
+  <path d="M0 700 V200 A200 200 0 0 1 400 200 V700" fill="none" stroke="#f7f0e6" stroke-opacity=".9" stroke-width="1"/>
+  <path d="M-14 700 V200 A214 214 0 0 1 414 200 V700" fill="none" stroke="#f7f0e6" stroke-opacity=".32" stroke-width="1"/>
+  <path d="M-28 700 V200 A228 228 0 0 1 428 200 V700" fill="none" stroke="#f7f0e6" stroke-opacity=".14" stroke-width="1"/>
+</svg>
+</div>
+
+<ul class="itin" style="list-style:none">
+  <h4>Seven nights</h4>
+  <li><i>1</i><b>Amalfi</b><em>40°38′N</em></li>
+  <li><i>2</i><b>Positano</b><em>40°37′N</em></li>
+  <li><i>3</i><b>Capri</b><em>40°33′N</em></li>
+  <li><i>5</i><b>Ponza</b><em>40°55′N</em></li>
+  <li><i>7</i><b>Procida</b><em>40°45′N</em></li>
+</ul>
+<div class="sun"><b>06:12</b>First light, 14 June<br>Wind 8 kn from the west</div>
+
+<script>
+const g=document.getElementById('glit'),ns='http://www.w3.org/2000/svg';
+let s=3;const r=()=>{s=(s*16807)%2147483647;return s/2147483647};
+for(let y=376;y<700;y+=2.6){
+  const t=(y-372)/330;
+  const spread=14+t*84;           // reflection column widens toward the viewer
+  const n=Math.floor(1+t*3.4);
+  for(let k=0;k<n;k++){
+    const w=(3+r()*(10+t*34));
+    const x=230+(r()-.5)*spread*2-w/2;
+    const e=document.createElementNS(ns,'rect');
+    e.setAttribute('x',x.toFixed(1));e.setAttribute('y',y.toFixed(1));e.setAttribute('width',w.toFixed(1));e.setAttribute('height',(.7+t*1.2).toFixed(1));
+    e.setAttribute('fill','#fff6dc');e.setAttribute('opacity',(.9-t*.45).toFixed(2));
+    g.appendChild(e);
+  }
+}
+// dark ripples
+for(let y=380;y<700;y+=5){const t=(y-372)/330;const w=20+r()*90*t+10;const e=document.createElementNS(ns,'rect');e.setAttribute('x',(r()*400-w/2).toFixed(1));e.setAttribute('y',y);e.setAttribute('width',w.toFixed(1));e.setAttribute('height',.8);e.setAttribute('fill','#0b3a44');e.setAttribute('opacity',.25);g.appendChild(e)}
+</script>
+</body>
+</html>

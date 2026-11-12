@@ -1,0 +1,251 @@
+{
+  "category": {
+    "id": "screen-heresy",
+    "name": "Screen Heresy",
+    "tagline": "rule-breaking interfaces x pixel and print craft",
+    "description": "Experimental sites that treat the screen as a medium to bend: fake operating systems, hand-drawn pixel worlds, risograph overprint and code-drawn art. Use it when the brand is the point of view, such as studios, festivals, games and artists.",
+    "vibes": [
+      "experimental",
+      "artistic",
+      "bold",
+      "retro"
+    ],
+    "accent": "#e8453c"
+  },
+  "designs": [
+    {
+      "id": "dialog-box-studio",
+      "name": "Dialog Box Studio",
+      "descriptor": "os-window nostalgia x interface studio",
+      "summary": "A teal Windows 95 desktop with icon column, beveled windows, a project folder, a polite fatal-error dialog and a working taskbar, all as the studio's homepage.",
+      "keywords": [
+        "beveled grey window chrome",
+        "navy gradient title bars",
+        "desktop icons and taskbar",
+        "error dialog as CTA",
+        "pixel UI font with heavy sans headline",
+        "dithered teal desktop"
+      ],
+      "vibes": [
+        "retro",
+        "playful",
+        "experimental",
+        "friendly"
+      ],
+      "best_for": [
+        "design studios",
+        "portfolios",
+        "software agencies",
+        "indie tools"
+      ],
+      "palette": [
+        "#008080",
+        "#c0c0c0",
+        "#000080",
+        "#1084d0",
+        "#c00000",
+        "#ffff00"
+      ],
+      "fonts": {
+        "display": "Archivo Black",
+        "body": "Tahoma",
+        "mono": "Pixelify Sans"
+      },
+      "image": "assets/designs/dialog-box-studio.png",
+      "mockup": "designs-src/dialog-box-studio/index.html",
+      "references": [
+        {
+          "title": "Retro and old-computer UI collection (Windows 95, Y2K)",
+          "url": "https://dribbble.com/alinekfernandes/collections/6753361-Retr",
+          "source": "dribbble"
+        },
+        {
+          "title": "15 classic 90s websites and modern sites keeping the aesthetic alive",
+          "url": "https://www.framer.com/blog/90s-websites/",
+          "source": "other"
+        },
+        {
+          "title": "Portfolio built as a Windows 95 desktop",
+          "url": "https://feedme.design/this-redditors-portfolio-is-a-blast-from-windows-95-past",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Make a .bevel class from four inset box-shadows (black and white outer, grey and light-grey inner) and a .sunk class that reverses them. Title bars are a 90deg navy-to-sky gradient with tiny bevelled control buttons. Position windows absolutely and let them overlap with z-index. Draw icons as 16x16 SVG symbols with shape-rendering:crispEdges, and add a taskbar with a Start button and a sunken tray. Use a pixel font for UI labels and a very heavy sans for the headline with a stacked white and grey text-shadow."
+    },
+    {
+      "id": "pixel-orchard",
+      "name": "Windfall",
+      "descriptor": "pixel art x cozy game",
+      "summary": "A full-screen 4x pixel-art dusk orchard with a striped sun and dithered sky, a chunky stacked-shadow logo, an RPG menu with a cursor and a portrait dialogue box.",
+      "keywords": [
+        "320x200 canvas scaled 4x",
+        "dithered banded sky",
+        "chunky stacked-shadow logo",
+        "RPG menu with arrow cursor",
+        "portrait dialogue box",
+        "pixel heart and coin HUD"
+      ],
+      "vibes": [
+        "retro",
+        "playful",
+        "friendly",
+        "warm"
+      ],
+      "best_for": [
+        "indie games",
+        "game studios",
+        "apps with a cozy tone",
+        "festival pages"
+      ],
+      "palette": [
+        "#1d2b53",
+        "#ff77a8",
+        "#ffec27",
+        "#ffa300",
+        "#1d7a3a",
+        "#fff1e8"
+      ],
+      "fonts": {
+        "display": "Press Start 2P",
+        "body": "VT323",
+        "mono": "VT323"
+      },
+      "image": "assets/designs/pixel-orchard.png",
+      "mockup": "designs-src/pixel-orchard/index.html",
+      "references": [
+        {
+          "title": "Let Pixels Breathe on Awwwards",
+          "url": "https://www.awwwards.com/sites/let-pixels-breathe",
+          "source": "awwwards"
+        },
+        {
+          "title": "Pixel Hollow: an indie studio page as a playable 8-bit scene",
+          "url": "https://kombai.com/gallery/inspirations/pixelhollow/",
+          "source": "other"
+        },
+        {
+          "title": "Pixel effect inspiration on Awwwards",
+          "url": "https://www.awwwards.com/inspiration/pixel-effect",
+          "source": "awwwards"
+        }
+      ],
+      "how_to_build": "Paint the whole scene on a 320x200 canvas with fillRect helpers (sky bands with checker dither rows, disc() for sun and tree canopies, sprites from string maps) and stretch it to 1280x800 with image-rendering:pixelated. Overlay HTML UI: panels use four hard 4px box-shadows as a pixel border, the logo stacks several offset text-shadows in two oranges and navy, and the menu cursor is a CSS triangle. Keep to a 15-colour palette so every layer feels like one console."
+    },
+    {
+      "id": "misregister-press",
+      "name": "Overprint",
+      "descriptor": "risograph x kinetic type",
+      "summary": "A festival site for a print biennial: two huge condensed words printed in pink and blue plates that miss each other, halftone discs, a taped yellow marquee and printer's marks.",
+      "keywords": [
+        "misregistered pink and blue plates",
+        "multiply overprint",
+        "halftone dot circles",
+        "giant condensed type",
+        "marquee tape band",
+        "registration marks and colour swatches"
+      ],
+      "vibes": [
+        "bold",
+        "artistic",
+        "experimental",
+        "youthful"
+      ],
+      "best_for": [
+        "festivals",
+        "print studios",
+        "galleries",
+        "exhibitions"
+      ],
+      "palette": [
+        "#f3f2ec",
+        "#ff4fb0",
+        "#2f8cff",
+        "#ffe21a",
+        "#14131a"
+      ],
+      "fonts": {
+        "display": "Big Shoulders Display",
+        "body": "Hanken Grotesk",
+        "mono": "Hanken Grotesk"
+      },
+      "image": "assets/designs/misregister-press.png",
+      "mockup": "designs-src/misregister-press/index.html",
+      "references": [
+        {
+          "title": "Risograph work on Behance (Mono Riso Print)",
+          "url": "https://www.behance.net/gallery/81273315/Mono-Riso-Print",
+          "source": "behance"
+        },
+        {
+          "title": "Designer spotlight: kinetic typography and print texture",
+          "url": "https://tympanus.net/codrops/2025/08/29/designer-spotlight-enrico-gisana/",
+          "source": "other"
+        },
+        {
+          "title": "Risotto: 400 printed postcards (Colossal)",
+          "url": "https://www.thisiscolossal.com/2026/04/gabriella-marcella-risotto/",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Render each giant word twice in two ink colours, offset by 10 to 20 pixels, both with mix-blend-mode:multiply so the overlap darkens like real overprint. Generate halftone discs on a canvas by placing dots on a rotated grid and scaling dot radius by a gradient function, then multiply the canvas over the paper. Add a rotated yellow marquee animated with translateX(-50%), a row of ink swatches, registration target SVGs and an SVG noise grain on top."
+    },
+    {
+      "id": "plotter-theory",
+      "name": "Plotter Theory",
+      "descriptor": "anti-design x generative drawing",
+      "summary": "A deliberately raw page: default Times, blue underlined links, a giant tight headline in difference blend colliding with a dense pen-plotter flow field and small generative thumbnails.",
+      "keywords": [
+        "flow-field line drawing",
+        "difference-blend headline",
+        "default serif and blue links",
+        "mono edition captions",
+        "truchet, packing and wave thumbnails",
+        "off-grid collisions"
+      ],
+      "vibes": [
+        "experimental",
+        "bold",
+        "minimal",
+        "serious"
+      ],
+      "best_for": [
+        "generative artists",
+        "creative coders",
+        "print editions",
+        "studios"
+      ],
+      "palette": [
+        "#ffffff",
+        "#000000",
+        "#0000ee",
+        "#ff2d12",
+        "#fff200"
+      ],
+      "fonts": {
+        "display": "Times New Roman",
+        "body": "Times New Roman",
+        "mono": "Courier New"
+      },
+      "image": "assets/designs/plotter-theory.png",
+      "mockup": "designs-src/plotter-theory/index.html",
+      "references": [
+        {
+          "title": "Coded generative design on Awwwards",
+          "url": "https://www.awwwards.com/inspiration/coded-generative-design-pizza-punk-creative-coding",
+          "source": "awwwards"
+        },
+        {
+          "title": "Generative landing page with WebGL (DEV Community)",
+          "url": "https://dev.to/georgedoescode/create-a-generative-landing-page-webgl-powered-background-animation-3nl0",
+          "source": "other"
+        },
+        {
+          "title": "The potential of generative art in web design",
+          "url": "https://purpleplanet.com/blog/potential-of-generative-art-in-web-design/",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Draw the artwork with a canvas: seeded value noise, thousands of short strokes that follow angle = fbm(x,y) times a few pi, a clear zone in the middle filled with concentric rings, and about 7 percent of strokes in one signal red. Set the headline in white with mix-blend-mode:difference and letter-spacing around -0.065em so it inverts over the lines. Keep the chrome deliberately raw: default serif, unstyled blue links, a plain bordered checkbox, mono captions and a rotated red sticker."
+    }
+  ]
+}

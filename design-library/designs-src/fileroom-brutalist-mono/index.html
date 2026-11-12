@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Fileroom Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: exposed-skeleton brutalism. Thick black cell borders, a 3-column table of boxes, hard offset shadows, default-blue links, one orange slab */
+:root{
+  --bg:#ffffff; --ink:#000000; --grey:#d4d4cf; --orange:#ff4d00; --link:#0000ee; --lime:#c6ff00;
+  --disp:'Archivo Black','Arial Black',sans-serif; --mono:'JetBrains Mono','Courier New',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--bg);color:var(--ink);font-family:var(--mono)}
+.frame{position:absolute;inset:14px;border:4px solid var(--ink);display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:56px 1fr 70px 138px}
+.cell{border:0 solid var(--ink);position:relative;overflow:hidden}
+.top{grid-column:1/-1;display:flex;border-bottom:4px solid var(--ink);font-size:13px;font-weight:700;text-transform:uppercase}
+.top>*{padding:0 20px;display:flex;align-items:center;border-right:4px solid var(--ink)}
+.top .logo{font-family:var(--disp);font-size:24px;letter-spacing:-.02em;padding-right:26px;background:var(--lime)}
+.top .sp{flex:1;border-right:0}
+.top a{color:var(--link);text-decoration:underline}
+.top .go{background:var(--ink);color:#fff;border-right:0;border-left:4px solid var(--ink)}
+.hero{grid-column:1/9;border-right:4px solid var(--ink);padding:22px 28px 0;display:flex;flex-direction:column}
+.hero .tiny{font-size:12px;text-transform:uppercase;display:flex;gap:16px;font-weight:700}
+.hero .tiny span{border:2px solid var(--ink);padding:2px 8px}
+h1{font-family:var(--disp);font-weight:400;font-size:176px;line-height:.82;letter-spacing:-.055em;text-transform:uppercase;margin:16px 0 0 -8px}
+h1 u{text-decoration:none;background:var(--orange);padding:0 10px 0 6px;display:inline-block;transform:translateY(8px)}
+.hero p{margin-top:26px;font-size:15px;line-height:1.5;max-width:560px;font-weight:400}
+.hero p b{background:var(--lime);padding:0 3px}
+.side{grid-column:9/13;display:flex;flex-direction:column}
+.box{border-bottom:4px solid var(--ink);padding:16px 20px;flex:1}
+.box:last-child{border-bottom:0}
+.box h3{font-family:var(--disp);font-weight:400;font-size:22px;text-transform:uppercase;margin-bottom:8px}
+.box.o{background:var(--orange)}
+.box small{font-size:11.5px;display:block;line-height:1.5}
+.num{font-family:var(--disp);font-size:92px;line-height:.9;letter-spacing:-.05em}
+.cta{grid-column:1/13;border-top:4px solid var(--ink);display:flex}
+.cta>*{display:flex;align-items:center;justify-content:center;font-family:var(--disp);text-transform:uppercase;font-size:24px;letter-spacing:-.01em}
+.cta .a{flex:1.3;background:var(--ink);color:#fff;border-right:4px solid var(--ink);gap:12px}
+.cta .b{flex:1;background:#fff;border-right:4px solid var(--ink)}
+.cta .c{flex:1;background:var(--grey)}
+.cta .a::after{content:"\2192"}
+.list{grid-column:1/13;border-top:4px solid var(--ink);display:grid;grid-template-columns:repeat(4,1fr)}
+.list>div{border-right:4px solid var(--ink);padding:14px 18px;font-size:12px;line-height:1.5}
+.list>div:last-child{border-right:0}
+.list h4{font-family:var(--disp);font-weight:400;font-size:18px;text-transform:uppercase;margin-bottom:6px}
+.list a{color:var(--link)}
+.hard{box-shadow:8px 8px 0 var(--ink)}
+.marq{position:absolute;right:20px;bottom:18px;background:#fff;border:3px solid var(--ink);padding:8px 12px;font-size:12px;font-weight:700;transform:rotate(-3deg);box-shadow:5px 5px 0 var(--ink)}
+</style></head><body>
+<div class="frame">
+  <div class="cell top"><div class="logo">FILEROOM</div><div>Index</div><div>Search</div><div>Deposit</div><div>Rules</div><div class="sp"></div><div><a href="#">login.html</a></div><div class="go">Enter &rarr;</div></div>
+  <div class="cell hero">
+    <div class="tiny"><span>v.26.11</span><span>Est. 1994 (on paper)</span><span>No cookies</span></div>
+    <h1>Keep<br>every <u>file.</u></h1>
+    <p>Fileroom is a document archive for architecture offices. <b>Drawings, specs, site photographs</b> and the 4,000 emails nobody wants to read, stored in one boring, searchable place that will outlive your software subscription.</p>
+  </div>
+  <div class="cell side">
+    <div class="box o"><div class="num">2.4M</div><small>PDFs, DWGs and scans indexed. Median search: 0.3 s. No AI summaries. Just the file.</small></div>
+    <div class="box"><h3>How it works</h3><small>1. Drag a folder in.<br>2. We name it sensibly.<br>3. You find it in ten years.</small></div>
+    <div class="box" style="background:var(--grey)"><h3>Price</h3><small>&pound;9 per user per month. Plain text invoice. Cancel by replying &ldquo;stop&rdquo;.</small></div>
+  </div>
+  <div class="cell cta"><div class="a">Start the free trial</div><div class="b">Read the manual</div><div class="c">See a sample archive</div></div>
+  <div class="cell list">
+    <div><h4>Storage</h4>Files stay in open formats. Export everything, any day, as a ZIP. <a href="#">Details</a></div>
+    <div><h4>Search</h4>Full text across scanned drawings, with OCR you can correct by hand. <a href="#">Details</a></div>
+    <div><h4>Access</h4>Per-project folders. No dashboards, no feeds, no &ldquo;engagement&rdquo;. <a href="#">Details</a></div>
+    <div><h4>Support</h4>A human named Dev answers within a working day. <a href="#">dev@fileroom.example</a></div>
+  </div>
+</div>
+<div class="marq">&#9888; best viewed in any browser</div>
+</body></html>

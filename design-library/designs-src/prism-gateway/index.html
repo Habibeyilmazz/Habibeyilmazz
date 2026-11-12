@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Prism — one prompt, every model</title>
+<meta name="viewport" content="width=1280">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: the product metaphor is the hero. A white beam (the prompt) enters a glass prism mid-left and splits into five spectral rays that land on model cards in a right-hand column. Headline sits above the beam. */
+:root{
+  --void:#040405; --white:#f5f5f7; --mute:#8a8a94; --glass:rgba(255,255,255,.07);
+  --r1:#ff5a5f; --r2:#ffb347; --r3:#9be564; --r4:#4fd8ff; --r5:#8f7bff;
+  --display:'Syne','Inter',system-ui,sans-serif; --mono:'Fira Code','DejaVu Sans Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--void)}
+body{font-family:var(--mono);color:var(--white);position:relative}
+svg.scene{position:absolute;inset:0}
+nav{position:absolute;left:56px;right:56px;top:28px;display:flex;align-items:center;gap:34px;font-size:12.5px;z-index:3}
+.logo{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.01em;margin-right:auto;display:flex;align-items:center;gap:10px}
+nav a{color:var(--mute)}
+.btn{background:var(--white);color:#08080a;padding:9px 16px;border-radius:99px;font-weight:500}
+.hero{position:absolute;left:56px;top:150px;width:700px;z-index:3}
+.tag{font-size:11.5px;color:var(--mute);letter-spacing:.06em;margin-bottom:20px;display:flex;gap:10px;align-items:center}
+.tag i{width:8px;height:8px;border-radius:2px;background:linear-gradient(90deg,var(--r1),var(--r3),var(--r5));display:block}
+h1{font-family:var(--display);font-weight:800;font-size:62px;line-height:1.02;letter-spacing:-.04em;white-space:nowrap}
+h1 span{background:linear-gradient(90deg,var(--r1),var(--r2) 25%,var(--r3) 50%,var(--r4) 75%,var(--r5));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{margin-top:20px;font-size:13.5px;line-height:1.75;color:#a5a5af;max-width:440px}
+.cta{margin-top:24px;display:flex;gap:12px;font-size:12.5px}
+.cta .p{background:var(--white);color:#08080a;padding:13px 20px;border-radius:99px;font-weight:500}
+.cta .s{padding:13px 18px;border-radius:99px;border:1px solid #2a2a31;color:var(--white)}
+.model{position:absolute;left:1000px;width:224px;height:52px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:linear-gradient(90deg,rgba(255,255,255,.07),rgba(255,255,255,.02));backdrop-filter:blur(6px);display:flex;align-items:center;gap:12px;padding:0 14px;font-size:12px;z-index:3}
+.model b{width:10px;height:10px;border-radius:50%;flex:none}
+.model span{color:var(--mute);margin-left:auto;font-size:11px}
+.model strong{font-weight:500}
+.stat{position:absolute;left:56px;bottom:30px;display:flex;gap:48px;font-size:11px;color:var(--mute);z-index:3}
+.stat b{display:block;font-family:var(--display);color:var(--white);font-size:26px;font-weight:700;letter-spacing:-.02em;margin-bottom:2px}
+.code{position:absolute;left:380px;bottom:30px;z-index:3;font-size:11.5px;color:#9a9aa6;background:rgba(255,255,255,.04);border:1px solid #232328;border-radius:10px;padding:12px 16px;line-height:1.6}
+.code i{font-style:normal;color:var(--r4)}.code u{text-decoration:none;color:var(--r2)}
+</style>
+</head>
+<body>
+<svg class="scene" width="1280" height="800" viewBox="0 0 1280 800">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".22"/><stop offset=".5" stop-color="#fff" stop-opacity=".04"/><stop offset="1" stop-color="#fff" stop-opacity=".14"/></linearGradient>
+    <linearGradient id="beam" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="1"/></linearGradient>
+    <linearGradient id="ray1" x1="0" x2="1"><stop offset="0" stop-color="#ff5a5f" stop-opacity=".95"/><stop offset="1" stop-color="#ff5a5f" stop-opacity=".95"/></linearGradient>
+    <filter id="glow" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="9"/></filter>
+    <filter id="glow2" x="-20%" y="-50%" width="140%" height="200%"><feGaussianBlur stdDeviation="2.2"/></filter>
+    <radialGradient id="pg" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient>
+    <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#fff" opacity=".07"/></pattern>
+    <mask id="dm"><rect width="1280" height="800" fill="url(#dmg)"/></mask>
+    <radialGradient id="dmg" cx="55%" cy="62%" r="55%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#000"/></radialGradient>
+  </defs>
+  <rect width="1280" height="800" fill="url(#dots)" mask="url(#dm)"/>
+  <g id="rays"></g>
+  <!-- incoming beam -->
+  <g>
+    <rect x="-20" y="573" width="560" height="3" fill="url(#beam)" filter="url(#glow2)"/>
+    <rect x="-20" y="566" width="560" height="17" fill="url(#beam)" opacity=".35" filter="url(#glow)"/>
+    <rect x="200" y="574" width="340" height="1.5" fill="#fff"/>
+  </g>
+  <!-- prism -->
+  <ellipse cx="640" cy="590" rx="240" ry="120" fill="url(#pg)" opacity=".5"/>
+  <polygon points="640,420 520,630 760,630" fill="url(#glass)" stroke="rgba(255,255,255,.7)" stroke-width="1.2" stroke-linejoin="round"/>
+  <polygon points="640,420 520,630 640,610" fill="rgba(255,255,255,.07)"/>
+  <polyline points="640,442 540,620" stroke="rgba(255,255,255,.35)" stroke-width="1" fill="none"/>
+  <polyline points="575,575 650,553 700,575" stroke="#fff" stroke-width="1.3" fill="none" opacity=".85"/>
+</svg>
+<nav>
+  <div class="logo"><svg width="22" height="22" viewBox="0 0 22 22"><polygon points="11,2 20,19 2,19" fill="none" stroke="#fff" stroke-width="1.8" stroke-linejoin="round"/><line x1="11" y1="13" x2="21" y2="9" stroke="#4fd8ff" stroke-width="1.6"/></svg>prism</div>
+  <a>Models</a><a>Routing</a><a>Pricing</a><a>Docs</a><span class="btn">Get API key</span>
+</nav>
+<section class="hero">
+  <div class="tag"><i></i>LLM gateway · 38 models · one endpoint</div>
+  <h1>One prompt.<br><span>Every model.</span></h1>
+  <p class="sub">Prism sends each request to the model that answers it best at the lowest cost, with automatic fallback when a provider slows down. Change one base URL. Keep your code.</p>
+  <div class="cta"><span class="p">Get a free API key</span><span class="s">See the routing rules</span></div>
+</section>
+<div id="models"></div>
+<div class="code">$ curl <i>api.prism.dev/v1/chat</i> \<br>&nbsp; -d <u>'{"model":"auto","budget":"low"}'</u></div>
+<div class="stat"><div><b>-41%</b>cost vs single provider</div><div><b>99.98%</b>request success</div></div>
+<script>
+(function(){
+  const cols=['#ff5a5f','#ffb347','#9be564','#4fd8ff','#8f7bff'];
+  const names=[['fast-chat','212 ms'],['deep-reason','4.1 s'],['vision','680 ms'],['code-agent','1.3 s'],['local-7b','on-device']];
+  const ys=[196,300,404,508,612], X0=690,Y0=545, X1=996;
+  const g=document.getElementById('rays'),NS='http://www.w3.org/2000/svg',m=document.getElementById('models');
+  ys.forEach((y,i)=>{
+    const c=cols[i],ey=y+26, w=2.6;
+    // wedge polygon from the exit spot
+    const poly=document.createElementNS(NS,'polygon');
+    poly.setAttribute('points',[X0,Y0-2, X1,ey-w, X1,ey+w, X0,Y0+2].join(' '));
+    const id='rg'+i;const lg=document.createElementNS(NS,'linearGradient');lg.setAttribute('id',id);lg.setAttribute('x1','0');lg.setAttribute('x2','1');
+    lg.innerHTML='<stop offset="0" stop-color="'+c+'" stop-opacity=".15"/><stop offset=".35" stop-color="'+c+'" stop-opacity=".8"/><stop offset="1" stop-color="'+c+'" stop-opacity="1"/>';
+    document.querySelector('defs').appendChild(lg);
+    poly.setAttribute('fill','url(#'+id+')');
+    const glow=poly.cloneNode();glow.setAttribute('filter','url(#glow)');glow.setAttribute('opacity','.7');
+    g.appendChild(glow);g.appendChild(poly);
+    const dot=document.createElementNS(NS,'circle');dot.setAttribute('cx',X1);dot.setAttribute('cy',ey);dot.setAttribute('r',4);dot.setAttribute('fill',c);g.appendChild(dot);
+    const d=document.createElement('div');d.className='model';d.style.top=y+'px';
+    d.innerHTML='<b style="background:'+c+';box-shadow:0 0 12px '+c+'"></b><strong>'+names[i][0]+'</strong><span>'+names[i][1]+'</span>';m.appendChild(d);
+  });
+  // spark at the exit point
+  const s=document.createElementNS(NS,'circle');s.setAttribute('cx',X0);s.setAttribute('cy',Y0);s.setAttribute('r',16);s.setAttribute('fill','url(#pg)');g.appendChild(s);
+})();
+</script>
+</body>
+</html>

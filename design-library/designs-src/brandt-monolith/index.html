@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Brandt Arkitekter</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@200;300;400;500&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+/* Layout: 50/50 split. Left = grey paper with a light typographic index; right = one monolith in a pale grey field, no colour anywhere but a slot of lamplight */
+:root{
+  --paper:#dcdad5; --slab:#c7c4be; --graphite:#161616; --ash:#8a8781; --fog:#eceae6; --lamp:#f0dfae;
+  --sans:'Inter Tight','Helvetica Neue',Arial,sans-serif;
+  --mono:'DM Mono','JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--paper);color:var(--graphite);font-family:var(--sans)}
+.left{position:absolute;left:0;top:0;width:640px;height:800px;padding:40px 56px 44px 56px}
+header{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+header b{font-family:var(--sans);font-weight:500;letter-spacing:.02em;text-transform:none;font-size:17px}
+header nav{display:flex;gap:26px}
+h1{position:absolute;left:56px;top:158px;font-weight:200;font-size:118px;line-height:.9;letter-spacing:-.055em}
+h1 i{font-style:normal;color:var(--ash)}
+.lead{position:absolute;left:58px;top:404px;width:340px;font-size:15px;line-height:1.5;color:#3a3a38}
+.index{position:absolute;left:56px;right:48px;bottom:44px;font-family:var(--mono);font-size:11.5px;letter-spacing:.02em}
+.index .h{display:grid;grid-template-columns:34px 1fr 150px 48px;padding:0 0 10px;color:var(--ash);text-transform:uppercase;letter-spacing:.08em;font-size:10px}
+.index .r{display:grid;grid-template-columns:34px 1fr 150px 48px;padding:10px 0;border-top:1px solid rgba(22,22,22,.28);align-items:baseline}
+.index .r span:first-child{color:var(--ash)}
+.index .r b{font-family:var(--sans);font-weight:400;font-size:17px;letter-spacing:-.01em}
+.index .r.on b{font-weight:500}
+.right{position:absolute;left:640px;top:0;width:640px;height:800px;overflow:hidden}
+.right svg{display:block;width:640px;height:800px}
+.cap{position:absolute;right:40px;bottom:44px;font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;text-align:right;line-height:1.7;color:#26262a}
+.tick{position:absolute;right:40px;top:40px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:#26262a;text-transform:uppercase}
+.cross{position:absolute;width:13px;height:13px}
+.cross::before,.cross::after{content:"";position:absolute;background:var(--graphite);opacity:.75}
+.cross::before{left:6px;top:0;width:1px;height:13px}.cross::after{top:6px;left:0;height:1px;width:13px}
+</style>
+</head>
+<body>
+<section class="left">
+  <header><b>Brandt Arkitekter</b><nav><span>Work</span><span>Studio</span><span>Journal</span><span>Contact</span></nav></header>
+  <h1>Concrete,<br><i>considered.</i></h1>
+  <p class="lead">An architecture office in Aarhus. Chapels, libraries and small public rooms, each cast in place from a single pour.</p>
+  <div class="index">
+    <div class="h"><span>No.</span><span>Project</span><span>Place</span><span>Year</span></div>
+    <div class="r on"><span>04</span><b>Kvarn Chapel</b><span>Tønder, DK</span><span>2024</span></div>
+    <div class="r"><span>03</span><b>Hollow Library</b><span>Ribe, DK</span><span>2022</span></div>
+    <div class="r"><span>02</span><b>Salt House</b><span>Skagen, DK</span><span>2020</span></div>
+    <div class="r"><span>01</span><b>Fjordside Baths</b><span>Vejle, DK</span><span>2018</span></div>
+  </div>
+</section>
+
+<section class="right">
+<svg viewBox="0 0 640 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e9e8e5"/><stop offset=".5" stop-color="#d9d8d4"/><stop offset="1" stop-color="#cfcdc8"/></linearGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#b7b5af"/><stop offset=".5" stop-color="#c6c4be"/><stop offset="1" stop-color="#cfcdc7"/></linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4c4b49"/><stop offset="1" stop-color="#2b2a29"/></linearGradient>
+    <linearGradient id="under" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0d0d0d" stop-opacity=".62"/><stop offset="1" stop-color="#0d0d0d" stop-opacity="0"/></linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#bdbbb5"/><stop offset="1" stop-color="#a9a7a1"/></linearGradient>
+    <linearGradient id="slot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6e9bf"/><stop offset="1" stop-color="#d9c58a"/></linearGradient>
+    <filter id="board" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9 .012" numOctaves="3" seed="3" result="n"/>
+      <feColorMatrix in="n" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1.1 -.35"/>
+    </filter>
+    <filter id="pores" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".55" numOctaves="2" seed="11"/>
+      <feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1.4 -.62"/>
+    </filter>
+    <pattern id="formwork" width="22" height="800" patternUnits="userSpaceOnUse"><rect width="1" height="800" fill="#000" opacity=".16"/></pattern>
+    <clipPath id="cf"><rect x="168" y="96" width="196" height="584"/></clipPath>
+    <clipPath id="cs"><path d="M364 96 L500 132 L500 640 L364 680Z"/></clipPath>
+  </defs>
+  <rect width="640" height="800" fill="url(#sky)"/>
+  <!-- ground -->
+  <rect y="640" width="640" height="160" fill="url(#ground)"/>
+  <rect y="640" width="640" height="1" fill="#8d8b85"/>
+  <!-- side face (shadow) -->
+  <path d="M364 96 L500 132 L500 640 L364 680Z" fill="url(#side)"/>
+  <g clip-path="url(#cs)"><rect x="360" y="90" width="150" height="600" filter="url(#board)" opacity=".18" style="mix-blend-mode:screen"/></g>
+  <!-- front face -->
+  <rect x="168" y="96" width="196" height="584" fill="url(#front)"/>
+  <g clip-path="url(#cf)">
+    <rect x="168" y="96" width="196" height="584" filter="url(#board)" opacity=".34"/>
+    <rect x="168" y="96" width="196" height="584" fill="url(#formwork)" opacity=".7"/>
+    <rect x="168" y="96" width="196" height="584" filter="url(#pores)" opacity=".16"/>
+    <!-- shadow under the cantilever -->
+    <rect x="168" y="352" width="196" height="150" fill="url(#under)"/>
+  </g>
+  <!-- slit of lamplight -->
+  <rect x="276" y="470" width="10" height="170" fill="url(#slot)"/>
+  <rect x="268" y="470" width="26" height="170" fill="#f0dfae" opacity=".12"/>
+  <!-- cantilever slab (front face) -->
+  <rect x="-40" y="312" width="404" height="44" fill="#c0beb8"/>
+  <rect x="-40" y="312" width="404" height="44" filter="url(#board)" opacity=".3"/>
+  <rect x="-40" y="312" width="404" height="1.5" fill="#e6e4df" opacity=".8"/>
+  <rect x="-40" y="354" width="404" height="2" fill="#0d0d0d" opacity=".35"/>
+  <!-- slab side face -->
+  <path d="M364 312 L500 338 L500 372 L364 356Z" fill="#1f1e1d"/>
+  <!-- edge highlight -->
+  <path d="M364 96 L364 680" stroke="#f4f3f0" stroke-width="1" opacity=".7"/>
+  <!-- dimension line -->
+  <g stroke="#161616" stroke-width="1" fill="none" opacity=".8">
+    <path d="M120 96 L120 680"/><path d="M114 96 L126 96"/><path d="M114 680 L126 680"/><path d="M114 312 L126 312"/>
+  </g>
+  <text x="108" y="400" font-family="DM Mono, monospace" font-size="10" fill="#161616" transform="rotate(-90 108 400)" text-anchor="middle" letter-spacing="1">H 21.4 M</text>
+</svg>
+<div class="tick">Fig. 04 / Elevation</div>
+<div class="cap">Kvarn Chapel, Tønder<br>Board-formed concrete, 2024</div>
+<div class="cross" style="left:24px;top:24px"></div>
+<div class="cross" style="right:24px;bottom:24px"></div>
+</section>
+</body>
+</html>

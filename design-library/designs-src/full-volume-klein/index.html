@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Full Volume Festival</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: edge-to-edge poster. Four condensed lines scaled to fill the width, rotated meta text up the side, a ticket strip pinned at the bottom */
+:root{
+  --blue:#1a2cff; --paper:#f1eee4; --orange:#ff5a1f; --deep:#0a14b8;
+  --disp:'Anton','Impact',sans-serif; --mono:'DM Mono','Courier New',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--blue);color:var(--paper);font-family:var(--mono)}
+nav{position:absolute;top:0;left:0;right:0;height:60px;padding:0 36px 0 72px;display:flex;justify-content:space-between;align-items:center;font-size:13px;letter-spacing:.1em;text-transform:uppercase;z-index:3}
+nav ul{display:flex;gap:34px;list-style:none}
+nav .logo{font-family:var(--disp);font-size:26px;letter-spacing:.02em;display:flex;gap:10px;align-items:center}
+nav .logo i{display:block;width:16px;height:16px;border-radius:50%;background:var(--orange)}
+nav .tix{background:var(--paper);color:var(--blue);padding:9px 16px;font-weight:500}
+.side{position:absolute;left:0;top:0;bottom:0;width:52px;border-right:2px solid var(--paper);display:flex;align-items:center;justify-content:center}
+.side span{transform:rotate(-90deg);white-space:nowrap;font-size:12px;letter-spacing:.3em;text-transform:uppercase}
+.poster{position:absolute;left:72px;right:32px;top:64px}
+.l{font-family:var(--disp);text-transform:uppercase;line-height:.84;letter-spacing:-.005em;white-space:nowrap;display:block;color:var(--paper)}
+.l1{font-size:262px}
+.l2{font-size:262px;color:transparent;-webkit-text-stroke:3px var(--paper);margin-top:4px}
+.l3{font-size:262px;margin-top:4px}
+.row{display:flex;justify-content:space-between;align-items:flex-end}
+.badge{position:absolute;right:44px;top:446px;width:168px;height:168px;border-radius:50%;background:var(--orange);color:var(--blue);display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--disp);font-size:30px;line-height:1;text-transform:uppercase;transform:rotate(12deg);z-index:4}
+.badge small{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;margin-top:6px;font-weight:500}
+.strip{position:absolute;left:0;right:0;bottom:0;height:130px;background:var(--paper);color:var(--blue);display:grid;grid-template-columns:52px 1.15fr 1fr 1fr 1fr 210px;z-index:2}
+.strip>div{padding:12px 22px;border-right:2px solid var(--blue)}
+.strip>div:first-child{background:var(--blue);border-right:2px solid var(--paper)}
+.strip h5{font-family:var(--disp);font-weight:400;font-size:34px;line-height:1;letter-spacing:.01em;text-transform:uppercase}
+.strip p{font-size:11.5px;line-height:1.4;margin-top:5px}
+.strip .k{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:500;opacity:.75}
+.strip .buy{background:var(--orange);color:var(--blue);border-right:0;display:flex;align-items:center;justify-content:center;font-family:var(--disp);font-size:30px;text-transform:uppercase;line-height:1;gap:8px}
+.mq{position:absolute;left:52px;right:0;bottom:130px;height:32px;background:var(--orange);color:var(--blue);overflow:hidden;white-space:nowrap;display:flex;align-items:center;font-family:var(--disp);font-size:22px;letter-spacing:.06em;text-transform:uppercase;z-index:2;border-top:2px solid var(--paper)}
+</style></head><body>
+<div class="side"><span>Rotterdam &middot; 3&ndash;5 September 2027</span></div>
+<nav><div class="logo"><i></i>Full Volume</div><ul><li>Lineup</li><li>Posters</li><li>Venue</li><li>Press</li></ul><span class="tix">Tickets</span></nav>
+<div class="poster">
+  <span class="l l1" id="a">FULL VOLUME</span>
+  <span class="l l2" id="b">TYPE FESTIVAL</span>
+  <span class="l l3" id="c">ROTTERDAM ’27</span>
+</div>
+<div class="badge"><div>Three days<br>of loud<br>letters<small>120 STUDIOS</small></div></div>
+<div class="mq"><span id="mq"></span></div>
+<div class="strip">
+  <div></div>
+  <div><div class="k">3 &ndash; 5 Sep</div><h5>Rotterdam</h5><p>Old Fruit Market, Hall 4. Open 10:00 &ndash; 23:00.</p></div>
+  <div><div class="k">Speakers</div><h5>64 voices</h5><p>Type designers, sign painters, poster printers.</p></div>
+  <div><div class="k">Workshops</div><h5>18 rooms</h5><p>Letterpress, lettering, screenprint.</p></div>
+  <div><div class="k">Exhibition</div><h5>900 posters</h5><p>Floor to ceiling. Take one home.</p></div>
+  <div class="buy">Get a<br>pass &rarr;</div>
+</div>
+<script>
+// fit each poster line to the container width
+const W=1280-72-32;
+document.fonts.load('100px Anton').then(()=>document.fonts.ready).then(()=>{
+for(const [id,tw] of [['a',W],['b',W*.985],['c',W-230]]){
+  const el=document.getElementById(id);el.style.display='inline-block';
+  const w=el.getBoundingClientRect().width,fs=parseFloat(getComputedStyle(el).fontSize);
+  el.style.fontSize=(fs*tw/w)+'px';el.style.display='block';
+}});
+document.getElementById('mq').textContent=('LOUDER • WIDER • BLACKER • BIGGER • ').repeat(10);
+</script>
+</body></html>

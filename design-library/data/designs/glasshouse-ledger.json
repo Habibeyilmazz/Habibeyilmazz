@@ -1,0 +1,241 @@
+{
+  "category": {
+    "id": "glasshouse-ledger",
+    "name": "Glasshouse Ledger",
+    "tagline": "frosted glass x bento fintech",
+    "description": "Product-UI heroes where the dashboard itself is the artwork: bento grids of unequal tiles, frosted glass panes and crisp little charts. Use it for fintech, health and wealth products that need to feel modern and trustworthy at the same time.",
+    "vibes": [
+      "modern",
+      "data-driven",
+      "corporate",
+      "light"
+    ],
+    "accent": "#165240"
+  },
+  "designs": [
+    {
+      "id": "halcyon-glasshouse",
+      "name": "Halcyon Glasshouse",
+      "descriptor": "frosted aurora x health data",
+      "summary": "Soft lavender, peach and mint light washes behind overlapping frosted-glass dashboard cards for sleep and recovery metrics.",
+      "keywords": [
+        "frosted glass cards",
+        "pastel aurora blobs",
+        "hypnogram step chart",
+        "ring progress gauge",
+        "gradient text accent",
+        "pill navigation"
+      ],
+      "vibes": [
+        "modern",
+        "friendly",
+        "light",
+        "data-driven"
+      ],
+      "best_for": [
+        "health apps",
+        "wellness",
+        "wearables",
+        "clinic software"
+      ],
+      "palette": [
+        "#f4f0fb",
+        "#241f4a",
+        "#b9b1ff",
+        "#ffbfa8",
+        "#aeeadb",
+        "#ff8fa8"
+      ],
+      "fonts": {
+        "display": "Bricolage Grotesque",
+        "body": "DM Sans",
+        "mono": "DM Mono"
+      },
+      "image": "assets/designs/halcyon-glasshouse.png",
+      "mockup": "designs-src/halcyon-glasshouse/index.html",
+      "references": [
+        {
+          "title": "Sleep Tracker Widget, liquid glass health UI (Dribbble tag listing)",
+          "url": "https://dribbble.com/matias/collections/7463499-UI-Ref",
+          "source": "dribbble"
+        },
+        {
+          "title": "Lumina, premium glassmorphism SaaS",
+          "url": "https://contra.com/p/FEEYZc3m-lumina-premium-glassmorphism-saa-s",
+          "source": "other"
+        },
+        {
+          "title": "Health Data collection",
+          "url": "https://dribbble.com/caspianievers/collections/1897610-Health-Data",
+          "source": "dribbble"
+        }
+      ],
+      "how_to_build": "Stack three or four large blurred radial blobs (filter: blur(70px)) behind the page and add a faint SVG-noise grain with multiply blend. Build cards with background rgba(255,255,255,.46), backdrop-filter: blur(26px) saturate(1.5), a 1px white border and an inset top highlight. Overlap the cards at different sizes so the blur visibly picks up the colour beneath. Draw charts as inline SVG with a lavender-to-rose gradient stroke and a low-opacity area fill."
+    },
+    {
+      "id": "tallyhouse-bento",
+      "name": "Tallyhouse Bento",
+      "descriptor": "sage bento x small-business money",
+      "summary": "A pale sage page with a grid of unequal rounded tiles: one deep-forest cash chart, a marigold alert tile, a runway donut and a virtual card.",
+      "keywords": [
+        "bento tile grid",
+        "forest green and marigold",
+        "highlighter underline",
+        "mono micro-labels",
+        "rounded 24px tiles",
+        "dark footer band"
+      ],
+      "vibes": [
+        "modern",
+        "friendly",
+        "corporate",
+        "light"
+      ],
+      "best_for": [
+        "business banking",
+        "accounting software",
+        "invoicing tools",
+        "SMB fintech"
+      ],
+      "palette": [
+        "#dfe6e0",
+        "#0d3a2b",
+        "#165240",
+        "#9fe3c0",
+        "#f0b232",
+        "#fbfcfa"
+      ],
+      "fonts": {
+        "display": "Hanken Grotesk",
+        "body": "Hanken Grotesk",
+        "mono": "Fragment Mono"
+      },
+      "image": "assets/designs/tallyhouse-bento.png",
+      "mockup": "designs-src/tallyhouse-bento/index.html",
+      "references": [
+        {
+          "title": "FinTech SaaS Features, Bento Grid Exploration",
+          "url": "https://dribbble.com/sparkpixel",
+          "source": "dribbble"
+        },
+        {
+          "title": "Bento design inspiration collection",
+          "url": "https://dribbble.com/premshandilya/collections/7144698-Bento-design-Inspiration",
+          "source": "dribbble"
+        },
+        {
+          "title": "Ledgerline, deep-teal fintech landing page",
+          "url": "https://superdesign.dev/library/ledgerline-deep-teal-mint-fintech-startup-dashboard-hero",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Position tiles in a 12-column grid with one dark tile as the anchor and one saturated tile (marigold) for the single call-to-action metric. Keep radii at 24px and gaps at 16px, with no shadows, so the colour does the separating. Use a mono face for tiny uppercase labels and a heavy grotesk with tight tracking for numbers. Fake the highlighter with a skewed yellow bar behind a key word using isolation: isolate on the heading."
+    },
+    {
+      "id": "payload-ultramarine",
+      "name": "Payload Ultramarine",
+      "descriptor": "cobalt bento x api infrastructure",
+      "summary": "A saturated electric-blue field with crisp white, ink and mint tiles holding approval rates, corridor speeds and a code sample that bleeds off the page.",
+      "keywords": [
+        "full-bleed cobalt blue",
+        "faint 64px grid",
+        "white and ink tiles",
+        "mint accent",
+        "code block tile",
+        "tabular mono metrics"
+      ],
+      "vibes": [
+        "bold",
+        "modern",
+        "technology",
+        "data-driven"
+      ],
+      "best_for": [
+        "payments APIs",
+        "developer tools",
+        "marketplace platforms",
+        "infrastructure"
+      ],
+      "palette": [
+        "#2a3cff",
+        "#ffffff",
+        "#0b1030",
+        "#7dffc4",
+        "#e8ecff"
+      ],
+      "fonts": {
+        "display": "Familjen Grotesk",
+        "body": "Geist",
+        "mono": "Geist Mono"
+      },
+      "image": "assets/designs/payload-ultramarine.png",
+      "mockup": "designs-src/payload-ultramarine/index.html",
+      "references": [
+        {
+          "title": "SwiftFunds SaaS fintech landing, bento features",
+          "url": "https://dribbble.com/uixfahad",
+          "source": "dribbble"
+        },
+        {
+          "title": "Premium SaaS Fintech Landing Page Design",
+          "url": "https://contra.com/p/bUeMrAcq-premium-saa-s-fintech-landing-page-design",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Fill the page with one flat saturated blue and overlay a 64px line grid masked to fade out toward the content. Set the headline very large (90px+) with letter-spacing around -0.05em and colour one phrase mint. Tiles alternate white, ink and mint with 22px radii, and the lowest tile runs off the bottom edge to suggest more below. Use Geist Mono for every label, number and the code sample."
+    },
+    {
+      "id": "meridian-pane",
+      "name": "Meridian Pane",
+      "descriptor": "layered glass x private wealth",
+      "summary": "A dark teal ocean with an amber sun and three tilted, translucent glass panes stacked like layers of a balance sheet.",
+      "keywords": [
+        "tilted frosted panes",
+        "deep teal gradient",
+        "amber sun orb",
+        "light serif headline",
+        "3D perspective stack",
+        "hairline rules"
+      ],
+      "vibes": [
+        "luxury",
+        "elegant",
+        "dark",
+        "data-driven"
+      ],
+      "best_for": [
+        "wealth management",
+        "family offices",
+        "private banking",
+        "investment platforms"
+      ],
+      "palette": [
+        "#04191d",
+        "#0b3b42",
+        "#13696f",
+        "#bff0e8",
+        "#f2b866"
+      ],
+      "fonts": {
+        "display": "Fraunces",
+        "body": "Outfit",
+        "mono": "Outfit"
+      },
+      "image": "assets/designs/meridian-pane.png",
+      "mockup": "designs-src/meridian-pane/index.html",
+      "references": [
+        {
+          "title": "Glass-themed fintech bento (Contra)",
+          "url": "https://contra.com/p/7bPBkgPq-building-a-glass-themed-fintech-bento",
+          "source": "other"
+        },
+        {
+          "title": "Premium glassmorphism dashboard with edge-to-edge line charts",
+          "url": "https://superdesign.dev/library/premium-glassmorphism-dashboard-with-smooth-edge-to-edge-line-charts",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Paint the ground with two or three large radial gradients on near-black teal, then place a glowing amber orb and a teal orb so the glass has something to refract. Each pane uses rgba(190,240,232,.09), backdrop-filter: blur(22px), a 1px pale-teal border and transform: perspective(1600px) rotateY(-14deg) rotateX(4deg). Offset the panes vertically so each overlaps the one behind it. Set the headline in a light optical-size serif with one italic word."
+    }
+  ]
+}

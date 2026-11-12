@@ -1,0 +1,3141 @@
+{
+ "generated": "2026-11-12T06:19:18.103Z",
+ "categories": [
+  {
+   "id": "crayon-lullaby",
+   "name": "Crayon Lullaby",
+   "tagline": "soft 3D x storybook x hand-drawn",
+   "description": "Gentle, handmade and kind to the eye. Squishy clay forms, wobbly hand-drawn lines, paper cutouts and storybook scenes make a page feel like it was made for small hands. Use it for kids' apps, education, family brands and anything that should feel safe and warm.",
+   "vibes": [
+    "friendly",
+    "handcrafted",
+    "playful",
+    "warm"
+   ],
+   "accent": "#ff8a5c",
+   "count": 4
+  },
+  {
+   "id": "glasshouse-ledger",
+   "name": "Glasshouse Ledger",
+   "tagline": "frosted glass x bento fintech",
+   "description": "Product-UI heroes where the dashboard itself is the artwork: bento grids of unequal tiles, frosted glass panes and crisp little charts. Use it for fintech, health and wealth products that need to feel modern and trustworthy at the same time.",
+   "vibes": [
+    "modern",
+    "data-driven",
+    "corporate",
+    "light"
+   ],
+   "accent": "#165240",
+   "count": 4
+  },
+  {
+   "id": "horizon-hush",
+   "name": "Horizon Hush",
+   "tagline": "vast quiet cinematic scenes",
+   "description": "Full-bleed scenes drawn entirely with gradients and silhouettes, where one oversized serif line sits in a calm landscape or fabric field. Hospitality, travel, fashion houses and anyone selling a feeling before a feature. Chrome is kept hairline-small so the scene does the talking.",
+   "vibes": [
+    "cinematic",
+    "luxury",
+    "elegant",
+    "minimal"
+   ],
+   "accent": "#d98a63",
+   "count": 4
+  },
+  {
+   "id": "isoline-atlas",
+   "name": "Isoline Atlas",
+   "tagline": "contour line art x enterprise type",
+   "description": "Data as texture: topographic and isobar line art, radial charts and big tabular numerals used as the hero image itself. Suits climate, risk, health and governance products that want to feel rigorous but look unlike a generic dashboard.",
+   "vibes": [
+    "data-driven",
+    "serious",
+    "modern",
+    "geometric"
+   ],
+   "accent": "#ff5a1f",
+   "count": 4
+  },
+  {
+   "id": "loud-type-dept",
+   "name": "Loud Type Dept",
+   "tagline": "letters as the whole interface",
+   "description": "Typography-first pages where giant, stretched or outlined letters carry the layout: brutalist grids, Klein-blue posters, variable-width stacks and Swiss grids. Little imagery, strong colour fields, and a clear grid or deliberate rawness. Best for festivals, foundries, archives, agencies and cultural venues that want to be read from across the room.",
+   "vibes": [
+    "bold",
+    "editorial",
+    "experimental",
+    "modern"
+   ],
+   "accent": "#1a2cff",
+   "count": 4
+  },
+  {
+   "id": "marble-static",
+   "name": "Marble Static",
+   "tagline": "classical statues x digital artifacts",
+   "description": "Greek and Roman sculpture colliding with screen-age residue: RGB splits, scan lines, chrome, sunset grids and torn paper. Use it for archives, music, culture and product launches that want myth and nostalgia in the same frame.",
+   "vibes": [
+    "artistic",
+    "retro",
+    "experimental",
+    "elegant"
+   ],
+   "accent": "#19b5c9",
+   "count": 4
+  },
+  {
+   "id": "moss-monolith",
+   "name": "Moss & Monolith",
+   "tagline": "stone, paper and living green",
+   "description": "Calm, material-led layouts: raw concrete, white gallery walls, soft botanical collage and fashion plates on oat paper. Sparse type, deliberate gaps and a single focal object per page. For architects, galleries, wellness brands and stylists who let the work speak.",
+   "vibes": [
+    "minimal",
+    "elegant",
+    "organic",
+    "artistic"
+   ],
+   "accent": "#5f7a4e",
+   "count": 4
+  },
+  {
+   "id": "night-instruments",
+   "name": "Night Instruments",
+   "tagline": "glow, orbit and schematic on black",
+   "description": "Futuristic product pages built like instruments: aurora light, orbital diagrams, engineering drawings and refracted beams over deep black or blueprint blue. Use it for AI platforms, hardware, space and compute companies that need to feel precise and a little cinematic.",
+   "vibes": [
+    "futuristic",
+    "technology",
+    "dark",
+    "cinematic"
+   ],
+   "accent": "#2de2c0",
+   "count": 4
+  },
+  {
+   "id": "phosphor-static",
+   "name": "Phosphor Static",
+   "tagline": "terminal glow x dithered mono",
+   "description": "Developer-tool sites that borrow from the command line: monospaced type, pixel dither, CRT glow, diffs and ASCII renderings. Use it for CLIs, infrastructure, observability and code tools that want to look like the thing they ship.",
+   "vibes": [
+    "technology",
+    "dark",
+    "serious",
+    "experimental"
+   ],
+   "accent": "#ffb000",
+   "count": 4
+  },
+  {
+   "id": "press-room-pulp",
+   "name": "Press Room Pulp",
+   "tagline": "ink, paper and the smell of the print shop",
+   "description": "Websites that borrow from the physical print workflow: risograph overprints, newsprint broadsheets, photocopied zines and press proofs with crop marks. Grain, misregistration and ink-on-stock colour make screens feel tactile. Best for studios, publishers, makers and any brand that wants to feel printed rather than rendered.",
+   "vibes": [
+    "editorial",
+    "handcrafted",
+    "warm",
+    "retro"
+   ],
+   "accent": "#ff48a0",
+   "count": 4
+  },
+  {
+   "id": "screen-heresy",
+   "name": "Screen Heresy",
+   "tagline": "rule-breaking interfaces x pixel and print craft",
+   "description": "Experimental sites that treat the screen as a medium to bend: fake operating systems, hand-drawn pixel worlds, risograph overprint and code-drawn art. Use it when the brand is the point of view, such as studios, festivals, games and artists.",
+   "vibes": [
+    "experimental",
+    "artistic",
+    "bold",
+    "retro"
+   ],
+   "accent": "#e8453c",
+   "count": 4
+  },
+  {
+   "id": "sticker-riot",
+   "name": "Sticker Riot",
+   "tagline": "chunky borders x collage x loud color",
+   "description": "Loud, tactile and unapologetically young. Thick outlines, hard offset shadows, die-cut stickers and saturated candy colors turn a hero into a pinboard. Use it for creative studios, merch, food and community brands that want to be remembered, not admired from a distance.",
+   "vibes": [
+    "playful",
+    "bold",
+    "youthful",
+    "creative"
+   ],
+   "accent": "#ff2f92",
+   "count": 4
+  }
+ ],
+ "vibes": [
+  {
+   "id": "creative",
+   "count": 9
+  },
+  {
+   "id": "modern",
+   "count": 9
+  },
+  {
+   "id": "artistic",
+   "count": 8
+  },
+  {
+   "id": "technology",
+   "count": 7
+  },
+  {
+   "id": "minimal",
+   "count": 7
+  },
+  {
+   "id": "bold",
+   "count": 14
+  },
+  {
+   "id": "playful",
+   "count": 10
+  },
+  {
+   "id": "elegant",
+   "count": 12
+  },
+  {
+   "id": "luxury",
+   "count": 5
+  },
+  {
+   "id": "retro",
+   "count": 6
+  },
+  {
+   "id": "futuristic",
+   "count": 6
+  },
+  {
+   "id": "editorial",
+   "count": 5
+  },
+  {
+   "id": "experimental",
+   "count": 7
+  },
+  {
+   "id": "friendly",
+   "count": 11
+  },
+  {
+   "id": "serious",
+   "count": 8
+  },
+  {
+   "id": "dark",
+   "count": 11
+  },
+  {
+   "id": "light",
+   "count": 7
+  },
+  {
+   "id": "warm",
+   "count": 13
+  },
+  {
+   "id": "cool",
+   "count": 6
+  },
+  {
+   "id": "organic",
+   "count": 1
+  },
+  {
+   "id": "geometric",
+   "count": 1
+  },
+  {
+   "id": "cinematic",
+   "count": 5
+  },
+  {
+   "id": "handcrafted",
+   "count": 8
+  },
+  {
+   "id": "data-driven",
+   "count": 7
+  },
+  {
+   "id": "corporate",
+   "count": 2
+  },
+  {
+   "id": "youthful",
+   "count": 7
+  }
+ ],
+ "designs": [
+  {
+   "id": "puddle-clay-bank",
+   "name": "Puddle Kids Bank",
+   "descriptor": "claymorphism x kids fintech",
+   "summary": "Puffy, pillowy clay buttons, coins and a pink piggy bank float on a soft sky gradient. Each object has a bright inner highlight and a deep inner shade, so the whole page looks molded rather than drawn.",
+   "keywords": [
+    "double inner shadows",
+    "pillowy pill buttons",
+    "clay coins",
+    "3D piggy built in CSS",
+    "soft sky gradient",
+    "gradient-filled headline word",
+    "rounded phone mock"
+   ],
+   "vibes": [
+    "friendly",
+    "playful",
+    "modern",
+    "light"
+   ],
+   "best_for": [
+    "kids finance",
+    "family apps",
+    "onboarding flows",
+    "education products"
+   ],
+   "palette": [
+    "#d6ebff",
+    "#243566",
+    "#ffb89c",
+    "#ffe178",
+    "#bba8ff",
+    "#92e6c3"
+   ],
+   "fonts": {
+    "display": "Baloo 2",
+    "body": "Nunito",
+    "mono": "Nunito"
+   },
+   "image": "assets/designs/puddle-clay-bank.png",
+   "mockup": "designs-src/puddle-clay-bank/index.html",
+   "references": [
+    {
+     "title": "Claymorphism UI design guide",
+     "url": "https://www.setproduct.com/blog/claymorphism-design-guide",
+     "source": "other"
+    },
+    {
+     "title": "Claymorphism: Will It Stick Around?",
+     "url": "https://smashingmagazine.com/2022/03/claymorphism-css-ui-design-trend/",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Define one clay shadow token that stacks an inset white highlight (10px 10px 18px, 65% white), an inset dark shade (-12px -14px 22px, 16% navy) and a soft outer drop. Apply it to buttons, cards, coins and the phone shell, with radii of 60px or full pills. Give each object a radial-gradient fill with the light source at 30% 30%. Build the mascot from a few stacked ellipses using the same inset recipe in a darker tint.",
+   "categoryId": "crayon-lullaby",
+   "categoryName": "Crayon Lullaby",
+   "index": 1,
+   "total": 48
+  },
+  {
+   "id": "moonlit-meadow-books",
+   "name": "Moonlit Meadow Books",
+   "descriptor": "storybook night x hand-painted",
+   "summary": "A torn cream book page sits on a painted midnight meadow with a huge moon, fireflies and a sleepy fox. Edges wobble and paper grain shows, so it reads as a real picture-book spread.",
+   "keywords": [
+    "torn paper page",
+    "wobbly painted edges",
+    "giant glowing moon",
+    "fox character",
+    "indigo night palette",
+    "handwritten script accents",
+    "fireflies and stars"
+   ],
+   "vibes": [
+    "handcrafted",
+    "warm",
+    "friendly",
+    "artistic"
+   ],
+   "best_for": [
+    "children's books",
+    "bedtime apps",
+    "publishers",
+    "family brands"
+   ],
+   "palette": [
+    "#1b2455",
+    "#2c3f7a",
+    "#ffe7a1",
+    "#fbf0d9",
+    "#ee7a30",
+    "#5f9a63"
+   ],
+   "fonts": {
+    "display": "Gloock",
+    "body": "Nunito",
+    "mono": "Caveat"
+   },
+   "image": "assets/designs/moonlit-meadow-books.png",
+   "mockup": "designs-src/moonlit-meadow-books/index.html",
+   "references": [
+    {
+     "title": "Little Sparrow illustration collection",
+     "url": "https://dribbble.com/valtorf/collections/7679359-Little-Sparrow",
+     "source": "dribbble"
+    },
+    {
+     "title": "Children book illustration on Dribbble",
+     "url": "https://dribbble.com/children-book-illustration",
+     "source": "dribbble"
+    },
+    {
+     "title": "Tubik Studio children's book to digital experience",
+     "url": "https://tubikstudio.com/blog/?p=17108",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Draw the scene as layered flat SVG shapes, then run the whole group through an feTurbulence plus feDisplacementMap filter (scale 7) so every edge wobbles like a brush. The page uses a stronger displacement plus a high-frequency noise layer composited inside the shape for paper grain. Pair a bookish display serif with a handwritten script for asides, and give buttons asymmetric border-radius (255px 18px 225px 18px / 18px 225px 18px 255px) for a hand-cut outline.",
+   "categoryId": "crayon-lullaby",
+   "categoryName": "Crayon Lullaby",
+   "index": 2,
+   "total": 48
+  },
+  {
+   "id": "crayon-corner-school",
+   "name": "Crayon Corner School",
+   "descriptor": "notebook paper x crayon doodles",
+   "summary": "Ruled notebook paper with a red margin and punched holes carries a headline colored letter by letter in waxy crayon. A taped worksheet and a gold-star sticker finish the classroom feel.",
+   "keywords": [
+    "ruled paper with margin line",
+    "crayon grain texture",
+    "multicolor letter headline",
+    "taped worksheet",
+    "gold star sticker",
+    "hand-drawn border radii",
+    "punched binder holes"
+   ],
+   "vibes": [
+    "playful",
+    "youthful",
+    "handcrafted",
+    "friendly"
+   ],
+   "best_for": [
+    "online schools",
+    "tutoring",
+    "kids' learning apps",
+    "parent communities"
+   ],
+   "palette": [
+    "#fffdf2",
+    "#bcd8f2",
+    "#e8412c",
+    "#2f6fe0",
+    "#fcc419",
+    "#32b06b"
+   ],
+   "fonts": {
+    "display": "Sniglet",
+    "body": "Patrick Hand",
+    "mono": "Patrick Hand"
+   },
+   "image": "assets/designs/crayon-corner-school.png",
+   "mockup": "designs-src/crayon-corner-school/index.html",
+   "references": [
+    {
+     "title": "Izzi Playground illustrated learning world",
+     "url": "https://contra.com/p/vqQLbvRr-izzi-playground",
+     "source": "other"
+    },
+    {
+     "title": "Kids illustration services on Dribbble",
+     "url": "https://dribbble.com/services/search/kidsillustrations",
+     "source": "dribbble"
+    }
+   ],
+   "how_to_build": "Make the paper with a repeating linear-gradient (1px blue line every 40px) and a 3px red margin div. Create the crayon look with an SVG filter: a low-frequency displacement for wobble, then a high-frequency feTurbulence thresholded through feColorMatrix into an alpha mask composited over the source, leaving speckled gaps. Color each headline letter in its own span with small rotations. Use slightly irregular border-radius values and thick ink borders with solid offset shadows on buttons.",
+   "categoryId": "crayon-lullaby",
+   "categoryName": "Crayon Lullaby",
+   "index": 3,
+   "total": 48
+  },
+  {
+   "id": "cutout-cove",
+   "name": "Cutout Cove Camp",
+   "descriptor": "papercraft layers x summer camp",
+   "summary": "A sunny scene built from stacked paper layers: scalloped waves, mountains, cloud cutouts and a smiling sun made of three discs. The headline sits on tilted paper strips like labels stuck to the picture.",
+   "keywords": [
+    "layered paper depth",
+    "upward shadows between waves",
+    "scalloped wave bands",
+    "concentric sun discs",
+    "tilted label strips",
+    "sailboat cutout",
+    "teal, coral and sun yellow"
+   ],
+   "vibes": [
+    "playful",
+    "warm",
+    "friendly",
+    "handcrafted"
+   ],
+   "best_for": [
+    "summer camps",
+    "outdoor brands",
+    "family travel",
+    "nature education"
+   ],
+   "palette": [
+    "#ffe4ae",
+    "#fff6e5",
+    "#ffc23a",
+    "#ff6b57",
+    "#1e93a3",
+    "#12384a"
+   ],
+   "fonts": {
+    "display": "Lilita One",
+    "body": "Quicksand",
+    "mono": "Quicksand"
+   },
+   "image": "assets/designs/cutout-cove.png",
+   "mockup": "designs-src/cutout-cove/index.html",
+   "references": [
+    {
+     "title": "Kids illustration services on Dribbble",
+     "url": "https://dribbble.com/services/search/kidsillustrations",
+     "source": "dribbble"
+    },
+    {
+     "title": "Studio Marmalade playful pastel homepage",
+     "url": "https://app.superdesign.dev/library/studio-marmalade-make-brands-people-smile-about",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Stack flat SVG shapes from back to front and give each layer a feDropShadow: waves cast a small shadow upward (dy -3) onto the layer behind, while sun discs and clouds cast it downward. Generate scalloped waves with a repeating quadratic path (q then t segments) at slightly different widths and offsets per band. Headline lines are separate cream blocks with 8 to 24px asymmetric radii, 1 to 2 degree rotations and a hard 5px under-shadow plus a soft blur shadow.",
+   "categoryId": "crayon-lullaby",
+   "categoryName": "Crayon Lullaby",
+   "index": 4,
+   "total": 48
+  },
+  {
+   "id": "halcyon-glasshouse",
+   "name": "Halcyon Glasshouse",
+   "descriptor": "frosted aurora x health data",
+   "summary": "Soft lavender, peach and mint light washes behind overlapping frosted-glass dashboard cards for sleep and recovery metrics.",
+   "keywords": [
+    "frosted glass cards",
+    "pastel aurora blobs",
+    "hypnogram step chart",
+    "ring progress gauge",
+    "gradient text accent",
+    "pill navigation"
+   ],
+   "vibes": [
+    "modern",
+    "friendly",
+    "light",
+    "data-driven"
+   ],
+   "best_for": [
+    "health apps",
+    "wellness",
+    "wearables",
+    "clinic software"
+   ],
+   "palette": [
+    "#f4f0fb",
+    "#241f4a",
+    "#b9b1ff",
+    "#ffbfa8",
+    "#aeeadb",
+    "#ff8fa8"
+   ],
+   "fonts": {
+    "display": "Bricolage Grotesque",
+    "body": "DM Sans",
+    "mono": "DM Mono"
+   },
+   "image": "assets/designs/halcyon-glasshouse.png",
+   "mockup": "designs-src/halcyon-glasshouse/index.html",
+   "references": [
+    {
+     "title": "Sleep Tracker Widget, liquid glass health UI (Dribbble tag listing)",
+     "url": "https://dribbble.com/matias/collections/7463499-UI-Ref",
+     "source": "dribbble"
+    },
+    {
+     "title": "Lumina, premium glassmorphism SaaS",
+     "url": "https://contra.com/p/FEEYZc3m-lumina-premium-glassmorphism-saa-s",
+     "source": "other"
+    },
+    {
+     "title": "Health Data collection",
+     "url": "https://dribbble.com/caspianievers/collections/1897610-Health-Data",
+     "source": "dribbble"
+    }
+   ],
+   "how_to_build": "Stack three or four large blurred radial blobs (filter: blur(70px)) behind the page and add a faint SVG-noise grain with multiply blend. Build cards with background rgba(255,255,255,.46), backdrop-filter: blur(26px) saturate(1.5), a 1px white border and an inset top highlight. Overlap the cards at different sizes so the blur visibly picks up the colour beneath. Draw charts as inline SVG with a lavender-to-rose gradient stroke and a low-opacity area fill.",
+   "categoryId": "glasshouse-ledger",
+   "categoryName": "Glasshouse Ledger",
+   "index": 5,
+   "total": 48
+  },
+  {
+   "id": "tallyhouse-bento",
+   "name": "Tallyhouse Bento",
+   "descriptor": "sage bento x small-business money",
+   "summary": "A pale sage page with a grid of unequal rounded tiles: one deep-forest cash chart, a marigold alert tile, a runway donut and a virtual card.",
+   "keywords": [
+    "bento tile grid",
+    "forest green and marigold",
+    "highlighter underline",
+    "mono micro-labels",
+    "rounded 24px tiles",
+    "dark footer band"
+   ],
+   "vibes": [
+    "modern",
+    "friendly",
+    "corporate",
+    "light"
+   ],
+   "best_for": [
+    "business banking",
+    "accounting software",
+    "invoicing tools",
+    "SMB fintech"
+   ],
+   "palette": [
+    "#dfe6e0",
+    "#0d3a2b",
+    "#165240",
+    "#9fe3c0",
+    "#f0b232",
+    "#fbfcfa"
+   ],
+   "fonts": {
+    "display": "Hanken Grotesk",
+    "body": "Hanken Grotesk",
+    "mono": "Fragment Mono"
+   },
+   "image": "assets/designs/tallyhouse-bento.png",
+   "mockup": "designs-src/tallyhouse-bento/index.html",
+   "references": [
+    {
+     "title": "FinTech SaaS Features, Bento Grid Exploration",
+     "url": "https://dribbble.com/sparkpixel",
+     "source": "dribbble"
+    },
+    {
+     "title": "Bento design inspiration collection",
+     "url": "https://dribbble.com/premshandilya/collections/7144698-Bento-design-Inspiration",
+     "source": "dribbble"
+    },
+    {
+     "title": "Ledgerline, deep-teal fintech landing page",
+     "url": "https://superdesign.dev/library/ledgerline-deep-teal-mint-fintech-startup-dashboard-hero",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Position tiles in a 12-column grid with one dark tile as the anchor and one saturated tile (marigold) for the single call-to-action metric. Keep radii at 24px and gaps at 16px, with no shadows, so the colour does the separating. Use a mono face for tiny uppercase labels and a heavy grotesk with tight tracking for numbers. Fake the highlighter with a skewed yellow bar behind a key word using isolation: isolate on the heading.",
+   "categoryId": "glasshouse-ledger",
+   "categoryName": "Glasshouse Ledger",
+   "index": 6,
+   "total": 48
+  },
+  {
+   "id": "payload-ultramarine",
+   "name": "Payload Ultramarine",
+   "descriptor": "cobalt bento x api infrastructure",
+   "summary": "A saturated electric-blue field with crisp white, ink and mint tiles holding approval rates, corridor speeds and a code sample that bleeds off the page.",
+   "keywords": [
+    "full-bleed cobalt blue",
+    "faint 64px grid",
+    "white and ink tiles",
+    "mint accent",
+    "code block tile",
+    "tabular mono metrics"
+   ],
+   "vibes": [
+    "bold",
+    "modern",
+    "technology",
+    "data-driven"
+   ],
+   "best_for": [
+    "payments APIs",
+    "developer tools",
+    "marketplace platforms",
+    "infrastructure"
+   ],
+   "palette": [
+    "#2a3cff",
+    "#ffffff",
+    "#0b1030",
+    "#7dffc4",
+    "#e8ecff"
+   ],
+   "fonts": {
+    "display": "Familjen Grotesk",
+    "body": "Geist",
+    "mono": "Geist Mono"
+   },
+   "image": "assets/designs/payload-ultramarine.png",
+   "mockup": "designs-src/payload-ultramarine/index.html",
+   "references": [
+    {
+     "title": "SwiftFunds SaaS fintech landing, bento features",
+     "url": "https://dribbble.com/uixfahad",
+     "source": "dribbble"
+    },
+    {
+     "title": "Premium SaaS Fintech Landing Page Design",
+     "url": "https://contra.com/p/bUeMrAcq-premium-saa-s-fintech-landing-page-design",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Fill the page with one flat saturated blue and overlay a 64px line grid masked to fade out toward the content. Set the headline very large (90px+) with letter-spacing around -0.05em and colour one phrase mint. Tiles alternate white, ink and mint with 22px radii, and the lowest tile runs off the bottom edge to suggest more below. Use Geist Mono for every label, number and the code sample.",
+   "categoryId": "glasshouse-ledger",
+   "categoryName": "Glasshouse Ledger",
+   "index": 7,
+   "total": 48
+  },
+  {
+   "id": "meridian-pane",
+   "name": "Meridian Pane",
+   "descriptor": "layered glass x private wealth",
+   "summary": "A dark teal ocean with an amber sun and three tilted, translucent glass panes stacked like layers of a balance sheet.",
+   "keywords": [
+    "tilted frosted panes",
+    "deep teal gradient",
+    "amber sun orb",
+    "light serif headline",
+    "3D perspective stack",
+    "hairline rules"
+   ],
+   "vibes": [
+    "luxury",
+    "elegant",
+    "dark",
+    "data-driven"
+   ],
+   "best_for": [
+    "wealth management",
+    "family offices",
+    "private banking",
+    "investment platforms"
+   ],
+   "palette": [
+    "#04191d",
+    "#0b3b42",
+    "#13696f",
+    "#bff0e8",
+    "#f2b866"
+   ],
+   "fonts": {
+    "display": "Fraunces",
+    "body": "Outfit",
+    "mono": "Outfit"
+   },
+   "image": "assets/designs/meridian-pane.png",
+   "mockup": "designs-src/meridian-pane/index.html",
+   "references": [
+    {
+     "title": "Glass-themed fintech bento (Contra)",
+     "url": "https://contra.com/p/7bPBkgPq-building-a-glass-themed-fintech-bento",
+     "source": "other"
+    },
+    {
+     "title": "Premium glassmorphism dashboard with edge-to-edge line charts",
+     "url": "https://superdesign.dev/library/premium-glassmorphism-dashboard-with-smooth-edge-to-edge-line-charts",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Paint the ground with two or three large radial gradients on near-black teal, then place a glowing amber orb and a teal orb so the glass has something to refract. Each pane uses rgba(190,240,232,.09), backdrop-filter: blur(22px), a 1px pale-teal border and transform: perspective(1600px) rotateY(-14deg) rotateX(4deg). Offset the panes vertically so each overlaps the one behind it. Set the headline in a light optical-size serif with one italic word.",
+   "categoryId": "glasshouse-ledger",
+   "categoryName": "Glasshouse Ledger",
+   "index": 8,
+   "total": 48
+  },
+  {
+   "id": "amanora-dunes",
+   "name": "Amanora Dunes",
+   "descriptor": "desert dusk x boutique hospitality",
+   "summary": "A layered terracotta dune scene under a low sun, with a light italic serif headline and a frosted booking strip floating over the foreground sand.",
+   "keywords": [
+    "stacked gradient dunes",
+    "low sun glow",
+    "light italic serif headline",
+    "frosted booking bar",
+    "wide-tracked caps nav",
+    "film grain overlay"
+   ],
+   "vibes": [
+    "cinematic",
+    "luxury",
+    "warm",
+    "elegant"
+   ],
+   "best_for": [
+    "boutique hotels",
+    "desert and safari lodges",
+    "slow-travel brands"
+   ],
+   "palette": [
+    "#f1d7b8",
+    "#e59a74",
+    "#a8512f",
+    "#3a1f17",
+    "#fbf1e2"
+   ],
+   "fonts": {
+    "display": "Cormorant Garamond",
+    "body": "Jost"
+   },
+   "image": "assets/designs/amanora-dunes.png",
+   "mockup": "designs-src/amanora-dunes/index.html",
+   "references": [
+    {
+     "title": "Alpine Hotel Felsblick, boutique hotel hero with serif type",
+     "url": "https://dribbble.com/eslamhassany91",
+     "source": "dribbble"
+    },
+    {
+     "title": "Dunhofenhutte, serif-led site with full-bleed storytelling",
+     "url": "https://www.designrush.com/best-designs/websites/dunhofenhutte-website-design",
+     "source": "other"
+    },
+    {
+     "title": "Arlington and Row, luxury retreat with serif and whitespace",
+     "url": "https://www.designrush.com/best-designs/websites/arlington-and-row-website-design",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Draw the whole scene as one inline SVG with preserveAspectRatio slice: a sky linearGradient, a radial-gradient sun, then four dune paths each with its own top-to-bottom gradient, darker toward the viewer. Add a 1px lighter stroke on the ridgelines and a feTurbulence grain at low opacity with soft-light blending. Set the headline in a light-weight Cormorant at 110px with tight negative tracking and one italic word. Build the booking bar as a 5-column grid with backdrop-filter blur and a solid ivory button.",
+   "categoryId": "horizon-hush",
+   "categoryName": "Horizon Hush",
+   "index": 9,
+   "total": 48
+  },
+  {
+   "id": "nordhavn-fjord",
+   "name": "Nordhavn Fjord",
+   "descriptor": "misty fjord x slow-travel",
+   "summary": "Five procedurally drawn mountain ridgelines fade into mist, with a giant thin wordmark sandwiched between the layers and a tiny ferry on still water.",
+   "keywords": [
+    "atmospheric perspective mountains",
+    "wordmark between layers",
+    "mirror water reflection",
+    "pale blue-grey palette",
+    "coordinate readout",
+    "tiny wide-tracked caps"
+   ],
+   "vibes": [
+    "cinematic",
+    "minimal",
+    "cool",
+    "elegant"
+   ],
+   "best_for": [
+    "expedition and cruise brands",
+    "outdoor lodges",
+    "travel journals"
+   ],
+   "palette": [
+    "#5d7488",
+    "#9db0bf",
+    "#d3dde3",
+    "#34485a",
+    "#f3f6f8"
+   ],
+   "fonts": {
+    "display": "Instrument Serif",
+    "body": "Manrope"
+   },
+   "image": "assets/designs/nordhavn-fjord.png",
+   "mockup": "designs-src/nordhavn-fjord/index.html",
+   "references": [
+    {
+     "title": "Hotel Mono, monochrome hotel concept collection",
+     "url": "https://dribbble.com/mathieuserrano/collections/3436117-Divers-inspiration",
+     "source": "dribbble"
+    },
+    {
+     "title": "Dunhofenhutte, cinematic full-bleed alpine storytelling",
+     "url": "https://www.designrush.com/best-designs/websites/dunhofenhutte-website-design",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Generate ridgelines with seeded midpoint displacement in a few lines of JS and emit them as SVG paths, back to front, each one a shade darker and bluer than the last. Insert the 190px thin sans wordmark as an SVG text node between layer three and four so the front mountains overlap the letters. Add translucent white fog gradients between layers, then mirror the paths below the waterline with a blur and a fade mask for the reflection. Keep every label at 10-11px with 0.25em tracking so the scene stays dominant.",
+   "categoryId": "horizon-hush",
+   "categoryName": "Horizon Hush",
+   "index": 10,
+   "total": 48
+  },
+  {
+   "id": "maison-veyl-nocturne",
+   "name": "Maison Veyl Nocturne",
+   "descriptor": "couture house x moonlit satin",
+   "summary": "Black satin drapes lit by a single cool moon-glow fill the frame behind one monumental italic Didone word, with champagne hairlines as the only warmth.",
+   "keywords": [
+    "canvas-rendered satin folds",
+    "giant italic Didone headline",
+    "champagne gold hairline accents",
+    "film grain",
+    "vertical rotated caption",
+    "play-ring video cue"
+   ],
+   "vibes": [
+    "luxury",
+    "dark",
+    "elegant",
+    "cinematic"
+   ],
+   "best_for": [
+    "fashion houses",
+    "couture and fragrance launches",
+    "luxury watchmakers"
+   ],
+   "palette": [
+    "#07070b",
+    "#dfe3ea",
+    "#8e97ab",
+    "#c9b48b",
+    "#1a1d28"
+   ],
+   "fonts": {
+    "display": "Bodoni Moda",
+    "body": "Tenor Sans"
+   },
+   "image": "assets/designs/maison-veyl-nocturne.png",
+   "mockup": "designs-src/maison-veyl-nocturne/index.html",
+   "references": [
+    {
+     "title": "Maison Lumiere, cinematic luxury fashion template",
+     "url": "https://www.framer.com/marketplace/templates/maison-lumi-re/",
+     "source": "other"
+    },
+    {
+     "title": "Luxury Editorial Website for Atelier Noir",
+     "url": "https://contra.com/p/qXBrBvEg-luxury-editorial-website-for-atelier-noir",
+     "source": "other"
+    },
+    {
+     "title": "Fine Dine Club, dark editorial luxury concept with serif type",
+     "url": "https://dribbble.com/dwipoprawiro",
+     "source": "dribbble"
+    }
+   ],
+   "how_to_build": "Render the drapes on a canvas per pixel: compute a warped sine phase across x, take its derivative as the surface slope, and light it with a diffuse term plus a sharp specular pow() that is strongest inside a gaussian moon-pool at the upper right. Add 3 percent noise for grain, then overlay a left-to-right dark gradient so type stays readable. Set the headline in Bodoni Moda italic at 228px with -0.035em tracking, and keep all other text at 11px caps with 0.3em letter-spacing.",
+   "categoryId": "horizon-hush",
+   "categoryName": "Horizon Hush",
+   "index": 11,
+   "total": 48
+  },
+  {
+   "id": "solenne-meridian",
+   "name": "Solenne Meridian",
+   "descriptor": "dawn sea x private charter",
+   "summary": "A tall arched window frames a sunrise over calm water with a glittering reflection path, flanked by a serif headline and a short itinerary on deep teal.",
+   "keywords": [
+    "arched window scene",
+    "concentric arch outlines",
+    "sun glitter path",
+    "deep teal ground",
+    "itinerary with latitudes",
+    "blush serif highlight word"
+   ],
+   "vibes": [
+    "luxury",
+    "cinematic",
+    "elegant",
+    "cool"
+   ],
+   "best_for": [
+    "yacht and villa charters",
+    "coastal resorts",
+    "private travel concierges"
+   ],
+   "palette": [
+    "#0b2a31",
+    "#124650",
+    "#7fc3c0",
+    "#f5c9b2",
+    "#f7f0e6"
+   ],
+   "fonts": {
+    "display": "Gilda Display",
+    "body": "Hanken Grotesk"
+   },
+   "image": "assets/designs/solenne-meridian.png",
+   "mockup": "designs-src/solenne-meridian/index.html",
+   "references": [
+    {
+     "title": "Luxury Hotel Website Development on Dribbble",
+     "url": "https://dribbble.com/services/242584-Luxury-Hotel-Website-Development",
+     "source": "dribbble"
+    },
+    {
+     "title": "Art Villas, luxury hospitality style-guide references",
+     "url": "https://dribbble.com/johnnyesleo/collections/7562643-STYLE-GUIDES-REFS",
+     "source": "dribbble"
+    }
+   ],
+   "how_to_build": "Clip an inline SVG to an arch path (a rectangle topped by a half-circle) and paint a peach-to-cream sky, a radial sun glow, two tiny island silhouettes and a teal sea gradient. Scatter short white rects in a column that widens toward the viewer for the sun glitter, and a few dark thin rects for ripples. Echo the arch twice with 14px offset outlines at falling opacity. The page ground is a radial teal gradient so the window glows. Use a single hairline-ruled list for the itinerary.",
+   "categoryId": "horizon-hush",
+   "categoryName": "Horizon Hush",
+   "index": 12,
+   "total": 48
+  },
+  {
+   "id": "isoline-highwater",
+   "name": "Highwater Contours",
+   "descriptor": "topographic line art x climate risk",
+   "summary": "A pale green paper field covered in generated elevation contours, with flood-zone lines and fills in signal orange and a floating readout panel.",
+   "keywords": [
+    "generated contour lines",
+    "orange flood zone",
+    "pale sage paper",
+    "elevation callout pin",
+    "mono coordinates",
+    "floating data panels"
+   ],
+   "vibes": [
+    "data-driven",
+    "serious",
+    "modern",
+    "light"
+   ],
+   "best_for": [
+    "climate risk",
+    "insurance",
+    "geospatial tools",
+    "urban planning"
+   ],
+   "palette": [
+    "#e3eae4",
+    "#0f3322",
+    "#7a9a86",
+    "#ff5a1f"
+   ],
+   "fonts": {
+    "display": "Instrument Sans",
+    "body": "Instrument Sans",
+    "mono": "JetBrains Mono"
+   },
+   "image": "assets/designs/isoline-highwater.png",
+   "mockup": "designs-src/isoline-highwater/index.html",
+   "references": [
+    {
+     "title": "Topographic contour component (Framer)",
+     "url": "https://www.framer.com/community/marketplace/components/topographic-contour/",
+     "source": "other"
+    },
+    {
+     "title": "Topolines, contour line art from real elevation data",
+     "url": "https://dev.to/topolines/i-built-a-web-tool-that-turns-real-elevation-data-into-topographic-contour-line-art-svg-png-132m",
+     "source": "other"
+    },
+    {
+     "title": "Climate Intelligence landing page design",
+     "url": "https://contra.com/p/gmArRZFb-climate-intelligence-landing-page-design",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Generate the terrain in a canvas: sum a few dozen Gaussian bumps plus a carved river valley into a scalar grid, then run marching squares at evenly spaced levels and stroke each segment, making every fifth level heavier. Colour the levels inside the flood band orange and add a blurred orange fill below the threshold. Fade the left side with a paper-coloured gradient so the headline stays clean, and float small panels with a light blur on the right.",
+   "categoryId": "isoline-atlas",
+   "categoryName": "Isoline Atlas",
+   "index": 13,
+   "total": 48
+  },
+  {
+   "id": "quorum-ledger-type",
+   "name": "Quorum Ledger",
+   "descriptor": "swiss grid x governance software",
+   "summary": "A white hairline-ruled page where a 196px tabular numeral and a small ledger table are the hero, with one yellow highlighter stroke as the only colour.",
+   "keywords": [
+    "giant tabular numeral",
+    "hairline grid frame",
+    "yellow highlighter stroke",
+    "serif italic accent",
+    "ledger table with micro bars",
+    "ruler tick margin"
+   ],
+   "vibes": [
+    "corporate",
+    "serious",
+    "minimal",
+    "editorial"
+   ],
+   "best_for": [
+    "board software",
+    "compliance",
+    "legal tech",
+    "enterprise SaaS"
+   ],
+   "palette": [
+    "#ffffff",
+    "#0b0c0e",
+    "#6b6f78",
+    "#d9dbe0",
+    "#ffdf2b"
+   ],
+   "fonts": {
+    "display": "Inter Tight",
+    "body": "Inter Tight",
+    "mono": "IBM Plex Mono"
+   },
+   "image": "assets/designs/quorum-ledger-type.png",
+   "mockup": "designs-src/quorum-ledger-type/index.html",
+   "references": [
+    {
+     "title": "Editorial enterprise SaaS landing page (template reference)",
+     "url": "https://enter.converge.ai/page/en-US/hub/e0b0304486824dbba7cde04b8f1bfa33-v-bb1c23a9",
+     "source": "other"
+    },
+    {
+     "title": "Webflow Enterprise page review (SaaSFrame)",
+     "url": "https://saasframe.io/examples/webflow-enterprise-page",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Draw the layout with 1px #d9dbe0 rules only: an outer frame, a nav rule, a vertical split and a four-column footer strip. Set the headline in Inter Tight 600 at 92px with -0.055em tracking and switch the last phrase to an italic serif. Make the highlighter with linear-gradient(transparent 58%, yellow 58% 90%, transparent 90%) on the inline element. Use font-variant-numeric: tabular-nums for the big number and every table column.",
+   "categoryId": "isoline-atlas",
+   "categoryName": "Isoline Atlas",
+   "index": 14,
+   "total": 48
+  },
+  {
+   "id": "isobar-grid",
+   "name": "Isobar Grid",
+   "descriptor": "pressure line art x energy weather",
+   "summary": "A midnight-blue weather chart of pale isobars and wind ticks around a coral low-pressure centre, with a thin serif headline and a forecast readout.",
+   "keywords": [
+    "pale blue isobar lines",
+    "wind direction ticks",
+    "single coral marker",
+    "light serif headline",
+    "mono pressure labels",
+    "midnight navy ground"
+   ],
+   "vibes": [
+    "serious",
+    "elegant",
+    "dark",
+    "data-driven"
+   ],
+   "best_for": [
+    "energy trading",
+    "weather services",
+    "utilities",
+    "climate research"
+   ],
+   "palette": [
+    "#091a33",
+    "#0d2444",
+    "#a9cdf5",
+    "#e9f1fb",
+    "#ff7a59"
+   ],
+   "fonts": {
+    "display": "Newsreader",
+    "body": "Instrument Sans",
+    "mono": "DM Mono"
+   },
+   "image": "assets/designs/isobar-grid.png",
+   "mockup": "designs-src/isobar-grid/index.html",
+   "references": [
+    {
+     "title": "Climate Pulse, dark navy line-chart template (Kombai)",
+     "url": "https://kombai.com/gallery/inspirations/climate-pulse/",
+     "source": "other"
+    },
+    {
+     "title": "Pentagram, CTrees data identity",
+     "url": "https://pentagram.com/work/ctrees",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Define a pressure field as a baseline of 1013 plus a few Gaussians (one deep low), run marching squares at 2 hPa intervals and make every 8 hPa line brighter and labelled. Add a coarse grid of short wind ticks that rotate around the low's centre. Keep the whole palette to pale blue on navy, with a single coral ring on the low as the only warm colour. Mask the left third with a navy gradient so the light serif headline reads cleanly.",
+   "categoryId": "isoline-atlas",
+   "categoryName": "Isoline Atlas",
+   "index": 15,
+   "total": 48
+  },
+  {
+   "id": "pulsewell-rings",
+   "name": "Pulsewell Rings",
+   "descriptor": "radial year chart x hospital capacity",
+   "summary": "A blush page with a huge radial chart of 365 daily spokes bleeding off the right edge, surge days in coral and a bed-count pill at its centre.",
+   "keywords": [
+    "365-spoke radial chart",
+    "coral surge spikes",
+    "blush and burgundy palette",
+    "teal occupancy ring",
+    "chunky serif headline",
+    "frosted floating chips"
+   ],
+   "vibes": [
+    "warm",
+    "friendly",
+    "data-driven",
+    "modern"
+   ],
+   "best_for": [
+    "healthcare operations",
+    "hospital analytics",
+    "public health",
+    "capacity planning"
+   ],
+   "palette": [
+    "#fff0ec",
+    "#3a0f22",
+    "#f2553d",
+    "#0f7f78",
+    "#f8d9d2"
+   ],
+   "fonts": {
+    "display": "Young Serif",
+    "body": "Figtree",
+    "mono": "Spline Sans Mono"
+   },
+   "image": "assets/designs/pulsewell-rings.png",
+   "mockup": "designs-src/pulsewell-rings/index.html",
+   "references": [
+    {
+     "title": "Healthy Dashboard Concept (Dribbble tag listing)",
+     "url": "https://dribbble.com/UnArshia/tags/fluent-design",
+     "source": "dribbble"
+    },
+    {
+     "title": "Climate visualizations for the people, Probable Futures",
+     "url": "https://www.mapbox.com/blog/climate-visualizations-for-the-people-probable-futures",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Generate the chart in an inline SVG with JavaScript: for each day of the year, draw a line from an inner radius at angle = day/365 * 2pi, with length scaled by a seasonal curve times a weekly rhythm, and colour days above a threshold coral. Add dashed concentric guide rings and month labels outside the spokes. Offset the SVG so it bleeds off the right edge, and place a dark pill with the headline number at its centre.",
+   "categoryId": "isoline-atlas",
+   "categoryName": "Isoline Atlas",
+   "index": 16,
+   "total": 48
+  },
+  {
+   "id": "fileroom-brutalist-mono",
+   "name": "Fileroom Brutalist Mono",
+   "descriptor": "brutalist x document archive",
+   "summary": "Raw boxed layout with 4px black borders, giant Archivo Black headline, a safety-orange block, default blue links and hard-shadow stickers.",
+   "keywords": [
+    "thick black cell borders",
+    "giant black-weight headline",
+    "safety orange slab",
+    "lime logo block",
+    "default blue underlined links",
+    "monospace body"
+   ],
+   "vibes": [
+    "bold",
+    "experimental",
+    "serious",
+    "light"
+   ],
+   "best_for": [
+    "developer tools",
+    "archives and libraries",
+    "agencies",
+    "architecture offices"
+   ],
+   "palette": [
+    "#ffffff",
+    "#000000",
+    "#ff4d00",
+    "#c6ff00",
+    "#0000ee",
+    "#d4d4cf"
+   ],
+   "fonts": {
+    "display": "Archivo Black",
+    "body": "JetBrains Mono",
+    "mono": "JetBrains Mono"
+   },
+   "image": "assets/designs/fileroom-brutalist-mono.png",
+   "mockup": "designs-src/fileroom-brutalist-mono/index.html",
+   "references": [
+    {
+     "title": "Brutalist website design guide with examples (Webflow)",
+     "url": "https://webflow.com/blog/10-brutalist-websites",
+     "source": "other"
+    },
+    {
+     "title": "Web Brutalism collection on Dribbble",
+     "url": "https://dribbble.com/dlevsapij/collections/3278617-Web-Brutalism",
+     "source": "dribbble"
+    },
+    {
+     "title": "Brutalist fonts in brutalist designs (Pangram Pangram)",
+     "url": "https://pangrampangram.com/blogs/journal/brutalist-fonts-in-brutalist-designs",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Wrap the page in a CSS grid with a 4px black border and give every cell a border instead of using gaps or shadows. Set the headline in Archivo Black at 170px or more with line-height .82 and tight negative tracking, and highlight one word with an inline-block coloured slab. Keep links as default blue underline and body text in a mono font, and add a single rotated sticker with a hard offset shadow.",
+   "categoryId": "loud-type-dept",
+   "categoryName": "Loud Type Dept",
+   "index": 17,
+   "total": 48
+  },
+  {
+   "id": "full-volume-klein",
+   "name": "Full Volume Klein",
+   "descriptor": "type poster x festival",
+   "summary": "A Klein-blue festival poster where three lines of Anton, solid then outlined, are scaled by script to fill the page edge to edge, with an orange marquee and ticket strip.",
+   "keywords": [
+    "ultramarine blue field",
+    "edge-to-edge condensed type",
+    "outlined stroke line",
+    "orange marquee band",
+    "rotated side label",
+    "ticket-style info strip"
+   ],
+   "vibes": [
+    "bold",
+    "creative",
+    "editorial",
+    "youthful"
+   ],
+   "best_for": [
+    "festivals and conferences",
+    "galleries",
+    "record labels",
+    "campaign sites"
+   ],
+   "palette": [
+    "#1a2cff",
+    "#f1eee4",
+    "#ff5a1f",
+    "#0a14b8"
+   ],
+   "fonts": {
+    "display": "Anton",
+    "body": "DM Mono",
+    "mono": "DM Mono"
+   },
+   "image": "assets/designs/full-volume-klein.png",
+   "mockup": "designs-src/full-volume-klein/index.html",
+   "references": [
+    {
+     "title": "Brutalist typography posters gallery (Graphic Design Junction)",
+     "url": "https://graphicdesignjunction.com/2026/08/brutalist-typography-posters/",
+     "source": "other"
+    },
+    {
+     "title": "Brutalism collection on Dribbble",
+     "url": "https://dribbble.com/bahur78/collections/7075304-Brutalism",
+     "source": "dribbble"
+    }
+   ],
+   "how_to_build": "Set each poster line in a condensed face, measure its natural width with getBoundingClientRect after fonts load, and scale font-size so every line spans the column exactly. Make the middle line transparent with -webkit-text-stroke in the paper colour. Keep colour to three flat values (blue, paper, orange) and anchor the bottom with a fixed-height info strip and a marquee band.",
+   "categoryId": "loud-type-dept",
+   "categoryName": "Loud Type Dept",
+   "index": 18,
+   "total": 48
+  },
+  {
+   "id": "elastic-axis-stretch",
+   "name": "Elastic Axis Stretch",
+   "descriptor": "variable type x lilac",
+   "summary": "A type foundry page where one word is stacked at four widths and weights along the variable font axes, each line fitted to the same column on a lilac ground.",
+   "keywords": [
+    "same word at four widths",
+    "width axis from condensed to extended",
+    "lilac background",
+    "acid-lime spec chips",
+    "mono axis readouts",
+    "ruled left rail"
+   ],
+   "vibes": [
+    "modern",
+    "experimental",
+    "creative",
+    "bold"
+   ],
+   "best_for": [
+    "type foundries",
+    "design tools",
+    "font specimens",
+    "creative studios"
+   ],
+   "palette": [
+    "#c9b8ff",
+    "#0b0a12",
+    "#d9ff3f",
+    "#f6f3ff"
+   ],
+   "fonts": {
+    "display": "Archivo",
+    "body": "Archivo",
+    "mono": "Martian Mono"
+   },
+   "image": "assets/designs/elastic-axis-stretch.png",
+   "mockup": "designs-src/elastic-axis-stretch/index.html",
+   "references": [
+    {
+     "title": "Brutalist fonts and variable type in practice (Pangram Pangram)",
+     "url": "https://pangrampangram.com/blogs/journal/brutalist-fonts-in-brutalist-designs",
+     "source": "other"
+    },
+    {
+     "title": "Typography and big-type shots on Dribbble (humanjpg)",
+     "url": "https://dribbble.com/humanjpg",
+     "source": "dribbble"
+    }
+   ],
+   "how_to_build": "Load a variable font with both wdth and wght axes from Google Fonts. Render the same word several times, setting font-variation-settings per line, then measure each line as inline-block and scale its font-size to fill the column so narrower settings become taller. Label each line with its axis values in mono. Keep the palette to a single tint, black and one acid accent.",
+   "categoryId": "loud-type-dept",
+   "categoryName": "Loud Type Dept",
+   "index": 19,
+   "total": 48
+  },
+  {
+   "id": "haus-nord-swiss-grid",
+   "name": "Haus Nord Swiss Grid",
+   "descriptor": "swiss grid x concert hall",
+   "summary": "A visible 12-column grid with a bleeding giant numeral, a concentric-arc motif in red and black, and tight Hanken Grotesk headlines for a concert series.",
+   "keywords": [
+    "visible 12-column hairlines",
+    "giant cropped numeral",
+    "concentric circle arcs",
+    "red and black on off-white",
+    "flush-left grotesk",
+    "ruled programme list"
+   ],
+   "vibes": [
+    "modern",
+    "minimal",
+    "elegant",
+    "editorial"
+   ],
+   "best_for": [
+    "concert halls and theatres",
+    "museums",
+    "architecture studios",
+    "cultural institutions"
+   ],
+   "palette": [
+    "#f7f7f4",
+    "#0c0c0c",
+    "#e4301b",
+    "#6b6b66"
+   ],
+   "fonts": {
+    "display": "Hanken Grotesk",
+    "body": "Hanken Grotesk",
+    "mono": "Hanken Grotesk"
+   },
+   "image": "assets/designs/haus-nord-swiss-grid.png",
+   "mockup": "designs-src/haus-nord-swiss-grid/index.html",
+   "references": [
+    {
+     "title": "Mario Grgic Swiss-style web layouts on Dribbble",
+     "url": "https://dribbble.com/mariogrgic",
+     "source": "dribbble"
+    },
+    {
+     "title": "Readymag Almanac: grids in web design",
+     "url": "https://readymag.com/almanac/grid",
+     "source": "other"
+    },
+    {
+     "title": "Swiss grid web design overview",
+     "url": "https://digitalheroes.co.in/styles/swiss-grid/",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Define a 12-column CSS grid with 20px gaps and use subgrid so header and hero align to the same tracks. Draw the column hairlines as a decorative overlay. Set headlines at 118px and a bleeding 380px numeral with weight 900 and tracking of about -0.05em, and build the arc motif as inline SVG concentric circles with two filled sectors. Limit colour to red, black and off-white.",
+   "categoryId": "loud-type-dept",
+   "categoryName": "Loud Type Dept",
+   "index": 20,
+   "total": 48
+  },
+  {
+   "id": "kouros-signal",
+   "name": "Kouros Signal",
+   "descriptor": "glitched antiquity x museum archive",
+   "summary": "A cold stone page with a giant Bodoni headline and a marble bust sliced, shifted and fringed in cyan and magenta, framed by a Greek key border.",
+   "keywords": [
+    "RGB-split marble bust",
+    "horizontal slice displacement",
+    "Greek key border strip",
+    "high-contrast Bodoni display",
+    "mono catalogue captions",
+    "scanline and grain overlay"
+   ],
+   "vibes": [
+    "artistic",
+    "experimental",
+    "elegant",
+    "cool"
+   ],
+   "best_for": [
+    "museums",
+    "archives",
+    "3D scan libraries",
+    "cultural institutions"
+   ],
+   "palette": [
+    "#d8dad6",
+    "#0c0d10",
+    "#00e5ff",
+    "#ff2bd6",
+    "#f1efe9"
+   ],
+   "fonts": {
+    "display": "Bodoni Moda",
+    "body": "Space Mono",
+    "mono": "Space Mono"
+   },
+   "image": "assets/designs/kouros-signal.png",
+   "mockup": "designs-src/kouros-signal/index.html",
+   "references": [
+    {
+     "title": "Glitch collection on Dribbble",
+     "url": "https://dribbble.com/nojuan/collections/580489-Glitch",
+     "source": "dribbble"
+    },
+    {
+     "title": "Spectra: where art meets digital innovation (classical sculpture concept)",
+     "url": "https://contra.com/p/rPWUrkMW-spectra-where-art-meets",
+     "source": "other"
+    },
+    {
+     "title": "Vaporwave style guide: Roman busts, VHS scanlines",
+     "url": "https://digitalheroes.co.in/styles/vaporwave/",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Build the bust as one inline SVG group (shapes plus an feTurbulence marble filter), then stack it: two colour-matrixed copies offset left and right with mix-blend-mode multiply, and several clipPath bands that repaint the background and redraw the bust shifted sideways. Add coloured streak rects and vertical bars for pixel-sorting. Pair a very heavy high-contrast serif with a mono caption face, and finish with a repeating-linear-gradient scanline layer and an SVG grain overlay.",
+   "categoryId": "marble-static",
+   "categoryName": "Marble Static",
+   "index": 21,
+   "total": 48
+  },
+  {
+   "id": "lethe-fm",
+   "name": "Lethe FM",
+   "descriptor": "vaporwave x classical radio",
+   "summary": "A neon sunset with a slit sun, a tilted teal grid floor and a lilac-to-pink profile bust on a plinth, with a glass player window floating in front.",
+   "keywords": [
+    "striped sunset sun",
+    "perspective neon grid floor",
+    "duotone profile bust",
+    "wide extended display type",
+    "Japanese vertical caption",
+    "translucent player window"
+   ],
+   "vibes": [
+    "retro",
+    "futuristic",
+    "artistic",
+    "dark"
+   ],
+   "best_for": [
+    "music apps",
+    "internet radio",
+    "events",
+    "album sites"
+   ],
+   "palette": [
+    "#12062e",
+    "#ff4fa3",
+    "#ffa35e",
+    "#2ee6d6",
+    "#f3e6ff"
+   ],
+   "fonts": {
+    "display": "Unbounded",
+    "body": "DM Mono",
+    "mono": "DM Mono"
+   },
+   "image": "assets/designs/lethe-fm.png",
+   "mockup": "designs-src/lethe-fm/index.html",
+   "references": [
+    {
+     "title": "Retro and old-computer UI collection (vaporwave, holographic)",
+     "url": "https://dribbble.com/alinekfernandes/collections/6753361-Retr",
+     "source": "dribbble"
+    },
+    {
+     "title": "Vaporwave web design: grids, busts, sunset gradients",
+     "url": "https://digitalheroes.co.in/styles/vaporwave/",
+     "source": "other"
+    },
+    {
+     "title": "Daplanks shots, vaporwave and glitch art",
+     "url": "https://dribbble.com/Daplanks/shots",
+     "source": "dribbble"
+    }
+   ],
+   "how_to_build": "Layer a multi-stop sky gradient, an SVG sun with a mask of horizontal black bars that grow thicker toward the horizon, and a floor div carrying a two-direction line grid under perspective(380px) rotateX(64deg) with a teal drop-shadow glow. Draw the bust as SVG paths filled with a three-stop teal-lilac-pink gradient and generate hair curls with a small loop. Use a wide display face with a gradient text fill, then add a blurred backdrop-filter window and a scanline overlay.",
+   "categoryId": "marble-static",
+   "categoryName": "Marble Static",
+   "index": 22,
+   "total": 48
+  },
+  {
+   "id": "halo-chrome",
+   "name": "Pearlpod Chrome",
+   "descriptor": "y2k chrome x gadget launch",
+   "summary": "A bubbly pearl-blue launch page: liquid-chrome wordmark, glossy pill buttons, orbit rings, chrome orbs and a taped lime ticker around a pocket music player.",
+   "keywords": [
+    "liquid chrome gradient lettering",
+    "glossy aqua pill buttons",
+    "orbit rings and chrome spheres",
+    "four-point sparkle stars",
+    "pastel iridescent ground",
+    "taped ticker band"
+   ],
+   "vibes": [
+    "retro",
+    "playful",
+    "futuristic",
+    "light"
+   ],
+   "best_for": [
+    "gadgets",
+    "music players",
+    "youth brands",
+    "product drops"
+   ],
+   "palette": [
+    "#cfe3ff",
+    "#16296b",
+    "#c6ff3d",
+    "#ff7cc8",
+    "#e5d6ff"
+   ],
+   "fonts": {
+    "display": "Bowlby One",
+    "body": "Figtree",
+    "mono": "Figtree"
+   },
+   "image": "assets/designs/halo-chrome.png",
+   "mockup": "designs-src/halo-chrome/index.html",
+   "references": [
+    {
+     "title": "Y2K aesthetic for web design: chrome, gradients, bubbles",
+     "url": "https://origin.webflow.com/blog/y2k-aesthetic",
+     "source": "other"
+    },
+    {
+     "title": "Y2K nostalgia style guide",
+     "url": "https://digitalheroes.co.in/styles/y2k-nostalgia/",
+     "source": "other"
+    },
+    {
+     "title": "15 classic 90s websites and modern sites keeping the look alive",
+     "url": "https://www.framer.com/blog/90s-websites/",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Fake chrome with background-clip:text and a hard-stop vertical gradient that goes white, sky blue, navy, then jumps back to light blue at 50 percent, plus a dark text-stroke and stacked drop-shadows. Build glossy buttons from a split gradient with a sharp midpoint, a white border and inset shadows. Spheres are radial gradients with an off-centre white highlight and a bright rim. Rotate the product SVG, ring it with a gradient-stroked ellipse and tilt a navy ticker band -2 degrees.",
+   "categoryId": "marble-static",
+   "categoryName": "Marble Static",
+   "index": 23,
+   "total": 48
+  },
+  {
+   "id": "cutout-pantheon",
+   "name": "Cut-Out Pantheon",
+   "descriptor": "surreal collage x zine press",
+   "summary": "A kraft-paper desk with a ransom-note headline, a torn card holding a headless marble torso, a column, an all-seeing eye on a blue moon, tape, stamps and a price tag.",
+   "keywords": [
+    "ransom-note letter tiles",
+    "torn paper edges",
+    "halftone dot shading",
+    "headless statue and floating eye",
+    "tape strips and rubber stamp",
+    "kraft paper texture"
+   ],
+   "vibes": [
+    "artistic",
+    "experimental",
+    "handcrafted",
+    "warm"
+   ],
+   "best_for": [
+    "magazines",
+    "art zines",
+    "publishers",
+    "galleries"
+   ],
+   "palette": [
+    "#d8b374",
+    "#f4ecd8",
+    "#14110f",
+    "#8c1c1c",
+    "#1f40c4",
+    "#ffc533"
+   ],
+   "fonts": {
+    "display": "Playfair Display + Anton (mixed)",
+    "body": "Special Elite",
+    "mono": "Special Elite"
+   },
+   "image": "assets/designs/cutout-pantheon.png",
+   "mockup": "designs-src/cutout-pantheon/index.html",
+   "references": [
+    {
+     "title": "Risograph and zine web aesthetics: grain, overlays, misregistration",
+     "url": "https://big-sky-design-atelier.vercel.app/prompts/04-yoga-studio/research/references.html",
+     "source": "other"
+    },
+    {
+     "title": "Secret Riso Club on It's Nice That",
+     "url": "https://www.itsnicethat.com/articles/secret-riso-club-graphic-design-project-161023",
+     "source": "other"
+    },
+    {
+     "title": "Spectra: classical sculpture meets digital collage",
+     "url": "https://contra.com/p/rPWUrkMW-spectra-where-art-meets",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Generate the headline from JavaScript: each letter becomes a tile with its own font, paper colour, rotation, vertical nudge and a slightly jagged clip-path polygon. For torn paper, run SVG shapes through an feTurbulence plus feDisplacementMap filter and add a hard feDropShadow. Shade statues with a rotated dot pattern fill at partial opacity, give cut-outs a thick white stroke, and finish with semi-transparent tape rectangles and a textPath stamp.",
+   "categoryId": "marble-static",
+   "categoryName": "Marble Static",
+   "index": 24,
+   "total": 48
+  },
+  {
+   "id": "brandt-monolith",
+   "name": "Brandt Monolith",
+   "descriptor": "board-formed concrete x architecture studio",
+   "summary": "A split screen: a light-weight grotesk headline and a monospaced project index on grey paper, facing a single cast-concrete tower with a lamplit slit.",
+   "keywords": [
+    "board-formed concrete texture",
+    "50/50 split layout",
+    "monospaced project index",
+    "dimension line annotation",
+    "crosshair registration marks",
+    "one slot of warm light"
+   ],
+   "vibes": [
+    "minimal",
+    "serious",
+    "cool",
+    "artistic"
+   ],
+   "best_for": [
+    "architecture studios",
+    "design engineers",
+    "property developers"
+   ],
+   "palette": [
+    "#dcdad5",
+    "#c7c4be",
+    "#161616",
+    "#8a8781",
+    "#f0dfae"
+   ],
+   "fonts": {
+    "display": "Inter Tight",
+    "body": "Inter Tight",
+    "mono": "DM Mono"
+   },
+   "image": "assets/designs/brandt-monolith.png",
+   "mockup": "designs-src/brandt-monolith/index.html",
+   "references": [
+    {
+     "title": "Website design for an architectural company",
+     "url": "https://www.dribbble.com/shots/23460453-Website-design-for-an-architectural-company",
+     "source": "dribbble"
+    },
+    {
+     "title": "Minimalist architecture portfolio essentials",
+     "url": "https://www.portfoliobox.com/magazine/essential-elements-of-minimalist-architecture-portfolio",
+     "source": "other"
+    },
+    {
+     "title": "Arch studio website and brand identity",
+     "url": "https://contra.com/p/YmMNYgWN-arch-studio-website-and-brand-identity-development",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Draw the tower as flat SVG polygons: a lit front face, a darker receding side face and one cantilevered slab. Create the formwork look with feTurbulence stretched along y (baseFrequency '.9 .012'), thresholded with feColorMatrix and laid over the face with multiply, plus a 22px repeating 1px-line pattern. Keep the page strictly monochrome and let one small warm rectangle be the only colour. Headline is Inter Tight weight 200 at 118px with -0.055em tracking; the table uses hairline top borders and mono labels.",
+   "categoryId": "moss-monolith",
+   "categoryName": "Moss & Monolith",
+   "index": 25,
+   "total": 48
+  },
+  {
+   "id": "oru-gallery-void",
+   "name": "Oru Gallery Void",
+   "descriptor": "white cube x ink painting",
+   "summary": "An empty gallery wall with a window of light, one ink enso on washi and a tiny museum label. Type stays at three sizes and the whitespace does the work.",
+   "keywords": [
+    "diagonal window light on wall",
+    "single hung artwork",
+    "museum wall label",
+    "tiny grotesk nav",
+    "italic serif title",
+    "floor reflection"
+   ],
+   "vibes": [
+    "minimal",
+    "light",
+    "elegant",
+    "artistic"
+   ],
+   "best_for": [
+    "galleries and museums",
+    "artist portfolios",
+    "auction and print houses"
+   ],
+   "palette": [
+    "#f2f1ed",
+    "#e2e0da",
+    "#0e0e0e",
+    "#8c8a84",
+    "#f7f5ef"
+   ],
+   "fonts": {
+    "display": "Newsreader",
+    "body": "Albert Sans"
+   },
+   "image": "assets/designs/oru-gallery-void.png",
+   "mockup": "designs-src/oru-gallery-void/index.html",
+   "references": [
+    {
+     "title": "Hotel Mono, monochrome minimal typography concept",
+     "url": "https://dribbble.com/mathieuserrano/collections/3436117-Divers-inspiration",
+     "source": "dribbble"
+    },
+    {
+     "title": "Webflow architecture studio theme for minimalists",
+     "url": "https://webflow.com/website/architecture-studio-portfolio-theme",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Paint the wall with a vertical gradient and two stacked translucent white parallelograms (linear-gradient at 112deg with hard stops) for the window light. The artwork is an SVG paper panel with feTurbulence washi fibre, hung with a layered box-shadow (tight contact shadow plus a long soft drop). Draw the brush ring as a variable-width polygon in JS, rough its edges with feDisplacementMap and cut thin paper-coloured dry-brush arcs through it. Use only 12px, 15px and 46px type sizes.",
+   "categoryId": "moss-monolith",
+   "categoryName": "Moss & Monolith",
+   "index": 26,
+   "total": 48
+  },
+  {
+   "id": "fernhill-clay-spa",
+   "name": "Fernhill Clay Spa",
+   "descriptor": "cut-paper botanical x wellness retreat",
+   "summary": "Sage-green ground, a chunky rounded serif and pill-shaped controls beside a pebble-shaped collage of layered ferns, a clay sun and a stack of stones.",
+   "keywords": [
+    "cut-paper fern collage",
+    "pebble blob shape",
+    "pill nav and buttons",
+    "stacked stones",
+    "paper grain overlay",
+    "clay and moss palette"
+   ],
+   "vibes": [
+    "organic",
+    "friendly",
+    "warm",
+    "handcrafted"
+   ],
+   "best_for": [
+    "spas and retreats",
+    "herbal and skincare brands",
+    "ceramics studios"
+   ],
+   "palette": [
+    "#cdd5bb",
+    "#2e4631",
+    "#587a4a",
+    "#d79a84",
+    "#f3efe3"
+   ],
+   "fonts": {
+    "display": "Young Serif",
+    "body": "Figtree"
+   },
+   "image": "assets/designs/fernhill-clay-spa.png",
+   "mockup": "designs-src/fernhill-clay-spa/index.html",
+   "references": [
+    {
+     "title": "Willow Wellness, earthy neutral wellness site",
+     "url": "https://www.designrush.com/best-designs/websites/willow-wellness-website-design",
+     "source": "other"
+    },
+    {
+     "title": "Laura Waterhouse, holistic therapy site with organic aesthetics",
+     "url": "https://www.designrush.com/best-designs/websites/laura-waterhouse-website-design",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Clip the collage to an asymmetric cubic-bezier pebble path and offset a thin outline copy of it behind for a print-misregistration feel. Generate each frond in JS as a curved rachis path with alternating leaflets whose size follows a sine curve, in six greens, with a feDropShadow under the sun and stones. Multiply a tiny inline SVG noise tile across the whole page for paper grain. Make every UI element fully rounded and keep the headline at 92px with -0.025em tracking, one word in clay.",
+   "categoryId": "moss-monolith",
+   "categoryName": "Moss & Monolith",
+   "index": 27,
+   "total": 48
+  },
+  {
+   "id": "lindqvist-lookbook",
+   "name": "Lindqvist Lookbook",
+   "descriptor": "oat paper x fashion portfolio",
+   "summary": "A wide-tracked Italiana wordmark above three staggered portrait plates of paper-cut silhouettes that run off the bottom edge, with a quiet index column at left.",
+   "keywords": [
+    "extra-wide tracked wordmark",
+    "staggered portrait plates",
+    "bleeding off bottom edge",
+    "paper-cut figure silhouettes",
+    "oat and espresso palette",
+    "numbered caption on each plate"
+   ],
+   "vibes": [
+    "elegant",
+    "artistic",
+    "warm",
+    "luxury"
+   ],
+   "best_for": [
+    "stylists and photographers",
+    "fashion designers",
+    "creative directors"
+   ],
+   "palette": [
+    "#dad1c4",
+    "#efe9df",
+    "#251c17",
+    "#b98a82",
+    "#4d4036"
+   ],
+   "fonts": {
+    "display": "Italiana",
+    "body": "Instrument Sans"
+   },
+   "image": "assets/designs/lindqvist-lookbook.png",
+   "mockup": "designs-src/lindqvist-lookbook/index.html",
+   "references": [
+    {
+     "title": "Luxury Fashion Website Concept Design",
+     "url": "https://contra.com/p/AWkrYeWL-luxury-fashion-website-concept-design",
+     "source": "other"
+    },
+    {
+     "title": "Louis Vuitton Collectibles on Awwwards",
+     "url": "https://www.awwwards.com/sites/louis-vuitton-collectibles",
+     "source": "awwwards"
+    },
+    {
+     "title": "Luxury Editorial Website for Atelier Noir",
+     "url": "https://contra.com/p/qXBrBvEg-luxury-editorial-website-for-atelier-noir",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Set the wordmark in a thin display face at 112px with 0.17em letter-spacing and matching left padding so it centres optically. Position three plates absolutely with different tops and heights, each taller than the remaining viewport so they crop at the fold. Build each figure from a handful of SVG shapes (head ellipse, neck, a single coat, cape or trouser silhouette) with one linear gradient for fabric and one radial light on the backdrop. Captions are 10px caps with the plate number first.",
+   "categoryId": "moss-monolith",
+   "categoryName": "Moss & Monolith",
+   "index": 28,
+   "total": 48
+  },
+  {
+   "id": "aurora-ribbon",
+   "name": "Northlight Aurora Ribbons",
+   "descriptor": "aurora curtains x frosted glass",
+   "summary": "Teal, jade and rose aurora curtains hang over a dark ridge line. A left-aligned light headline sits below and a frosted-glass agent run card floats on the right.",
+   "keywords": [
+    "canvas aurora curtains",
+    "film grain over gradients",
+    "frosted glass card",
+    "gradient accent word",
+    "dark ridge silhouette",
+    "live task checklist"
+   ],
+   "vibes": [
+    "futuristic",
+    "cinematic",
+    "elegant",
+    "dark"
+   ],
+   "best_for": [
+    "AI agent platforms",
+    "automation tools",
+    "creative AI products"
+   ],
+   "palette": [
+    "#03060d",
+    "#2de2c0",
+    "#7dffa8",
+    "#e65bd0",
+    "#e8f3f2"
+   ],
+   "fonts": {
+    "display": "Bricolage Grotesque",
+    "body": "Bricolage Grotesque",
+    "mono": "Red Hat Mono"
+   },
+   "image": "assets/designs/aurora-ribbon.png",
+   "mockup": "designs-src/aurora-ribbon/index.html",
+   "references": [
+    {
+     "title": "Neobot personal AI chat assistant page design",
+     "url": "https://dribbble.com/shots/25511481-Neobot-Personal-AI-Chat-Assistant-Page-Design",
+     "source": "dribbble"
+    },
+    {
+     "title": "Aurora mesh gradient UI trend",
+     "url": "https://trends.daisyui.com/trend/mesh-gradient-aurora-ui/",
+     "source": "other"
+    },
+    {
+     "title": "Glass aurora dark hero",
+     "url": "https://superdesign.dev/library/lumina-design-prompted-glass-aurora-dark-hero",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Paint the sky on a canvas: for every 2px column draw a vertical linear gradient whose height and offset come from summed sine waves, fading to transparent at the top and brightest near the lower edge, with globalCompositeOperation set to lighter and a small blur filter. Add stars, a dark ridge path, a radial dark patch behind the text and a little noise for grain. Layer a backdrop-filter blur card with a 1px translucent border on top.",
+   "categoryId": "night-instruments",
+   "categoryName": "Night Instruments",
+   "index": 29,
+   "total": 48
+  },
+  {
+   "id": "orbital-pass",
+   "name": "Perigee Orbital Pass",
+   "descriptor": "orbit diagram x condensed type",
+   "summary": "Towering condensed capitals beside a tilted orbit diagram: a burnt-orange planet, concentric rings, satellites, a ground-station crosshair and mono telemetry.",
+   "keywords": [
+    "tilted elliptical orbit rings",
+    "burnt orange lit planet",
+    "condensed uppercase headline",
+    "telemetry callouts",
+    "masked grid backdrop",
+    "stat strip"
+   ],
+   "vibes": [
+    "futuristic",
+    "bold",
+    "technology",
+    "dark"
+   ],
+   "best_for": [
+    "space and satellite companies",
+    "aerospace data APIs",
+    "geospatial platforms"
+   ],
+   "palette": [
+    "#05060b",
+    "#ece6d8",
+    "#ff7a3d",
+    "#7f98ff",
+    "#7b8097"
+   ],
+   "fonts": {
+    "display": "Big Shoulders Display",
+    "body": "Martian Mono",
+    "mono": "Martian Mono"
+   },
+   "image": "assets/designs/orbital-pass.png",
+   "mockup": "designs-src/orbital-pass/index.html",
+   "references": [
+    {
+     "title": "Orbital integration ecosystem",
+     "url": "https://superdesign.dev/library/orbital-integration-ecosystem",
+     "source": "other"
+    },
+    {
+     "title": "Cinematic space travel landing page",
+     "url": "https://enter.converge.ai/page/en-US/hub/de70ac3164ef4be6850b23e50cba2e91-v-bb1c23a9",
+     "source": "other"
+    },
+    {
+     "title": "VELOS interstellar logistics landing page",
+     "url": "https://aura.build/templates/velos-interstell-31",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Draw the diagram in one SVG: group the rings under translate and rotate(-20) so ellipses share the same tilt, vary stroke opacity and dash patterns between rings, and highlight the active arc in the accent colour. Fill the planet with an offset radialGradient and draw the front half of the inner ring after it so it passes in front. Mask a faint grid with a radial gradient. Set the headline in a very condensed display face at 128px with tight leading and put all labels in a small uppercase mono.",
+   "categoryId": "night-instruments",
+   "categoryName": "Night Instruments",
+   "index": 30,
+   "total": 48
+  },
+  {
+   "id": "blueprint-fabric",
+   "name": "Tessel Blueprint Fabric",
+   "descriptor": "engineering drawing x isometric chip",
+   "summary": "A cobalt drafting sheet with a minor and major grid, an exploded isometric chip with dimension lines and lettered callouts, and a real title block.",
+   "keywords": [
+    "cobalt blueprint grid",
+    "isometric exploded chip",
+    "dimension lines with arrows",
+    "circled letter callouts",
+    "drawing title block",
+    "outlined condensed headline"
+   ],
+   "vibes": [
+    "technology",
+    "geometric",
+    "serious",
+    "cool"
+   ],
+   "best_for": [
+    "chips and hardware",
+    "robotics and industrial products",
+    "deep-tech engineering firms"
+   ],
+   "palette": [
+    "#0b2c72",
+    "#071d52",
+    "#d7e6ff",
+    "#7fa8ff",
+    "#ffe14a"
+   ],
+   "fonts": {
+    "display": "Barlow Condensed",
+    "body": "DM Mono",
+    "mono": "DM Mono"
+   },
+   "image": "assets/designs/blueprint-fabric.png",
+   "mockup": "designs-src/blueprint-fabric/index.html",
+   "references": [
+    {
+     "title": "Orbit console Framer component (schematic and control panel styling)",
+     "url": "https://www.framer.com/marketplace/components/orbitconsole/",
+     "source": "other"
+    },
+    {
+     "title": "Apogee Dynamics design inspiration",
+     "url": "https://kombai.com/gallery/inspirations/apogee-dynamics/",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Stack linear-gradient lines at 20px and 100px on a blue background for the sheet grid, then draw an inner frame with a second inset border. Generate the chip in SVG with a helper that maps (u, v, z) to screen using x = (u - v) * cos30 and y = (u + v) * 0.5 - z, drawing each slab as a top face plus two shaded side faces. Add dashed vertical guides between layers, dimension lines with small triangular arrowheads, and circled letter callouts. Finish with a bordered title block in a condensed face.",
+   "categoryId": "night-instruments",
+   "categoryName": "Night Instruments",
+   "index": 31,
+   "total": 48
+  },
+  {
+   "id": "prism-gateway",
+   "name": "Prism Spectral Gateway",
+   "descriptor": "refracted light x model routing",
+   "summary": "A white beam enters a glass prism and fans into five glowing spectral rays that land on model cards, a literal picture of one request routed to many models.",
+   "keywords": [
+    "glass prism triangle",
+    "five spectral rays with glow",
+    "wide extra-bold headline",
+    "gradient text line",
+    "model status cards",
+    "curl snippet card"
+   ],
+   "vibes": [
+    "futuristic",
+    "bold",
+    "creative",
+    "dark"
+   ],
+   "best_for": [
+    "LLM gateways and routers",
+    "API aggregators",
+    "developer infrastructure with a clear metaphor"
+   ],
+   "palette": [
+    "#040405",
+    "#f5f5f7",
+    "#ff5a5f",
+    "#ffb347",
+    "#9be564",
+    "#4fd8ff",
+    "#8f7bff"
+   ],
+   "fonts": {
+    "display": "Syne",
+    "body": "Fira Code",
+    "mono": "Fira Code"
+   },
+   "image": "assets/designs/prism-gateway.png",
+   "mockup": "designs-src/prism-gateway/index.html",
+   "references": [
+    {
+     "title": "Bold dark-mode AI platform landing page",
+     "url": "https://enter.converge.ai/marketplace/templates/ede359a116f4485d8e10a47dba2bd8d0",
+     "source": "other"
+    },
+    {
+     "title": "Cosmic AI automation landing page",
+     "url": "https://enter.converge.ai/marketplace/templates/d0a1d1a0f9904b9d852cf2c70f4637cd",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "In one SVG, draw the prism as a polygon with a translucent white linearGradient fill and a thin white stroke. For each ray build a thin wedge polygon from the exit point to a target dot, fill it with a gradient that fades in along its length, and duplicate it under a feGaussianBlur filter for glow. Position HTML model cards at the ray endpoints. Use a very wide display face at about 62px for the headline with a multi-stop gradient clipped to one line of text.",
+   "categoryId": "night-instruments",
+   "categoryName": "Night Instruments",
+   "index": 32,
+   "total": 48
+  },
+  {
+   "id": "dither-void",
+   "name": "Nullpoint Dither",
+   "descriptor": "bayer dither x brutal grotesk",
+   "summary": "Pure bone-white on black. A lit planet is rendered in a coarse Bayer dither, set against a huge expanded grotesk headline with one outlined word.",
+   "keywords": [
+    "bayer ordered dither",
+    "two-colour white on black",
+    "expanded heavy grotesk",
+    "outline text",
+    "mono data rail",
+    "install command box"
+   ],
+   "vibes": [
+    "technology",
+    "bold",
+    "minimal",
+    "dark"
+   ],
+   "best_for": [
+    "runtimes",
+    "CLIs",
+    "open-source infrastructure",
+    "developer platforms"
+   ],
+   "palette": [
+    "#080808",
+    "#efede6",
+    "#8b8982",
+    "#2a2a28"
+   ],
+   "fonts": {
+    "display": "Archivo (wdth 105, 900)",
+    "body": "JetBrains Mono",
+    "mono": "JetBrains Mono"
+   },
+   "image": "assets/designs/dither-void.png",
+   "mockup": "designs-src/dither-void/index.html",
+   "references": [
+    {
+     "title": "Developers and DevOps website collection (monochrome dev pages)",
+     "url": "https://dribbble.com/timilehinololade/collections/6975174-Developers-and-DevOps-website",
+     "source": "dribbble"
+    },
+    {
+     "title": "Oguz Yagiz Kara, dark developer site work",
+     "url": "https://oguzyagiz.dribbble.com/",
+     "source": "dribbble"
+    },
+    {
+     "title": "Terminal Mono design reference",
+     "url": "https://www.developersdigest.tech/library/design/terminal-mono",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Render the hero image in a canvas at low resolution (about 300x300), shade a sphere with simple Lambert lighting, then threshold each pixel against an 8x8 Bayer matrix so only two colours remain. Scale the canvas up with image-rendering: pixelated and let it bleed off the right edge. Set the headline in a variable grotesk at a wide width axis and weight 900 with negative tracking, and make one word transparent with -webkit-text-stroke. Keep everything else mono, uppercase and small, separated by 1px hairlines.",
+   "categoryId": "phosphor-static",
+   "categoryName": "Phosphor Static",
+   "index": 33,
+   "total": 48
+  },
+  {
+   "id": "amber-daemon",
+   "name": "Vigil Amber Terminal",
+   "descriptor": "crt phosphor x tmux panes",
+   "summary": "The whole page is a tmux session in amber phosphor: tab bar, framed panes with titles, a live log tail and a block-character sparkline, closed by a status line.",
+   "keywords": [
+    "amber phosphor glow",
+    "scanlines and vignette",
+    "tmux pane borders",
+    "pixel display headline",
+    "log tail with level tags",
+    "block-character sparkline",
+    "keycap buttons"
+   ],
+   "vibes": [
+    "retro",
+    "technology",
+    "dark",
+    "warm"
+   ],
+   "best_for": [
+    "observability tools",
+    "log and monitoring products",
+    "SSH and ops utilities"
+   ],
+   "palette": [
+    "#110a03",
+    "#ffb000",
+    "#ffd36b",
+    "#a56d00",
+    "#ff6a3d"
+   ],
+   "fonts": {
+    "display": "VT323",
+    "body": "IBM Plex Mono",
+    "mono": "IBM Plex Mono"
+   },
+   "image": "assets/designs/amber-daemon.png",
+   "mockup": "designs-src/amber-daemon/index.html",
+   "references": [
+    {
+     "title": "Developer portfolio as a live terminal on a phosphor CRT",
+     "url": "https://kombai.com/gallery/inspirations/okafor/",
+     "source": "other"
+    },
+    {
+     "title": "Terminal Dark pattern: real output as the hero",
+     "url": "https://pro.reactbits.dev/docs/agent-kit/skills/terminal-dark",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Lay out a CSS grid of bordered panes and place each title on the top border with a background-coloured label. Colour everything from one amber hue family and add text-shadow glows of 6 to 36px. Fake the CRT with a repeating-linear-gradient scanline overlay and a radial-gradient vignette on pseudo-elements above the content. Use a pixel font for the headline, a blinking block cursor made from a span, and Unicode block characters for the sparkline.",
+   "categoryId": "phosphor-static",
+   "categoryName": "Phosphor Static",
+   "index": 34,
+   "total": 48
+  },
+  {
+   "id": "diff-noir",
+   "name": "Patchwork Diff Noir",
+   "descriptor": "serif display x code diff",
+   "summary": "A literary serif headline beside a tilted, glowing code review: red and green diff lines with an inline AI comment card floating off the page.",
+   "keywords": [
+    "perspective-tilted code window",
+    "red and green diff bands",
+    "line-number gutter",
+    "floating comment card with glow",
+    "light serif display",
+    "faint dot grid"
+   ],
+   "vibes": [
+    "technology",
+    "modern",
+    "elegant",
+    "dark"
+   ],
+   "best_for": [
+    "code review tools",
+    "AI coding assistants",
+    "developer productivity apps"
+   ],
+   "palette": [
+    "#0b0c0f",
+    "#101216",
+    "#e9e8e4",
+    "#2fa46f",
+    "#e0575b",
+    "#7cc4ff"
+   ],
+   "fonts": {
+    "display": "Newsreader",
+    "body": "Geist",
+    "mono": "Geist Mono"
+   },
+   "image": "assets/designs/diff-noir.png",
+   "mockup": "designs-src/diff-noir/index.html",
+   "references": [
+    {
+     "title": "Dark AI developer tool landing page template",
+     "url": "https://enter.converge.ai/marketplace/templates/a5c988ca580f4cbca25adc304be71e76",
+     "source": "other"
+    },
+    {
+     "title": "Neon-noir developer platform landing page",
+     "url": "https://enter.converge.ai/marketplace/templates/b71aa466ed29428cb5af582ec293795e",
+     "source": "other"
+    },
+    {
+     "title": "Developer tool dashboard and onboarding patterns",
+     "url": "https://superdesign.dev/library/developer-tool-dashboardonboarding",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Build the diff as a normal DOM block with a 4-column grid per line (old number, new number, sign, code) and tint added and removed rows with 13% alpha fills. Put it in a container with perspective on the parent and transform: rotateY(-17deg) rotateX(7deg) on the child, then give the comment card translateZ and a blue box-shadow glow so it lifts off. Pair a light-weight serif headline (one italic word in the accent) with a clean sans for body copy.",
+   "categoryId": "phosphor-static",
+   "categoryName": "Phosphor Static",
+   "index": 35,
+   "total": 48
+  },
+  {
+   "id": "ascii-meridian",
+   "name": "Meridian ASCII Horizon",
+   "descriptor": "ascii planet x edge network",
+   "summary": "A centred thesis above a planet rising from the bottom edge, drawn entirely from text characters, with amber city markers and latency callouts.",
+   "keywords": [
+    "ascii character globe",
+    "planet horizon rising from bottom",
+    "amber node markers",
+    "dashed arc routes",
+    "thin weight geometric headline",
+    "mono status footer"
+   ],
+   "vibes": [
+    "technology",
+    "futuristic",
+    "cool",
+    "dark"
+   ],
+   "best_for": [
+    "CDNs and edge platforms",
+    "network and cloud infrastructure",
+    "latency-focused APIs"
+   ],
+   "palette": [
+    "#040810",
+    "#6fd3ff",
+    "#cfeeff",
+    "#1c4a66",
+    "#ffc46b"
+   ],
+   "fonts": {
+    "display": "Sora",
+    "body": "Sora",
+    "mono": "DM Mono"
+   },
+   "image": "assets/designs/ascii-meridian.png",
+   "mockup": "designs-src/ascii-meridian/index.html",
+   "references": [
+    {
+     "title": "Cosmic AI automation landing page",
+     "url": "https://enter.converge.ai/marketplace/templates/d0a1d1a0f9904b9d852cf2c70f4637cd",
+     "source": "other"
+    },
+    {
+     "title": "Cinematic satellite mission control dashboard",
+     "url": "https://enter.converge.ai/marketplace/templates/776503d8535542919ca6d60a6f7ecaff",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Draw onto a canvas with a monospaced font on a fixed cell grid. For each cell, compute whether it falls inside a large circle placed below the viewport, derive a sphere normal, sample 3D value noise for land versus ocean and pick a character from a brightness ramp (. : - + x o # @). Tint land cyan and ocean deep blue, brighten the rim, then plot city points with lon/lat projection and add HTML labels. Wait for document.fonts before drawing.",
+   "categoryId": "phosphor-static",
+   "categoryName": "Phosphor Static",
+   "index": 36,
+   "total": 48
+  },
+  {
+   "id": "twin-drum-riso",
+   "name": "Twin Drum Riso",
+   "descriptor": "risograph x halftone",
+   "summary": "Two spot inks overprint on warm stock, with a canvas-drawn halftone sun and a serif headline that mixes pink and blue like a real two-drum print.",
+   "keywords": [
+    "pink and blue overprint",
+    "halftone dot gradients",
+    "misregistered shapes",
+    "paper grain overlay",
+    "serif headline in spot colour",
+    "mono spec labels"
+   ],
+   "vibes": [
+    "creative",
+    "handcrafted",
+    "warm",
+    "bold"
+   ],
+   "best_for": [
+    "print studios",
+    "indie publishers",
+    "zine shops",
+    "illustrators"
+   ],
+   "palette": [
+    "#efe9dc",
+    "#1c1a2e",
+    "#ff48a0",
+    "#2447e0",
+    "#ffd23f"
+   ],
+   "fonts": {
+    "display": "Young Serif",
+    "body": "Space Mono",
+    "mono": "Space Mono"
+   },
+   "image": "assets/designs/twin-drum-riso.png",
+   "mockup": "designs-src/twin-drum-riso/index.html",
+   "references": [
+    {
+     "title": "Riso-style editorial landing templates (Kombai gallery)",
+     "url": "https://kombai.com/gallery/inspirations/panel-pop/",
+     "source": "other"
+    },
+    {
+     "title": "Editorial landing pages collection on Dribbble",
+     "url": "https://dribbble.com/thejasonsanders/collections/5112616-CAS",
+     "source": "dribbble"
+    }
+   ],
+   "how_to_build": "Draw halftone dots on a canvas by looping a rotated grid and scaling each circle by a gradient function, one layer per ink at different screen angles. Set the canvas to mix-blend-mode: multiply so pink and blue overprint into plum. Add an SVG feTurbulence grain over the page with multiply, and keep text colours as flat spot inks.",
+   "categoryId": "press-room-pulp",
+   "categoryName": "Press Room Pulp",
+   "index": 37,
+   "total": 48
+  },
+  {
+   "id": "harbour-ledger-salmon",
+   "name": "Harbour Ledger Salmon",
+   "descriptor": "financial daily x newsprint",
+   "summary": "A salmon-pink financial newspaper front page in bottle green ink, with a Bodoni masthead, drop cap, freight index chart and a ticker column.",
+   "keywords": [
+    "salmon newsprint ground",
+    "Bodoni masthead",
+    "bottle-green single ink",
+    "drop cap and justified columns",
+    "framed line chart",
+    "dotted price ticker"
+   ],
+   "vibes": [
+    "editorial",
+    "serious",
+    "warm",
+    "data-driven"
+   ],
+   "best_for": [
+    "newsletters",
+    "financial media",
+    "research publications",
+    "industry data products"
+   ],
+   "palette": [
+    "#f5d5c0",
+    "#0d3a2c",
+    "#b3261e",
+    "#efc8b0"
+   ],
+   "fonts": {
+    "display": "Bodoni Moda",
+    "body": "Source Serif 4",
+    "mono": "IBM Plex Mono"
+   },
+   "image": "assets/designs/harbour-ledger-salmon.png",
+   "mockup": "designs-src/harbour-ledger-salmon/index.html",
+   "references": [
+    {
+     "title": "Editorial Swiss and newspaper style guides on Pinterest-style boards (design-taste)",
+     "url": "https://design-taste-web.vercel.app/pin/minimalist-editorial-swiss-style-editorial-design-cultural-institution-4e9b85c5",
+     "source": "other"
+    },
+    {
+     "title": "Media and editorial website design (Tubik)",
+     "url": "https://tubikstudio.com/blog/media-editorial-website-design/",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Use a one-ink palette: a tinted paper background and a single dark green for type, rules and fills, with red only for movement. Build the layout with a 3-column CSS grid separated by 1px rules, a thick-thin double rule under the masthead and a CSS column-count body with ::first-letter drop cap. Set Bodoni Moda with a mid opsz so hairlines survive at headline size, and draw the chart as inline SVG with tabular mono labels.",
+   "categoryId": "press-room-pulp",
+   "categoryName": "Press Room Pulp",
+   "index": 38,
+   "total": 48
+  },
+  {
+   "id": "photocopy-club-zine",
+   "name": "Photocopy Club Zine",
+   "descriptor": "xerox collage x ransom note",
+   "summary": "A grey photocopy sheet with a ransom-note masthead, taped halftone cassette, typewriter copy, a highlighter swipe and a red rubber stamp.",
+   "keywords": [
+    "ransom-note cut-out letters",
+    "photocopy noise and streaks",
+    "masking tape strips",
+    "highlighter yellow",
+    "typewriter text on paper scraps",
+    "rubber stamp"
+   ],
+   "vibes": [
+    "creative",
+    "handcrafted",
+    "bold",
+    "youthful"
+   ],
+   "best_for": [
+    "zine distros",
+    "record labels",
+    "independent bookstores",
+    "protest and community groups"
+   ],
+   "palette": [
+    "#d9d8d2",
+    "#141414",
+    "#ffe83a",
+    "#d8261c",
+    "#f4f3ee"
+   ],
+   "fonts": {
+    "display": "Anton",
+    "body": "Courier Prime",
+    "mono": "Special Elite"
+   },
+   "image": "assets/designs/photocopy-club-zine.png",
+   "mockup": "designs-src/photocopy-club-zine/index.html",
+   "references": [
+    {
+     "title": "Brutalist editorial spreads (zine and photocopy roots)",
+     "url": "https://thomashardwickdesign.myportfolio.com/brutalist-editorial-spreads",
+     "source": "other"
+    },
+    {
+     "title": "Brutalist editorial fashion landing page",
+     "url": "https://enter.converge.ai/marketplace/templates/f84b1635f1f2414998ae0fca817fec87",
+     "source": "other"
+    },
+    {
+     "title": "Magazine and newspaper sites on maxibestof",
+     "url": "https://maxibestof.one/websites/magazine-newspaper-blog",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Generate the masthead with a few lines of JS: wrap each letter in an inline-block with a random font, background (white, black, yellow), size and slight rotation. Cut-out scraps are absolutely positioned blocks with small rotations and hard offset shadows. A multiply-blended feTurbulence noise layer plus faint vertical gradient streaks gives the photocopier feel; the cassette is inline SVG with a halftone pattern and a contrast filter.",
+   "categoryId": "press-room-pulp",
+   "categoryName": "Press Room Pulp",
+   "index": 39,
+   "total": 48
+  },
+  {
+   "id": "registro-kraft-proof",
+   "name": "Registro Kraft Proof",
+   "descriptor": "press proof x kraft stock",
+   "summary": "A trimmed white page floating on kraft board, surrounded by crop marks, registration targets, slug lines and CMYK colour bars, with an overprinting circle diagram as the hero.",
+   "keywords": [
+    "kraft board background",
+    "crop and registration marks",
+    "CMYK colour bar",
+    "dashed fold line",
+    "multiply-blended process circles",
+    "mono slug text"
+   ],
+   "vibes": [
+    "editorial",
+    "handcrafted",
+    "warm",
+    "creative"
+   ],
+   "best_for": [
+    "print shops",
+    "packaging studios",
+    "paper brands",
+    "graphic design portfolios"
+   ],
+   "palette": [
+    "#bf9f72",
+    "#f6f1e6",
+    "#1d140d",
+    "#00a3dd",
+    "#e5097f",
+    "#ffd500"
+   ],
+   "fonts": {
+    "display": "Bricolage Grotesque",
+    "body": "DM Mono",
+    "mono": "DM Mono"
+   },
+   "image": "assets/designs/registro-kraft-proof.png",
+   "mockup": "designs-src/registro-kraft-proof/index.html",
+   "references": [
+    {
+     "title": "Swiss and editorial layout guide (Readymag Almanac)",
+     "url": "https://readymag.com/almanac/grid/practice",
+     "source": "other"
+    },
+    {
+     "title": "Editorial design guide for 2026",
+     "url": "https://madegooddesigns.com/editorial-design-guide/",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Fill the viewport with a kraft colour and a stretched fibre texture from feTurbulence with a low horizontal frequency. Place the content sheet as an inner box with a soft contact shadow, then draw crop marks as 1.5px absolutely positioned lines and registration targets with ::before/::after crosshairs. Overlap three SVG circles with mix-blend-mode: multiply for live CMY mixing, and use tight negative tracking on a heavy grotesque for the headline.",
+   "categoryId": "press-room-pulp",
+   "categoryName": "Press Room Pulp",
+   "index": 40,
+   "total": 48
+  },
+  {
+   "id": "dialog-box-studio",
+   "name": "Dialog Box Studio",
+   "descriptor": "os-window nostalgia x interface studio",
+   "summary": "A teal Windows 95 desktop with icon column, beveled windows, a project folder, a polite fatal-error dialog and a working taskbar, all as the studio's homepage.",
+   "keywords": [
+    "beveled grey window chrome",
+    "navy gradient title bars",
+    "desktop icons and taskbar",
+    "error dialog as CTA",
+    "pixel UI font with heavy sans headline",
+    "dithered teal desktop"
+   ],
+   "vibes": [
+    "retro",
+    "playful",
+    "experimental",
+    "friendly"
+   ],
+   "best_for": [
+    "design studios",
+    "portfolios",
+    "software agencies",
+    "indie tools"
+   ],
+   "palette": [
+    "#008080",
+    "#c0c0c0",
+    "#000080",
+    "#1084d0",
+    "#c00000",
+    "#ffff00"
+   ],
+   "fonts": {
+    "display": "Archivo Black",
+    "body": "Tahoma",
+    "mono": "Pixelify Sans"
+   },
+   "image": "assets/designs/dialog-box-studio.png",
+   "mockup": "designs-src/dialog-box-studio/index.html",
+   "references": [
+    {
+     "title": "Retro and old-computer UI collection (Windows 95, Y2K)",
+     "url": "https://dribbble.com/alinekfernandes/collections/6753361-Retr",
+     "source": "dribbble"
+    },
+    {
+     "title": "15 classic 90s websites and modern sites keeping the aesthetic alive",
+     "url": "https://www.framer.com/blog/90s-websites/",
+     "source": "other"
+    },
+    {
+     "title": "Portfolio built as a Windows 95 desktop",
+     "url": "https://feedme.design/this-redditors-portfolio-is-a-blast-from-windows-95-past",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Make a .bevel class from four inset box-shadows (black and white outer, grey and light-grey inner) and a .sunk class that reverses them. Title bars are a 90deg navy-to-sky gradient with tiny bevelled control buttons. Position windows absolutely and let them overlap with z-index. Draw icons as 16x16 SVG symbols with shape-rendering:crispEdges, and add a taskbar with a Start button and a sunken tray. Use a pixel font for UI labels and a very heavy sans for the headline with a stacked white and grey text-shadow.",
+   "categoryId": "screen-heresy",
+   "categoryName": "Screen Heresy",
+   "index": 41,
+   "total": 48
+  },
+  {
+   "id": "pixel-orchard",
+   "name": "Windfall",
+   "descriptor": "pixel art x cozy game",
+   "summary": "A full-screen 4x pixel-art dusk orchard with a striped sun and dithered sky, a chunky stacked-shadow logo, an RPG menu with a cursor and a portrait dialogue box.",
+   "keywords": [
+    "320x200 canvas scaled 4x",
+    "dithered banded sky",
+    "chunky stacked-shadow logo",
+    "RPG menu with arrow cursor",
+    "portrait dialogue box",
+    "pixel heart and coin HUD"
+   ],
+   "vibes": [
+    "retro",
+    "playful",
+    "friendly",
+    "warm"
+   ],
+   "best_for": [
+    "indie games",
+    "game studios",
+    "apps with a cozy tone",
+    "festival pages"
+   ],
+   "palette": [
+    "#1d2b53",
+    "#ff77a8",
+    "#ffec27",
+    "#ffa300",
+    "#1d7a3a",
+    "#fff1e8"
+   ],
+   "fonts": {
+    "display": "Press Start 2P",
+    "body": "VT323",
+    "mono": "VT323"
+   },
+   "image": "assets/designs/pixel-orchard.png",
+   "mockup": "designs-src/pixel-orchard/index.html",
+   "references": [
+    {
+     "title": "Let Pixels Breathe on Awwwards",
+     "url": "https://www.awwwards.com/sites/let-pixels-breathe",
+     "source": "awwwards"
+    },
+    {
+     "title": "Pixel Hollow: an indie studio page as a playable 8-bit scene",
+     "url": "https://kombai.com/gallery/inspirations/pixelhollow/",
+     "source": "other"
+    },
+    {
+     "title": "Pixel effect inspiration on Awwwards",
+     "url": "https://www.awwwards.com/inspiration/pixel-effect",
+     "source": "awwwards"
+    }
+   ],
+   "how_to_build": "Paint the whole scene on a 320x200 canvas with fillRect helpers (sky bands with checker dither rows, disc() for sun and tree canopies, sprites from string maps) and stretch it to 1280x800 with image-rendering:pixelated. Overlay HTML UI: panels use four hard 4px box-shadows as a pixel border, the logo stacks several offset text-shadows in two oranges and navy, and the menu cursor is a CSS triangle. Keep to a 15-colour palette so every layer feels like one console.",
+   "categoryId": "screen-heresy",
+   "categoryName": "Screen Heresy",
+   "index": 42,
+   "total": 48
+  },
+  {
+   "id": "misregister-press",
+   "name": "Overprint",
+   "descriptor": "risograph x kinetic type",
+   "summary": "A festival site for a print biennial: two huge condensed words printed in pink and blue plates that miss each other, halftone discs, a taped yellow marquee and printer's marks.",
+   "keywords": [
+    "misregistered pink and blue plates",
+    "multiply overprint",
+    "halftone dot circles",
+    "giant condensed type",
+    "marquee tape band",
+    "registration marks and colour swatches"
+   ],
+   "vibes": [
+    "bold",
+    "artistic",
+    "experimental",
+    "youthful"
+   ],
+   "best_for": [
+    "festivals",
+    "print studios",
+    "galleries",
+    "exhibitions"
+   ],
+   "palette": [
+    "#f3f2ec",
+    "#ff4fb0",
+    "#2f8cff",
+    "#ffe21a",
+    "#14131a"
+   ],
+   "fonts": {
+    "display": "Big Shoulders Display",
+    "body": "Hanken Grotesk",
+    "mono": "Hanken Grotesk"
+   },
+   "image": "assets/designs/misregister-press.png",
+   "mockup": "designs-src/misregister-press/index.html",
+   "references": [
+    {
+     "title": "Risograph work on Behance (Mono Riso Print)",
+     "url": "https://www.behance.net/gallery/81273315/Mono-Riso-Print",
+     "source": "behance"
+    },
+    {
+     "title": "Designer spotlight: kinetic typography and print texture",
+     "url": "https://tympanus.net/codrops/2025/08/29/designer-spotlight-enrico-gisana/",
+     "source": "other"
+    },
+    {
+     "title": "Risotto: 400 printed postcards (Colossal)",
+     "url": "https://www.thisiscolossal.com/2026/04/gabriella-marcella-risotto/",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Render each giant word twice in two ink colours, offset by 10 to 20 pixels, both with mix-blend-mode:multiply so the overlap darkens like real overprint. Generate halftone discs on a canvas by placing dots on a rotated grid and scaling dot radius by a gradient function, then multiply the canvas over the paper. Add a rotated yellow marquee animated with translateX(-50%), a row of ink swatches, registration target SVGs and an SVG noise grain on top.",
+   "categoryId": "screen-heresy",
+   "categoryName": "Screen Heresy",
+   "index": 43,
+   "total": 48
+  },
+  {
+   "id": "plotter-theory",
+   "name": "Plotter Theory",
+   "descriptor": "anti-design x generative drawing",
+   "summary": "A deliberately raw page: default Times, blue underlined links, a giant tight headline in difference blend colliding with a dense pen-plotter flow field and small generative thumbnails.",
+   "keywords": [
+    "flow-field line drawing",
+    "difference-blend headline",
+    "default serif and blue links",
+    "mono edition captions",
+    "truchet, packing and wave thumbnails",
+    "off-grid collisions"
+   ],
+   "vibes": [
+    "experimental",
+    "bold",
+    "minimal",
+    "serious"
+   ],
+   "best_for": [
+    "generative artists",
+    "creative coders",
+    "print editions",
+    "studios"
+   ],
+   "palette": [
+    "#ffffff",
+    "#000000",
+    "#0000ee",
+    "#ff2d12",
+    "#fff200"
+   ],
+   "fonts": {
+    "display": "Times New Roman",
+    "body": "Times New Roman",
+    "mono": "Courier New"
+   },
+   "image": "assets/designs/plotter-theory.png",
+   "mockup": "designs-src/plotter-theory/index.html",
+   "references": [
+    {
+     "title": "Coded generative design on Awwwards",
+     "url": "https://www.awwwards.com/inspiration/coded-generative-design-pizza-punk-creative-coding",
+     "source": "awwwards"
+    },
+    {
+     "title": "Generative landing page with WebGL (DEV Community)",
+     "url": "https://dev.to/georgedoescode/create-a-generative-landing-page-webgl-powered-background-animation-3nl0",
+     "source": "other"
+    },
+    {
+     "title": "The potential of generative art in web design",
+     "url": "https://purpleplanet.com/blog/potential-of-generative-art-in-web-design/",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Draw the artwork with a canvas: seeded value noise, thousands of short strokes that follow angle = fbm(x,y) times a few pi, a clear zone in the middle filled with concentric rings, and about 7 percent of strokes in one signal red. Set the headline in white with mix-blend-mode:difference and letter-spacing around -0.065em so it inverts over the lines. Keep the chrome deliberately raw: default serif, unstyled blue links, a plain bordered checkbox, mono captions and a rotated red sticker.",
+   "categoryId": "screen-heresy",
+   "categoryName": "Screen Heresy",
+   "index": 44,
+   "total": 48
+  },
+  {
+   "id": "gumdrop-bureau",
+   "name": "Gumdrop Bureau",
+   "descriptor": "neo-brutalism x indie studio",
+   "summary": "A cream dot-grid page where every element wears a 3px black outline and a hard shadow. Tilted project cards, a highlighted headline word and crossing marquee ribbons give a web studio an instantly friendly voice.",
+   "keywords": [
+    "3px black outlines",
+    "hard offset shadows",
+    "tilted bordered cards",
+    "crossing marquee belts",
+    "dot-grid paper",
+    "highlighter headline word",
+    "candy accent palette"
+   ],
+   "vibes": [
+    "bold",
+    "playful",
+    "creative",
+    "youthful"
+   ],
+   "best_for": [
+    "web studios",
+    "portfolios",
+    "indie agencies",
+    "creative tools"
+   ],
+   "palette": [
+    "#fff3d4",
+    "#16120f",
+    "#ffd23f",
+    "#ff6fa5",
+    "#5b8cff",
+    "#43e0a0"
+   ],
+   "fonts": {
+    "display": "Bricolage Grotesque",
+    "body": "Bricolage Grotesque",
+    "mono": "DM Mono"
+   },
+   "image": "assets/designs/gumdrop-bureau.png",
+   "mockup": "designs-src/gumdrop-bureau/index.html",
+   "references": [
+    {
+     "title": "Neo-Brutalism landing page shot",
+     "url": "https://dribbble.com/shots/22485202-Neo-Brutalism-Landing-Page-of-DAMN-I-LOVE-INDONESIA",
+     "source": "dribbble"
+    },
+    {
+     "title": "Neubrutalism collection",
+     "url": "https://dribbble.com/jonschker-design/collections/5904505-neubrutalism",
+     "source": "dribbble"
+    },
+    {
+     "title": "Neubrutalism collection (Rebekka Zorn)",
+     "url": "https://dribbble.com/RebekkaZorn/collections/5850498-Neubrutalism",
+     "source": "dribbble"
+    }
+   ],
+   "how_to_build": "Set one border token (3px solid ink) and one shadow token (6px 6px 0 ink) and apply them to nav, buttons, cards and tags so everything reads as the same cut paper. Rotate cards by 2 to 5 degrees and overlap them with absolute positioning. Use a tight negative-tracked heavy grotesk for the headline and wrap one word in an outlined, rotated highlight block. Build the dot grid with a radial-gradient background and the belts with rotated overflow-hidden bars of repeating text and shape bullets.",
+   "categoryId": "sticker-riot",
+   "categoryName": "Sticker Riot",
+   "index": 45,
+   "total": 48
+  },
+  {
+   "id": "slap-sticker-club",
+   "name": "Slap Sticker Club",
+   "descriptor": "die-cut stickers x grid paper",
+   "summary": "A lilac cutting-mat grid covered in glossy die-cut stickers: a starburst, a smiley, a heart, a lightning bolt. The headline gets a layered pink and ink drop shadow like a vinyl decal.",
+   "keywords": [
+    "white die-cut outlines",
+    "soft sticker shadows",
+    "rotated sticker pile",
+    "cutting-mat grid",
+    "tape strip",
+    "fat rounded display type",
+    "lime and hot pink on lilac"
+   ],
+   "vibes": [
+    "playful",
+    "youthful",
+    "bold",
+    "creative"
+   ],
+   "best_for": [
+    "merch brands",
+    "subscription boxes",
+    "artist shops",
+    "Gen-Z communities"
+   ],
+   "palette": [
+    "#cdb8ff",
+    "#2b1259",
+    "#c8ff3a",
+    "#ff2f92",
+    "#33c6ff",
+    "#ff8a1f"
+   ],
+   "fonts": {
+    "display": "Bagel Fat One",
+    "body": "Figtree",
+    "mono": "Figtree"
+   },
+   "image": "assets/designs/slap-sticker-club.png",
+   "mockup": "designs-src/slap-sticker-club/index.html",
+   "references": [
+    {
+     "title": "Limoni Studio sticker-collage template",
+     "url": "https://www.framer.com/marketplace/templates/limoni-studio/",
+     "source": "other"
+    },
+    {
+     "title": "Brethren Design Co. sticker-led branding",
+     "url": "https://www.stickergiant.com/blog/brethren-design-co",
+     "source": "other"
+    },
+    {
+     "title": "Scrapbook sticker UI trend",
+     "url": "https://trends.daisyui.com/trend/scrapbook-sticker-ui/",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Draw each sticker as inline SVG with the same shape stacked twice: a fat white stroke (stroke-width 16 to 22, round joins) underneath and the colored fill on top, which gives the die-cut border for free. Add two drop-shadow filters (a tight 3px one and a soft 10px one) and rotate each piece. Make the grid with two linear-gradients at 40px. Fake the headline decal with stacked text-shadows: ink outline offsets first, then a hot-pink offset.",
+   "categoryId": "sticker-riot",
+   "categoryName": "Sticker Riot",
+   "index": 46,
+   "total": 48
+  },
+  {
+   "id": "fry-day-snacks",
+   "name": "Fry Day Snacks",
+   "descriptor": "food truck x flat mascot",
+   "summary": "A tomato-red half and a butter-yellow half split by a scalloped edge, with a smiling fry carton as the hero. Cocoa-brown outlines and a checkerboard floor make a street-food brand feel like a cartoon.",
+   "keywords": [
+    "scalloped split edge",
+    "cocoa outlines",
+    "smiling carton mascot",
+    "checkerboard strip",
+    "stacked text-shadow headline",
+    "dip cups",
+    "price chips"
+   ],
+   "vibes": [
+    "playful",
+    "warm",
+    "bold",
+    "retro"
+   ],
+   "best_for": [
+    "food trucks",
+    "snack brands",
+    "restaurants",
+    "delivery apps"
+   ],
+   "palette": [
+    "#ff4b2b",
+    "#fff0c9",
+    "#3b1409",
+    "#ffc933",
+    "#6fbf45",
+    "#ff9bb8"
+   ],
+   "fonts": {
+    "display": "Rammetto One",
+    "body": "Nunito",
+    "mono": "Nunito"
+   },
+   "image": "assets/designs/fry-day-snacks.png",
+   "mockup": "designs-src/fry-day-snacks/index.html",
+   "references": [
+    {
+     "title": "Gen Z maximalism web style reference",
+     "url": "https://chrislemke.github.io/website_designs/examples/Gen_Z_Maximalism.html",
+     "source": "other"
+    },
+    {
+     "title": "Neo-brutalist sustainable commerce landing template",
+     "url": "https://enter.converge.ai/marketplace/templates/8b2ae80e1edd41028e91b2d697286458",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Split the viewport into two flat color fields and hide the seam with an SVG scalloped path. Keep every object outlined in one dark brown at 6px and use solid, non-blurred offset shadows. Build the headline with several text-shadow layers (outline in 8 directions plus a deep offset). The checkerboard is a repeating-conic-gradient. Draw the carton, fries and cups as simple flat SVG shapes with rounded joins and give the carton a face so the product feels like a character.",
+   "categoryId": "sticker-riot",
+   "categoryName": "Sticker Riot",
+   "index": 47,
+   "total": 48
+  },
+  {
+   "id": "blobfish-collective",
+   "name": "Blobfish Collective",
+   "descriptor": "flat blobs x bubblegum maximalism",
+   "summary": "Outline-free organic blobs in bubblegum, mint, lavender and tangerine fill the page behind a huge soft italic serif headline. Tilted rounded tiles at the bottom hint at the weekly program.",
+   "keywords": [
+    "outline-free flat blobs",
+    "bubblegum pink ground",
+    "soft wonky italic serif",
+    "tilted rounded tiles",
+    "blobs with faces",
+    "navy pill nav",
+    "confetti squiggles"
+   ],
+   "vibes": [
+    "playful",
+    "friendly",
+    "creative",
+    "youthful"
+   ],
+   "best_for": [
+    "art studios",
+    "community co-ops",
+    "youth programs",
+    "events and festivals"
+   ],
+   "palette": [
+    "#ffcfe3",
+    "#1d1a4d",
+    "#ff7b3b",
+    "#a8f0d0",
+    "#c6b6ff",
+    "#fff09a"
+   ],
+   "fonts": {
+    "display": "Fraunces",
+    "body": "Outfit",
+    "mono": "Outfit"
+   },
+   "image": "assets/designs/blobfish-collective.png",
+   "mockup": "designs-src/blobfish-collective/index.html",
+   "references": [
+    {
+     "title": "Studio Marmalade playful pastel homepage",
+     "url": "https://app.superdesign.dev/library/studio-marmalade-make-brands-people-smile-about",
+     "source": "other"
+    },
+    {
+     "title": "Gen Z maximalism style reference",
+     "url": "https://chrislemke.github.io/website_designs/examples/Gen_Z_Maximalism.html",
+     "source": "other"
+    }
+   ],
+   "how_to_build": "Paint one full-bleed SVG of hand-placed blob paths (cubic curves, no strokes) behind the content and keep the type centered above it. Use Fraunces with SOFT 100 and WONK 1 at weight 800 italic for the headline so the letters look squishy; put the lightest word on a navy text-shadow for contrast. Navigation is a single fully rounded navy bar. Bottom tiles use 44px radii and alternate small rotations.",
+   "categoryId": "sticker-riot",
+   "categoryName": "Sticker Riot",
+   "index": 48,
+   "total": 48
+  }
+ ]
+}

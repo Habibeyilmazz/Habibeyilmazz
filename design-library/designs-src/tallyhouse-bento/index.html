@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Tallyhouse — Money for Small Business</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Fragment+Mono&display=swap" rel="stylesheet">
+<style>
+/* Layout: headline top-left, 12-col bento of unequal tiles (one dark hero tile) flowing right and below the fold line */
+:root{--bg:#dfe6e0;--tile:#fbfcfa;--forest:#0d3a2b;--forest2:#165240;--ink:#112019;--mut:#66756d;--gold:#f0b232;--mint:#9fe3c0;--line:#cfd8d1;
+--sans:'Hanken Grotesk','Helvetica Neue',Arial,sans-serif;--mono:'Fragment Mono',ui-monospace,Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--bg);color:var(--ink);font-family:var(--sans)}
+nav{position:absolute;left:40px;right:40px;top:26px;height:44px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:23px;letter-spacing:-.03em;display:flex;align-items:center;gap:9px}
+.logo i{width:24px;height:24px;background:var(--forest);border-radius:7px;position:relative}
+.logo i:after{content:"";position:absolute;left:6px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--gold)}
+.menu{display:flex;gap:30px;font-size:15px;font-weight:500;color:var(--mut)}
+.nr{display:flex;gap:10px;align-items:center;font-size:14px;font-weight:600}
+.nr .ghost{padding:11px 16px}
+.nr .solid{padding:12px 20px;background:var(--forest);color:#fff;border-radius:12px}
+.hero{position:absolute;left:40px;top:112px;width:455px}
+.tag{display:inline-flex;gap:8px;align-items:center;font-family:var(--mono);font-size:12px;background:var(--tile);padding:7px 12px 7px 8px;border-radius:99px;color:var(--forest)}
+.tag b{background:var(--gold);color:var(--ink);border-radius:99px;padding:2px 8px;font-family:var(--sans);font-weight:700;font-size:11px}
+h1{isolation:isolate;font-size:64px;line-height:.98;letter-spacing:-.045em;font-weight:800;margin:22px 0 20px;text-wrap:balance}
+h1 span{color:var(--forest2);position:relative;white-space:nowrap}
+h1 span:after{content:"";position:absolute;left:0;right:0;bottom:4px;height:11px;background:var(--gold);z-index:-1;border-radius:3px;transform:skewX(-8deg)}
+p.l{font-size:18px;line-height:1.5;color:var(--mut);max-width:420px}
+.btns{display:flex;gap:10px;margin-top:28px;font-weight:700;font-size:15px}
+.btns .a{background:var(--forest);color:#fff;padding:16px 24px;border-radius:14px}
+.btns .b{background:var(--tile);padding:16px 22px;border-radius:14px}
+.trust{margin-top:34px;font-size:13px;color:var(--mut);display:flex;align-items:center;gap:12px}
+.av{display:flex}.av i{width:30px;height:30px;border-radius:50%;border:3px solid var(--bg);margin-left:-8px}
+.av i:first-child{margin-left:0}
+/* bento */
+.t{position:absolute;background:var(--tile);border-radius:24px;padding:20px;overflow:hidden}
+.k{font-family:var(--mono);font-size:11px;color:var(--mut);letter-spacing:.04em;text-transform:uppercase}
+.n{font-size:34px;font-weight:800;letter-spacing:-.04em;line-height:1}
+.dark{background:var(--forest);color:#fff}.dark .k{color:#8fb7a5}
+.t1{left:540px;top:100px;width:360px;height:292px}
+.t2{left:916px;top:100px;width:324px;height:150px}
+.t3{left:916px;top:266px;width:324px;height:126px;background:var(--gold)}
+.t4{left:540px;top:408px;width:176px;height:216px}
+.t5{left:732px;top:408px;width:236px;height:216px}
+.t6{left:984px;top:408px;width:256px;height:216px;background:#c9ecd8}
+.deltaup{letter-spacing:.02em;display:inline-block;font-size:12px;font-weight:700;background:rgba(159,227,192,.25);color:var(--mint);padding:4px 8px;border-radius:8px;margin-left:8px;vertical-align:6px}
+.list{margin-top:10px;display:flex;flex-direction:column;gap:9px;font-size:13px}
+.list div{display:flex;justify-content:space-between;align-items:center}
+.list b{font-weight:700}
+.dot{width:22px;height:22px;border-radius:7px;display:inline-block;vertical-align:middle;margin-right:8px}
+.ticker{position:absolute;left:0;right:0;bottom:0;height:130px;background:var(--forest);border-radius:36px 36px 0 0;padding:34px 40px;display:flex;gap:80px;color:#fff;align-items:flex-start}
+.ticker .x{max-width:300px}
+.ticker h3{font-size:22px;letter-spacing:-.03em;font-weight:700;line-height:1.1}
+.ticker p{font-size:13px;color:#9cc2b0;margin-top:8px;line-height:1.4}
+</style></head><body>
+<nav><div class="logo"><i></i>Tallyhouse</div>
+<div class="menu"><span>Accounts</span><span>Invoicing</span><span>Cards</span><span>Payroll</span><span>Pricing</span></div>
+<div class="nr"><span class="ghost">Sign in</span><span class="solid">Open an account</span></div></nav>
+
+<section class="hero">
+ <span class="tag"><b>New</b>Cash runway forecasting</span>
+ <h1>Your books, <span>balanced</span> before breakfast.</h1>
+ <p class="l">One business account that sorts every payment, chases every invoice and shows exactly how many months of cash you have left.</p>
+ <div class="btns"><span class="a">Open in 8 minutes</span><span class="b">Watch the tour</span></div>
+ <div class="trust"><div class="av"><i style="background:#f0b232"></i><i style="background:#165240"></i><i style="background:#9fe3c0"></i><i style="background:#e9806b"></i></div>Trusted by 18,400 shops, studios and clinics</div>
+</section>
+
+<div class="t dark t1">
+ <div class="k">Cash on hand · all accounts</div>
+ <div class="n" style="font-size:46px;margin-top:12px">£184,920<span class="deltaup">+12.4%</span></div>
+ <svg viewBox="0 0 320 150" width="320" height="150" style="position:absolute;left:20px;bottom:14px">
+  <defs><linearGradient id="ar" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#9fe3c0" stop-opacity=".45"/><stop offset="1" stop-color="#9fe3c0" stop-opacity="0"/></linearGradient></defs>
+  <g stroke="rgba(255,255,255,.1)"><path d="M0 30H320M0 70H320M0 110H320"/></g>
+  <path d="M0 112 C30 108 40 90 66 94 S110 120 136 88 176 60 200 66 240 40 262 36 300 22 316 14 V150 H0Z" fill="url(#ar)"/>
+  <path d="M0 112 C30 108 40 90 66 94 S110 120 136 88 176 60 200 66 240 40 262 36 300 22 316 14" fill="none" stroke="#9fe3c0" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M200 66 C230 70 270 52 316 40" fill="none" stroke="#f0b232" stroke-width="2" stroke-dasharray="3 5"/>
+  <circle cx="316" cy="14" r="5" fill="#9fe3c0" stroke="#0d3a2b" stroke-width="3"/>
+  <text x="206" y="94" font-family="Fragment Mono" font-size="9" fill="#f0b232">forecast</text>
+ </svg>
+</div>
+
+<div class="t t2">
+ <div class="k">Runway</div>
+ <div style="display:flex;align-items:center;gap:18px;margin-top:10px">
+  <svg viewBox="0 0 90 90" width="96" height="96"><circle cx="45" cy="45" r="36" fill="none" stroke="#e3eae5" stroke-width="12"/><circle cx="45" cy="45" r="36" fill="none" stroke="#165240" stroke-width="12" stroke-dasharray="168 226" stroke-linecap="round" transform="rotate(-90 45 45)"/></svg>
+  <div><div class="n">14.2</div><div style="font-size:13px;color:var(--mut);margin-top:6px;line-height:1.35">months of cash at<br>current burn</div></div>
+ </div>
+</div>
+
+<div class="t t3">
+ <div class="k" style="color:#6b4d07">Invoices due this week</div>
+ <div class="n" style="margin-top:12px;font-size:38px">£21,300</div>
+ <div style="font-size:13px;margin-top:10px;font-weight:600">9 invoices · 3 reminders sent automatically</div>
+</div>
+
+<div class="t t4">
+ <div class="k">Spend by week</div>
+ <svg viewBox="0 0 136 150" width="136" height="150" style="margin-top:10px">
+  <g fill="#dfe8e1"><rect x="0" y="70" width="18" height="80" rx="5"/><rect x="24" y="52" width="18" height="98" rx="5"/><rect x="48" y="84" width="18" height="66" rx="5"/><rect x="72" y="40" width="18" height="110" rx="5"/></g>
+  <rect x="96" y="14" width="18" height="136" rx="5" fill="#165240"/><rect x="120" y="60" width="16" height="90" rx="5" fill="#dfe8e1"/>
+ </svg>
+</div>
+
+<div class="t t5">
+ <div class="k">Latest, auto-sorted</div>
+ <div class="list">
+  <div><span><i class="dot" style="background:#f0b232"></i>Brightside Supplies</span><b>−£642</b></div>
+  <div><span><i class="dot" style="background:#9fe3c0"></i>Okafor &amp; Daughters</span><b style="color:#165240">+£3,180</b></div>
+  <div><span><i class="dot" style="background:#e9806b"></i>Northline Rent</span><b>−£2,400</b></div>
+  <div><span><i class="dot" style="background:#165240"></i>HMRC VAT</span><b>−£1,915</b></div>
+  <div><span><i class="dot" style="background:#9fb8ff"></i>Stripe payout</span><b style="color:#165240">+£5,402</b></div>
+ </div>
+</div>
+
+<div class="t t6">
+ <div class="k" style="color:#2d6a52">Virtual card</div>
+ <div style="margin-top:12px;height:112px;border-radius:16px;background:linear-gradient(135deg,#165240,#0d3a2b);color:#fff;padding:14px;position:relative">
+  <div style="font-family:var(--mono);font-size:11px;color:#9fe3c0">Tallyhouse Business</div>
+  <div style="position:absolute;left:14px;bottom:14px;font-family:var(--mono);font-size:13px;letter-spacing:.12em">•••• 4821</div>
+  <div style="position:absolute;right:14px;bottom:12px;width:30px;height:20px;border-radius:5px;background:var(--gold)"></div>
+ </div>
+ <div style="font-size:13px;margin-top:12px;font-weight:600">Freeze, limit or split in one tap</div>
+</div>
+
+<div class="ticker">
+ <div class="x"><h3>Every payment sorted, tagged and ready for your accountant.</h3></div>
+ <div class="x"><h3>99.98%</h3><p>bank-feed accuracy across 2.1m monthly transactions</p></div>
+ <div class="x"><h3>FSCS protected</h3><p>Balances held with tier-one partner banks</p></div>
+</div>
+</body></html>

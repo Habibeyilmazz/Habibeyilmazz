@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Twin Drum Riso Co-op</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+/* Layout: wide left headline column overprinting a canvas halftone sun on the right; a spot-colour swatch strip below */
+:root{
+  --paper:#efe9dc; --ink:#1c1a2e; --pink:#ff48a0; --blue:#2447e0; --yellow:#ffd23f;
+  --serif:'Young Serif','Georgia',serif; --mono:'Space Mono','Courier New',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--paper);color:var(--ink);font-family:var(--mono)}
+body{position:relative}
+.grain{position:absolute;inset:0;pointer-events:none;z-index:9;mix-blend-mode:multiply;opacity:.55;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='300' height='300'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='4'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .3  0 0 0 0 .25  0 0 0 .55 -.12'/></filter><rect width='300' height='300' filter='url(%23n)'/></svg>")}
+nav{position:absolute;top:0;left:0;right:0;height:72px;padding:0 48px;display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.08em;text-transform:uppercase;border-bottom:2px solid var(--ink)}
+.logo{font-family:var(--serif);font-size:24px;text-transform:none;letter-spacing:0;display:flex;align-items:center;gap:10px}
+.logo i{display:block;width:26px;height:26px;position:relative}
+.logo i::before,.logo i::after{content:"";position:absolute;width:18px;height:18px;border-radius:50%;mix-blend-mode:multiply}
+.logo i::before{background:var(--pink);left:0;top:0}.logo i::after{background:var(--blue);right:0;bottom:0}
+nav ul{display:flex;gap:34px;list-style:none}
+.btn{background:var(--ink);color:var(--paper);padding:11px 18px;border-radius:0;font-weight:700}
+.stage{position:absolute;top:72px;left:0;right:0;bottom:118px;overflow:hidden}
+canvas{position:absolute;right:-30px;top:-20px;mix-blend-mode:multiply;height:560px;width:auto}
+.eyebrow{position:absolute;left:48px;top:40px;font-size:12px;letter-spacing:.12em;text-transform:uppercase;display:flex;gap:14px;align-items:center}
+.eyebrow b{background:var(--yellow);padding:3px 8px;font-weight:700;border:1.5px solid var(--ink)}
+h1{position:absolute;left:44px;top:78px;font-family:var(--serif);font-weight:400;font-size:132px;line-height:.92;letter-spacing:-.025em;width:760px}
+h1 span{display:block;mix-blend-mode:multiply}
+h1 .a{color:var(--pink)}
+h1 .b{color:var(--blue);margin-left:70px}
+h1 .c{color:var(--ink);font-style:normal}
+h1 .b2{position:absolute;left:0;top:0;color:var(--blue);opacity:.0}
+.lede{position:absolute;left:48px;bottom:44px;width:430px;font-size:15px;line-height:1.55}
+.cta{position:absolute;left:520px;bottom:44px;display:flex;flex-direction:column;gap:12px}
+.cta a{display:inline-block;font-weight:700;font-size:14px;letter-spacing:.04em;text-transform:uppercase;padding:15px 24px;border:2px solid var(--ink);text-decoration:none;color:var(--ink)}
+.cta a.p{background:var(--pink);box-shadow:5px 5px 0 var(--blue)}
+.cta a.s{border-style:dashed;text-align:center;background:var(--paper)}.cta{z-index:5}
+.tag{position:absolute;right:58px;bottom:30px;width:172px;height:172px;border-radius:50%;background:var(--yellow);border:2px solid var(--ink);display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--serif);font-size:19px;line-height:1.1;transform:rotate(-9deg);z-index:3}
+.tag small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;margin-top:6px}
+.strip{background:var(--paper);z-index:6;position:absolute;left:0;right:0;bottom:0;height:118px;border-top:2px solid var(--ink);display:grid;grid-template-columns:repeat(4,1fr)}
+.strip div{padding:18px 26px;border-right:2px solid var(--ink);position:relative;overflow:hidden}
+.strip div:last-child{border-right:0}
+.strip h4{font-family:var(--serif);font-weight:400;font-size:22px;margin-bottom:6px}
+.strip p{font-size:11.5px;line-height:1.5;max-width:230px}
+.strip .sw{position:absolute;right:20px;top:20px;width:46px;height:46px;border-radius:50%}
+.reg{position:absolute;width:22px;height:22px;z-index:4}
+.reg::before,.reg::after{content:"";position:absolute;background:var(--ink)}
+.reg::before{left:10px;top:-4px;width:2px;height:30px}.reg::after{top:10px;left:-4px;height:2px;width:30px}
+</style></head><body>
+<div class="grain"></div>
+<nav>
+  <div class="logo"><i></i>Twin Drum</div>
+  <ul><li>Print jobs</li><li>Studio hire</li><li>Zines</li><li>Ink library</li></ul>
+  <span class="btn">Get a quote</span>
+</nav>
+<div class="stage">
+  <canvas id="c" width="760" height="680"></canvas>
+  <div class="eyebrow"><b>Riso Co-op</b> Leeds &middot; 2 drums &middot; est. 2017</div>
+  <h1><span class="a">Two inks.</span><span class="b">One pass.</span><span class="c">No filter.</span></h1>
+  <p class="lede">A community risograph studio. Bring a file, pick two spot colours, and walk out with 200 grainy, glorious, slightly misregistered prints before lunch.</p>
+  <div class="cta"><a class="p">Book a drum</a><a class="s">See the ink chart</a></div>
+  <div class="tag"><div>Bring your own paper<small>Mon&ndash;Sat</small></div></div>
+  <div class="reg" style="left:700px;top:20px"></div>
+</div>
+<div class="strip">
+  <div><h4>Fluoro Pink</h4><p>Loud, warm, and stubbornly not on any screen.</p><i class="sw" style="background:var(--pink)"></i></div>
+  <div><h4>Medium Blue</h4><p>Overprints pink into a deep plum. Mix on purpose.</p><i class="sw" style="background:var(--blue)"></i></div>
+  <div><h4>Sunflower</h4><p>The third drum colour, swapped in on Thursdays.</p><i class="sw" style="background:var(--yellow);border:2px solid var(--ink)"></i></div>
+  <div><h4>A3 &middot; 80gsm</h4><p>£0.14 per side, per colour. Paper from the stockroom.</p><i class="sw" style="background:var(--ink)"></i></div>
+</div>
+<script>
+const c=document.getElementById('c'),x=c.getContext('2d');
+const W=c.width,H=c.height;
+x.globalCompositeOperation='multiply';
+function layer(color,angle,step,fn){
+  x.fillStyle=color;const ca=Math.cos(angle),sa=Math.sin(angle);
+  for(let u=-W;u<W*2;u+=step)for(let v=-H;v<H*2;v+=step){
+    const px=u*ca-v*sa,py=u*sa+v*ca; if(px<0||py<0||px>W||py>H)continue;
+    const d=fn(px,py); if(d<=0.03)continue;
+    x.beginPath();x.arc(px,py,Math.min(d,1)*step*0.72,0,6.283);x.fill();
+  }
+}
+// sun: radial gradient with shading, pink layer
+const sun=(cx,cy,r)=>(px,py)=>{const dx=px-cx,dy=py-cy,d=Math.hypot(dx,dy);if(d>r)return 0;return 0.35+0.65*(1-(dy/r+1)/2)*(1-d/r*.3)};
+const ring=(cx,cy,r1,r2)=>(px,py)=>{const d=Math.hypot(px-cx,py-cy);if(d<r1||d>r2)return 0;return .25+.75*((px-cx)/(r2)+1)/2};
+layer('#ff48a0',Math.PI/12,11,sun(300,300,230));
+layer('#2447e0',Math.PI/3.4,11,(px,py)=>{
+  const a=ring(430,380,150,300)(px,py); const g=Math.max(0,(py-380)/300+.15);
+  const hill=py>470+Math.sin(px/60)*30?Math.min(1,(py-470)/200+.3):0;
+  return Math.max(a*.9,hill*.85);
+});
+// stripes of solid yellow-ish blocks (simulated spot)
+x.globalCompositeOperation='multiply';
+x.fillStyle='rgba(255,210,63,.9)';x.fillRect(560,70,120,16);x.fillRect(560,96,120,16);x.fillRect(560,122,120,16);
+</script>
+</body></html>

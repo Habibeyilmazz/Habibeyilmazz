@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Windfall — Pixel Orchard</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<style>
+/* Layout: full-bleed 320x200 dithered dusk-orchard canvas scaled 4x, game logo top-left, RPG menu, HUD top-right, dialogue box bottom. */
+:root{
+  --navy:#1d2b53; --plum:#7e2553; --cream:#fff1e8; --yellow:#ffec27; --orange:#ffa300; --red:#ff004d; --pink:#ff77a8; --blue:#29adff; --brown:#ab5236;
+  --px:"Press Start 2P","Courier New",monospace; --vt:"VT323","Courier New",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:#000}
+body{position:relative;font-family:var(--vt);color:var(--cream)}
+canvas#scene{position:absolute;left:0;top:0;width:1280px;height:800px;image-rendering:pixelated;image-rendering:crisp-edges}
+.box{background:var(--navy);box-shadow:0 -4px 0 0 var(--cream),0 4px 0 0 var(--cream),-4px 0 0 0 var(--cream),4px 0 0 0 var(--cream),0 8px 0 0 rgba(0,0,0,.35)}
+.hud{position:absolute;right:44px;top:36px;display:flex;gap:26px;padding:12px 18px;font-family:var(--px);font-size:13px;line-height:1;align-items:center}
+.hud b{color:var(--yellow);font-weight:400}
+.hud .h{color:var(--red);letter-spacing:3px}
+.hud .h i{color:#5b2a4a;font-style:normal}
+.logo{position:absolute;left:52px;top:56px}
+.kick{font-family:var(--px);font-size:12px;color:var(--cream);letter-spacing:2px;text-shadow:3px 3px 0 var(--navy);margin-bottom:22px}
+h1{font-family:var(--px);font-weight:400;font-size:92px;line-height:1;color:var(--yellow);letter-spacing:-2px;
+  text-shadow:4px 0 0 var(--orange),0 4px 0 var(--orange),4px 4px 0 var(--orange),8px 8px 0 var(--brown),10px 10px 0 var(--navy),12px 12px 0 var(--navy),14px 14px 0 var(--navy)}
+.tl{margin-top:34px;font-size:34px;line-height:1.05;color:var(--cream);text-shadow:3px 3px 0 var(--navy);width:640px}
+.menu{position:absolute;left:52px;top:340px;padding:20px 30px 18px 22px;font-family:var(--px);font-size:15px;line-height:1;width:372px}
+.menu li{list-style:none;padding:11px 0 11px 28px;position:relative;letter-spacing:1px}
+.menu li.on{color:var(--yellow)}
+.menu li.on:before{content:"";position:absolute;left:0;top:8px;border:8px solid transparent;border-left:12px solid var(--yellow);border-right:0;border-top-width:7px;border-bottom-width:7px;transform:scale(1.2)}
+.menu li small{float:right;font-family:var(--vt);font-size:22px;color:var(--pink);letter-spacing:0}
+.dlg{position:absolute;left:300px;bottom:40px;width:690px;height:164px;display:flex;gap:20px;padding:20px 26px}
+.por{width:108px;height:108px;flex:none;background:var(--plum);box-shadow:0 -4px 0 0 var(--yellow),0 4px 0 0 var(--yellow),-4px 0 0 0 var(--yellow),4px 0 0 0 var(--yellow)}
+.por canvas{width:108px;height:108px;image-rendering:pixelated;display:block}
+.nm{position:absolute;left:176px;top:-20px;background:var(--yellow);color:var(--navy);font-family:var(--px);font-size:12px;padding:8px 12px;box-shadow:4px 4px 0 var(--navy)}
+.tx{font-size:31px;line-height:1.12;padding-top:6px}
+.tx b{font-weight:400;color:var(--yellow)}
+.tx i{font-style:normal;color:var(--pink)}
+.nx{position:absolute;right:26px;bottom:14px;font-family:var(--px);font-size:10px;color:var(--yellow);animation:bob .8s steps(2) infinite}
+@keyframes bob{50%{transform:translateY(4px)}}
+.hint{position:absolute;right:44px;bottom:18px;font-family:var(--px);font-size:10px;line-height:2;text-align:right;text-shadow:2px 2px 0 var(--navy)}
+.hint span{background:var(--cream);color:var(--navy);padding:2px 6px;margin-right:6px;text-shadow:none}
+@media (prefers-reduced-motion:reduce){.nx{animation:none}}
+</style>
+</head>
+<body>
+<canvas id="scene" width="320" height="200"></canvas>
+
+<div class="hud box"><span class="h">♥♥♥<i>♥</i></span><span>DAY <b>14</b></span><span><b>06:42</b></span><span>◉ <b>128</b></span></div>
+
+<div class="logo">
+  <div class="kick">LANTERN FROG GAMES PRESENTS</div>
+  <h1>WINDFALL</h1>
+  <div class="tl">A tiny orchard sim for tired grown-ups.</div>
+</div>
+
+<ul class="menu box">
+  <li class="on">WISHLIST ON STEAM <small>2026</small></li>
+  <li>WATCH TRAILER</li>
+  <li>READ THE DEVLOG</li>
+  <li>PRESS KIT</li>
+</ul>
+
+<div class="dlg box">
+  <div class="nm">MAPLE</div>
+  <div class="por"><canvas id="por" width="16" height="16"></canvas></div>
+  <div class="tx">Welcome to <b>Windfall</b>. The apples are ripe, the <i>deadline</i> is a rumour, and nobody is watching you nap under the big tree.</div>
+  <div class="nx">▼</div>
+</div>
+<div class="hint"><span>Z</span>OK <span>X</span>BACK</div>
+
+<script>
+(function(){
+  var c=document.getElementById('scene'),g=c.getContext('2d');
+  var seed=7;function rnd(){seed=(seed*16807)%2147483647;return seed/2147483647}
+  function px(x,y,col){g.fillStyle=col;g.fillRect(x|0,y|0,1,1)}
+  function rc(x,y,w,h,col){g.fillStyle=col;g.fillRect(x|0,y|0,w|0,h|0)}
+  function disc(cx,cy,r,col){g.fillStyle=col;for(var y=-r;y<=r;y++){var w=Math.floor(Math.sqrt(r*r-y*y)+.5);g.fillRect(cx-w,cy+y,w*2+1,1)}}
+  // sky bands with dithered seams
+  var bands=['#1d2b53','#2b3a7a','#4b4aa0','#7a56a8','#b4609f','#ff77a8','#ff9d7a','#ffc79a','#ffe2b8'];
+  var bh=14;
+  for(var i=0;i<bands.length;i++){rc(0,i*bh,320,bh,bands[i]);
+    if(i>0){for(var y=0;y<4;y++)for(var x=0;x<320;x++){if((x+y)%2==0&&y<3)px(x,i*bh+y,bands[i-1]);if((x+y)%2==1&&y<1)px(x,i*bh+y,bands[i-1]);}
+      for(var x2=0;x2<320;x2++){ if((x2+3)%2==1) px(x2,i*bh-1,bands[i]); }}}
+  // stars
+  for(var s=0;s<40;s++){var sx=Math.floor(rnd()*320),sy=Math.floor(rnd()*42);px(sx,sy,s%5?'#fff1e8':'#ffec27');}
+  // sun
+  disc(232,104,30,'#ff9d7a');disc(232,104,26,'#ffa300');disc(232,104,22,'#ffec27');
+  for(var yy=96;yy<130;yy+=4){rc(196,yy+ (yy>108?0:0),80,(yy-92)/12|0,'#ffa300');}
+  // clouds
+  function cloud(x,y,col,sh){rc(x+4,y+4,26,5,col);rc(x+8,y+1,14,4,col);rc(x+16,y+3,12,3,col);rc(x,y+7,36,3,sh);}
+  cloud(40,70,'#ffb9c8','#e08aa8');cloud(120,48,'#ffd3c0','#e0a0a8');cloud(270,60,'#ffb9c8','#e08aa8');cloud(190,30,'#d99ad0','#b074b8');
+  // far hills
+  for(var x=0;x<320;x++){var h=116+Math.sin(x/38)*7+Math.sin(x/11)*2;rc(x,h,1,90,'#6b3f86');}
+  for(var x=0;x<320;x++){var h=124+Math.sin(x/27+1)*8+Math.sin(x/9)*1.5;rc(x,h,1,90,'#3d3f7a');}
+  // mid hills with grass
+  for(var x=0;x<320;x++){var h=134+Math.sin(x/45+2)*6;rc(x,h,1,90,'#1f6b4f');if(x%2==0)px(x,h,'#38a169');}
+  // ground
+  rc(0,146,320,54,'#0f5a3c');
+  for(var y=146;y<200;y++){for(var x=0;x<320;x++){ if(((x+y)%3==0)&&((x*7+y*13)%11<2))px(x,y,'#1a7a4c'); }}
+  // dirt path
+  for(var y=150;y<200;y++){var w=18+(y-150)*1.2,cx=120+(y-150)*0.15;rc(cx-w/2,y,w,1,'#8a5a3a');if(y%4==0)rc(cx-w/2,y,w,1,'#9a6a44');}
+  // trees
+  function tree(x,y,s){
+    var tw=Math.max(2,Math.round(3*s)),th=Math.round(16*s);
+    rc(x-tw/2,y-th,tw,th,'#6b3a1e');rc(x+tw/2-1,y-th,1,th,'#4a2812');
+    var R=Math.round(15*s);
+    disc(x-R*.6,y-th-R*.5,Math.round(R*.7),'#145a2e');disc(x+R*.6,y-th-R*.5,Math.round(R*.7),'#145a2e');
+    disc(x,y-th-R*.9,R,'#1d7a3a');disc(x-R*.4,y-th-R*1.1,Math.round(R*.7),'#2a9a48');disc(x+R*.2,y-th-R*1.3,Math.round(R*.4),'#4fc25a');
+    var n=Math.round(8*s*s+3);
+    for(var i=0;i<n;i++){var a=rnd()*6.28,d=rnd()*R*.95;var ax=Math.round(x+Math.cos(a)*d),ay=Math.round(y-th-R*.9+Math.sin(a)*d*.9);
+      rc(ax,ay,s>.8?2:1,s>.8?2:1,'#ff004d');if(s>.8)px(ax,ay,'#ff77a8');}
+    rc(x-R*.9,y,R*1.8,Math.max(1,Math.round(2*s)),'#0a4a30');
+  }
+  tree(30,140,.55);tree(70,138,.5);tree(150,136,.45);tree(200,139,.5);tree(262,140,.55);tree(300,138,.5);
+  tree(12,162,.85);tree(286,164,.9);tree(246,158,.8);
+  tree(300,190,1.25);tree(24,196,1.3);
+  // fence
+  for(var x=40;x<100;x+=8){rc(x,170,2,12,'#d9b48a');}rc(40,173,62,2,'#d9b48a');rc(40,178,62,2,'#d9b48a');
+  // fallen apples
+  [[96,176],[110,184],[172,172],[184,188],[212,180],[130,193],[205,194]].forEach(function(a){rc(a[0],a[1],3,3,'#ff004d');px(a[0],a[1],'#ff77a8');px(a[0]+1,a[1]-1,'#00e436');});
+  // farmer + dog
+  function spr(map,pal,x,y){map.forEach(function(r,j){for(var i=0;i<r.length;i++){var ch=r[i];if(ch!='.')px(x+i,y+j,pal[ch]);}})}
+  var P={K:'#1d2b53',H:'#ffec27',h:'#ffa300',S:'#ffccaa',B:'#29adff',b:'#1b6fb0',L:'#ab5236',W:'#fff1e8'};
+  spr(['..KKKK..','.KHHHHK.','KhhhhhhK','.KSSSSK.','.KSKSKK.','.KSSSSK.','..KBBK..','.KBBBBK.','KSBbbBSK','KSBBBBSK','.KBBBBK.','.KLLLLK.','.KLKKLK.','.KLK.KLK','.KK...KK'],P,256,163);
+  var D={K:'#1d2b53',W:'#fff1e8',O:'#ffa300',L:'#ab5236'};
+  spr(['..KK....','.KWWK...','KWWWWKKKK','KKWWWWWWWK','.KWWOWWWWK','.KWK.KWK.','.KK..KK..'],D,271,173);
+  // portrait
+  var pc=document.getElementById('por'),pg=pc.getContext('2d');
+  var Q={K:'#1d2b53',H:'#ffec27',h:'#ffa300',S:'#ffccaa',B:'#ab5236',E:'#1d2b53',M:'#ff004d',C:'#ff77a8',R:'#29adff'};
+  var rows=['.....KKKKKK.....','...KKHHHHHHKK...','..KHHHHHHHHHHK..','.KKhhhhhhhhhhKK.','KHHHHHHHHHHHHHHK','.KKKKKKKKKKKKKK.','..KBSSSSSSSSBK..','..KBSSSSSSSSBK..','..KSSEESSEESSK..','..KSSEESSEESSK..','..KSCSSSSSSCSK..','..KSSSSMMSSSSK..','...KSSSSSSSSK...','....KKSSSSKK....','..KRRRKKKKRRRK..','.KRRRRRRRRRRRRK.'];
+  rows.forEach(function(r,j){for(var i=0;i<16;i++){var ch=r[i];if(ch&&ch!='.'){pg.fillStyle=Q[ch]||'#000';pg.fillRect(i,j,1,1);}}});
+})();
+</script>
+</body>
+</html>

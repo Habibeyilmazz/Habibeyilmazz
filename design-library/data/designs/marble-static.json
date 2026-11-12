@@ -1,0 +1,250 @@
+{
+  "category": {
+    "id": "marble-static",
+    "name": "Marble Static",
+    "tagline": "classical statues x digital artifacts",
+    "description": "Greek and Roman sculpture colliding with screen-age residue: RGB splits, scan lines, chrome, sunset grids and torn paper. Use it for archives, music, culture and product launches that want myth and nostalgia in the same frame.",
+    "vibes": [
+      "artistic",
+      "retro",
+      "experimental",
+      "elegant"
+    ],
+    "accent": "#19b5c9"
+  },
+  "designs": [
+    {
+      "id": "kouros-signal",
+      "name": "Kouros Signal",
+      "descriptor": "glitched antiquity x museum archive",
+      "summary": "A cold stone page with a giant Bodoni headline and a marble bust sliced, shifted and fringed in cyan and magenta, framed by a Greek key border.",
+      "keywords": [
+        "RGB-split marble bust",
+        "horizontal slice displacement",
+        "Greek key border strip",
+        "high-contrast Bodoni display",
+        "mono catalogue captions",
+        "scanline and grain overlay"
+      ],
+      "vibes": [
+        "artistic",
+        "experimental",
+        "elegant",
+        "cool"
+      ],
+      "best_for": [
+        "museums",
+        "archives",
+        "3D scan libraries",
+        "cultural institutions"
+      ],
+      "palette": [
+        "#d8dad6",
+        "#0c0d10",
+        "#00e5ff",
+        "#ff2bd6",
+        "#f1efe9"
+      ],
+      "fonts": {
+        "display": "Bodoni Moda",
+        "body": "Space Mono",
+        "mono": "Space Mono"
+      },
+      "image": "assets/designs/kouros-signal.png",
+      "mockup": "designs-src/kouros-signal/index.html",
+      "references": [
+        {
+          "title": "Glitch collection on Dribbble",
+          "url": "https://dribbble.com/nojuan/collections/580489-Glitch",
+          "source": "dribbble"
+        },
+        {
+          "title": "Spectra: where art meets digital innovation (classical sculpture concept)",
+          "url": "https://contra.com/p/rPWUrkMW-spectra-where-art-meets",
+          "source": "other"
+        },
+        {
+          "title": "Vaporwave style guide: Roman busts, VHS scanlines",
+          "url": "https://digitalheroes.co.in/styles/vaporwave/",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Build the bust as one inline SVG group (shapes plus an feTurbulence marble filter), then stack it: two colour-matrixed copies offset left and right with mix-blend-mode multiply, and several clipPath bands that repaint the background and redraw the bust shifted sideways. Add coloured streak rects and vertical bars for pixel-sorting. Pair a very heavy high-contrast serif with a mono caption face, and finish with a repeating-linear-gradient scanline layer and an SVG grain overlay."
+    },
+    {
+      "id": "lethe-fm",
+      "name": "Lethe FM",
+      "descriptor": "vaporwave x classical radio",
+      "summary": "A neon sunset with a slit sun, a tilted teal grid floor and a lilac-to-pink profile bust on a plinth, with a glass player window floating in front.",
+      "keywords": [
+        "striped sunset sun",
+        "perspective neon grid floor",
+        "duotone profile bust",
+        "wide extended display type",
+        "Japanese vertical caption",
+        "translucent player window"
+      ],
+      "vibes": [
+        "retro",
+        "futuristic",
+        "artistic",
+        "dark"
+      ],
+      "best_for": [
+        "music apps",
+        "internet radio",
+        "events",
+        "album sites"
+      ],
+      "palette": [
+        "#12062e",
+        "#ff4fa3",
+        "#ffa35e",
+        "#2ee6d6",
+        "#f3e6ff"
+      ],
+      "fonts": {
+        "display": "Unbounded",
+        "body": "DM Mono",
+        "mono": "DM Mono"
+      },
+      "image": "assets/designs/lethe-fm.png",
+      "mockup": "designs-src/lethe-fm/index.html",
+      "references": [
+        {
+          "title": "Retro and old-computer UI collection (vaporwave, holographic)",
+          "url": "https://dribbble.com/alinekfernandes/collections/6753361-Retr",
+          "source": "dribbble"
+        },
+        {
+          "title": "Vaporwave web design: grids, busts, sunset gradients",
+          "url": "https://digitalheroes.co.in/styles/vaporwave/",
+          "source": "other"
+        },
+        {
+          "title": "Daplanks shots, vaporwave and glitch art",
+          "url": "https://dribbble.com/Daplanks/shots",
+          "source": "dribbble"
+        }
+      ],
+      "how_to_build": "Layer a multi-stop sky gradient, an SVG sun with a mask of horizontal black bars that grow thicker toward the horizon, and a floor div carrying a two-direction line grid under perspective(380px) rotateX(64deg) with a teal drop-shadow glow. Draw the bust as SVG paths filled with a three-stop teal-lilac-pink gradient and generate hair curls with a small loop. Use a wide display face with a gradient text fill, then add a blurred backdrop-filter window and a scanline overlay."
+    },
+    {
+      "id": "halo-chrome",
+      "name": "Pearlpod Chrome",
+      "descriptor": "y2k chrome x gadget launch",
+      "summary": "A bubbly pearl-blue launch page: liquid-chrome wordmark, glossy pill buttons, orbit rings, chrome orbs and a taped lime ticker around a pocket music player.",
+      "keywords": [
+        "liquid chrome gradient lettering",
+        "glossy aqua pill buttons",
+        "orbit rings and chrome spheres",
+        "four-point sparkle stars",
+        "pastel iridescent ground",
+        "taped ticker band"
+      ],
+      "vibes": [
+        "retro",
+        "playful",
+        "futuristic",
+        "light"
+      ],
+      "best_for": [
+        "gadgets",
+        "music players",
+        "youth brands",
+        "product drops"
+      ],
+      "palette": [
+        "#cfe3ff",
+        "#16296b",
+        "#c6ff3d",
+        "#ff7cc8",
+        "#e5d6ff"
+      ],
+      "fonts": {
+        "display": "Bowlby One",
+        "body": "Figtree",
+        "mono": "Figtree"
+      },
+      "image": "assets/designs/halo-chrome.png",
+      "mockup": "designs-src/halo-chrome/index.html",
+      "references": [
+        {
+          "title": "Y2K aesthetic for web design: chrome, gradients, bubbles",
+          "url": "https://origin.webflow.com/blog/y2k-aesthetic",
+          "source": "other"
+        },
+        {
+          "title": "Y2K nostalgia style guide",
+          "url": "https://digitalheroes.co.in/styles/y2k-nostalgia/",
+          "source": "other"
+        },
+        {
+          "title": "15 classic 90s websites and modern sites keeping the look alive",
+          "url": "https://www.framer.com/blog/90s-websites/",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Fake chrome with background-clip:text and a hard-stop vertical gradient that goes white, sky blue, navy, then jumps back to light blue at 50 percent, plus a dark text-stroke and stacked drop-shadows. Build glossy buttons from a split gradient with a sharp midpoint, a white border and inset shadows. Spheres are radial gradients with an off-centre white highlight and a bright rim. Rotate the product SVG, ring it with a gradient-stroked ellipse and tilt a navy ticker band -2 degrees."
+    },
+    {
+      "id": "cutout-pantheon",
+      "name": "Cut-Out Pantheon",
+      "descriptor": "surreal collage x zine press",
+      "summary": "A kraft-paper desk with a ransom-note headline, a torn card holding a headless marble torso, a column, an all-seeing eye on a blue moon, tape, stamps and a price tag.",
+      "keywords": [
+        "ransom-note letter tiles",
+        "torn paper edges",
+        "halftone dot shading",
+        "headless statue and floating eye",
+        "tape strips and rubber stamp",
+        "kraft paper texture"
+      ],
+      "vibes": [
+        "artistic",
+        "experimental",
+        "handcrafted",
+        "warm"
+      ],
+      "best_for": [
+        "magazines",
+        "art zines",
+        "publishers",
+        "galleries"
+      ],
+      "palette": [
+        "#d8b374",
+        "#f4ecd8",
+        "#14110f",
+        "#8c1c1c",
+        "#1f40c4",
+        "#ffc533"
+      ],
+      "fonts": {
+        "display": "Playfair Display + Anton (mixed)",
+        "body": "Special Elite",
+        "mono": "Special Elite"
+      },
+      "image": "assets/designs/cutout-pantheon.png",
+      "mockup": "designs-src/cutout-pantheon/index.html",
+      "references": [
+        {
+          "title": "Risograph and zine web aesthetics: grain, overlays, misregistration",
+          "url": "https://big-sky-design-atelier.vercel.app/prompts/04-yoga-studio/research/references.html",
+          "source": "other"
+        },
+        {
+          "title": "Secret Riso Club on It's Nice That",
+          "url": "https://www.itsnicethat.com/articles/secret-riso-club-graphic-design-project-161023",
+          "source": "other"
+        },
+        {
+          "title": "Spectra: classical sculpture meets digital collage",
+          "url": "https://contra.com/p/rPWUrkMW-spectra-where-art-meets",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Generate the headline from JavaScript: each letter becomes a tile with its own font, paper colour, rotation, vertical nudge and a slightly jagged clip-path polygon. For torn paper, run SVG shapes through an feTurbulence plus feDisplacementMap filter and add a hard feDropShadow. Shade statues with a rotated dot pattern fill at partial opacity, give cut-outs a thick white stroke, and finish with semi-transparent tape rectangles and a textPath stamp."
+    }
+  ]
+}

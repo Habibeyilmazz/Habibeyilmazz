@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Fernhill Retreat</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: soft sage ground, text left, a cut-paper botanical collage inside an organic pebble shape right. All edges are rounded; nothing is straight. */
+:root{
+  --sage:#cdd5bb; --moss:#2e4631; --fern:#587a4a; --leaf:#8aa468; --bone:#f3efe3; --clay:#d79a84; --ink:#243024;
+  --serif:'Young Serif','Fraunces','Georgia',serif;
+  --sans:'Figtree','Inter','Helvetica Neue',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--sage);color:var(--ink);font-family:var(--sans)}
+body::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.22;mix-blend-mode:multiply;background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' seed='4'/><feColorMatrix values='0 0 0 0 .3  0 0 0 0 .3  0 0 0 0 .2  0 0 0 .7 -.25'/></filter><rect width='220' height='220' filter='url(%23n)'/></svg>")}
+header{position:absolute;top:36px;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:500;z-index:3}
+header .logo{font-family:var(--serif);font-size:25px;display:flex;align-items:center;gap:10px;letter-spacing:-.01em}
+header .logo i{width:26px;height:26px;border-radius:60% 40% 55% 45%/50% 60% 40% 50%;background:var(--moss);display:block;position:relative}
+header .logo i::after{content:"";position:absolute;left:9px;top:5px;width:5px;height:15px;background:var(--sage);border-radius:50%;transform:rotate(24deg)}
+header nav{display:flex;gap:6px;background:rgba(243,239,227,.55);padding:6px;border-radius:999px}
+header nav a{padding:9px 18px;border-radius:999px}
+header nav a.on{background:var(--moss);color:var(--bone)}
+header .book{background:var(--clay);padding:13px 24px;border-radius:999px;font-weight:600;color:#3b1d12}
+.copy{position:absolute;left:56px;top:176px;width:560px;z-index:3}
+.chip{display:inline-flex;align-items:center;gap:10px;background:var(--bone);border-radius:999px;padding:8px 16px 8px 10px;font-size:13px;font-weight:500}
+.chip b{width:22px;height:22px;border-radius:50%;background:var(--fern);display:block}
+h1{font-family:var(--serif);font-weight:400;font-size:92px;line-height:.98;letter-spacing:-.025em;margin-top:28px;color:var(--moss)}
+h1 em{font-style:normal;color:#b5694f}
+.copy p{margin-top:28px;font-size:18px;line-height:1.55;width:440px;color:#394735;font-weight:400}
+.cta{display:flex;gap:14px;margin-top:36px;align-items:center}
+.cta .a{background:var(--moss);color:var(--bone);padding:19px 32px;border-radius:999px;font-weight:600;font-size:15px}
+.cta .b{padding:19px 8px;font-weight:600;font-size:15px;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1.5px}
+.stats{position:absolute;left:56px;bottom:44px;display:flex;gap:12px;z-index:3}
+.stats div{background:rgba(243,239,227,.7);border-radius:22px;padding:14px 22px;font-size:12px;line-height:1.35;font-weight:500;color:#3b4a37}
+.stats b{display:block;font-family:var(--serif);font-weight:400;font-size:26px;color:var(--moss);letter-spacing:-.01em;line-height:1.1}
+.art{position:absolute;left:600px;top:0;width:680px;height:800px}
+.art svg{width:680px;height:800px;display:block}
+.tag{position:absolute;right:56px;bottom:44px;z-index:3;background:var(--bone);border-radius:999px;padding:12px 20px;font-size:13px;font-weight:500;display:flex;gap:10px;align-items:center}
+.tag i{width:8px;height:8px;border-radius:50%;background:#6aa05a;display:block}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><i></i>Fernhill</div>
+  <nav><a class="on">Retreat</a><a>Rituals</a><a>Stays</a><a>The Garden</a></nav>
+  <div class="book">Book a stay</div>
+</header>
+
+<section class="copy">
+  <span class="chip"><b></b>Hydrotherapy &amp; clay baths in the Catskills</span>
+  <h1>Slow rooms,<br><em>green</em> hours.</h1>
+  <p>Twelve cabins, a spring-fed bathhouse and forty acres of fern. Three days is enough to remember how your shoulders feel.</p>
+  <div class="cta"><span class="a">See the rituals</span><span class="b">Take the garden tour</span></div>
+</section>
+
+<div class="stats">
+  <div><b>41°N</b>Hudson Highlands</div>
+  <div><b>12</b>timber cabins</div>
+  <div><b>38°C</b>spring bath, daily</div>
+</div>
+
+<div class="art">
+<svg viewBox="0 0 680 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="pebble"><path d="M96 150 C150 40 330 6 470 56 C600 102 700 210 676 400 C660 560 640 716 500 770 C350 826 150 780 70 640 C20 550 40 450 70 350 C90 270 70 210 96 150Z"/></clipPath>
+    <linearGradient id="bgg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a5a3d"/><stop offset="1" stop-color="#22371f"/></linearGradient>
+    <radialGradient id="sunG" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#f5d2b6"/><stop offset="1" stop-color="#d79a84"/></radialGradient>
+    <filter id="drop" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#17240f" flood-opacity=".28"/></filter>
+    <filter id="pap" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="2"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .6 -.25"/></filter>
+  </defs>
+  <!-- offset echo of the pebble -->
+  <path transform="translate(18 16)" d="M96 150 C150 40 330 6 470 56 C600 102 700 210 676 400 C660 560 640 716 500 770 C350 826 150 780 70 640 C20 550 40 450 70 350 C90 270 70 210 96 150Z" fill="none" stroke="#2e4631" stroke-width="1.5" opacity=".55"/>
+  <path d="M96 150 C150 40 330 6 470 56 C600 102 700 210 676 400 C660 560 640 716 500 770 C350 826 150 780 70 640 C20 550 40 450 70 350 C90 270 70 210 96 150Z" fill="url(#bgg)"/>
+  <g clip-path="url(#pebble)">
+    <circle cx="470" cy="236" r="104" fill="url(#sunG)" filter="url(#drop)"/>
+    <g id="fronds"></g>
+    <rect width="680" height="800" filter="url(#pap)" opacity=".22" style="mix-blend-mode:multiply"/>
+  </g>
+  <!-- stacked stones -->
+  <g filter="url(#drop)">
+    <ellipse cx="150" cy="676" rx="92" ry="34" fill="#c7beaa"/>
+    <ellipse cx="156" cy="640" rx="70" ry="27" fill="#e4dac4"/>
+    <ellipse cx="160" cy="610" rx="46" ry="20" fill="#a9b48f"/>
+    <ellipse cx="162" cy="590" rx="26" ry="12" fill="#d79a84"/>
+  </g>
+</svg>
+</div>
+<div class="tag"><i></i>Next opening: Tue 17 Nov, two cabins left</div>
+
+<script>
+const NS='http://www.w3.org/2000/svg';
+const g=document.getElementById('fronds');
+function el(t,a,p=g){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e}
+// A fern frond: curved rachis + paired leaflets that shrink toward the tip
+function frond(x,y,ang,len,curl,leaf,color,w){
+  const grp=el('g',{transform:`translate(${x} ${y}) rotate(${ang})`});
+  const pts=[];const n=26;
+  for(let i=0;i<=n;i++){const t=i/n;pts.push([curl*t*t*len*.5, -t*len])}
+  el('path',{d:'M'+pts.map(p=>p.map(v=>v.toFixed(1)).join(' ')).join('L'),stroke:color,'stroke-width':2.4,fill:'none','stroke-linecap':'round'},grp);
+  for(let i=2;i<=n;i+=2){
+    const t=i/n, [px,py]=pts[i], [qx,qy]=pts[i-1];
+    const tang=Math.atan2(py-qy,px-qx)*180/Math.PI;           // direction of rachis
+    const size=leaf*1.7*Math.sin(Math.PI*Math.pow(t,.7))*(1-t*.3)+5;
+    for(const side of [-1,1]){
+      const rot=tang+90*side*0 + (side*(62-t*20));
+      const l=el('path',{d:`M0 0 C ${size*.3} ${-size*.46} ${size*.78} ${-size*.34} ${size} 0 C ${size*.78} ${size*.34} ${size*.3} ${size*.46} 0 0Z`,fill:color,transform:`translate(${px.toFixed(1)} ${py.toFixed(1)}) rotate(${(tang+ (side>0?-74+t*22:180+74-t*22)).toFixed(1)})`},grp);
+    }
+  }
+}
+const cols=['#7d9a5e','#5f8250','#9fb77c','#486b44','#b9cb97','#6d8f58'];
+const base=[[330,860],[470,880],[250,820],[560,860],[420,900],[170,780],[640,830]];
+const spec=[[-34,520,.5,92],[-10,590,.35,110],[-58,430,.6,76],[18,560,-.4,100],[8,480,.2,84],[-72,360,.5,60],[34,430,-.5,74]];
+spec.forEach((s,i)=>frond(base[i][0],base[i][1],s[0],s[1],s[2],s[3]*.42,cols[i%cols.length]));
+// hanging fronds from upper left of the pebble
+frond(120,40,150,300,.4,38,'#2d4a2e');
+frond(220,0,160,360,-.3,44,'#365a38');
+frond(60,120,130,230,.5,30,'#294128');
+// small pale accent frond over the sun
+frond(560,420,-4,300,.35,28,'#e8e3cf');
+</script>
+</body>
+</html>

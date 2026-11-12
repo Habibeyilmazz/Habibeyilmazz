@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Fry Day Snacks</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rammetto+One&family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--tomato:#ff4b2b;--cream:#fff0c9;--cocoa:#3b1409;--butter:#ffc933;--pickle:#6fbf45;--pink:#ff9bb8;
+--display:'Rammetto One','Arial Black',Impact,sans-serif;--body:'Nunito','Trebuchet MS',sans-serif}
+*{box-sizing:border-box;margin:0}
+html,body{width:1280px;height:800px;overflow:hidden}
+body{background:var(--butter);font-family:var(--body);color:var(--cocoa);position:relative}
+.left{position:absolute;left:0;top:0;width:700px;height:800px;background:var(--tomato)}
+.wave{position:absolute;left:660px;top:0;width:80px;height:800px}
+.checks{position:absolute;left:0;bottom:0;width:700px;height:96px;background:repeating-conic-gradient(var(--cocoa) 0 25%,var(--cream) 0 50%) 0 0/48px 48px;border-top:6px solid var(--cocoa)}
+nav{position:absolute;top:28px;left:48px;right:48px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+.logo{font-family:var(--display);font-size:32px;color:var(--cream);text-shadow:3px 3px 0 var(--cocoa);display:flex;gap:10px;align-items:center}
+.logo i{width:38px;height:38px;border-radius:50%;background:var(--butter);border:4px solid var(--cocoa);display:inline-grid;place-items:center;font-style:normal;font-size:16px;color:var(--cocoa);text-shadow:none}
+.menu{display:flex;gap:26px;font-weight:900;font-size:17px;color:var(--cocoa);align-items:center}
+.menu .cart{background:var(--cocoa);color:var(--butter);padding:10px 20px;border-radius:99px}
+.hero{position:absolute;left:48px;top:122px;width:620px;z-index:4}
+.kick{display:inline-block;background:var(--cream);font-weight:900;font-size:15px;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;border-radius:99px;transform:rotate(-3deg);border:3px solid var(--cocoa)}
+h1{font-family:var(--display);font-weight:400;font-size:104px;line-height:.95;color:var(--cream);margin-top:22px;text-shadow:5px 5px 0 var(--cocoa),-1px -1px 0 var(--cocoa),1px -1px 0 var(--cocoa),-1px 1px 0 var(--cocoa),1px 1px 0 var(--cocoa),4px 6px 0 var(--cocoa),6px 4px 0 var(--cocoa)}
+h1 em{font-style:normal;color:var(--butter)}
+p.lead{font-size:21px;font-weight:700;line-height:1.4;color:var(--cream);margin-top:26px;max-width:470px}
+.row{display:flex;gap:14px;margin-top:26px;align-items:center}
+.order{font-family:var(--display);font-size:24px;background:var(--cream);color:var(--cocoa);border:4px solid var(--cocoa);border-radius:18px;padding:14px 26px;box-shadow:6px 6px 0 var(--cocoa);display:inline-block}
+.time{font-weight:900;font-size:16px;color:var(--cream);line-height:1.25}
+.time b{color:var(--butter)}
+.art{position:absolute;right:0;top:0;width:580px;height:800px}
+.sun{position:absolute;left:50px;top:100px;width:480px;height:480px;border-radius:50%;background:var(--cream);border:6px solid var(--cocoa);box-shadow:10px 10px 0 var(--pink)}
+.art svg{position:absolute;left:0;top:0}
+.chip{position:absolute;display:flex;align-items:center;gap:12px;background:var(--cream);border:4px solid var(--cocoa);border-radius:18px;padding:10px 16px 10px 12px;box-shadow:5px 5px 0 var(--cocoa);font-weight:900;font-size:17px;line-height:1.1}
+.chip i{width:34px;height:34px;border-radius:50%;border:3px solid var(--cocoa);display:block}
+.chip small{display:block;font-weight:700;font-size:13px;opacity:.7;margin-top:2px}
+.burst{position:absolute;right:30px;top:120px;width:130px;height:130px;background:var(--pickle);clip-path:polygon(50% 0,60% 14%,78% 6%,80% 24%,98% 28%,88% 44%,100% 58%,84% 68%,86% 86%,68% 84%,58% 100%,46% 88%,30% 98%,26% 80%,8% 78%,14% 62%,0 48%,14% 36%,8% 18%,26% 18%,32% 2%,44% 14%);display:grid;place-items:center;text-align:center;font-family:var(--display);font-size:19px;line-height:1;color:var(--cocoa);transform:rotate(12deg)}
+.burst span{font-family:var(--body);font-weight:900;font-size:12px;display:block;margin-top:3px}
+</style></head><body>
+<div class="left"></div>
+<svg class="wave" viewBox="0 0 80 800" preserveAspectRatio="none"><path d="M0 0H30C54 0 54 50 30 50S6 100 30 100 54 150 30 150 6 200 30 200 54 250 30 250 6 300 30 300 54 350 30 350 6 400 30 400 54 450 30 450 6 500 30 500 54 550 30 550 6 600 30 600 54 650 30 650 6 700 30 700 54 750 30 750 6 800 30 800H0Z" fill="#ff4b2b"/></svg>
+<div class="checks"></div>
+<nav>
+  <div class="logo"><i>FD</i>Fry Day</div>
+  <div class="menu"><span>Menu</span><span>Dips</span><span>Find a truck</span><span class="cart">Bag (2)</span></div>
+</nav>
+<section class="hero">
+  <span class="kick">Crinkle cut / Twice fried / Zero shame</span>
+  <h1>Fry. Dip. <em>Repeat.</em></h1>
+  <p class="lead">Loaded fries and 14 house dips, served hot from a bright red truck near you. Happy hour is every hour after 4.</p>
+  <div class="row"><a class="order">Order for pickup</a><div class="time">Open till late<br><b>Cooking now: 6 min wait</b></div></div>
+</section>
+<section class="art">
+  <div class="sun"></div>
+  <svg width="580" height="800" viewBox="0 0 580 800">
+    <g stroke="#3b1409" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+      <!-- fries -->
+      <g fill="#ffc933">
+        <path d="M170 300 150 150l46-6 16 150z"/><path d="M222 296 214 120l48-4 4 180z"/><path d="M274 296 290 108l46 8-10 180z"/><path d="M322 300 372 140l42 20-62 142z"/><path d="M190 300 110 190l36-26 76 128z"/><path d="M368 300 450 214l30 30-98 66z"/>
+      </g>
+      <g fill="#ffe18a" stroke-width="0"><path d="M168 150l6 100-18-6z"/><path d="M220 124l6 90-14-4z"/><path d="M292 112l-8 90 14 2z"/></g>
+      <!-- carton -->
+      <path d="M130 290h330l-36 330c-2 18-14 28-30 28H196c-16 0-28-10-30-28z" fill="#ff4b2b"/>
+      <path d="M130 290h330l-6 52H136z" fill="#fff0c9"/>
+      <path d="M150 350h290" stroke-width="0"/>
+      <circle cx="295" cy="490" r="82" fill="#fff0c9"/>
+      <circle cx="268" cy="474" r="9" fill="#3b1409" stroke="none"/><circle cx="322" cy="474" r="9" fill="#3b1409" stroke="none"/>
+      <path d="M262 504q33 36 66 0" fill="#ff4b2b" stroke-width="5"/>
+      <circle cx="244" cy="500" r="11" fill="#ff9bb8" stroke="none"/><circle cx="346" cy="500" r="11" fill="#ff9bb8" stroke="none"/>
+      <!-- dip cups -->
+      <path d="M40 560h110l-12 112H52z" fill="#6fbf45"/><ellipse cx="95" cy="560" rx="55" ry="12" fill="#ffe18a"/>
+      <path d="M445 620h100l-10 100h-80z" fill="#ff9bb8"/><ellipse cx="495" cy="620" rx="50" ry="11" fill="#fff0c9"/>
+    </g>
+    <text x="95" y="636" text-anchor="middle" font-family="Rammetto One,Arial Black,sans-serif" font-size="22" fill="#3b1409" transform="rotate(-4 95 626)">ranch</text>
+    <text x="495" y="684" text-anchor="middle" font-family="Rammetto One,Arial Black,sans-serif" font-size="18" fill="#3b1409">pink!</text>
+  </svg>
+  <div class="burst">NEW<span>truffle<br>ketchup</span></div>
+  <div class="chip" style="left:360px;top:610px;transform:rotate(3deg);display:none"></div>
+</section>
+<div class="chip" style="left:984px;top:728px;transform:rotate(-2deg)"><i style="background:#ffc933"></i><div>Big Cheese Box<small>$9.50 / feeds two</small></div></div>
+<div class="chip" style="left:766px;top:730px;transform:rotate(2deg)"><i style="background:#6fbf45"></i><div>Pickle Dust<small>$7.00 / vegan</small></div></div>
+</body></html>

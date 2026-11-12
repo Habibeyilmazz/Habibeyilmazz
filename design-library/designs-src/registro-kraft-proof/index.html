@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Registro Print Works</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: a press proof sheet. Kraft ground, trimmed white-ink page in the middle, crop marks + slug labels + CMYK bar bleeding off the edge */
+:root{
+  --kraft:#bf9f72; --kraft2:#a98756; --ink:#1d140d; --white:#f6f1e6; --c:#00a3dd; --m:#e5097f; --y:#ffd500;
+  --disp:'Bricolage Grotesque','Helvetica Neue',sans-serif; --mono:'DM Mono','Courier New',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--kraft);color:var(--ink);font-family:var(--mono)}
+.fibre{position:absolute;inset:0;mix-blend-mode:multiply;opacity:.55;pointer-events:none;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='500'><filter id='f'><feTurbulence type='fractalNoise' baseFrequency='.012 .6' numOctaves='3' seed='3'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .22  0 0 0 0 .08  0 0 0 .9 -.3'/></filter><rect width='500' height='500' filter='url(%23f)'/></svg>")}
+.slug{position:absolute;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:500}
+.sheet{position:absolute;left:112px;top:58px;width:1056px;height:644px;background:var(--white);box-shadow:0 1px 0 #0003,0 14px 24px -10px #3b250f88;overflow:hidden}
+.sheet::after{content:"";position:absolute;inset:0;pointer-events:none;background:repeating-linear-gradient(90deg,#0000 0 3px,#00000005 3px 4px)}
+nav{position:absolute;top:0;left:0;right:0;height:58px;padding:0 40px;display:flex;justify-content:space-between;align-items:center;font-size:12px;letter-spacing:.07em;text-transform:uppercase}
+nav b{font-family:var(--disp);font-weight:800;font-size:22px;letter-spacing:-.02em;text-transform:none;display:flex;align-items:center;gap:9px}
+nav b i{width:22px;height:22px;border:2.5px solid var(--ink);border-radius:50%;position:relative}
+nav b i::before,nav b i::after{content:"";position:absolute;background:var(--ink)}
+nav b i::before{left:7.5px;top:-6px;width:2px;height:28px}nav b i::after{top:7.5px;left:-6px;height:2px;width:28px}
+nav ul{display:flex;gap:30px;list-style:none}
+nav .pill{border:1.5px solid var(--ink);padding:8px 14px}
+h1{position:absolute;z-index:1;left:40px;top:78px;font-family:var(--disp);font-weight:800;font-size:94px;line-height:.9;letter-spacing:-.045em;font-variation-settings:'opsz' 96}
+h1 em{font-style:normal;position:relative;display:inline-block}
+h1 em::after{content:"";position:absolute;left:-2px;right:-2px;bottom:6px;height:22px;background:var(--y);z-index:-1;mix-blend-mode:multiply}
+h1 .m{color:var(--m);mix-blend-mode:multiply}
+.sub{position:absolute;z-index:2;left:44px;top:352px;width:460px;font-size:14.5px;line-height:1.6}
+.sub b{font-weight:500;border-bottom:2px solid var(--ink)}
+.cta{position:absolute;left:44px;top:462px;display:flex;gap:14px}
+.cta a{font-size:13px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;padding:15px 22px;border:2px solid var(--ink);text-decoration:none;color:var(--ink)}
+.cta a.p{background:var(--ink);color:var(--white)}
+.spec{position:absolute;left:44px;bottom:30px;right:44px;display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);padding-top:12px;gap:20px}
+.spec div{font-size:11px;line-height:1.5;text-transform:uppercase;letter-spacing:.05em}
+.spec strong{display:block;font-family:var(--disp);font-weight:800;font-size:30px;letter-spacing:-.02em;text-transform:none;line-height:1}
+.art{position:absolute;right:36px;top:76px;width:420px;height:410px}
+.fold{position:absolute;top:0;bottom:0;left:528px;border-left:1.5px dashed #1d140d66}
+.foldl{position:absolute;left:534px;top:64px;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;opacity:.55}
+/* crop marks */
+.cm{position:absolute;background:var(--ink)}
+.bar{position:absolute;left:112px;top:722px;display:flex}
+.bar i{display:block;width:34px;height:20px}
+.reg{position:absolute;width:30px;height:30px;border:2px solid var(--ink);border-radius:50%}
+.reg::before,.reg::after{content:"";position:absolute;background:var(--ink)}
+.reg::before{left:12px;top:-8px;width:2px;height:44px}.reg::after{top:12px;left:-8px;height:2px;width:44px}
+.reg b{position:absolute;inset:7px;border-radius:50%;background:var(--ink)}
+.tint{position:absolute;right:112px;top:722px;display:flex;gap:0}
+.tint i{display:block;width:24px;height:20px;background:var(--ink)}
+</style></head><body>
+<div class="fibre"></div>
+
+<!-- crop marks around the sheet (sheet 112,58 -> 1168,702) -->
+<i class="cm" style="left:92px;top:58px;width:14px;height:1.5px"></i><i class="cm" style="left:112px;top:38px;width:1.5px;height:14px"></i>
+<i class="cm" style="left:1174px;top:58px;width:14px;height:1.5px"></i><i class="cm" style="left:1168px;top:38px;width:1.5px;height:14px"></i>
+<i class="cm" style="left:92px;top:702px;width:14px;height:1.5px"></i><i class="cm" style="left:112px;top:708px;width:1.5px;height:14px"></i>
+<i class="cm" style="left:1174px;top:702px;width:14px;height:1.5px"></i><i class="cm" style="left:1168px;top:708px;width:1.5px;height:14px"></i>
+<div class="reg" style="left:34px;top:365px"><b></b></div>
+<div class="reg" style="left:1216px;top:365px"><b></b></div>
+<div class="slug" style="left:112px;top:20px">Job 0426 / Registro Print Works</div>
+<div class="slug" style="right:112px;top:20px;text-align:right">Trim 297 &times; 210 &nbsp; Bleed 3 mm</div>
+<div class="slug" style="left:112px;top:746px">Proof 02 &middot; Uncoated 120gsm &middot; 4/1 + white</div>
+<div class="bar"><i style="background:var(--c)"></i><i style="background:var(--m)"></i><i style="background:var(--y)"></i><i style="background:var(--ink)"></i><i style="background:#2c6;opacity:0"></i></div>
+<div class="tint"><i style="opacity:.1"></i><i style="opacity:.25"></i><i style="opacity:.4"></i><i style="opacity:.55"></i><i style="opacity:.7"></i><i style="opacity:.85"></i><i></i></div>
+
+<div class="sheet">
+  <nav><b><i></i>Registro</b><ul><li>Services</li><li>Stock library</li><li>Proofing</li><li>Gallery</li></ul><span class="pill">Upload artwork</span></nav>
+  <div class="fold"></div><div class="foldl">fold &uarr;</div>
+  <h1>Printed<br>matter, <em>in</em><br><span class="m">register.</span></h1>
+  <p class="sub">A small offset &amp; digital print works in Porto. Send a PDF, get a physical proof in <b>48 hours</b>, then a full run on stocks you can actually touch before you commit.</p>
+  <div class="cta"><a class="p" href="#">Order a proof &rarr;</a><a href="#">Browse 94 stocks</a></div>
+  <svg class="art" style="top:90px" viewBox="0 0 420 410">
+    <g style="isolation:isolate">
+      <circle cx="172" cy="206" r="122" fill="#00a3dd" style="mix-blend-mode:multiply"/>
+      <circle cx="248" cy="206" r="122" fill="#e5097f" style="mix-blend-mode:multiply"/>
+      <circle cx="210" cy="146" r="122" fill="#ffd500" style="mix-blend-mode:multiply"/>
+    </g>
+    <circle cx="210" cy="188" r="46" fill="#f6f1e6"/>
+    <circle cx="210" cy="188" r="46" fill="none" stroke="#1d140d" stroke-width="2"/>
+    <path d="M210 130v116M152 188h116" stroke="#1d140d" stroke-width="2"/>
+    <text x="0" y="395" font-family="DM Mono" font-size="11" letter-spacing="1.3" fill="#1d140d">C 100  M 0  Y 0   /   C 0  M 100  Y 0   /   C 0  M 0  Y 100</text>
+    <text x="0" y="12" font-family="DM Mono" font-size="10" letter-spacing="1.3" fill="#1d140d">FIG. A &mdash; MISREGISTRATION TEST, 0.15 MM</text>
+  </svg>
+  <div class="spec">
+    <div><strong>48 h</strong>Physical proof to your door</div>
+    <div><strong>94</strong>Uncoated, recycled &amp; kraft stocks</div>
+    <div><strong>0.1 mm</strong>Press registration tolerance</div>
+    <div><strong>100%</strong>Renewable-power presses</div>
+  </div>
+</div>
+</body></html>

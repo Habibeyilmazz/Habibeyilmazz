@@ -1,0 +1,237 @@
+{
+  "category": {
+    "id": "loud-type-dept",
+    "name": "Loud Type Dept",
+    "tagline": "letters as the whole interface",
+    "description": "Typography-first pages where giant, stretched or outlined letters carry the layout: brutalist grids, Klein-blue posters, variable-width stacks and Swiss grids. Little imagery, strong colour fields, and a clear grid or deliberate rawness. Best for festivals, foundries, archives, agencies and cultural venues that want to be read from across the room.",
+    "vibes": [
+      "bold",
+      "editorial",
+      "experimental",
+      "modern"
+    ],
+    "accent": "#1a2cff"
+  },
+  "designs": [
+    {
+      "id": "fileroom-brutalist-mono",
+      "name": "Fileroom Brutalist Mono",
+      "descriptor": "brutalist x document archive",
+      "summary": "Raw boxed layout with 4px black borders, giant Archivo Black headline, a safety-orange block, default blue links and hard-shadow stickers.",
+      "keywords": [
+        "thick black cell borders",
+        "giant black-weight headline",
+        "safety orange slab",
+        "lime logo block",
+        "default blue underlined links",
+        "monospace body"
+      ],
+      "vibes": [
+        "bold",
+        "experimental",
+        "serious",
+        "light"
+      ],
+      "best_for": [
+        "developer tools",
+        "archives and libraries",
+        "agencies",
+        "architecture offices"
+      ],
+      "palette": [
+        "#ffffff",
+        "#000000",
+        "#ff4d00",
+        "#c6ff00",
+        "#0000ee",
+        "#d4d4cf"
+      ],
+      "fonts": {
+        "display": "Archivo Black",
+        "body": "JetBrains Mono",
+        "mono": "JetBrains Mono"
+      },
+      "image": "assets/designs/fileroom-brutalist-mono.png",
+      "mockup": "designs-src/fileroom-brutalist-mono/index.html",
+      "references": [
+        {
+          "title": "Brutalist website design guide with examples (Webflow)",
+          "url": "https://webflow.com/blog/10-brutalist-websites",
+          "source": "other"
+        },
+        {
+          "title": "Web Brutalism collection on Dribbble",
+          "url": "https://dribbble.com/dlevsapij/collections/3278617-Web-Brutalism",
+          "source": "dribbble"
+        },
+        {
+          "title": "Brutalist fonts in brutalist designs (Pangram Pangram)",
+          "url": "https://pangrampangram.com/blogs/journal/brutalist-fonts-in-brutalist-designs",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Wrap the page in a CSS grid with a 4px black border and give every cell a border instead of using gaps or shadows. Set the headline in Archivo Black at 170px or more with line-height .82 and tight negative tracking, and highlight one word with an inline-block coloured slab. Keep links as default blue underline and body text in a mono font, and add a single rotated sticker with a hard offset shadow."
+    },
+    {
+      "id": "full-volume-klein",
+      "name": "Full Volume Klein",
+      "descriptor": "type poster x festival",
+      "summary": "A Klein-blue festival poster where three lines of Anton, solid then outlined, are scaled by script to fill the page edge to edge, with an orange marquee and ticket strip.",
+      "keywords": [
+        "ultramarine blue field",
+        "edge-to-edge condensed type",
+        "outlined stroke line",
+        "orange marquee band",
+        "rotated side label",
+        "ticket-style info strip"
+      ],
+      "vibes": [
+        "bold",
+        "creative",
+        "editorial",
+        "youthful"
+      ],
+      "best_for": [
+        "festivals and conferences",
+        "galleries",
+        "record labels",
+        "campaign sites"
+      ],
+      "palette": [
+        "#1a2cff",
+        "#f1eee4",
+        "#ff5a1f",
+        "#0a14b8"
+      ],
+      "fonts": {
+        "display": "Anton",
+        "body": "DM Mono",
+        "mono": "DM Mono"
+      },
+      "image": "assets/designs/full-volume-klein.png",
+      "mockup": "designs-src/full-volume-klein/index.html",
+      "references": [
+        {
+          "title": "Brutalist typography posters gallery (Graphic Design Junction)",
+          "url": "https://graphicdesignjunction.com/2026/08/brutalist-typography-posters/",
+          "source": "other"
+        },
+        {
+          "title": "Brutalism collection on Dribbble",
+          "url": "https://dribbble.com/bahur78/collections/7075304-Brutalism",
+          "source": "dribbble"
+        }
+      ],
+      "how_to_build": "Set each poster line in a condensed face, measure its natural width with getBoundingClientRect after fonts load, and scale font-size so every line spans the column exactly. Make the middle line transparent with -webkit-text-stroke in the paper colour. Keep colour to three flat values (blue, paper, orange) and anchor the bottom with a fixed-height info strip and a marquee band."
+    },
+    {
+      "id": "elastic-axis-stretch",
+      "name": "Elastic Axis Stretch",
+      "descriptor": "variable type x lilac",
+      "summary": "A type foundry page where one word is stacked at four widths and weights along the variable font axes, each line fitted to the same column on a lilac ground.",
+      "keywords": [
+        "same word at four widths",
+        "width axis from condensed to extended",
+        "lilac background",
+        "acid-lime spec chips",
+        "mono axis readouts",
+        "ruled left rail"
+      ],
+      "vibes": [
+        "modern",
+        "experimental",
+        "creative",
+        "bold"
+      ],
+      "best_for": [
+        "type foundries",
+        "design tools",
+        "font specimens",
+        "creative studios"
+      ],
+      "palette": [
+        "#c9b8ff",
+        "#0b0a12",
+        "#d9ff3f",
+        "#f6f3ff"
+      ],
+      "fonts": {
+        "display": "Archivo",
+        "body": "Archivo",
+        "mono": "Martian Mono"
+      },
+      "image": "assets/designs/elastic-axis-stretch.png",
+      "mockup": "designs-src/elastic-axis-stretch/index.html",
+      "references": [
+        {
+          "title": "Brutalist fonts and variable type in practice (Pangram Pangram)",
+          "url": "https://pangrampangram.com/blogs/journal/brutalist-fonts-in-brutalist-designs",
+          "source": "other"
+        },
+        {
+          "title": "Typography and big-type shots on Dribbble (humanjpg)",
+          "url": "https://dribbble.com/humanjpg",
+          "source": "dribbble"
+        }
+      ],
+      "how_to_build": "Load a variable font with both wdth and wght axes from Google Fonts. Render the same word several times, setting font-variation-settings per line, then measure each line as inline-block and scale its font-size to fill the column so narrower settings become taller. Label each line with its axis values in mono. Keep the palette to a single tint, black and one acid accent."
+    },
+    {
+      "id": "haus-nord-swiss-grid",
+      "name": "Haus Nord Swiss Grid",
+      "descriptor": "swiss grid x concert hall",
+      "summary": "A visible 12-column grid with a bleeding giant numeral, a concentric-arc motif in red and black, and tight Hanken Grotesk headlines for a concert series.",
+      "keywords": [
+        "visible 12-column hairlines",
+        "giant cropped numeral",
+        "concentric circle arcs",
+        "red and black on off-white",
+        "flush-left grotesk",
+        "ruled programme list"
+      ],
+      "vibes": [
+        "modern",
+        "minimal",
+        "elegant",
+        "editorial"
+      ],
+      "best_for": [
+        "concert halls and theatres",
+        "museums",
+        "architecture studios",
+        "cultural institutions"
+      ],
+      "palette": [
+        "#f7f7f4",
+        "#0c0c0c",
+        "#e4301b",
+        "#6b6b66"
+      ],
+      "fonts": {
+        "display": "Hanken Grotesk",
+        "body": "Hanken Grotesk",
+        "mono": "Hanken Grotesk"
+      },
+      "image": "assets/designs/haus-nord-swiss-grid.png",
+      "mockup": "designs-src/haus-nord-swiss-grid/index.html",
+      "references": [
+        {
+          "title": "Mario Grgic Swiss-style web layouts on Dribbble",
+          "url": "https://dribbble.com/mariogrgic",
+          "source": "dribbble"
+        },
+        {
+          "title": "Readymag Almanac: grids in web design",
+          "url": "https://readymag.com/almanac/grid",
+          "source": "other"
+        },
+        {
+          "title": "Swiss grid web design overview",
+          "url": "https://digitalheroes.co.in/styles/swiss-grid/",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Define a 12-column CSS grid with 20px gaps and use subgrid so header and hero align to the same tracks. Draw the column hairlines as a decorative overlay. Set headlines at 118px and a bleeding 380px numeral with weight 900 and tracking of about -0.05em, and build the arc motif as inline SVG concentric circles with two filled sectors. Limit colour to red, black and off-white."
+    }
+  ]
+}

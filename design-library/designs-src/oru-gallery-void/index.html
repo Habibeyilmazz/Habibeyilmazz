@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Oru Gallery</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@300;400;500&family=Newsreader:ital,opsz,wght@1,6..72,300;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+/* Layout: a white gallery wall. One ink painting, one museum label, a window of light, and then silence. Type never exceeds three sizes. */
+:root{
+  --wall:#f2f1ed; --floor:#e2e0da; --ink:#0e0e0e; --mute:#8c8a84; --shadow:rgba(30,28,24,.22); --paper:#f7f5ef;
+  --sans:'Albert Sans','Helvetica Neue',Arial,sans-serif;
+  --serif:'Newsreader','Cormorant Garamond','Times New Roman',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--wall);color:var(--ink);font-family:var(--sans)}
+.wall{position:absolute;inset:0;background:
+  linear-gradient(112deg,rgba(255,255,255,0) 0,rgba(255,255,255,0) 18%,rgba(255,255,255,.55) 18%,rgba(255,255,255,.55) 33%,rgba(255,255,255,0) 33%,rgba(255,255,255,0) 36%,rgba(255,255,255,.4) 36%,rgba(255,255,255,.4) 43%,rgba(255,255,255,0) 43%),
+  linear-gradient(180deg,#f6f5f1 0%,#eeede8 100%)}
+.floor{position:absolute;left:0;right:0;top:660px;bottom:0;background:linear-gradient(180deg,#dedcd5 0%,#e8e6e0 100%);border-top:1px solid #cfcdc6}
+.skirt{position:absolute;left:0;right:0;top:648px;height:12px;background:#ebe9e4;border-top:1px solid #d9d7d0}
+header{position:absolute;top:36px;left:56px;right:56px;display:flex;justify-content:space-between;font-size:12px;letter-spacing:.04em;font-weight:400}
+header nav{display:flex;gap:40px;color:var(--ink)}
+header b{font-weight:500;letter-spacing:.32em}
+.frame{position:absolute;left:420px;top:112px;width:440px;height:480px;background:var(--paper);box-shadow:0 1px 0 rgba(255,255,255,.7) inset,0 2px 3px var(--shadow),0 26px 40px -10px rgba(30,28,24,.32),0 70px 90px -40px rgba(30,28,24,.3)}
+.frame svg{width:100%;height:100%;display:block}
+.small{position:absolute;left:944px;top:262px;width:116px;height:150px;background:#e7e4dc;box-shadow:0 2px 3px var(--shadow),0 18px 26px -8px rgba(30,28,24,.35)}
+.small::after{content:"";position:absolute;left:18px;right:18px;top:78px;height:3px;background:#0e0e0e;transform:rotate(-.6deg)}
+.label{position:absolute;left:944px;top:442px;font-size:11px;line-height:1.55;color:var(--ink);width:170px}
+.label i{font-family:var(--serif);font-size:15px;display:block;margin-bottom:2px;font-weight:300}
+.label span{color:var(--mute);display:block}
+.title{position:absolute;left:56px;top:226px;width:250px}
+.title small{display:block;font-size:12px;letter-spacing:.04em;color:var(--mute);margin-bottom:22px}
+.title h1{font-family:var(--serif);font-style:italic;font-weight:300;font-size:46px;line-height:1.02;letter-spacing:-.01em}
+.title p{margin-top:26px;font-size:12px;line-height:1.6;color:#3a3935;width:210px}
+.dates{position:absolute;left:56px;bottom:56px;font-size:12px;line-height:1.6;letter-spacing:.02em}
+.dates b{display:block;font-weight:400;font-size:12px;color:var(--mute)}
+.visit{position:absolute;right:56px;bottom:56px;font-size:12px;letter-spacing:.04em;display:flex;align-items:center;gap:12px;color:var(--ink)}
+.visit::after{content:"";width:46px;height:1px;background:var(--ink)}
+.scroll{position:absolute;left:50%;bottom:20px;font-size:10px;letter-spacing:.3em;color:var(--mute);transform:translateX(-50%)}
+.refl{position:absolute;left:420px;top:662px;width:440px;height:80px;opacity:.07;background:linear-gradient(180deg,#000,transparent);filter:blur(5px)}
+</style>
+</head>
+<body>
+<div class="wall"></div>
+<div class="skirt"></div>
+<div class="floor"></div>
+<div class="refl"></div>
+<header>
+  <b>ORU</b>
+  <nav><span>Now</span><span>Archive</span><span>Artists</span><span>Visit</span></nav>
+</header>
+
+<div class="title">
+  <small>Exhibition 31, Gallery One</small>
+  <h1>The Quiet<br>Circle</h1>
+  <p>Kaito Oru paints one gesture a day for a year. Forty ensō, shown in an otherwise empty room.</p>
+</div>
+
+<div class="frame">
+<svg id="ens" viewBox="0 0 440 480" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency=".035 .06" numOctaves="4" seed="8" result="t"/>
+      <feDisplacementMap in="SourceGraphic" in2="t" scale="9" xChannelSelector="R" yChannelSelector="G" result="d"/>
+      <feGaussianBlur in="d" stdDeviation=".35"/>
+    </filter>
+    <filter id="wash" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".012 .02" numOctaves="3" seed="21"/>
+      <feColorMatrix values="0 0 0 0 .35  0 0 0 0 .33  0 0 0 0 .3  0 0 0 .5 -.18"/>
+    </filter>
+    <filter id="fibre" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency=".9 .08" numOctaves="2" seed="5"/>
+      <feColorMatrix values="0 0 0 0 .3  0 0 0 0 .28  0 0 0 0 .25  0 0 0 .6 -.28"/>
+    </filter>
+  </defs>
+  <rect width="440" height="480" filter="url(#wash)" opacity=".5"/>
+  <rect width="440" height="480" filter="url(#fibre)" opacity=".4"/>
+  <g id="stroke" filter="url(#rough)"></g>
+</svg>
+</div>
+<div class="small"></div>
+<div class="label"><i>Ensō No. 7</i>Kaito Oru, 2025<span>Sumi ink on washi<br>180 × 150 cm</span></div>
+
+<div class="dates">12 September – 30 November 2026<b>Tue–Sun, 11:00–18:00, free entry</b></div>
+<div class="visit">Plan your visit</div>
+
+<script>
+// brush ring: variable-width ribbon, heavy at the start, dry and thin at the tail
+const NS='http://www.w3.org/2000/svg';
+const cx=222,cy=244,R=128;
+let seed=19;const rnd=()=>{seed=(seed*16807)%2147483647;return seed/2147483647};
+const a0=-Math.PI*.62, sweep=Math.PI*2*.93, N=180;
+const outer=[],inner=[];
+for(let i=0;i<=N;i++){
+  const t=i/N, a=a0+sweep*t;
+  const w=Math.max(3, 40*Math.pow(1-t,.55)*(0.9+.25*Math.sin(t*9)) + 2);
+  const rr=R+Math.sin(t*5.2)*5+t*10;
+  outer.push([cx+Math.cos(a)*(rr+w/2),cy+Math.sin(a)*(rr+w/2)]);
+  inner.push([cx+Math.cos(a)*(rr-w/2),cy+Math.sin(a)*(rr-w/2)]);
+}
+const d='M'+outer.map(p=>p.map(v=>v.toFixed(1)).join(' ')).join('L')+'L'+inner.reverse().map(p=>p.map(v=>v.toFixed(1)).join(' ')).join('L')+'Z';
+const g=document.getElementById('stroke');
+const p=document.createElementNS(NS,'path');p.setAttribute('d',d);p.setAttribute('fill','#0c0c0c');g.appendChild(p);
+// dry-brush gaps: thin paper-coloured arcs cut through the heavier half
+for(let k=0;k<26;k++){
+  const t0=.30+rnd()*.55, len=.04+rnd()*.12, off=(rnd()-.5)*20;
+  const a1=a0+sweep*t0,a2=a0+sweep*(t0+len),rr=R+t0*10+off;
+  const e=document.createElementNS(NS,'path');
+  e.setAttribute('d',`M${cx+Math.cos(a1)*rr} ${cy+Math.sin(a1)*rr} A${rr} ${rr} 0 0 1 ${cx+Math.cos(a2)*rr} ${cy+Math.sin(a2)*rr}`);
+  e.setAttribute('stroke','#f7f5ef');e.setAttribute('stroke-width',(.5+rnd()*1.4).toFixed(2));e.setAttribute('fill','none');e.setAttribute('opacity',(.55+rnd()*.4).toFixed(2));
+  g.appendChild(e);
+}
+</script>
+</body>
+</html>

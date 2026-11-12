@@ -1,0 +1,86 @@
+{
+  "category": {
+    "id": "night-instruments",
+    "name": "Night Instruments",
+    "tagline": "glow, orbit and schematic on black",
+    "description": "Futuristic product pages built like instruments: aurora light, orbital diagrams, engineering drawings and refracted beams over deep black or blueprint blue. Use it for AI platforms, hardware, space and compute companies that need to feel precise and a little cinematic.",
+    "vibes": ["futuristic", "technology", "dark", "cinematic"],
+    "accent": "#2de2c0"
+  },
+  "designs": [
+    {
+      "id": "aurora-ribbon",
+      "name": "Northlight Aurora Ribbons",
+      "descriptor": "aurora curtains x frosted glass",
+      "summary": "Teal, jade and rose aurora curtains hang over a dark ridge line. A left-aligned light headline sits below and a frosted-glass agent run card floats on the right.",
+      "keywords": ["canvas aurora curtains", "film grain over gradients", "frosted glass card", "gradient accent word", "dark ridge silhouette", "live task checklist"],
+      "vibes": ["futuristic", "cinematic", "elegant", "dark"],
+      "best_for": ["AI agent platforms", "automation tools", "creative AI products"],
+      "palette": ["#03060d", "#2de2c0", "#7dffa8", "#e65bd0", "#e8f3f2"],
+      "fonts": { "display": "Bricolage Grotesque", "body": "Bricolage Grotesque", "mono": "Red Hat Mono" },
+      "image": "assets/designs/aurora-ribbon.png",
+      "mockup": "designs-src/aurora-ribbon/index.html",
+      "references": [
+        { "title": "Neobot personal AI chat assistant page design", "url": "https://dribbble.com/shots/25511481-Neobot-Personal-AI-Chat-Assistant-Page-Design", "source": "dribbble" },
+        { "title": "Aurora mesh gradient UI trend", "url": "https://trends.daisyui.com/trend/mesh-gradient-aurora-ui/", "source": "other" },
+        { "title": "Glass aurora dark hero", "url": "https://superdesign.dev/library/lumina-design-prompted-glass-aurora-dark-hero", "source": "other" }
+      ],
+      "how_to_build": "Paint the sky on a canvas: for every 2px column draw a vertical linear gradient whose height and offset come from summed sine waves, fading to transparent at the top and brightest near the lower edge, with globalCompositeOperation set to lighter and a small blur filter. Add stars, a dark ridge path, a radial dark patch behind the text and a little noise for grain. Layer a backdrop-filter blur card with a 1px translucent border on top."
+    },
+    {
+      "id": "orbital-pass",
+      "name": "Perigee Orbital Pass",
+      "descriptor": "orbit diagram x condensed type",
+      "summary": "Towering condensed capitals beside a tilted orbit diagram: a burnt-orange planet, concentric rings, satellites, a ground-station crosshair and mono telemetry.",
+      "keywords": ["tilted elliptical orbit rings", "burnt orange lit planet", "condensed uppercase headline", "telemetry callouts", "masked grid backdrop", "stat strip"],
+      "vibes": ["futuristic", "bold", "technology", "dark"],
+      "best_for": ["space and satellite companies", "aerospace data APIs", "geospatial platforms"],
+      "palette": ["#05060b", "#ece6d8", "#ff7a3d", "#7f98ff", "#7b8097"],
+      "fonts": { "display": "Big Shoulders Display", "body": "Martian Mono", "mono": "Martian Mono" },
+      "image": "assets/designs/orbital-pass.png",
+      "mockup": "designs-src/orbital-pass/index.html",
+      "references": [
+        { "title": "Orbital integration ecosystem", "url": "https://superdesign.dev/library/orbital-integration-ecosystem", "source": "other" },
+        { "title": "Cinematic space travel landing page", "url": "https://enter.converge.ai/page/en-US/hub/de70ac3164ef4be6850b23e50cba2e91-v-bb1c23a9", "source": "other" },
+        { "title": "VELOS interstellar logistics landing page", "url": "https://aura.build/templates/velos-interstell-31", "source": "other" }
+      ],
+      "how_to_build": "Draw the diagram in one SVG: group the rings under translate and rotate(-20) so ellipses share the same tilt, vary stroke opacity and dash patterns between rings, and highlight the active arc in the accent colour. Fill the planet with an offset radialGradient and draw the front half of the inner ring after it so it passes in front. Mask a faint grid with a radial gradient. Set the headline in a very condensed display face at 128px with tight leading and put all labels in a small uppercase mono."
+    },
+    {
+      "id": "blueprint-fabric",
+      "name": "Tessel Blueprint Fabric",
+      "descriptor": "engineering drawing x isometric chip",
+      "summary": "A cobalt drafting sheet with a minor and major grid, an exploded isometric chip with dimension lines and lettered callouts, and a real title block.",
+      "keywords": ["cobalt blueprint grid", "isometric exploded chip", "dimension lines with arrows", "circled letter callouts", "drawing title block", "outlined condensed headline"],
+      "vibes": ["technology", "geometric", "serious", "cool"],
+      "best_for": ["chips and hardware", "robotics and industrial products", "deep-tech engineering firms"],
+      "palette": ["#0b2c72", "#071d52", "#d7e6ff", "#7fa8ff", "#ffe14a"],
+      "fonts": { "display": "Barlow Condensed", "body": "DM Mono", "mono": "DM Mono" },
+      "image": "assets/designs/blueprint-fabric.png",
+      "mockup": "designs-src/blueprint-fabric/index.html",
+      "references": [
+        { "title": "Orbit console Framer component (schematic and control panel styling)", "url": "https://www.framer.com/marketplace/components/orbitconsole/", "source": "other" },
+        { "title": "Apogee Dynamics design inspiration", "url": "https://kombai.com/gallery/inspirations/apogee-dynamics/", "source": "other" }
+      ],
+      "how_to_build": "Stack linear-gradient lines at 20px and 100px on a blue background for the sheet grid, then draw an inner frame with a second inset border. Generate the chip in SVG with a helper that maps (u, v, z) to screen using x = (u - v) * cos30 and y = (u + v) * 0.5 - z, drawing each slab as a top face plus two shaded side faces. Add dashed vertical guides between layers, dimension lines with small triangular arrowheads, and circled letter callouts. Finish with a bordered title block in a condensed face."
+    },
+    {
+      "id": "prism-gateway",
+      "name": "Prism Spectral Gateway",
+      "descriptor": "refracted light x model routing",
+      "summary": "A white beam enters a glass prism and fans into five glowing spectral rays that land on model cards, a literal picture of one request routed to many models.",
+      "keywords": ["glass prism triangle", "five spectral rays with glow", "wide extra-bold headline", "gradient text line", "model status cards", "curl snippet card"],
+      "vibes": ["futuristic", "bold", "creative", "dark"],
+      "best_for": ["LLM gateways and routers", "API aggregators", "developer infrastructure with a clear metaphor"],
+      "palette": ["#040405", "#f5f5f7", "#ff5a5f", "#ffb347", "#9be564", "#4fd8ff", "#8f7bff"],
+      "fonts": { "display": "Syne", "body": "Fira Code", "mono": "Fira Code" },
+      "image": "assets/designs/prism-gateway.png",
+      "mockup": "designs-src/prism-gateway/index.html",
+      "references": [
+        { "title": "Bold dark-mode AI platform landing page", "url": "https://enter.converge.ai/marketplace/templates/ede359a116f4485d8e10a47dba2bd8d0", "source": "other" },
+        { "title": "Cosmic AI automation landing page", "url": "https://enter.converge.ai/marketplace/templates/d0a1d1a0f9904b9d852cf2c70f4637cd", "source": "other" }
+      ],
+      "how_to_build": "In one SVG, draw the prism as a polygon with a translucent white linearGradient fill and a thin white stroke. For each ray build a thin wedge polygon from the exit point to a target dot, fill it with a gradient that fades in along its length, and duplicate it under a feGaussianBlur filter for glow. Position HTML model cards at the ray endpoints. Use a very wide display face at about 62px for the headline with a multi-stop gradient clipped to one line of text."
+    }
+  ]
+}

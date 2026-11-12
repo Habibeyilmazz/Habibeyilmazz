@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Moonlit Meadow Books</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Caveat:wght@600;700&family=Nunito:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--night:#1b2455;--night2:#2c3f7a;--moon:#ffe7a1;--paper:#fbf0d9;--ink:#2a2140;--fox:#ee7a30;--leaf:#5f9a63;--rose:#f0a3a3;
+--display:'Gloock','Georgia',serif;--hand:'Caveat','Comic Sans MS',cursive;--body:'Nunito','Trebuchet MS',sans-serif}
+*{box-sizing:border-box;margin:0}
+html,body{width:1280px;height:800px;overflow:hidden}
+body{background:var(--night);font-family:var(--body);color:var(--ink);position:relative}
+svg.scene{position:absolute;inset:0}
+nav{position:absolute;top:28px;left:56px;right:56px;display:flex;justify-content:space-between;align-items:center;color:var(--paper);z-index:5}
+.logo{font-family:var(--display);font-size:28px;display:flex;align-items:center;gap:10px}
+.logo svg{width:34px;height:34px}
+.links{display:flex;gap:30px;font-weight:700;font-size:17px;align-items:center}
+.links .p{background:var(--moon);color:var(--night);padding:10px 22px;border-radius:255px 18px 225px 18px/18px 225px 18px 255px;border:3px solid var(--night)}
+.page{position:absolute;left:56px;top:112px;width:586px;height:640px;background:var(--paper);filter:url(#rough);border-radius:6px 26px 10px 30px;transform:rotate(-1.2deg);box-shadow:0 30px 50px rgba(0,0,0,.4);z-index:3}
+.copy{position:absolute;left:56px;top:112px;width:586px;height:640px;padding:46px 52px;transform:rotate(-1.2deg);z-index:4}
+.tag{font-family:var(--hand);font-weight:700;font-size:30px;color:#c4562a;transform:rotate(-2deg);display:inline-block}
+.tag:after{content:"";display:block;height:8px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='8'%3E%3Cpath d='M0 4q10-6 20 0t20 0 20 0 20 0' stroke='%23c4562a' stroke-width='3' fill='none'/%3E%3C/svg%3E") repeat-x;margin-top:-4px}
+h1{font-family:var(--display);font-weight:400;font-size:74px;line-height:1.02;margin-top:10px;letter-spacing:-.01em}
+h1 em{font-style:normal;color:#d85a1f;position:relative;white-space:nowrap}
+h1 em:after{content:"";position:absolute;left:-4px;right:-4px;bottom:2px;height:14px;background:rgba(255,200,80,.55);z-index:-1;border-radius:8px;transform:rotate(-1deg)}
+p.lead{font-size:20px;line-height:1.5;font-weight:500;margin-top:22px;max-width:440px}
+.btns{display:flex;gap:16px;margin-top:28px;align-items:center}
+.btn{font-family:var(--display);font-size:22px;padding:15px 28px 17px;background:var(--fox);color:#fff;border:3px solid var(--ink);border-radius:255px 18px 225px 18px/18px 225px 18px 255px;box-shadow:4px 5px 0 var(--ink)}
+.note{font-family:var(--hand);font-weight:700;font-size:27px;line-height:1;color:var(--ink);transform:rotate(-3deg)}
+.shelf{position:absolute;left:56px;right:56px;bottom:24px;display:none}
+.tab{position:absolute;right:36px;bottom:34px;z-index:6;background:var(--paper);padding:14px 20px;border-radius:12px 28px 12px 26px;border:3px solid var(--ink);transform:rotate(2deg);box-shadow:4px 5px 0 rgba(0,0,0,.35);max-width:268px}
+.tab b{font-family:var(--display);font-weight:400;font-size:21px;display:block}
+.tab span{font-size:15px;font-weight:700;opacity:.75}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <filter id="wob" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="7"/></filter>
+  <filter id="rough" x="-3%" y="-3%" width="106%" height="106%"><feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" seed="9" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="9" result="d"/><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="2" result="g"/><feColorMatrix in="g" type="matrix" values="0 0 0 0 .45  0 0 0 0 .3  0 0 0 0 .1  0 0 0 .14 0" result="grain"/><feComposite in="grain" in2="d" operator="in" result="gi"/><feMerge><feMergeNode in="d"/><feMergeNode in="gi"/></feMerge></filter>
+  <radialGradient id="glow"><stop offset="0" stop-color="#ffe7a1" stop-opacity=".55"/><stop offset="1" stop-color="#ffe7a1" stop-opacity="0"/></radialGradient>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#151c4a"/><stop offset=".6" stop-color="#2c3f7a"/><stop offset="1" stop-color="#4e5f9c"/></linearGradient>
+</defs></svg>
+
+<svg class="scene" viewBox="0 0 1280 800">
+  <rect width="1280" height="800" fill="url(#sky)"/>
+  <g filter="url(#wob)">
+    <circle cx="930" cy="250" r="260" fill="url(#glow)"/>
+    <circle cx="930" cy="250" r="118" fill="#ffe7a1"/>
+    <g fill="#f4d37e"><circle cx="890" cy="222" r="22"/><circle cx="968" cy="286" r="16"/><circle cx="944" cy="206" r="9"/><circle cx="900" cy="296" r="11"/></g>
+    <g fill="#fff6d5"><path d="M720 120l6 16 16 6-16 6-6 16-6-16-16-6 16-6zM1130 90l5 13 13 5-13 5-5 13-5-13-13-5 13-5zM1180 300l4 10 10 4-10 4-4 10-4-10-10-4 10-4zM760 330l4 10 10 4-10 4-4 10-4-10-10-4 10-4zM1060 170l4 10 10 4-10 4-4 10-4-10-10-4 10-4z"/></g>
+    <!-- hills -->
+    <path d="M0 520C200 440 380 470 560 520S900 560 1280 470V800H0Z" fill="#33508a"/>
+    <path d="M0 600C220 540 420 580 640 610S1000 600 1280 560V800H0Z" fill="#3f7060"/>
+    <!-- cottage on far hill -->
+    <g transform="translate(1110 470)"><rect x="0" y="22" width="64" height="44" fill="#f2dcb5"/><path d="M-8 26 32-8 72 26Z" fill="#c4562a"/><rect x="24" y="36" width="16" height="22" rx="3" fill="#ffd36a"/></g>
+    <path d="M0 680C240 620 460 650 700 680S1040 690 1280 640V800H0Z" fill="#4f8a58"/>
+    <!-- trees -->
+    <g><rect x="772" y="540" width="14" height="70" fill="#3b2a3d"/><circle cx="779" cy="520" r="52" fill="#2f6b57"/><circle cx="752" cy="548" r="34" fill="#2f6b57"/><circle cx="808" cy="548" r="34" fill="#2f6b57"/></g>
+    <g><rect x="1150" y="600" width="12" height="60" fill="#3b2a3d"/><circle cx="1156" cy="582" r="40" fill="#3b7a5a"/><circle cx="1134" cy="606" r="26" fill="#3b7a5a"/><circle cx="1178" cy="606" r="26" fill="#3b7a5a"/></g>
+    <!-- flowers -->
+    <g stroke="#2e5d3a" stroke-width="3" fill="none"><path d="M700 740v-40M740 750v-34M1010 750v-38M1060 740v-30M1200 730v-36"/></g>
+    <g fill="#f0a3a3"><circle cx="700" cy="694" r="10"/><circle cx="1060" cy="704" r="10"/></g><g fill="#fff"><circle cx="740" cy="710" r="10"/><circle cx="1200" cy="688" r="10"/></g><g fill="#ffe7a1"><circle cx="1010" cy="706" r="10"/></g>
+    <!-- fox -->
+    <g transform="translate(-90 30)">
+      <path d="M960 650C1060 670 1090 590 1040 540C1030 580 1000 600 950 600Z" fill="#ee7a30"/>
+      <path d="M1040 540C1058 560 1062 590 1052 612C1040 600 1034 570 1040 540Z" fill="#fff4de"/>
+      <path d="M868 540C846 580 846 650 872 672L968 672C996 650 990 580 962 540Z" fill="#ee7a30"/>
+      <ellipse cx="916" cy="620" rx="30" ry="46" fill="#fff4de"/>
+      <path d="M866 482 880 412 908 444 928 444 956 412 970 482C970 522 944 544 918 544 892 544 866 522 866 482Z" fill="#ee7a30"/>
+      <path d="M876 436 882 460 898 448ZM960 436 954 460 938 448Z" fill="#6b2f2a"/>
+      <path d="M868 488C888 510 902 526 918 544 934 526 948 510 968 488 948 498 934 500 918 500 902 500 888 498 868 488Z" fill="#fff4de"/>
+      <circle cx="918" cy="528" r="7" fill="#2a2140"/>
+      <path d="M886 480q8-9 16 0M934 480q8-9 16 0" stroke="#2a2140" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <ellipse cx="892" cy="676" rx="22" ry="10" fill="#6b2f2a"/><ellipse cx="944" cy="676" rx="22" ry="10" fill="#6b2f2a"/>
+    </g>
+    <!-- fireflies -->
+    <g fill="#fff1a8"><circle cx="760" cy="440" r="5"/><circle cx="1010" cy="470" r="5"/><circle cx="1100" cy="380" r="4"/><circle cx="700" cy="620" r="5"/><circle cx="1210" cy="540" r="5"/><circle cx="880" cy="400" r="4"/></g>
+  </g>
+</svg>
+
+<nav>
+  <div class="logo"><svg viewBox="0 0 40 40"><path d="M26 4a16 16 0 1 0 10 24A13 13 0 0 1 26 4Z" fill="#ffe7a1"/></svg>Moonlit Meadow</div>
+  <div class="links"><span>Story shelf</span><span>Read-aloud</span><span>Grown-ups</span><span class="p">Try a story</span></div>
+</nav>
+
+<div class="page"></div>
+<section class="copy">
+  <span class="tag">bedtime stories for ages 3 to 7</span>
+  <h1>Stories that tuck <em>themselves</em> in.</h1>
+  <p class="lead">Hand-painted picture books with a gentle voice-over and a sleepy ending, so the lights go out before the last page.</p>
+  <div class="btns"><a class="btn">Read tonight's story</a><span class="note">first 12 books free &rarr;</span></div>
+</section>
+<div class="tab"><b>Tonight: The Fox Who Borrowed the Moon</b><span>9 minutes / read-aloud / sleepy ending</span></div>
+</body></html>

@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Lethe FM</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;500;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: sunset sky + slit sun, tilted neon floor grid, profile bust on a plinth right of centre, headline left, glass player on the floor. */
+:root{
+  --night:#12062e; --plum:#3b0f6b; --pink:#ff4fa3; --peach:#ffa35e; --teal:#2ee6d6; --lilac:#f3e6ff;
+  --display:"Unbounded","Syncopate","Arial Black",sans-serif;
+  --mono:"DM Mono","JetBrains Mono",ui-monospace,Menlo,monospace;
+  --jp:"IPAGothic","Noto Sans JP","Hiragino Sans",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden}
+body{background:var(--night);color:var(--lilac);font-family:var(--mono);position:relative}
+.sky{position:absolute;inset:0 0 300px 0;background:linear-gradient(180deg,#0e0526 0%,#2a0b55 38%,#8a1f8a 66%,#ff4fa3 92%,#ffa35e 100%)}
+.stars{position:absolute;inset:0 0 300px 0}
+.stars i{position:absolute;color:var(--lilac);font-style:normal;font-size:14px;opacity:.7}
+.floor{position:absolute;left:0;right:0;top:500px;bottom:0;overflow:hidden;background:linear-gradient(180deg,#ff7fb6 0,#6a1b8c 3%,#1c0845 24%,#0d0426 100%)}
+.grid{position:absolute;left:-60%;width:220%;top:0;height:900px;transform:perspective(380px) rotateX(64deg);transform-origin:50% 0;
+  background-image:linear-gradient(var(--teal) 2px,transparent 2px),linear-gradient(90deg,var(--teal) 2px,transparent 2px);background-size:90px 70px;
+  opacity:.85;filter:drop-shadow(0 0 6px var(--teal));-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 22%)}
+.glow{position:absolute;left:0;right:0;top:482px;height:36px;background:radial-gradient(60% 100% at 55% 50%,rgba(255,200,120,.9),transparent 70%);filter:blur(6px)}
+nav{position:absolute;left:56px;right:56px;top:34px;display:flex;justify-content:space-between;align-items:center;z-index:6;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.logo{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:.06em;display:flex;align-items:center;gap:10px}
+.logo span{font-family:var(--jp);font-size:12px;font-weight:400;letter-spacing:.3em;color:var(--teal);border:1px solid var(--teal);padding:3px 6px}
+nav ul{list-style:none;display:flex;gap:36px}
+nav .on{color:var(--peach)}
+.pill{border:1px solid var(--lilac);padding:10px 18px;border-radius:99px;display:flex;gap:10px;align-items:center}
+.pill b{width:8px;height:8px;border-radius:50%;background:var(--pink);box-shadow:0 0 10px var(--pink);display:block}
+.vert{position:absolute;left:24px;top:130px;writing-mode:vertical-rl;font-family:var(--jp);font-size:15px;letter-spacing:.5em;color:var(--lilac);opacity:.75;z-index:5}
+.hero{position:absolute;left:84px;top:132px;z-index:5;width:640px}
+.tag{font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--peach);margin-bottom:22px;display:flex;gap:12px;align-items:center}
+.tag:before{content:"";width:34px;height:2px;background:var(--peach)}
+h1{font-family:var(--display);font-weight:800;font-size:68px;line-height:1.0;letter-spacing:-.03em;text-transform:uppercase}
+h1 .o{color:var(--teal);text-shadow:0 0 24px rgba(46,230,214,.55)}
+h1 .g{background:linear-gradient(90deg,var(--peach),var(--pink) 60%,#c98bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{margin-top:24px;width:430px;font-size:15px;line-height:1.65;color:#f0d9ff}
+.cta{margin-top:28px;display:flex;gap:16px;align-items:center}
+.btn{font-family:var(--display);font-weight:500;font-size:12px;letter-spacing:.12em;text-transform:uppercase;padding:17px 26px;border-radius:99px;background:linear-gradient(90deg,var(--peach),var(--pink));color:#2a0b3d;box-shadow:0 0 28px rgba(255,79,163,.55)}
+.lnk{font-size:12px;letter-spacing:.16em;text-transform:uppercase;border-bottom:1px solid var(--lilac);padding-bottom:3px}
+svg.scene{position:absolute;left:0;top:0;width:1280px;height:800px;z-index:2}
+.player{position:absolute;left:84px;top:596px;width:468px;z-index:6;background:rgba(18,6,46,.62);border:1px solid rgba(243,230,255,.55);border-radius:6px;backdrop-filter:blur(8px);box-shadow:0 0 0 1px rgba(46,230,214,.5),0 20px 40px rgba(0,0,0,.45)}
+.tb{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;background:linear-gradient(90deg,var(--teal),#8f8bff 50%,var(--pink));color:#1a0636}
+.tb s{text-decoration:none;display:flex;gap:6px}.tb s i{width:11px;height:11px;background:#1a0636;opacity:.75;display:block}
+.pb{display:grid;grid-template-columns:1fr auto;gap:12px 18px;padding:16px 16px 14px}
+.np{font-size:11px;letter-spacing:.18em;color:var(--teal);text-transform:uppercase}
+.tt{font-family:var(--display);font-weight:500;font-size:19px;margin-top:6px;letter-spacing:-.01em}
+.ar{font-size:12px;color:#d8c2f5;margin-top:4px}
+.eq{display:flex;gap:4px;align-items:flex-end;height:46px}
+.eq i{display:block;width:6px;background:linear-gradient(0deg,var(--teal),var(--pink));animation:eq 1.2s ease-in-out infinite alternate}
+.eq i:nth-child(2n){animation-duration:.9s}.eq i:nth-child(3n){animation-duration:1.5s}
+@keyframes eq{from{height:20%}to{height:100%}}
+.bar{grid-column:1/3;height:4px;background:rgba(243,230,255,.25);position:relative}
+.bar:after{content:"";position:absolute;left:0;top:0;bottom:0;width:38%;background:var(--pink);box-shadow:0 0 10px var(--pink)}
+.tm{grid-column:1/3;display:flex;justify-content:space-between;font-size:11px;color:#c9b2ea;letter-spacing:.1em;margin-top:-4px}
+.cap{position:absolute;right:56px;top:262px;z-index:6;text-align:right;font-size:11px;letter-spacing:.18em;text-transform:uppercase;line-height:1.8;color:var(--lilac)}
+.cap b{color:var(--peach);font-weight:500}
+.scan{position:absolute;inset:0;z-index:8;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 3px);mix-blend-mode:multiply}
+@media (prefers-reduced-motion:reduce){.eq i{animation:none;height:60%}}
+</style>
+</head>
+<body>
+<div class="sky"></div>
+<div class="stars" id="stars"></div>
+<div class="floor"><div class="grid"></div></div>
+<div class="glow"></div>
+
+<svg class="scene" viewBox="0 0 1280 800" aria-hidden="true">
+  <defs>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffe27a"/><stop offset=".5" stop-color="#ff9e5e"/><stop offset="1" stop-color="#ff3f9c"/></linearGradient>
+    <mask id="slits">
+      <rect width="1280" height="800" fill="#fff"/>
+      <rect x="0" y="372" width="1280" height="4" fill="#000"/><rect x="0" y="396" width="1280" height="7" fill="#000"/>
+      <rect x="0" y="422" width="1280" height="10" fill="#000"/><rect x="0" y="450" width="1280" height="14" fill="#000"/><rect x="0" y="480" width="1280" height="20" fill="#000"/>
+    </mask>
+    <linearGradient id="bk" x1="0" x2="1" y1="0" y2="0.3">
+      <stop offset="0" stop-color="#2ee6d6"/><stop offset=".3" stop-color="#e9ddff"/><stop offset=".62" stop-color="#ff7fc0"/><stop offset="1" stop-color="#7a2bd0"/>
+    </linearGradient>
+    <linearGradient id="hr" x1="0" x2="1"><stop offset="0" stop-color="#8ff3e8"/><stop offset=".5" stop-color="#d9b8ff"/><stop offset="1" stop-color="#6a2fc8"/></linearGradient>
+    <linearGradient id="pl" x1="0" x2="1"><stop offset="0" stop-color="#e8e0f7"/><stop offset=".6" stop-color="#b9a7dc"/><stop offset="1" stop-color="#6a4fa0"/></linearGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="22"/></filter>
+    <g id="bust">
+      <path d="M40 560 C60 470 130 428 175 410 L265 410 C330 430 380 480 395 560 Z" fill="url(#bk)"/>
+      <path d="M165 300 C168 340 162 380 172 412 L270 412 C262 370 272 330 276 290 Z" fill="url(#bk)"/>
+      <path d="M130 112 C128 130 124 148 128 164 C120 184 106 204 98 216 C100 225 110 227 115 229 C110 238 110 244 116 248 C111 254 113 259 118 262 C114 276 118 290 128 300 C146 316 172 318 200 306 C240 300 270 290 280 262 C304 232 312 190 306 140 C300 80 262 36 214 36 C168 36 134 66 130 112 Z" fill="url(#bk)"/>
+      <path d="M130 112 C134 66 170 40 214 40 C266 42 300 82 306 140 C312 190 300 232 282 262 C270 230 266 200 262 170 C240 150 190 130 150 138 C140 128 132 120 130 112 Z" fill="url(#hr)"/>
+      <g id="vcurls"></g>
+      <path d="M140 150 C152 142 166 144 174 150" fill="none" stroke="#5b2f9a" stroke-width="3" stroke-linecap="round"/>
+      <path d="M142 164 C150 170 162 170 170 164" fill="none" stroke="#5b2f9a" stroke-width="3" stroke-linecap="round"/>
+      <path d="M112 232 C118 240 122 240 128 238 M116 262 C124 258 132 258 140 262" fill="none" stroke="#7a3fb8" stroke-width="2" opacity=".7"/>
+      <ellipse cx="232" cy="190" rx="11" ry="23" fill="#c7a8ee" stroke="#6a2fc8" stroke-width="2" opacity=".9"/>
+      <path d="M172 330 C200 346 240 344 268 326" fill="none" stroke="#6a2fc8" stroke-width="2" opacity=".5"/>
+    </g>
+  </defs>
+
+  <!-- sun -->
+  <circle cx="790" cy="410" r="230" fill="url(#sun)" mask="url(#slits)"/>
+  <circle cx="790" cy="410" r="262" fill="none" stroke="#ffe27a" stroke-width="1.5" opacity=".5" stroke-dasharray="2 8"/>
+  <!-- halo behind bust -->
+  <ellipse cx="790" cy="400" rx="230" ry="260" fill="#ff4fa3" opacity=".28" filter="url(#soft)"/>
+  <!-- plinth -->
+  <g>
+    <path d="M590 640 L1030 640 L1070 700 L550 700 Z" fill="#d9cdf5"/>
+    <rect x="550" y="700" width="520" height="60" fill="url(#pl)"/>
+    <path d="M640 700 V760 M730 700 V760 M820 700 V760 M910 700 V760 M1000 700 V760" stroke="#3b0f6b" stroke-opacity=".35" stroke-width="3"/>
+    <rect x="550" y="700" width="520" height="4" fill="#fff" opacity=".55"/>
+    <rect x="550" y="756" width="520" height="4" fill="#2ee6d6" opacity=".8"/>
+  </g>
+  <!-- bust (profile, facing left) -->
+  <clipPath id="cb"><rect x="0" y="0" width="1280" height="640"/></clipPath>
+  <g clip-path="url(#cb)"><g transform="translate(560 100) scale(1.2)"><use href="#bust"/></g></g>
+  <!-- shadow fade at plinth top so bust sits on it -->
+  <path d="M610 640 L970 640 L1010 700 L570 700 Z" fill="#12062e" opacity="0"/>
+  <!-- floating UI marker -->
+  <g font-family="DM Mono, monospace" font-size="11" letter-spacing="2" fill="#f3e6ff">
+        <text x="1012" y="196" text-anchor="start">LAT 37.97 N</text>
+    <line x1="1000" y1="192" x2="920" y2="236" stroke="#f3e6ff" stroke-width="1" opacity=".6"/>
+  </g>
+</svg>
+
+<nav>
+  <div class="logo">LETHE FM<span>忘却放送</span></div>
+  <ul><li class="on">Listen</li><li>Schedule</li><li>Mixes</li><li>Press</li></ul>
+  <div class="pill"><b></b>On air · 14,382 forgetting</div>
+</nav>
+<div class="vert">忘れることは、美しい</div>
+
+<div class="hero">
+  <div class="tag">24 hour river of sound</div>
+  <h1><span class="o">Forget</span><br>something <span class="g">beautiful.</span></h1>
+  <p class="sub">An internet radio that plays one track once and never again. Tune in to the river, drink from it, and leave it behind.</p>
+  <div class="cta"><div class="btn">Tune in free</div><div class="lnk">See tonight’s drift →</div></div>
+</div>
+
+<div class="player">
+  <div class="tb"><span>lethe_player.exe</span><s><i></i><i></i><i></i></s></div>
+  <div class="pb">
+    <div><div class="np">Now flowing · ch. 03</div><div class="tt">Slow Amnesia for Marble</div><div class="ar">Vera Halcyon · aired once, 03:12 UTC</div></div>
+    <div class="eq" id="eq"></div>
+    <div class="bar"></div>
+    <div class="tm"><span>01:48</span><span>-03:21</span></div>
+  </div>
+</div>
+<div class="cap"><b>Fig. A</b> · Hermes, left profile<br>Plinth height 92 cm<br>Signal 88.1 FM · the river</div>
+<div class="scan"></div>
+<script>
+var st='';[[120,90],[240,40],[360,150],[520,70],[640,30],[960,60],[1100,130],[1200,60],[1180,260],[80,260],[460,230],[300,300]].forEach(function(p,i){st+='<i style="left:'+p[0]+'px;top:'+p[1]+'px;font-size:'+(10+i%3*4)+'px">+</i>'});
+document.getElementById('stars').innerHTML=st;
+var e='';[40,70,50,90,60,100,45,80,55,35,75,65].forEach(function(h){e+='<i style="height:'+h+'%"></i>'});document.getElementById('eq').innerHTML=e;
+(function(){var g=document.getElementById('vcurls'),s='';
+ function ring(R,r,a0,a1,n,cx,cy,sy){for(var i=0;i<=n;i++){var a=a0+(a1-a0)*i/n,x=cx+Math.cos(a)*R,y=cy+Math.sin(a)*R*sy;
+  s+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+r+'" fill="url(#hr)" stroke="#6a2fc8" stroke-width="1.6" stroke-opacity=".6"/>';}}
+ ring(80,17,Math.PI*1.05,Math.PI*2.05,16,218,150,1.2);
+ ring(56,15,Math.PI*1.2,Math.PI*2.0,10,222,140,1.0);
+ g.innerHTML=s;})();
+</script>
+</body>
+</html>

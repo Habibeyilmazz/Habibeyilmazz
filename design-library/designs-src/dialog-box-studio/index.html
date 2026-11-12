@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Dialog Box Studio</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Pixelify+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: teal desktop with icon column, three overlapping beveled windows (studio, project folder, error dialog) and a taskbar. */
+:root{
+  --desk:#008080; --face:#c0c0c0; --hi:#ffffff; --mid:#808080; --dk:#0a0a0a; --navy:#000080; --sky:#1084d0; --yel:#ffff00; --red:#c00000;
+  --ui:"Pixelify Sans","DejaVu Sans","Tahoma",sans-serif;
+  --body:"Tahoma","Verdana","DejaVu Sans",sans-serif;
+  --display:"Archivo Black","Arial Black",Impact,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden}
+body{background:var(--desk);font-family:var(--body);font-size:13px;color:#000;position:relative;
+  background-image:linear-gradient(45deg,rgba(0,0,0,.06) 25%,transparent 25%,transparent 75%,rgba(0,0,0,.06) 75%),linear-gradient(45deg,rgba(0,0,0,.06) 25%,transparent 25%,transparent 75%,rgba(0,0,0,.06) 75%);background-size:4px 4px;background-position:0 0,2px 2px}
+.bevel{background:var(--face);box-shadow:inset -1px -1px var(--dk),inset 1px 1px var(--hi),inset -2px -2px var(--mid),inset 2px 2px #dfdfdf}
+.sunk{background:#fff;box-shadow:inset 1px 1px var(--mid),inset -1px -1px var(--hi),inset 2px 2px var(--dk),inset -2px -2px #dfdfdf}
+.win{position:absolute;padding:3px}
+.tbar{height:24px;display:flex;align-items:center;justify-content:space-between;padding:2px 3px 2px 6px;color:#fff;font-family:var(--ui);font-weight:600;font-size:15px;letter-spacing:.02em;background:linear-gradient(90deg,var(--navy),var(--sky))}
+.tbar.off{background:linear-gradient(90deg,#808080,#b8b8b8)}
+.tbar span{display:flex;align-items:center;gap:6px}
+.ctl{display:flex;gap:2px}
+.ctl i{width:19px;height:17px;display:grid;place-items:center;font-style:normal;font-family:var(--ui);font-size:13px;color:#000;line-height:1}
+.menu{display:flex;gap:16px;padding:4px 8px;font-size:13px}
+.menu u{text-decoration:underline}
+.btn{display:inline-grid;place-items:center;min-width:92px;height:30px;padding:0 14px;font-family:var(--ui);font-size:15px;font-weight:600;color:#000}
+.btn.def{box-shadow:inset 0 0 0 1px var(--dk),inset -2px -2px var(--dk),inset 2px 2px var(--hi),inset -3px -3px var(--mid),inset 3px 3px #dfdfdf}
+.icons{position:absolute;left:24px;top:32px;display:flex;flex-direction:column;gap:20px;z-index:1}
+.ic{width:84px;text-align:center;color:#fff;font-family:var(--ui);font-size:14px;line-height:1.15}
+.ic svg{display:block;margin:0 auto 6px;width:44px;height:44px;shape-rendering:crispEdges}
+.ic span{display:inline-block;padding:1px 3px}
+.ic.sel span{background:var(--navy);outline:1px dotted #ff0}
+#main{left:150px;top:46px;width:590px;z-index:2}
+#main .body{padding:18px 26px 20px;background:var(--face)}
+h1{font-family:var(--display);font-size:62px;line-height:.96;letter-spacing:-.02em;color:var(--navy);text-transform:uppercase;text-shadow:3px 3px 0 #fff,4px 4px 0 var(--mid)}
+h1 em{font-style:normal;color:var(--red)}
+.cur{display:inline-block;width:.42em;height:.12em;background:var(--navy);margin-left:6px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.lede{margin-top:20px;font-size:14px;line-height:1.5;width:470px}
+.row{display:flex;gap:12px;margin-top:20px;align-items:center}
+.chk{margin-left:10px;font-size:12px;display:flex;gap:6px;align-items:center}
+.chk b{width:13px;height:13px;display:grid;place-items:center;font-size:11px;line-height:1}
+#folder{left:690px;top:116px;width:560px;z-index:3}
+.addr{display:flex;gap:8px;align-items:center;padding:3px 8px 6px;font-size:13px}
+.addr .sunk{flex:1;height:24px;padding:3px 6px;font-family:var(--ui);font-size:14px}
+.grid{padding:14px 8px;height:226px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px 0;align-content:start}
+.fi{text-align:center;font-family:var(--ui);font-size:14px;line-height:1.15}
+.fi svg{width:48px;height:48px;display:block;margin:0 auto 5px;shape-rendering:crispEdges}
+.fi small{display:block;font-family:var(--body);font-size:11px;color:#555;margin-top:2px}
+.stat{display:flex;gap:4px;padding:3px 3px 0}
+.stat div{flex:1;height:22px;padding:3px 8px;font-size:12px;box-shadow:inset 1px 1px var(--mid),inset -1px -1px var(--hi)}
+.stat div:first-child{flex:2}
+#err{left:430px;top:512px;width:420px;z-index:5}
+#err .body{display:flex;gap:18px;padding:20px 20px 10px}
+.eico{width:44px;height:44px;flex:none}
+#err p{font-size:13.5px;line-height:1.5}
+#err p b{font-family:var(--ui);font-size:16px;display:block;margin-bottom:4px}
+.btns{display:flex;gap:8px;justify-content:center;padding:8px 0 14px}
+#note{left:180px;top:548px;width:230px;z-index:4;transform:none}
+#note .body{padding:10px 12px;background:#ffffe1;box-shadow:inset 1px 1px var(--hi),inset -1px -1px var(--dk);font-size:12.5px;line-height:1.45;margin:3px}
+#task{position:absolute;left:0;right:0;bottom:0;height:40px;display:flex;align-items:center;gap:6px;padding:3px 4px;z-index:9}
+.start{height:30px;display:flex;align-items:center;gap:8px;padding:0 12px;font-family:var(--ui);font-weight:600;font-size:17px}
+.tb{height:30px;min-width:170px;display:flex;align-items:center;gap:6px;padding:0 10px;font-family:var(--ui);font-size:14px}
+.tb.on{background:repeating-conic-gradient(#fff 0 25%,var(--face) 0 50%) 0 0/2px 2px;box-shadow:inset 1px 1px var(--dk),inset -1px -1px var(--hi),inset 2px 2px var(--mid);font-weight:600}
+.tray{margin-left:auto;height:30px;display:flex;align-items:center;gap:12px;padding:0 12px;font-family:var(--ui);font-size:14px;box-shadow:inset 1px 1px var(--mid),inset -1px -1px var(--hi)}
+.cap{position:absolute;right:26px;top:26px;color:#fff;font-family:var(--ui);font-size:14px;text-align:right;line-height:1.3;opacity:.95;z-index:1}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <symbol id="fold" viewBox="0 0 16 16"><path d="M1 3h5l1 1h8v10H1z" fill="#ffff00" stroke="#000" stroke-width="1"/><path d="M1 6h14" stroke="#808000"/></symbol>
+  <symbol id="doc" viewBox="0 0 16 16"><path d="M3 1h7l3 3v11H3z" fill="#fff" stroke="#000"/><path d="M5 6h6M5 8h6M5 10h6M5 12h4" stroke="#000080"/></symbol>
+  <symbol id="pc" viewBox="0 0 16 16"><rect x="2" y="1" width="12" height="9" fill="#c0c0c0" stroke="#000"/><rect x="4" y="3" width="8" height="5" fill="#00ffff" stroke="#000080"/><rect x="5" y="11" width="6" height="2" fill="#808080" stroke="#000"/><rect x="3" y="13" width="10" height="2" fill="#c0c0c0" stroke="#000"/></symbol>
+  <symbol id="bin" viewBox="0 0 16 16"><path d="M4 4h8l-1 11H5z" fill="#c0c0c0" stroke="#000"/><path d="M3 3h10v1H3z" fill="#808080" stroke="#000"/><path d="M6 6v7M8 6v7M10 6v7" stroke="#000"/></symbol>
+  <symbol id="grid" viewBox="0 0 16 16"><rect x="1" y="2" width="14" height="12" fill="#fff" stroke="#000"/><path d="M1 6h14M1 10h14M6 2v12M10 2v12" stroke="#008000"/><rect x="1" y="2" width="14" height="4" fill="#008000" opacity=".4"/></symbol>
+</defs></svg>
+
+<div class="icons">
+  <div class="ic sel"><svg><use href="#pc"/></svg><span>My Studio</span></div>
+  <div class="ic"><svg><use href="#fold"/></svg><span>Selected Work</span></div>
+  <div class="ic"><svg><use href="#doc"/></svg><span>Readme.txt</span></div>
+  <div class="ic"><svg><use href="#grid"/></svg><span>Rates.xls</span></div>
+  <div class="ic"><svg><use href="#bin"/></svg><span>Rejected Ideas</span></div>
+</div>
+<div class="cap">Dialog Box Studio<br>Est. 1996 · Rotterdam<br>Best viewed at 800 × 600</div>
+
+<!-- main window -->
+<div class="win bevel" id="main">
+  <div class="tbar"><span><svg width="16" height="16" style="shape-rendering:crispEdges"><use href="#pc"/></svg>studio.exe — Dialog Box Studio</span><div class="ctl"><i class="bevel">_</i><i class="bevel">□</i><i class="bevel">×</i></div></div>
+  <div class="menu"><span><u>F</u>ile</span><span><u>E</u>dit</span><span><u>V</u>iew</span><span><u>W</u>ork</span><span><u>H</u>elp</span></div>
+  <div class="body sunk" style="background:var(--face)">
+    <h1>We make<br>software<br>that says<br><em>sorry.</em><span class="cur"></span></h1>
+    <p class="lede">A small interface studio. We design apps, onboarding and error messages with the manners of a good 1996 dialog box. Clear, polite, and a little bit sorry.</p>
+    <div class="row"><div class="btn bevel def">Start a project</div><div class="btn bevel">Cancel</div><div class="chk"><b class="sunk">✓</b>Never show again</div></div>
+  </div>
+</div>
+
+<!-- folder window -->
+<div class="win bevel" id="folder">
+  <div class="tbar"><span><svg width="16" height="16" style="shape-rendering:crispEdges"><use href="#fold"/></svg>C:\Clients\Selected</span><div class="ctl"><i class="bevel">_</i><i class="bevel">□</i><i class="bevel">×</i></div></div>
+  <div class="menu"><span><u>F</u>ile</span><span><u>E</u>dit</span><span><u>V</u>iew</span><span><u>T</u>ools</span></div>
+  <div class="addr"><span>Address</span><div class="sunk">C:\Clients\Selected\2025</div></div>
+  <div class="grid sunk">
+    <div class="fi"><svg><use href="#fold"/></svg>Apology Engine<small>Postbank</small></div>
+    <div class="fi"><svg><use href="#fold"/></svg>Honest Cookie Banner<small>Kiosk Press</small></div>
+    <div class="fi"><svg><use href="#fold"/></svg>404 Poetry<small>Museum Het Vlot</small></div>
+    <div class="fi"><svg><use href="#doc"/></svg>Loading Bar v2<small>Tram.co</small></div>
+    <div class="fi"><svg><use href="#doc"/></svg>Tooltip Therapy<small>Mindly</small></div>
+    <div class="fi"><svg><use href="#grid"/></svg>Undo Everything<small>Draftsman</small></div>
+  </div>
+  <div class="stat"><div>6 object(s)</div><div>14.2 MB</div></div>
+</div>
+
+<!-- note -->
+<div class="win bevel" id="note">
+  <div class="tbar off" style="height:20px;font-size:13px"><span>Tip of the Day</span><div class="ctl"><i class="bevel" style="height:14px">×</i></div></div>
+  <div class="body"><b>Did you know?</b><br>Eleven of our last twelve clients said “thank you” after we told them no.</div>
+</div>
+
+<!-- error dialog -->
+<div class="win bevel" id="err">
+  <div class="tbar"><span>Fatal Excellence</span><div class="ctl"><i class="bevel">×</i></div></div>
+  <div class="body">
+    <svg class="eico" viewBox="0 0 16 16" style="shape-rendering:crispEdges"><circle cx="8" cy="8" r="7" fill="#c00000" stroke="#000"/><path d="M5 5l6 6M11 5l-6 6" stroke="#fff" stroke-width="2"/></svg>
+    <p><b>Illegal level of polish</b>Your portfolio has performed an illegal level of polish and will be shut down. Do you want to book a call anyway?</p>
+  </div>
+  <div class="btns"><div class="btn bevel def">Abort</div><div class="btn bevel">Retry</div><div class="btn bevel">Ignore</div></div>
+</div>
+
+<div id="task" class="bevel">
+  <div class="start bevel"><svg width="20" height="18" viewBox="0 0 20 18" style="shape-rendering:crispEdges"><rect x="1" y="2" width="8" height="7" fill="#e00000"/><rect x="10" y="1" width="8" height="7" fill="#00a000"/><rect x="1" y="10" width="8" height="7" fill="#0000e0"/><rect x="10" y="9" width="8" height="7" fill="#e0c000"/></svg>Start</div>
+  <div class="tb bevel on">studio.exe</div><div class="tb bevel">C:\Clients\Selected</div><div class="tb bevel">Fatal Excellence</div>
+  <div class="tray">♪ ✉ <span>11:11 PM</span></div>
+</div>
+</body>
+</html>

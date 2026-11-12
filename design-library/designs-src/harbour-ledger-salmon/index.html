@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>The Harbour Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,900;1,6..96,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: financial-daily front page: centered masthead, lead story left, framed index chart centre-right, ticker column far right */
+:root{
+  --paper:#f5d5c0; --paper2:#efc8b0; --ink:#0d3a2c; --ink2:#2b5a49; --red:#b3261e;
+  --disp:'Bodoni Moda','Didot',serif; --body:'Source Serif 4','Georgia',serif; --mono:'IBM Plex Mono','Courier New',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--paper);color:var(--ink);font-family:var(--body)}
+.top{display:flex;justify-content:space-between;padding:14px 44px 0;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase}
+.mast{text-align:center;padding:4px 44px 0;position:relative}
+.mast h1{font-family:var(--disp);font-weight:900;font-size:84px;line-height:1.08;letter-spacing:-.02em;font-variation-settings:'opsz' 40;font-feature-settings:"liga"}
+.mast h1 em{font-style:italic;font-weight:500;font-size:.7em;padding:0 .12em}
+.mast .ear{position:absolute;top:22px;width:190px;font-size:11.5px;line-height:1.35;text-align:left;border:1.5px solid var(--ink);padding:8px 10px}
+.mast .ear.l{left:44px}.mast .ear.r{right:44px;text-align:right}
+.ear b{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:3px}
+.rule{margin:8px 44px 0;border-top:4px solid var(--ink);border-bottom:1px solid var(--ink);height:7px}
+.menu{margin:0 44px;display:flex;justify-content:space-between;padding:9px 0;font-family:var(--mono);font-size:11.5px;text-transform:uppercase;letter-spacing:.07em;border-bottom:1px solid var(--ink)}
+.menu b{background:var(--ink);color:var(--paper);padding:2px 9px}
+.grid{display:grid;grid-template-columns:455px 1fr 232px;gap:0;margin:0 44px;height:466px}
+.col{padding:20px 24px 0 0;border-right:1px solid var(--ink)}
+.col+.col{padding-left:24px}.col:last-child{border-right:0;padding-right:0}
+.kick{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--red);font-weight:500;margin-bottom:8px}
+h2{font-variation-settings:'opsz' 18;font-family:var(--disp);font-weight:900;font-size:50px;line-height:1.01;letter-spacing:-.015em;text-wrap:balance}
+.dek{font-style:italic;font-size:17px;line-height:1.35;margin:12px 0 14px;color:var(--ink2)}
+.byline{font-family:var(--mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;border-top:1px solid var(--ink);padding-top:8px;margin-bottom:10px}
+.txt{font-size:14px;line-height:1.5;column-count:2;column-gap:20px;text-align:justify;hyphens:auto}
+.txt::first-letter{font-family:var(--disp);font-weight:900;font-size:56px;float:left;line-height:.8;padding:5px 7px 0 0}
+.chart{border:2px solid var(--ink);padding:12px 14px;background:var(--paper2)}
+.chart h3{font-family:var(--disp);font-size:20px;font-weight:900;line-height:1.1}
+.chart .sub{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;margin:3px 0 6px}
+.big{font-variation-settings:'opsz' 20;font-family:var(--disp);font-weight:900;font-size:62px;line-height:1;margin:8px 0 2px;display:flex;align-items:baseline;gap:10px}
+.big small{font-family:var(--mono);font-size:13px;color:var(--red);font-weight:500}
+.cap{font-size:12.5px;line-height:1.4;margin-top:12px;border-top:1px solid var(--ink);padding-top:8px}
+.tick h3{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;border-bottom:2px solid var(--ink);padding-bottom:6px}
+.tick table{width:100%;border-collapse:collapse;font-family:var(--mono);font-size:12px}
+.tick td{padding:7px 0;border-bottom:1px dotted var(--ink);}
+.tick td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.up{color:var(--ink)}.dn{color:var(--red)}
+.sub-box{margin-top:12px;background:var(--ink);color:var(--paper);padding:14px 14px 16px}
+.sub-box h4{font-family:var(--disp);font-size:22px;line-height:1.05;margin-bottom:8px}
+.sub-box p{font-size:12px;line-height:1.4;margin-bottom:10px;opacity:.9}
+.sub-box span{display:inline-block;background:var(--paper);color:var(--ink);font-family:var(--mono);font-weight:500;font-size:11px;text-transform:uppercase;letter-spacing:.08em;padding:7px 11px}
+.briefs{margin:0 44px;border-top:4px solid var(--ink);display:grid;grid-template-columns:repeat(4,1fr);height:140px}
+.briefs>div{padding:12px 18px 0 0;border-right:1px solid var(--ink);margin-right:18px}
+.briefs>div:last-child{border:0}
+.briefs h5{font-family:var(--disp);font-variation-settings:'opsz' 14;font-weight:900;font-size:19px;line-height:1.1;margin:4px 0 6px}
+.briefs p{font-size:12.5px;line-height:1.4}
+</style></head><body>
+<div class="top"><span>Thursday 12 November 2026</span><span>Vol. CXII &middot; No. 31,204</span><span>Price: free before 9 a.m.</span></div>
+<div class="mast">
+  <div class="ear l"><b>Today</b>Brent crude steadies; container rates fall for a ninth straight week.</div>
+  <h1>The Harbour <em>Ledger</em></h1>
+  <div class="ear r"><b>Weather at the quay</b>Fog lifting by ten. Moderate swell, northwest.</div>
+</div>
+<div class="rule"></div>
+<div class="menu"><span>Freight</span><span>Ports</span><span>Commodities</span><span>Insurance</span><span>Tide tables</span><span>Letters</span><span><b>Subscribe &rarr;</b></span></div>
+<div class="grid">
+  <div class="col">
+    <div class="kick">Lead &middot; Shipping</div>
+    <h2>Boxes are cheap again. Nobody told the shelves.</h2>
+    <p class="dek">Spot rates on the Asia&ndash;Europe lane have halved since spring, yet retailers report no change at the till.</p>
+    <div class="byline">By Ines Marchetti, Freight Editor &middot; 6 min read</div>
+    <p class="txt">The cranes at Rotterdam have not been this idle since the spring of 2019. Along Quay 14, stacks of empty forty-footers wait for a cargo that is slow to arrive. Shipowners, who made a fortune from scarcity, now discuss blank sailings with the grim politeness of men at a funeral. The ledger of the past year tells a plainer story: the price of moving a box fell, and the price of what is inside it did not.</p>
+  </div>
+  <div class="col">
+    <div class="chart">
+      <h3>The Ledger Freight Index</h3>
+      <div class="sub">Weekly composite, USD per 40ft box</div>
+      <svg viewBox="0 0 400 190" width="100%" style="display:block">
+        <g stroke="#0d3a2c" stroke-width=".6" opacity=".35"><path d="M34 20H392M34 62H392M34 104H392M34 146H392"/></g>
+        <g font-family="IBM Plex Mono" font-size="9" fill="#0d3a2c"><text x="0" y="23">4,000</text><text x="0" y="65">3,000</text><text x="0" y="107">2,000</text><text x="0" y="149">1,000</text></g>
+        <path d="M34 28 L70 24 L106 40 L142 58 L178 72 L214 70 L250 94 L286 112 L322 124 L358 140 L392 148 L392 168 L34 168Z" fill="#0d3a2c" opacity=".14"/>
+        <path d="M34 28 L70 24 L106 40 L142 58 L178 72 L214 70 L250 94 L286 112 L322 124 L358 140 L392 148" fill="none" stroke="#0d3a2c" stroke-width="2.6"/>
+        <circle cx="392" cy="148" r="4.5" fill="#b3261e"/>
+        <g font-family="IBM Plex Mono" font-size="9" fill="#0d3a2c"><text x="34" y="182">Jan</text><text x="142" y="182">Apr</text><text x="250" y="182">Jul</text><text x="358" y="182">Oct</text></g>
+        <text x="296" y="136" font-family="IBM Plex Mono" font-size="9.5" fill="#b3261e" font-weight="500">$1,238 today</text>
+      </svg>
+    </div>
+    <div class="big">&minus;53%<small>since March</small></div>
+    <p class="cap">Rates have fallen in every one of the last nine weeks, the longest run since the index began in 1998. Insurers, meanwhile, have yet to cut a single premium.</p>
+  </div>
+  <div class="col tick">
+    <h3>Port &amp; Market Board</h3>
+    <table>
+      <tr><td>Brent crude</td><td class="up">84.12 &#9650;</td></tr>
+      <tr><td>Bunker 380</td><td class="dn">611.50 &#9660;</td></tr>
+      <tr><td>Baltic Dry</td><td class="up">1,742 &#9650;</td></tr>
+      <tr><td>Shanghai&ndash;Rtm</td><td class="dn">1,238 &#9660;</td></tr>
+      <tr><td>EUR / USD</td><td class="up">1.0870 &#9650;</td></tr>
+      <tr><td>Wheat, Mar</td><td class="dn">5.94 &#9660;</td></tr>
+      <tr><td>Copper</td><td class="up">4.21 &#9650;</td></tr>
+    </table>
+    <div class="sub-box"><h4>Read the ledger before the market does.</h4><p>Daily edition by 6 a.m. Cancel any time.</p><span>Start 30 days free</span></div>
+  </div>
+</div>
+<div class="briefs">
+  <div><div class="kick" style="margin:0">Ports</div><h5>Felixstowe books a record quiet Tuesday</h5><p>Gate moves down 31% on the year as importers draw on stock.</p></div>
+  <div><div class="kick" style="margin:0">Insurance</div><h5>Why premiums stay high on a calm sea</h5><p>Underwriters price the last war, not the next fog bank.</p></div>
+  <div><div class="kick" style="margin:0">Commodities</div><h5>Wheat slips as Black Sea convoys resume</h5><p>Chicago March futures touch a five-month low.</p></div>
+  <div><div class="kick" style="margin:0">Tide tables</div><h5>High water 11:42, 5.1 metres</h5><p>Springs run through the weekend. Lock gates close at 12:30.</p></div>
+</div>
+</body></html>

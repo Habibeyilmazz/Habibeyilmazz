@@ -1,0 +1,231 @@
+{
+  "category": {
+    "id": "horizon-hush",
+    "name": "Horizon Hush",
+    "tagline": "vast quiet cinematic scenes",
+    "description": "Full-bleed scenes drawn entirely with gradients and silhouettes, where one oversized serif line sits in a calm landscape or fabric field. Hospitality, travel, fashion houses and anyone selling a feeling before a feature. Chrome is kept hairline-small so the scene does the talking.",
+    "vibes": [
+      "cinematic",
+      "luxury",
+      "elegant",
+      "minimal"
+    ],
+    "accent": "#d98a63"
+  },
+  "designs": [
+    {
+      "id": "amanora-dunes",
+      "name": "Amanora Dunes",
+      "descriptor": "desert dusk x boutique hospitality",
+      "summary": "A layered terracotta dune scene under a low sun, with a light italic serif headline and a frosted booking strip floating over the foreground sand.",
+      "keywords": [
+        "stacked gradient dunes",
+        "low sun glow",
+        "light italic serif headline",
+        "frosted booking bar",
+        "wide-tracked caps nav",
+        "film grain overlay"
+      ],
+      "vibes": [
+        "cinematic",
+        "luxury",
+        "warm",
+        "elegant"
+      ],
+      "best_for": [
+        "boutique hotels",
+        "desert and safari lodges",
+        "slow-travel brands"
+      ],
+      "palette": [
+        "#f1d7b8",
+        "#e59a74",
+        "#a8512f",
+        "#3a1f17",
+        "#fbf1e2"
+      ],
+      "references": [
+        {
+          "title": "Alpine Hotel Felsblick, boutique hotel hero with serif type",
+          "url": "https://dribbble.com/eslamhassany91",
+          "source": "dribbble"
+        },
+        {
+          "title": "Dunhofenhutte, serif-led site with full-bleed storytelling",
+          "url": "https://www.designrush.com/best-designs/websites/dunhofenhutte-website-design",
+          "source": "other"
+        },
+        {
+          "title": "Arlington and Row, luxury retreat with serif and whitespace",
+          "url": "https://www.designrush.com/best-designs/websites/arlington-and-row-website-design",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Draw the whole scene as one inline SVG with preserveAspectRatio slice: a sky linearGradient, a radial-gradient sun, then four dune paths each with its own top-to-bottom gradient, darker toward the viewer. Add a 1px lighter stroke on the ridgelines and a feTurbulence grain at low opacity with soft-light blending. Set the headline in a light-weight Cormorant at 110px with tight negative tracking and one italic word. Build the booking bar as a 5-column grid with backdrop-filter blur and a solid ivory button.",
+      "image": "assets/designs/amanora-dunes.png",
+      "mockup": "designs-src/amanora-dunes/index.html",
+      "fonts": {
+        "display": "Cormorant Garamond",
+        "body": "Jost"
+      }
+    },
+    {
+      "id": "nordhavn-fjord",
+      "name": "Nordhavn Fjord",
+      "descriptor": "misty fjord x slow-travel",
+      "summary": "Five procedurally drawn mountain ridgelines fade into mist, with a giant thin wordmark sandwiched between the layers and a tiny ferry on still water.",
+      "keywords": [
+        "atmospheric perspective mountains",
+        "wordmark between layers",
+        "mirror water reflection",
+        "pale blue-grey palette",
+        "coordinate readout",
+        "tiny wide-tracked caps"
+      ],
+      "vibes": [
+        "cinematic",
+        "minimal",
+        "cool",
+        "elegant"
+      ],
+      "best_for": [
+        "expedition and cruise brands",
+        "outdoor lodges",
+        "travel journals"
+      ],
+      "palette": [
+        "#5d7488",
+        "#9db0bf",
+        "#d3dde3",
+        "#34485a",
+        "#f3f6f8"
+      ],
+      "references": [
+        {
+          "title": "Hotel Mono, monochrome hotel concept collection",
+          "url": "https://dribbble.com/mathieuserrano/collections/3436117-Divers-inspiration",
+          "source": "dribbble"
+        },
+        {
+          "title": "Dunhofenhutte, cinematic full-bleed alpine storytelling",
+          "url": "https://www.designrush.com/best-designs/websites/dunhofenhutte-website-design",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Generate ridgelines with seeded midpoint displacement in a few lines of JS and emit them as SVG paths, back to front, each one a shade darker and bluer than the last. Insert the 190px thin sans wordmark as an SVG text node between layer three and four so the front mountains overlap the letters. Add translucent white fog gradients between layers, then mirror the paths below the waterline with a blur and a fade mask for the reflection. Keep every label at 10-11px with 0.25em tracking so the scene stays dominant.",
+      "image": "assets/designs/nordhavn-fjord.png",
+      "mockup": "designs-src/nordhavn-fjord/index.html",
+      "fonts": {
+        "display": "Instrument Serif",
+        "body": "Manrope"
+      }
+    },
+    {
+      "id": "maison-veyl-nocturne",
+      "name": "Maison Veyl Nocturne",
+      "descriptor": "couture house x moonlit satin",
+      "summary": "Black satin drapes lit by a single cool moon-glow fill the frame behind one monumental italic Didone word, with champagne hairlines as the only warmth.",
+      "keywords": [
+        "canvas-rendered satin folds",
+        "giant italic Didone headline",
+        "champagne gold hairline accents",
+        "film grain",
+        "vertical rotated caption",
+        "play-ring video cue"
+      ],
+      "vibes": [
+        "luxury",
+        "dark",
+        "elegant",
+        "cinematic"
+      ],
+      "best_for": [
+        "fashion houses",
+        "couture and fragrance launches",
+        "luxury watchmakers"
+      ],
+      "palette": [
+        "#07070b",
+        "#dfe3ea",
+        "#8e97ab",
+        "#c9b48b",
+        "#1a1d28"
+      ],
+      "references": [
+        {
+          "title": "Maison Lumiere, cinematic luxury fashion template",
+          "url": "https://www.framer.com/marketplace/templates/maison-lumi-re/",
+          "source": "other"
+        },
+        {
+          "title": "Luxury Editorial Website for Atelier Noir",
+          "url": "https://contra.com/p/qXBrBvEg-luxury-editorial-website-for-atelier-noir",
+          "source": "other"
+        },
+        {
+          "title": "Fine Dine Club, dark editorial luxury concept with serif type",
+          "url": "https://dribbble.com/dwipoprawiro",
+          "source": "dribbble"
+        }
+      ],
+      "how_to_build": "Render the drapes on a canvas per pixel: compute a warped sine phase across x, take its derivative as the surface slope, and light it with a diffuse term plus a sharp specular pow() that is strongest inside a gaussian moon-pool at the upper right. Add 3 percent noise for grain, then overlay a left-to-right dark gradient so type stays readable. Set the headline in Bodoni Moda italic at 228px with -0.035em tracking, and keep all other text at 11px caps with 0.3em letter-spacing.",
+      "image": "assets/designs/maison-veyl-nocturne.png",
+      "mockup": "designs-src/maison-veyl-nocturne/index.html",
+      "fonts": {
+        "display": "Bodoni Moda",
+        "body": "Tenor Sans"
+      }
+    },
+    {
+      "id": "solenne-meridian",
+      "name": "Solenne Meridian",
+      "descriptor": "dawn sea x private charter",
+      "summary": "A tall arched window frames a sunrise over calm water with a glittering reflection path, flanked by a serif headline and a short itinerary on deep teal.",
+      "keywords": [
+        "arched window scene",
+        "concentric arch outlines",
+        "sun glitter path",
+        "deep teal ground",
+        "itinerary with latitudes",
+        "blush serif highlight word"
+      ],
+      "vibes": [
+        "luxury",
+        "cinematic",
+        "elegant",
+        "cool"
+      ],
+      "best_for": [
+        "yacht and villa charters",
+        "coastal resorts",
+        "private travel concierges"
+      ],
+      "palette": [
+        "#0b2a31",
+        "#124650",
+        "#7fc3c0",
+        "#f5c9b2",
+        "#f7f0e6"
+      ],
+      "references": [
+        {
+          "title": "Luxury Hotel Website Development on Dribbble",
+          "url": "https://dribbble.com/services/242584-Luxury-Hotel-Website-Development",
+          "source": "dribbble"
+        },
+        {
+          "title": "Art Villas, luxury hospitality style-guide references",
+          "url": "https://dribbble.com/johnnyesleo/collections/7562643-STYLE-GUIDES-REFS",
+          "source": "dribbble"
+        }
+      ],
+      "how_to_build": "Clip an inline SVG to an arch path (a rectangle topped by a half-circle) and paint a peach-to-cream sky, a radial sun glow, two tiny island silhouettes and a teal sea gradient. Scatter short white rects in a column that widens toward the viewer for the sun glitter, and a few dark thin rects for ripples. Echo the arch twice with 14px offset outlines at falling opacity. The page ground is a radial teal gradient so the window glows. Use a single hairline-ruled list for the itinerary.",
+      "image": "assets/designs/solenne-meridian.png",
+      "mockup": "designs-src/solenne-meridian/index.html",
+      "fonts": {
+        "display": "Gilda Display",
+        "body": "Hanken Grotesk"
+      }
+    }
+  ]
+}

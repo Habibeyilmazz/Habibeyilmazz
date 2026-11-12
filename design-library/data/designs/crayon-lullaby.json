@@ -1,0 +1,242 @@
+{
+  "category": {
+    "id": "crayon-lullaby",
+    "name": "Crayon Lullaby",
+    "tagline": "soft 3D x storybook x hand-drawn",
+    "description": "Gentle, handmade and kind to the eye. Squishy clay forms, wobbly hand-drawn lines, paper cutouts and storybook scenes make a page feel like it was made for small hands. Use it for kids' apps, education, family brands and anything that should feel safe and warm.",
+    "vibes": [
+      "friendly",
+      "handcrafted",
+      "playful",
+      "warm"
+    ],
+    "accent": "#ff8a5c"
+  },
+  "designs": [
+    {
+      "id": "puddle-clay-bank",
+      "name": "Puddle Kids Bank",
+      "descriptor": "claymorphism x kids fintech",
+      "summary": "Puffy, pillowy clay buttons, coins and a pink piggy bank float on a soft sky gradient. Each object has a bright inner highlight and a deep inner shade, so the whole page looks molded rather than drawn.",
+      "keywords": [
+        "double inner shadows",
+        "pillowy pill buttons",
+        "clay coins",
+        "3D piggy built in CSS",
+        "soft sky gradient",
+        "gradient-filled headline word",
+        "rounded phone mock"
+      ],
+      "vibes": [
+        "friendly",
+        "playful",
+        "modern",
+        "light"
+      ],
+      "best_for": [
+        "kids finance",
+        "family apps",
+        "onboarding flows",
+        "education products"
+      ],
+      "palette": [
+        "#d6ebff",
+        "#243566",
+        "#ffb89c",
+        "#ffe178",
+        "#bba8ff",
+        "#92e6c3"
+      ],
+      "fonts": {
+        "display": "Baloo 2",
+        "body": "Nunito",
+        "mono": "Nunito"
+      },
+      "image": "assets/designs/puddle-clay-bank.png",
+      "mockup": "designs-src/puddle-clay-bank/index.html",
+      "references": [
+        {
+          "title": "Claymorphism UI design guide",
+          "url": "https://www.setproduct.com/blog/claymorphism-design-guide",
+          "source": "other"
+        },
+        {
+          "title": "Claymorphism: Will It Stick Around?",
+          "url": "https://smashingmagazine.com/2022/03/claymorphism-css-ui-design-trend/",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Define one clay shadow token that stacks an inset white highlight (10px 10px 18px, 65% white), an inset dark shade (-12px -14px 22px, 16% navy) and a soft outer drop. Apply it to buttons, cards, coins and the phone shell, with radii of 60px or full pills. Give each object a radial-gradient fill with the light source at 30% 30%. Build the mascot from a few stacked ellipses using the same inset recipe in a darker tint."
+    },
+    {
+      "id": "moonlit-meadow-books",
+      "name": "Moonlit Meadow Books",
+      "descriptor": "storybook night x hand-painted",
+      "summary": "A torn cream book page sits on a painted midnight meadow with a huge moon, fireflies and a sleepy fox. Edges wobble and paper grain shows, so it reads as a real picture-book spread.",
+      "keywords": [
+        "torn paper page",
+        "wobbly painted edges",
+        "giant glowing moon",
+        "fox character",
+        "indigo night palette",
+        "handwritten script accents",
+        "fireflies and stars"
+      ],
+      "vibes": [
+        "handcrafted",
+        "warm",
+        "friendly",
+        "artistic"
+      ],
+      "best_for": [
+        "children's books",
+        "bedtime apps",
+        "publishers",
+        "family brands"
+      ],
+      "palette": [
+        "#1b2455",
+        "#2c3f7a",
+        "#ffe7a1",
+        "#fbf0d9",
+        "#ee7a30",
+        "#5f9a63"
+      ],
+      "fonts": {
+        "display": "Gloock",
+        "body": "Nunito",
+        "mono": "Caveat"
+      },
+      "image": "assets/designs/moonlit-meadow-books.png",
+      "mockup": "designs-src/moonlit-meadow-books/index.html",
+      "references": [
+        {
+          "title": "Little Sparrow illustration collection",
+          "url": "https://dribbble.com/valtorf/collections/7679359-Little-Sparrow",
+          "source": "dribbble"
+        },
+        {
+          "title": "Children book illustration on Dribbble",
+          "url": "https://dribbble.com/children-book-illustration",
+          "source": "dribbble"
+        },
+        {
+          "title": "Tubik Studio children's book to digital experience",
+          "url": "https://tubikstudio.com/blog/?p=17108",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Draw the scene as layered flat SVG shapes, then run the whole group through an feTurbulence plus feDisplacementMap filter (scale 7) so every edge wobbles like a brush. The page uses a stronger displacement plus a high-frequency noise layer composited inside the shape for paper grain. Pair a bookish display serif with a handwritten script for asides, and give buttons asymmetric border-radius (255px 18px 225px 18px / 18px 225px 18px 255px) for a hand-cut outline."
+    },
+    {
+      "id": "crayon-corner-school",
+      "name": "Crayon Corner School",
+      "descriptor": "notebook paper x crayon doodles",
+      "summary": "Ruled notebook paper with a red margin and punched holes carries a headline colored letter by letter in waxy crayon. A taped worksheet and a gold-star sticker finish the classroom feel.",
+      "keywords": [
+        "ruled paper with margin line",
+        "crayon grain texture",
+        "multicolor letter headline",
+        "taped worksheet",
+        "gold star sticker",
+        "hand-drawn border radii",
+        "punched binder holes"
+      ],
+      "vibes": [
+        "playful",
+        "youthful",
+        "handcrafted",
+        "friendly"
+      ],
+      "best_for": [
+        "online schools",
+        "tutoring",
+        "kids' learning apps",
+        "parent communities"
+      ],
+      "palette": [
+        "#fffdf2",
+        "#bcd8f2",
+        "#e8412c",
+        "#2f6fe0",
+        "#fcc419",
+        "#32b06b"
+      ],
+      "fonts": {
+        "display": "Sniglet",
+        "body": "Patrick Hand",
+        "mono": "Patrick Hand"
+      },
+      "image": "assets/designs/crayon-corner-school.png",
+      "mockup": "designs-src/crayon-corner-school/index.html",
+      "references": [
+        {
+          "title": "Izzi Playground illustrated learning world",
+          "url": "https://contra.com/p/vqQLbvRr-izzi-playground",
+          "source": "other"
+        },
+        {
+          "title": "Kids illustration services on Dribbble",
+          "url": "https://dribbble.com/services/search/kidsillustrations",
+          "source": "dribbble"
+        }
+      ],
+      "how_to_build": "Make the paper with a repeating linear-gradient (1px blue line every 40px) and a 3px red margin div. Create the crayon look with an SVG filter: a low-frequency displacement for wobble, then a high-frequency feTurbulence thresholded through feColorMatrix into an alpha mask composited over the source, leaving speckled gaps. Color each headline letter in its own span with small rotations. Use slightly irregular border-radius values and thick ink borders with solid offset shadows on buttons."
+    },
+    {
+      "id": "cutout-cove",
+      "name": "Cutout Cove Camp",
+      "descriptor": "papercraft layers x summer camp",
+      "summary": "A sunny scene built from stacked paper layers: scalloped waves, mountains, cloud cutouts and a smiling sun made of three discs. The headline sits on tilted paper strips like labels stuck to the picture.",
+      "keywords": [
+        "layered paper depth",
+        "upward shadows between waves",
+        "scalloped wave bands",
+        "concentric sun discs",
+        "tilted label strips",
+        "sailboat cutout",
+        "teal, coral and sun yellow"
+      ],
+      "vibes": [
+        "playful",
+        "warm",
+        "friendly",
+        "handcrafted"
+      ],
+      "best_for": [
+        "summer camps",
+        "outdoor brands",
+        "family travel",
+        "nature education"
+      ],
+      "palette": [
+        "#ffe4ae",
+        "#fff6e5",
+        "#ffc23a",
+        "#ff6b57",
+        "#1e93a3",
+        "#12384a"
+      ],
+      "fonts": {
+        "display": "Lilita One",
+        "body": "Quicksand",
+        "mono": "Quicksand"
+      },
+      "image": "assets/designs/cutout-cove.png",
+      "mockup": "designs-src/cutout-cove/index.html",
+      "references": [
+        {
+          "title": "Kids illustration services on Dribbble",
+          "url": "https://dribbble.com/services/search/kidsillustrations",
+          "source": "dribbble"
+        },
+        {
+          "title": "Studio Marmalade playful pastel homepage",
+          "url": "https://app.superdesign.dev/library/studio-marmalade-make-brands-people-smile-about",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Stack flat SVG shapes from back to front and give each layer a feDropShadow: waves cast a small shadow upward (dy -3) onto the layer behind, while sun discs and clouds cast it downward. Generate scalloped waves with a repeating quadratic path (q then t segments) at slightly different widths and offsets per band. Headline lines are separate cream blocks with 8 to 24px asymmetric radii, 1 to 2 degree rotations and a hard 5px under-shadow plus a soft blur shadow."
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tessel — blueprint compute fabric</title>
+<meta name="viewport" content="width=1280">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: a drawing sheet. Margin frame with zone letters, headline in drafting capitals on the left, an exploded isometric chip with dimension lines on the right, title block bottom-right. */
+:root{
+  --blue:#0b2c72; --blue-deep:#071d52; --line:#d7e6ff; --line2:#7fa8ff; --faint:rgba(127,168,255,.16); --hi:#ffe14a;
+  --display:'Barlow Condensed','Arial Narrow',sans-serif; --mono:'DM Mono','DejaVu Sans Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--blue)}
+body{font-family:var(--mono);color:var(--line);position:relative;
+  background:
+   radial-gradient(ellipse at 70% 45%,rgba(60,120,255,.28),transparent 60%),
+   linear-gradient(var(--faint) 1px,transparent 1px) 0 0/20px 20px,
+   linear-gradient(90deg,var(--faint) 1px,transparent 1px) 0 0/20px 20px,
+   linear-gradient(rgba(127,168,255,.3) 1px,transparent 1px) 0 0/100px 100px,
+   linear-gradient(90deg,rgba(127,168,255,.3) 1px,transparent 1px) 0 0/100px 100px,
+   var(--blue)}
+.frame{position:absolute;inset:16px;border:1.5px solid var(--line);pointer-events:none}
+.frame::before{content:"";position:absolute;inset:8px;border:1px solid var(--line2);opacity:.6}
+.zone{position:absolute;font-size:10px;color:var(--line2);letter-spacing:.1em}
+svg.fig{position:absolute;left:0;top:0}
+nav{position:absolute;left:56px;right:56px;top:44px;display:flex;align-items:center;gap:34px;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;z-index:3}
+.logo{font-family:var(--display);font-weight:700;font-size:28px;letter-spacing:.2em;margin-right:auto;display:flex;align-items:center;gap:12px}
+nav a{color:var(--line2)}
+.btn{border:1px solid var(--line);padding:9px 16px;background:rgba(7,29,82,.6)}
+.hero{position:absolute;left:62px;top:150px;width:560px;z-index:3}
+.fig-no{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--hi);display:flex;gap:12px;align-items:center;margin-bottom:20px}
+.fig-no::before{content:"";width:28px;height:1px;background:var(--hi)}
+h1{font-family:var(--display);font-weight:600;font-size:104px;line-height:.9;letter-spacing:.01em;text-transform:uppercase;color:#fff}
+h1 s{text-decoration:none;color:transparent;-webkit-text-stroke:1.5px var(--line)}
+.sub{margin-top:26px;font-size:13px;line-height:1.8;color:#b8cdf5;max-width:430px;font-weight:300}
+.cta{display:flex;margin-top:28px;font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+.cta .p{background:var(--hi);color:#1b1700;padding:15px 22px;font-weight:500}
+.cta .s{border:1px solid var(--line);border-left:0;padding:15px 22px}
+.tb{position:absolute;right:34px;bottom:34px;width:372px;border:1.5px solid var(--line);background:rgba(7,29,82,.82);z-index:3;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase}
+.tb .r{display:grid;border-top:1px solid var(--line2)}
+.tb .r:first-child{border-top:0}
+.tb .r.a{grid-template-columns:1fr 1fr 1fr}
+.tb .r.b{grid-template-columns:2fr 1fr}
+.tb div>div{padding:6px 9px;border-left:1px solid var(--line2)}
+.tb div>div:first-child{border-left:0}
+.tb small{display:block;color:var(--line2);font-size:8px;margin-bottom:2px}
+.tb b{font-family:var(--display);font-size:19px;letter-spacing:.08em;font-weight:600;color:#fff}
+</style>
+</head>
+<body>
+<div class="frame"></div>
+<span class="zone" style="left:638px;top:20px">3</span><span class="zone" style="left:638px;bottom:20px">3</span>
+<span class="zone" style="left:24px;top:390px">C</span><span class="zone" style="right:24px;top:390px">C</span>
+<svg class="fig" id="fig" width="1280" height="800" viewBox="0 0 1280 800"></svg>
+<nav>
+  <div class="logo"><svg width="30" height="30" viewBox="0 0 30 30" fill="none" stroke="#d7e6ff" stroke-width="1.5"><path d="M15 2l12 7v12l-12 7L3 21V9z"/><path d="M15 2v26M3 9l24 12M27 9L3 21" opacity=".5"/></svg>TESSEL</div>
+  <a>Fabric</a><a>Tile spec</a><a>Software</a><a>Pricing</a><span class="btn">Order dev kit</span>
+</nav>
+<section class="hero">
+  <div class="fig-no">Fig. 1 · T4 compute tile, exploded view</div>
+  <h1>Compute,<br>drawn to<br><s>tolerance.</s></h1>
+  <p class="sub">Tessel tiles snap together into one logical processor. 64 cores per tile, 3 TB/s of die-to-die bandwidth, and a toolchain that compiles to the whole fabric as if it were a single chip.</p>
+  <div class="cta"><span class="p">Order the dev kit</span><span class="s">Download tile spec (PDF)</span></div>
+</section>
+<div class="tb">
+  <div class="r b"><div><small>Title</small><b>T4 Compute Tile</b></div><div><small>Dwg no.</small><b>TSL-0420</b></div></div>
+  <div class="r a"><div><small>Scale</small><b>2 : 1</b></div><div><small>Rev</small><b>C</b></div><div><small>Sheet</small><b>1 / 4</b></div></div>
+</div>
+<script>
+(function(){
+  const S=document.getElementById('fig'),NS='http://www.w3.org/2000/svg';
+  const CX=900,CY=470,K=Math.cos(Math.PI/6);
+  const P=(u,v,z)=>[CX+(u-v)*K, CY+(u+v)*0.5 - z];
+  const pts=a=>a.map(p=>p.join(',')).join(' ');
+  function el(t,at,par){const e=document.createElementNS(NS,t);for(const k in at)e.setAttribute(k,at[k]);(par||S).appendChild(e);return e;}
+  const L='#d7e6ff',L2='#7fa8ff';
+  // slab: square of half-size h at height z, thickness t
+  function slab(h,z,t,fillTop,opts){
+    opts=opts||{};
+    const a=P(-h,-h,z),b=P(h,-h,z),c=P(h,h,z),d=P(-h,h,z);
+    const a2=P(-h,-h,z-t),c2=P(h,h,z-t),b2=P(h,-h,z-t),d2=P(-h,h,z-t);
+    // left face (d-c side bottom) and right face
+    el('polygon',{points:pts([d,c,c2,d2]),fill:'#0a2562',stroke:L,'stroke-width':1.2});
+    el('polygon',{points:pts([c,b,b2,c2]),fill:'#071b4d',stroke:L,'stroke-width':1.2});
+    el('polygon',{points:pts([a,b,c,d]),fill:fillTop,stroke:L,'stroke-width':1.6});
+    return {a,b,c,d};
+  }
+  // vertical guide lines (explode axes)
+  const H=[150,118,80,46],Z=[0,70,140,210],T=[16,10,12,14];
+  [[1,1],[1,-1],[-1,1],[-1,-1]].forEach(([su,sv])=>{
+    for(let i=0;i<3;i++){const p=P(su*H[i+1]*1,sv*H[i+1],Z[i]),q=P(su*H[i+1],sv*H[i+1],Z[i+1]);
+      el('line',{x1:p[0],y1:p[1],x2:q[0],y2:q[1],stroke:L2,'stroke-width':1,'stroke-dasharray':'4 4'});}
+  });
+  // layer 0: substrate
+  const s0=slab(H[0],Z[0],T[0],'#0c2f7c');
+  // pads on substrate edges
+  for(let i=-6;i<=6;i++){for(const e of [-1,1]){
+    const u=i*20,v=e*(H[0]-10); const q=[P(u-5,v-4,Z[0]),P(u+5,v-4,Z[0]),P(u+5,v+4,Z[0]),P(u-5,v+4,Z[0])];
+    el('polygon',{points:pts(q),fill:'none',stroke:L2,'stroke-width':1});
+    const r=[P(v-4,u-5,Z[0]),P(v+4,u-5,Z[0]),P(v+4,u+5,Z[0]),P(v-4,u+5,Z[0])];
+    el('polygon',{points:pts(r),fill:'none',stroke:L2,'stroke-width':1});
+  }}
+  // layer 1: interposer with trace grid
+  const s1=slab(H[1],Z[1],T[1],'#0d3486');
+  for(let i=-5;i<=5;i++){const a=P(i*20,-H[1]+10,Z[1]),b=P(i*20,H[1]-10,Z[1]);el('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:L2,'stroke-width':.8,opacity:.7});
+    const c=P(-H[1]+10,i*20,Z[1]),d=P(H[1]-10,i*20,Z[1]);el('line',{x1:c[0],y1:c[1],x2:d[0],y2:d[1],stroke:L2,'stroke-width':.8,opacity:.7});}
+  // layer 2: die with 4x4 core cells
+  slab(H[2],Z[2],T[2],'#10399a');
+  const cell=(H[2]*2-20)/4;
+  for(let i=0;i<4;i++)for(let j=0;j<4;j++){
+    const u0=-H[2]+10+i*cell+3,v0=-H[2]+10+j*cell+3,w=cell-6;
+    const q=[P(u0,v0,Z[2]),P(u0+w,v0,Z[2]),P(u0+w,v0+w,Z[2]),P(u0,v0+w,Z[2])];
+    el('polygon',{points:pts(q),fill:(i===1&&j===2)?'#ffe14a':'rgba(215,230,255,.1)',stroke:(i===1&&j===2)?'#ffe14a':L,'stroke-width':1,opacity:(i===1&&j===2)?.95:1});
+  }
+  // layer 3: lid
+  slab(H[3],Z[3],T[3],'#1546b8');
+  const lid=[[-26,0],[26,0]];
+  const l1=P(-30,-6,Z[3]),l2=P(30,-6,Z[3]);
+  el('line',{x1:l1[0],y1:l1[1],x2:l2[0],y2:l2[1],stroke:L,'stroke-width':1.2});
+  // dimension line along substrate right edge (u=H0 side)
+  function dim(p,q,off,label,rot){
+    const dx=q[0]-p[0],dy=q[1]-p[1],len=Math.hypot(dx,dy),nx=-dy/len*off,ny=dx/len*off;
+    const a=[p[0]+nx,p[1]+ny],b=[q[0]+nx,q[1]+ny];
+    el('line',{x1:p[0],y1:p[1],x2:a[0]+nx*.15,y2:a[1]+ny*.15,stroke:L2,'stroke-width':1});
+    el('line',{x1:q[0],y1:q[1],x2:b[0]+nx*.15,y2:b[1]+ny*.15,stroke:L2,'stroke-width':1});
+    el('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:L,'stroke-width':1.2});
+    const ux=dx/len,uy=dy/len;
+    [[a,1],[b,-1]].forEach(([e,s])=>{el('polygon',{points:pts([[e[0],e[1]],[e[0]+s*ux*9-uy*3,e[1]+s*uy*9+ux*3],[e[0]+s*ux*9+uy*3,e[1]+s*uy*9-ux*3]]),fill:L});});
+    const m=[(a[0]+b[0])/2,(a[1]+b[1])/2];
+    const bg=el('rect',{x:m[0]-26,y:m[1]-9,width:52,height:16,fill:'#0b2c72',transform:'rotate('+rot+' '+m[0]+' '+m[1]+')'});
+    const tt=el('text',{x:m[0],y:m[1]+4,fill:'#fff','text-anchor':'middle','font-family':'DM Mono','font-size':11,transform:'rotate('+rot+' '+m[0]+' '+m[1]+')'});tt.textContent=label;
+  }
+  dim(P(H[0],H[0],Z[0]-T[0]),P(H[0],-H[0],Z[0]-T[0]),26,'62.5 mm',-30);
+  dim(P(-H[0],H[0],Z[0]-T[0]),P(H[0],H[0],Z[0]-T[0]),26,'62.5 mm',30);
+  // height dimension
+  (function(){const x0=CX+H[0]*K+112, y0=P(H[0],-H[0],0)[1]; const a=[x0,P(0,0,0)[1]-130],b=[x0,P(0,0,0)[1]+80]; })();
+  // callouts: circled letters with leaders
+  function call(letter,from,to,txt,anchor){
+    el('polyline',{points:pts([from,[to[0]-(anchor==='l'?-10:10),to[1]],to]),fill:'none',stroke:L,'stroke-width':1});
+    el('circle',{cx:from[0],cy:from[1],r:2.6,fill:L});
+    el('circle',{cx:to[0]+(anchor==='l'?14:-14),cy:to[1],r:12,fill:'#0b2c72',stroke:L,'stroke-width':1.2});
+    const t=el('text',{x:to[0]+(anchor==='l'?14:-14),y:to[1]+4.5,fill:'#fff','text-anchor':'middle','font-family':'Barlow Condensed','font-size':15,'font-weight':600});t.textContent=letter;
+    const t2=el('text',{x:to[0]+(anchor==='l'?34:-34),y:to[1]+4,fill:'#b8cdf5','text-anchor':anchor==='l'?'start':'end','font-family':'DM Mono','font-size':10.5,'letter-spacing':.6});t2.textContent=txt;
+  }
+  call('A',P(-30,-30,Z[3]),[760,150],'HEAT SPREADER · Cu-W','l');
+  call('B',P(H[2]-20,-H[2]+30,Z[2]),[1150,230],'64 CORES · 3 nm','r');
+  call('C',P(H[1],H[1]-40,Z[1]),[1196,310],'SI INTERPOSER','r');
+  call('D',P(-H[0]+30,H[0]-10,Z[0]),[610,300],'2,304 BGA PADS','l');
+  // centre marks
+  el('path',{d:'M'+(CX-6)+' 745v-10M'+(CX+6)+' 745v-10',stroke:L2});
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Puddle Kids Bank</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--sky:#d6ebff;--sky2:#bcdcff;--ink:#243566;--peach:#ffb89c;--lemon:#ffe178;--grape:#bba8ff;--mint:#92e6c3;--white:#fff;
+--display:'Baloo 2','Arial Rounded MT Bold','Trebuchet MS',sans-serif;--body:'Nunito','Trebuchet MS',sans-serif;
+--clay:inset 10px 10px 18px rgba(255,255,255,.65),inset -12px -14px 22px rgba(36,53,102,.16),0 22px 34px -8px rgba(36,53,102,.28)}
+*{box-sizing:border-box;margin:0}
+html,body{width:1280px;height:800px;overflow:hidden}
+body{background:radial-gradient(900px 600px at 78% 40%,#eaf5ff,var(--sky) 60%,var(--sky2));color:var(--ink);font-family:var(--body);position:relative}
+nav{position:absolute;top:30px;left:56px;right:56px;display:flex;align-items:center;justify-content:space-between;z-index:5}
+.logo{font-family:var(--display);font-weight:800;font-size:32px;display:flex;align-items:center;gap:12px}
+.logo i{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0 12%,var(--grape) 13%);box-shadow:var(--clay);display:block}
+.links{display:flex;gap:10px;font-weight:800;font-size:17px;align-items:center}
+.links span{padding:11px 20px;border-radius:99px}
+.links .cta{background:var(--lemon);box-shadow:var(--clay);padding:12px 24px}
+.hero{position:absolute;left:56px;top:150px;width:600px;z-index:3}
+.pill{display:inline-flex;align-items:center;gap:10px;background:var(--white);border-radius:99px;padding:8px 18px 8px 10px;font-weight:800;font-size:15px;box-shadow:0 10px 20px -6px rgba(36,53,102,.22),inset 0 -3px 6px rgba(36,53,102,.08)}
+.pill b{background:var(--mint);width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-size:14px}
+h1{font-family:var(--display);font-weight:800;font-size:96px;line-height:.98;letter-spacing:-.02em;margin-top:22px}
+h1 span{display:inline-block;background:linear-gradient(180deg,#ff9d7a,#ff7aa5);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 8px 0 rgba(36,53,102,.12))}
+p.lead{font-size:22px;line-height:1.45;font-weight:700;margin-top:22px;max-width:500px;color:#3f4f86}
+.btns{display:flex;gap:16px;margin-top:30px}
+.btn{font-family:var(--display);font-weight:800;font-size:22px;border-radius:99px;padding:18px 34px 20px;background:linear-gradient(180deg,#ffc7ae,var(--peach));box-shadow:var(--clay)}
+.btn.b{background:linear-gradient(180deg,#fff,#eef5ff)}
+.safe{display:flex;gap:18px;margin-top:30px;font-weight:800;font-size:15px;color:#3f4f86}
+.safe span{display:flex;align-items:center;gap:8px}
+.safe i{width:20px;height:20px;border-radius:50%;background:var(--mint);box-shadow:inset 3px 3px 5px #fff,inset -3px -3px 5px rgba(36,53,102,.18);display:block}
+.stage{position:absolute;right:0;top:0;width:620px;height:800px}
+.clay{position:absolute;box-shadow:var(--clay)}
+.phone{left:150px;top:92px;width:330px;height:640px;border-radius:70px;background:linear-gradient(160deg,#fff,#e9f1ff);padding:22px;box-shadow:inset 10px 10px 20px #fff,inset -14px -16px 26px rgba(36,53,102,.14),0 40px 60px -14px rgba(36,53,102,.4);transform:rotate(4deg)}
+.screen{width:100%;height:100%;border-radius:52px;background:linear-gradient(180deg,#ffe9b0,#ffd9c7);position:relative;overflow:hidden;box-shadow:inset 0 6px 14px rgba(36,53,102,.14)}
+.screen h5{font-family:var(--display);font-weight:800;font-size:22px;text-align:center;margin-top:28px}
+.screen small{display:block;text-align:center;font-weight:800;font-size:13px;opacity:.65}
+.goal{position:absolute;left:18px;right:18px;bottom:22px;background:#fff;border-radius:30px;padding:16px 18px;box-shadow:var(--clay)}
+.goal div{font-weight:800;font-size:15px;display:flex;justify-content:space-between}
+.task{position:absolute;left:18px;right:18px;background:#fff;border-radius:22px;padding:10px 14px;display:flex;align-items:center;gap:10px;font-weight:800;font-size:14px;box-shadow:0 10px 16px -6px rgba(36,53,102,.25),inset 0 -3px 6px rgba(36,53,102,.07)}.task i{width:22px;height:22px;border-radius:50%;background:var(--mint);box-shadow:inset 3px 3px 5px #fff,inset -3px -3px 5px rgba(36,53,102,.2)}.task b{margin-left:auto;color:#2a9a6c}.bar{height:20px;border-radius:99px;background:#e6ecff;margin-top:10px;box-shadow:inset 0 3px 6px rgba(36,53,102,.18);overflow:hidden}
+.bar i{display:block;height:100%;width:71%;border-radius:99px;background:linear-gradient(180deg,#a8f0cf,#5fd3a2);box-shadow:inset 0 3px 4px rgba(255,255,255,.7)}
+/* pig */
+.pig{position:absolute;left:34px;top:96px;width:228px;height:200px}
+.pig>*{position:absolute}
+.body{left:0;top:30px;width:200px;height:156px;border-radius:50%;background:radial-gradient(circle at 34% 28%,#ffc0d3,#ff8fb3 70%);box-shadow:inset 10px 10px 18px rgba(255,255,255,.55),inset -14px -14px 22px rgba(180,50,100,.35),0 18px 22px -6px rgba(36,53,102,.3)}
+.ear{width:44px;height:48px;border-radius:50% 50% 40% 40%;background:#ff7aa5;top:12px;box-shadow:inset 5px 5px 8px rgba(255,255,255,.5),inset -5px -5px 8px rgba(180,50,100,.35)}
+.snout{left:150px;top:88px;width:74px;height:58px;border-radius:50%;background:#ff7aa5;box-shadow:inset 6px 6px 10px rgba(255,255,255,.5),inset -6px -8px 12px rgba(180,50,100,.4)}
+.snout:before,.snout:after{content:"";position:absolute;top:22px;width:10px;height:16px;border-radius:50%;background:#b8325f;left:18px}
+.snout:after{left:44px}
+.eye{left:132px;top:78px;width:15px;height:20px;border-radius:50%;background:var(--ink)}
+.eye:after{content:"";position:absolute;left:3px;top:3px;width:5px;height:6px;background:#fff;border-radius:50%}
+.slot{left:56px;top:38px;width:70px;height:12px;border-radius:99px;background:#a8305d;box-shadow:inset 0 3px 5px rgba(0,0,0,.4)}
+.leg{width:40px;height:44px;border-radius:40% 40% 50% 50%;background:#ff7aa5;top:166px;box-shadow:inset 4px 4px 7px rgba(255,255,255,.5),inset -5px -5px 8px rgba(180,50,100,.35)}
+.coin{border-radius:50%;background:radial-gradient(circle at 32% 28%,#fff6c2,var(--lemon) 55%,#ffc43a);display:grid;place-items:center;font-family:var(--display);font-weight:800;color:#b57a00;box-shadow:inset 6px 6px 10px rgba(255,255,255,.7),inset -8px -8px 14px rgba(180,110,0,.35),0 16px 22px -6px rgba(36,53,102,.3)}
+.coin:after{content:"";position:absolute;inset:12%;border-radius:50%;border:3px dashed rgba(181,122,0,.4)}
+.blob{border-radius:48% 52% 55% 45%/55% 45% 55% 45%}
+.ten{left:70px;top:110px;width:128px;height:128px;font-size:44px;transform:rotate(-12deg)}
+.five{left:470px;top:330px;width:96px;height:96px;font-size:34px;transform:rotate(10deg)}
+.one{left:110px;top:540px;width:84px;height:84px;font-size:30px;transform:rotate(-6deg)}
+.star{left:470px;top:110px;width:100px;height:100px;background:radial-gradient(circle at 32% 28%,#d9ccff,var(--grape) 60%,#9d86ff);clip-path:none;border-radius:34% 66% 40% 60%/50% 40% 60% 50%;transform:rotate(14deg)}
+.mint{left:12px;top:380px;width:96px;height:96px;background:radial-gradient(circle at 32% 28%,#d8fff0,var(--mint) 60%,#5fd3a2);border-radius:50%}
+</style></head><body>
+<nav>
+  <div class="logo"><i></i>Puddle</div>
+  <div class="links"><span>How it works</span><span>For parents</span><span>Chores</span><span class="cta">Start saving</span></div>
+</nav>
+<section class="hero">
+  <span class="pill"><b>&#9733;</b>Kids' bank with a parent's key</span>
+  <h1>Saving is <span>squishy</span> fun.</h1>
+  <p class="lead">Puddle gives 6 to 12 year olds a real card, real goals and a little pig that cheers. Parents set the rules.</p>
+  <div class="btns"><a class="btn">Open an account</a><a class="btn b">Watch the 40s tour</a></div>
+  <div class="safe"><span><i></i>No fees, ever</span><span><i></i>Parent-approved spending</span><span><i></i>Ages 6 to 12</span></div>
+</section>
+<section class="stage">
+  <div class="clay mint"></div>
+  <div class="clay blob star"></div>
+  <div class="clay phone"><div class="screen">
+    <h5>Mia's Piggy</h5><small>Goal: Skateboard</small>
+    <div class="pig"><i class="ear" style="left:92px"></i><i class="ear" style="left:34px;transform:rotate(-10deg)"></i><div class="body"></div><i class="slot"></i><i class="snout"></i><i class="eye"></i><i class="leg" style="left:34px"></i><i class="leg" style="left:128px"></i></div>
+    <div class="task" style="top:318px"><i></i>Walk Biscuit<b>+$2</b></div><div class="task" style="top:372px"><i style="background:var(--lemon)"></i>Feed the fish<b>+$1</b></div>
+    <div class="goal"><div><span>$64 saved</span><span>$90</span></div><div class="bar"><i></i></div></div>
+  </div></div>
+  <div class="clay coin ten">$10</div>
+  <div class="clay coin five">$5</div>
+  <div class="clay coin one">$1</div>
+</section>
+</body></html>

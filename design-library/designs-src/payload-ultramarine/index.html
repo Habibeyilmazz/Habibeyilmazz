@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Crossrail — Payments Infrastructure</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=Geist+Mono:wght@400;500&family=Geist:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: full-bleed cobalt field; giant headline left, bento of white tiles that bleed off the right/bottom edges */
+:root{--cobalt:#2a3cff;--deep:#1624c4;--white:#fff;--ice:#e8ecff;--mint:#7dffc4;--ink:#0b1030;--mut:#6f77a8;
+--display:'Familjen Grotesk','Helvetica Neue',Arial,sans-serif;--body:'Geist','Helvetica Neue',Arial,sans-serif;--mono:'Geist Mono',ui-monospace,Menlo,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--cobalt);color:#fff;font-family:var(--body)}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.07) 1px,transparent 1px);background-size:64px 64px;background-position:-1px -1px;-webkit-mask-image:linear-gradient(100deg,#000,transparent 70%);mask-image:linear-gradient(100deg,#000,transparent 70%)}
+nav{position:absolute;left:56px;right:56px;top:30px;display:flex;align-items:center;justify-content:space-between;font-size:15px;font-weight:500}
+.logo{font-family:var(--display);font-weight:700;font-size:25px;letter-spacing:-.03em;display:flex;align-items:center;gap:10px}
+.logo svg{display:block}
+.menu{display:flex;gap:32px;color:rgba(255,255,255,.8)}
+.nb{display:flex;gap:18px;align-items:center}
+.nb .w{background:#fff;color:var(--cobalt);padding:11px 18px;border-radius:10px;font-weight:600}
+.hero{position:absolute;left:56px;top:140px;width:560px}
+.badge{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;border:1px solid rgba(255,255,255,.35);border-radius:99px;padding:7px 14px;letter-spacing:.02em}
+.badge i{width:7px;height:7px;border-radius:50%;background:var(--mint);box-shadow:0 0 0 4px rgba(125,255,196,.25)}
+h1{font-family:var(--display);font-size:92px;line-height:.9;letter-spacing:-.05em;font-weight:700;margin:26px 0 26px;text-wrap:balance}
+h1 u{text-decoration:none;color:var(--mint)}
+p.l{font-size:19px;line-height:1.5;color:rgba(255,255,255,.82);max-width:440px}
+.btns{display:flex;gap:12px;margin-top:32px;font-weight:600;font-size:16px}
+.btns .a{background:#fff;color:var(--cobalt);padding:17px 26px;border-radius:12px}
+.btns .b{border:1px solid rgba(255,255,255,.45);padding:17px 24px;border-radius:12px;font-family:var(--mono);font-size:14px;font-weight:500}
+.t{position:absolute;background:#fff;color:var(--ink);border-radius:22px;padding:22px;overflow:hidden}
+.k{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}
+.num{font-family:var(--display);font-weight:700;letter-spacing:-.04em;line-height:1}
+.t1{left:672px;top:110px;width:262px;height:258px}
+.t2{left:950px;top:110px;width:274px;height:150px;background:var(--ink);color:#fff}
+.t3{left:950px;top:276px;width:274px;height:240px;background:var(--ice)}
+.t4{left:672px;top:384px;width:262px;height:132px;background:var(--mint)}
+.t5{left:672px;top:532px;width:552px;height:300px}
+code{font-family:var(--mono);font-size:13px;line-height:1.75;display:block;color:#c9d0ff}
+code b{font-weight:400;color:var(--mint)} code i{font-style:normal;color:#ffb38a} code s{text-decoration:none;color:#7f89d6}
+.pill{font-family:var(--mono);font-size:11px;background:#e0fff1;color:#0b7a4b;border-radius:99px;padding:4px 9px}
+.corr{display:flex;flex-direction:column;gap:10px;margin-top:14px;font-size:13px}
+.corr div{display:flex;align-items:center;gap:10px}
+.corr b{width:36px;font-family:var(--mono);font-weight:500;font-size:12px}
+.bar{flex:1;height:8px;border-radius:5px;background:#fff;overflow:hidden}.bar i{display:block;height:100%;background:var(--cobalt);border-radius:5px}
+.corr em{font-style:normal;font-family:var(--mono);font-size:12px;width:44px;text-align:right}
+</style></head><body>
+<div class="grid"></div>
+<nav>
+ <div class="logo"><svg width="30" height="30" viewBox="0 0 30 30"><rect width="30" height="30" rx="8" fill="#fff"/><path d="M7 21 L14 9 L16 12 L11 21Z M15 21 L22 9 L24 12 L19 21Z" fill="#2a3cff" transform="translate(-1 0)"/></svg>Crossrail</div>
+ <div class="menu"><span>Payments</span><span>Payouts</span><span>Treasury</span><span>Developers</span><span>Pricing</span></div>
+ <div class="nb"><span>Sign in</span><span class="w">Get API keys</span></div>
+</nav>
+
+<section class="hero">
+ <span class="badge"><i></i>Now live in 42 payout corridors</span>
+ <h1>Move money like a <u>function call.</u></h1>
+ <p class="l">Crossrail is payments infrastructure for marketplaces: collect in any currency, split in real time and pay out in minutes, through one API.</p>
+ <div class="btns"><span class="a">Start building</span><span class="b">$ npm i @crossrail/node</span></div>
+</section>
+
+<div class="t t1">
+ <div class="k">Authorisation rate · 30 d</div>
+ <div class="num" style="font-size:58px;margin-top:12px">97.8<span style="font-size:28px">%</span></div>
+ <svg viewBox="0 0 286 100" width="218" height="100" preserveAspectRatio="none" style="position:absolute;left:22px;bottom:16px">
+  <g stroke="#e6e9f7"><path d="M0 20H286M0 50H286M0 80H286"/></g>
+  <path d="M0 70 L20 62 L40 66 L60 52 L80 58 L100 44 L120 48 L140 36 L160 40 L180 30 L200 34 L220 22 L240 26 L262 14 L286 10" fill="none" stroke="#2a3cff" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M0 86 L40 84 L80 82 L120 78 L160 74 L200 72 L240 68 L286 64" fill="none" stroke="#b8c0ee" stroke-width="2" stroke-dasharray="3 4"/>
+  <circle cx="286" cy="10" r="5" fill="#2a3cff" stroke="#fff" stroke-width="3"/>
+ </svg>
+</div>
+
+<div class="t t2">
+ <div class="k" style="color:#8f98d8">Volume today</div>
+ <div class="num" style="font-size:44px;margin-top:12px">$48.2M</div>
+ <div style="font-family:var(--mono);font-size:12px;color:var(--mint);margin-top:12px">▲ 6.1% · 1.9M payments</div>
+</div>
+
+<div class="t t3">
+ <div class="k">Payout speed by corridor</div>
+ <div class="corr">
+  <div><b>US</b><span class="bar"><i style="width:96%"></i></span><em>2 min</em></div>
+  <div><b>EU</b><span class="bar"><i style="width:88%"></i></span><em>6 min</em></div>
+  <div><b>UK</b><span class="bar"><i style="width:84%"></i></span><em>9 min</em></div>
+  <div><b>BR</b><span class="bar"><i style="width:64%"></i></span><em>31 min</em></div>
+  <div><b>IN</b><span class="bar"><i style="width:56%"></i></span><em>46 min</em></div>
+ </div>
+</div>
+
+<div class="t t4">
+ <div class="k" style="color:#0a6a46">Uptime · 12 months</div>
+ <div class="num" style="font-size:44px;margin-top:12px">99.999%</div>
+</div>
+
+<div class="t t5" style="background:#0b1030;color:#fff">
+ <div style="display:flex;justify-content:space-between;align-items:center"><span class="k" style="color:#8f98d8">POST /v1/payouts</span><span class="pill">201 Created · 118 ms</span></div>
+ <code style="margin-top:14px"><s>const</s> payout = <s>await</s> crossrail.payouts.<b>create</b>({<br>
+ &nbsp;&nbsp;amount: <i>12_450_00</i>, currency: <b>'BRL'</b>,<br>
+ &nbsp;&nbsp;split: [{ to: <b>'seller_8f2'</b>, pct: <i>88</i> },<br>
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ to: <b>'platform'</b>, pct: <i>12</i> }],<br>
+ &nbsp;&nbsp;speed: <b>'instant'</b><br>});<br><s>// settles in 4 min via Pix · fee $18.20</s></code>
+</div>
+</body></html>

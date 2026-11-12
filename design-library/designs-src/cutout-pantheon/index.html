@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Pantheon Dept. — Cut-Out</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Playfair+Display:ital,wght@0,900;1,900&family=Special+Elite&family=Rubik+Mono+One&family=Permanent+Marker&family=Old+Standard+TT:ital,wght@1,700&display=swap" rel="stylesheet">
+<style>
+/* Layout: kraft-paper desk, ransom-note headline left, torn cream card with a headless torso + floating eye right, stamps, tape and a price tag. */
+:root{
+  --kraft:#d8b374; --cream:#f4ecd8; --ink:#14110f; --blood:#8c1c1c; --ultra:#1f40c4; --sun:#ffc533;
+  --typer:"Special Elite","Courier New",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden}
+body{background:var(--kraft);color:var(--ink);position:relative;font-family:var(--typer)}
+.paper{position:absolute;inset:0;pointer-events:none}
+nav{position:absolute;left:44px;top:30px;display:flex;gap:10px;z-index:8}
+nav span{background:var(--cream);padding:9px 16px 8px;font-size:14px;letter-spacing:.06em;text-transform:uppercase;box-shadow:2px 3px 0 rgba(20,17,15,.25)}
+nav span:nth-child(1){background:var(--ink);color:var(--cream);font-family:"Rubik Mono One",sans-serif;font-size:13px;transform:rotate(-2deg)}
+nav span:nth-child(2){transform:rotate(1.5deg)}nav span:nth-child(3){transform:rotate(-1deg);background:var(--sun)}nav span:nth-child(4){transform:rotate(2deg)}
+#ransom{position:absolute;left:44px;top:112px;width:640px;z-index:6}
+.ln{display:flex;flex-wrap:nowrap;align-items:center;margin-bottom:6px;height:92px}
+.t{display:inline-grid;place-items:center;height:78px;min-width:56px;padding:0 8px;margin-right:-1px;box-shadow:2px 3px 0 rgba(20,17,15,.28);line-height:1}
+.sp{width:22px}
+.strip{position:absolute;left:52px;top:430px;width:470px;background:var(--cream);padding:20px 24px 22px;font-size:17px;line-height:1.5;transform:rotate(-1.4deg);z-index:6;box-shadow:3px 5px 0 rgba(20,17,15,.28)}
+.strip b{background:var(--sun);padding:0 4px;font-weight:400}
+.tape{position:absolute;width:96px;height:28px;background:rgba(255,236,150,.72);z-index:9;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.tag{position:absolute;left:62px;top:632px;z-index:7;display:flex;align-items:center;gap:0;transform:rotate(1.5deg)}
+.tag .a{background:var(--ink);color:var(--cream);font-family:"Anton",sans-serif;font-size:26px;letter-spacing:.06em;text-transform:uppercase;padding:16px 26px 14px 30px;clip-path:polygon(0 0,100% 0,100% 100%,0 100%,14px 50%);box-shadow:3px 4px 0 rgba(20,17,15,.3)}
+.tag .b{margin-left:18px;font-family:"Old Standard TT",serif;font-style:italic;font-weight:700;font-size:20px;line-height:1.15}
+.tag .b small{display:block;font-family:var(--typer);font-style:normal;font-weight:400;font-size:13px;letter-spacing:.05em;margin-top:4px}
+svg.col{position:absolute;inset:0;width:1280px;height:800px;z-index:3}
+.cap{position:absolute;right:34px;bottom:26px;z-index:8;font-size:13px;letter-spacing:.08em;text-transform:uppercase;transform:rotate(-1deg);background:var(--cream);padding:7px 12px;box-shadow:2px 3px 0 rgba(20,17,15,.25)}
+</style>
+</head>
+<body>
+<svg class="paper" width="1280" height="800"><filter id="pf"><feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="3" seed="4"/><feColorMatrix values="0 0 0 0 .3  0 0 0 0 .2  0 0 0 0 .05  0 0 0 .5 -.12"/></filter><filter id="fib"><feTurbulence type="fractalNoise" baseFrequency=".012 .4" numOctaves="2" seed="9"/><feColorMatrix values="0 0 0 0 1  0 0 0 0 .95  0 0 0 0 .8  0 0 0 .6 -.22"/></filter><rect width="100%" height="100%" filter="url(#pf)"/><rect width="100%" height="100%" filter="url(#fib)" opacity=".5"/></svg>
+
+<svg class="col" viewBox="0 0 1280 800" aria-hidden="true">
+  <defs>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="2" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="9"/></filter>
+    <filter id="rough2" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency=".05" numOctaves="2" seed="8" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="6"/></filter>
+    <filter id="drop" x="-10%" y="-10%" width="125%" height="125%"><feDropShadow dx="4" dy="6" stdDeviation="0" flood-color="#14110f" flood-opacity=".28"/></filter>
+    <pattern id="ht" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="3.5" cy="3.5" r="2.1" fill="#14110f"/></pattern>
+    <pattern id="htb" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="3" cy="3" r="1.5" fill="#8c1c1c"/></pattern>
+    <pattern id="htu" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(60)"><circle cx="4" cy="4" r="2.4" fill="#1f40c4"/></pattern>
+    <clipPath id="torso"><path d="M-170 320 C-165 200 -112 150 -60 128 L-34 74 C-10 90 10 90 34 74 L60 128 C112 150 165 200 170 320 Z"/></clipPath>
+    <radialGradient id="sphere" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e6dcc3"/></radialGradient>
+    <path id="arc" d="M0 0 A60 60 0 1 1 -0.1 0"/>
+    <path id="stampc" d="M-62 0 A62 62 0 1 1 62 0 A62 62 0 1 1 -62 0"/>
+  </defs>
+
+  <!-- big torn cream card -->
+  <g transform="translate(944 408) rotate(3.5)" filter="url(#drop)">
+    <g filter="url(#rough)"><rect x="-205" y="-300" width="410" height="640" fill="#e9dcbc"/></g>
+  </g>
+
+  <!-- halftone sun disc, blood red -->
+  <g filter="url(#rough2)" transform="translate(1135 132)"><circle r="74" fill="var(--sun)"/><circle r="74" fill="url(#htb)"/><circle r="74" fill="none" stroke="#14110f" stroke-width="3"/></g>
+
+  <!-- ultramarine moon (cut paper) -->
+  <g filter="url(#rough)"><circle cx="950" cy="390" r="214" fill="var(--ultra)"/></g>
+  <g filter="url(#rough2)"><circle cx="950" cy="390" r="214" fill="url(#htu)" opacity=".0"/><path d="M745 400 Z" fill="#fff" opacity=".0"/></g>
+  <!-- column (halftone, left of card) -->
+  <g transform="translate(722 252) rotate(-4)" filter="url(#rough2)">
+    <g filter="url(#drop)">
+      <rect x="-34" y="60" width="68" height="360" fill="#efe5cf"/>
+      <rect x="-34" y="60" width="68" height="360" fill="url(#ht)" opacity=".5"/>
+      <g stroke="#14110f" stroke-width="2" opacity=".6"><path d="M-20 60V420M-7 60V420M7 60V420M20 60V420"/></g>
+      <rect x="-48" y="36" width="96" height="26" fill="#efe5cf" stroke="#14110f" stroke-width="2"/>
+      <circle cx="-46" cy="46" r="16" fill="#efe5cf" stroke="#14110f" stroke-width="2.5"/><circle cx="46" cy="46" r="16" fill="#efe5cf" stroke="#14110f" stroke-width="2.5"/>
+      <circle cx="-46" cy="46" r="6" fill="none" stroke="#14110f" stroke-width="2"/><circle cx="46" cy="46" r="6" fill="none" stroke="#14110f" stroke-width="2"/>
+      <rect x="-52" y="20" width="104" height="18" fill="#efe5cf" stroke="#14110f" stroke-width="2"/>
+      <rect x="-48" y="420" width="96" height="24" fill="#efe5cf" stroke="#14110f" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- torso with white sticker edge -->
+  <g transform="translate(950 392) rotate(2.5)" filter="url(#drop)">
+    <g filter="url(#rough2)">
+      <path d="M-170 320 C-165 200 -112 150 -60 128 L-34 74 C-10 90 10 90 34 74 L60 128 C112 150 165 200 170 320 Z" fill="#fff" stroke="#fff" stroke-width="16" stroke-linejoin="round"/>
+      <path d="M-170 320 C-165 200 -112 150 -60 128 L-34 74 C-10 90 10 90 34 74 L60 128 C112 150 165 200 170 320 Z" fill="#fbf8ef"/>
+      <g clip-path="url(#torso)">
+        <path d="M30 60 L60 128 C112 150 165 200 170 320 L10 320 C30 240 40 140 30 60Z" fill="url(#ht)" opacity=".55"/>
+        <path d="M-120 160 C-60 200 -20 250 0 330 M-60 130 C-20 190 10 250 20 330 M-150 240 C-90 250 -50 290 -40 330 M90 180 C70 230 70 280 90 330" fill="none" stroke="#14110f" stroke-width="2.2" opacity=".7"/>
+        <path d="M-170 320 L-170 340 L170 340 L170 320Z" fill="var(--blood)"/>
+        <rect x="-170" y="270" width="340" height="60" fill="var(--blood)" opacity="0"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- floating eye in place of head -->
+  <g transform="translate(956 318) rotate(-6)" filter="url(#drop)">
+    <g filter="url(#rough2)">
+      <circle r="92" fill="var(--sun)" stroke="#14110f" stroke-width="4"/>
+      <path d="M-84 0 C-48 -50 48 -50 84 0 C48 50 -48 50 -84 0Z" fill="#fff" stroke="#14110f" stroke-width="5"/>
+      <circle r="30" fill="var(--ultra)" stroke="#14110f" stroke-width="4"/><circle r="12" fill="#14110f"/><circle cx="-9" cy="-9" r="5" fill="#fff"/>
+      <g stroke="#14110f" stroke-width="3.5" stroke-linecap="round"><path d="M-60 -34L-72 -54M-30 -50L-34 -74M0 -56V-82M30 -50L34 -74M60 -34L72 -54"/></g>
+    </g>
+  </g>
+
+  <!-- small cut shapes -->
+  <g transform="translate(1160 560) rotate(18)" filter="url(#drop)"><g filter="url(#rough2)"><path d="M0 0 L90 0 L90 -22 L140 30 L90 82 L90 60 L0 60Z" fill="#14110f"/></g></g>
+  <g transform="translate(790 650) rotate(-8)" filter="url(#drop)"><g filter="url(#rough2)"><rect width="150" height="64" fill="var(--blood)"/><rect width="150" height="64" fill="url(#ht)" opacity=".25"/><text x="75" y="42" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="34" fill="#f4ecd8" letter-spacing="3">ISSUE 07</text></g></g>
+
+  <!-- stamp -->
+  <g transform="translate(1108 612) rotate(-14)" opacity=".92">
+    <circle r="70" fill="none" stroke="var(--blood)" stroke-width="4"/><circle r="48" fill="none" stroke="var(--blood)" stroke-width="2"/>
+    <text font-family="Special Elite, Courier New, monospace" font-size="13" letter-spacing="3.2" fill="var(--blood)"><textPath href="#stampc" startOffset="2%">PANTHEON DEPT • EST. 1994 • GLUE ONLY</textPath></text>
+    <text y="9" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="26" fill="var(--blood)" letter-spacing="2">VOID</text>
+  </g>
+</svg>
+
+<div class="tape" style="left:20px;top:392px;transform:rotate(-24deg)"></div>
+<div class="tape" style="left:836px;top:98px;transform:rotate(-8deg)"></div>
+<div class="tape" style="left:1020px;top:660px;transform:rotate(32deg)"></div>
+
+<nav><span>Pantheon Dept.</span><span>Issues</span><span>Subscribe</span><span>Cut-ups</span></nav>
+<div id="ransom"></div>
+<div class="strip">A quarterly of surreal collage. <b>Scissors, glue</b> and forty years of old atlases. Every cover is cut by hand, scanned once and burned.</div>
+<div class="tag"><div class="a">Order €14</div><div class="b">64 pages, one risograph insert<small>Ships worldwide, wrapped in newsprint</small></div></div>
+<div class="cap">Fig. 7 — Torso, no head, one eye</div>
+
+<script>
+(function(){
+  var fonts=[["Playfair Display",900,"normal"],["Anton",400,"normal"],["Abril Fatface",400,"normal"],["Rubik Mono One",400,"normal"],["Special Elite",400,"normal"],["Playfair Display",900,"italic"],["Permanent Marker",400,"normal"],["Old Standard TT",700,"italic"]];
+  var pals=[["#f4ecd8","#14110f"],["#14110f","#f4ecd8"],["#8c1c1c","#f4ecd8"],["#1f40c4","#fff5d6"],["#ffc533","#14110f"],["#ffffff","#8c1c1c"],["#e9dfc8","#1f40c4"]];
+  var lines=["MISPLACE","the gods,","GLUED."];
+  var seed=11;function r(){seed=(seed*9301+49297)%233280;return seed/233280}
+  var out='';
+  lines.forEach(function(L,li){
+    out+='<div class="ln" style="margin-left:'+(li==1?46:li==2?18:0)+'px">';
+    var base=[70,70,100][li];
+    L.split('').forEach(function(ch,i){
+      var f=fonts[Math.floor(r()*fonts.length)],p=pals[Math.floor(r()*pals.length)];
+      if(li==0&&i%3==0)f=fonts[1];
+      var fs=base*(0.82+r()*.34),rot=(r()*10-5).toFixed(1),dy=(r()*14-7).toFixed(0);
+      if(ch==' '){out+='<span class="sp"></span>';return;}
+      var j=function(){return Math.round(r()*5)};
+      var clip='polygon('+j()+'px '+j()+'px,calc(100% - '+j()+'px) '+j()+'px,calc(100% - '+j()+'px) calc(100% - '+j()+'px),'+j()+'px calc(100% - '+j()+'px))';
+      out+='<span class="t" style="background:'+p[0]+';color:'+p[1]+';font-family:\''+f[0]+'\';font-weight:'+f[1]+';font-style:'+f[2]+';font-size:'+fs.toFixed(0)+'px;transform:translateY('+dy+'px) rotate('+rot+'deg);height:'+(fs*.98+10).toFixed(0)+'px;clip-path:'+clip+'">'+ch+'</span>';
+    });
+    out+='</div>';
+  });
+  document.getElementById('ransom').innerHTML=out;
+})();
+</script>
+</body>
+</html>

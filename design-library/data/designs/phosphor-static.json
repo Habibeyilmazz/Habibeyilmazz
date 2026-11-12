@@ -1,0 +1,86 @@
+{
+  "category": {
+    "id": "phosphor-static",
+    "name": "Phosphor Static",
+    "tagline": "terminal glow x dithered mono",
+    "description": "Developer-tool sites that borrow from the command line: monospaced type, pixel dither, CRT glow, diffs and ASCII renderings. Use it for CLIs, infrastructure, observability and code tools that want to look like the thing they ship.",
+    "vibes": ["technology", "dark", "serious", "experimental"],
+    "accent": "#ffb000"
+  },
+  "designs": [
+    {
+      "id": "dither-void",
+      "name": "Nullpoint Dither",
+      "descriptor": "bayer dither x brutal grotesk",
+      "summary": "Pure bone-white on black. A lit planet is rendered in a coarse Bayer dither, set against a huge expanded grotesk headline with one outlined word.",
+      "keywords": ["bayer ordered dither", "two-colour white on black", "expanded heavy grotesk", "outline text", "mono data rail", "install command box"],
+      "vibes": ["technology", "bold", "minimal", "dark"],
+      "best_for": ["runtimes", "CLIs", "open-source infrastructure", "developer platforms"],
+      "palette": ["#080808", "#efede6", "#8b8982", "#2a2a28"],
+      "fonts": { "display": "Archivo (wdth 105, 900)", "body": "JetBrains Mono", "mono": "JetBrains Mono" },
+      "image": "assets/designs/dither-void.png",
+      "mockup": "designs-src/dither-void/index.html",
+      "references": [
+        { "title": "Developers and DevOps website collection (monochrome dev pages)", "url": "https://dribbble.com/timilehinololade/collections/6975174-Developers-and-DevOps-website", "source": "dribbble" },
+        { "title": "Oguz Yagiz Kara, dark developer site work", "url": "https://oguzyagiz.dribbble.com/", "source": "dribbble" },
+        { "title": "Terminal Mono design reference", "url": "https://www.developersdigest.tech/library/design/terminal-mono", "source": "other" }
+      ],
+      "how_to_build": "Render the hero image in a canvas at low resolution (about 300x300), shade a sphere with simple Lambert lighting, then threshold each pixel against an 8x8 Bayer matrix so only two colours remain. Scale the canvas up with image-rendering: pixelated and let it bleed off the right edge. Set the headline in a variable grotesk at a wide width axis and weight 900 with negative tracking, and make one word transparent with -webkit-text-stroke. Keep everything else mono, uppercase and small, separated by 1px hairlines."
+    },
+    {
+      "id": "amber-daemon",
+      "name": "Vigil Amber Terminal",
+      "descriptor": "crt phosphor x tmux panes",
+      "summary": "The whole page is a tmux session in amber phosphor: tab bar, framed panes with titles, a live log tail and a block-character sparkline, closed by a status line.",
+      "keywords": ["amber phosphor glow", "scanlines and vignette", "tmux pane borders", "pixel display headline", "log tail with level tags", "block-character sparkline", "keycap buttons"],
+      "vibes": ["retro", "technology", "dark", "warm"],
+      "best_for": ["observability tools", "log and monitoring products", "SSH and ops utilities"],
+      "palette": ["#110a03", "#ffb000", "#ffd36b", "#a56d00", "#ff6a3d"],
+      "fonts": { "display": "VT323", "body": "IBM Plex Mono", "mono": "IBM Plex Mono" },
+      "image": "assets/designs/amber-daemon.png",
+      "mockup": "designs-src/amber-daemon/index.html",
+      "references": [
+        { "title": "Developer portfolio as a live terminal on a phosphor CRT", "url": "https://kombai.com/gallery/inspirations/okafor/", "source": "other" },
+        { "title": "Terminal Dark pattern: real output as the hero", "url": "https://pro.reactbits.dev/docs/agent-kit/skills/terminal-dark", "source": "other" }
+      ],
+      "how_to_build": "Lay out a CSS grid of bordered panes and place each title on the top border with a background-coloured label. Colour everything from one amber hue family and add text-shadow glows of 6 to 36px. Fake the CRT with a repeating-linear-gradient scanline overlay and a radial-gradient vignette on pseudo-elements above the content. Use a pixel font for the headline, a blinking block cursor made from a span, and Unicode block characters for the sparkline."
+    },
+    {
+      "id": "diff-noir",
+      "name": "Patchwork Diff Noir",
+      "descriptor": "serif display x code diff",
+      "summary": "A literary serif headline beside a tilted, glowing code review: red and green diff lines with an inline AI comment card floating off the page.",
+      "keywords": ["perspective-tilted code window", "red and green diff bands", "line-number gutter", "floating comment card with glow", "light serif display", "faint dot grid"],
+      "vibes": ["technology", "modern", "elegant", "dark"],
+      "best_for": ["code review tools", "AI coding assistants", "developer productivity apps"],
+      "palette": ["#0b0c0f", "#101216", "#e9e8e4", "#2fa46f", "#e0575b", "#7cc4ff"],
+      "fonts": { "display": "Newsreader", "body": "Geist", "mono": "Geist Mono" },
+      "image": "assets/designs/diff-noir.png",
+      "mockup": "designs-src/diff-noir/index.html",
+      "references": [
+        { "title": "Dark AI developer tool landing page template", "url": "https://enter.converge.ai/marketplace/templates/a5c988ca580f4cbca25adc304be71e76", "source": "other" },
+        { "title": "Neon-noir developer platform landing page", "url": "https://enter.converge.ai/marketplace/templates/b71aa466ed29428cb5af582ec293795e", "source": "other" },
+        { "title": "Developer tool dashboard and onboarding patterns", "url": "https://superdesign.dev/library/developer-tool-dashboardonboarding", "source": "other" }
+      ],
+      "how_to_build": "Build the diff as a normal DOM block with a 4-column grid per line (old number, new number, sign, code) and tint added and removed rows with 13% alpha fills. Put it in a container with perspective on the parent and transform: rotateY(-17deg) rotateX(7deg) on the child, then give the comment card translateZ and a blue box-shadow glow so it lifts off. Pair a light-weight serif headline (one italic word in the accent) with a clean sans for body copy."
+    },
+    {
+      "id": "ascii-meridian",
+      "name": "Meridian ASCII Horizon",
+      "descriptor": "ascii planet x edge network",
+      "summary": "A centred thesis above a planet rising from the bottom edge, drawn entirely from text characters, with amber city markers and latency callouts.",
+      "keywords": ["ascii character globe", "planet horizon rising from bottom", "amber node markers", "dashed arc routes", "thin weight geometric headline", "mono status footer"],
+      "vibes": ["technology", "futuristic", "cool", "dark"],
+      "best_for": ["CDNs and edge platforms", "network and cloud infrastructure", "latency-focused APIs"],
+      "palette": ["#040810", "#6fd3ff", "#cfeeff", "#1c4a66", "#ffc46b"],
+      "fonts": { "display": "Sora", "body": "Sora", "mono": "DM Mono" },
+      "image": "assets/designs/ascii-meridian.png",
+      "mockup": "designs-src/ascii-meridian/index.html",
+      "references": [
+        { "title": "Cosmic AI automation landing page", "url": "https://enter.converge.ai/marketplace/templates/d0a1d1a0f9904b9d852cf2c70f4637cd", "source": "other" },
+        { "title": "Cinematic satellite mission control dashboard", "url": "https://enter.converge.ai/marketplace/templates/776503d8535542919ca6d60a6f7ecaff", "source": "other" }
+      ],
+      "how_to_build": "Draw onto a canvas with a monospaced font on a fixed cell grid. For each cell, compute whether it falls inside a large circle placed below the viewport, derive a sphere normal, sample 3D value noise for land versus ocean and pick a character from a brightness ramp (. : - + x o # @). Tint land cyan and ocean deep blue, brighten the rim, then plot city points with lon/lat projection and add HTML labels. Wait for document.fonts before drawing."
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Plotter Theory</title>
+<meta name="viewport" content="width=1280">
+<style>
+/* Layout: anti-design. Default Times and blue links, giant colliding headline in difference-blend over a pen-plotter flow field, mono captions and thumbnails scattered off-grid. */
+:root{
+  --paper:#ffffff; --ink:#000000; --link:#0000ee; --red:#ff2d12; --hi:#fff200;
+  --serif:"Times New Roman","Liberation Serif",Times,serif;
+  --mono:"Courier New","Liberation Mono","DejaVu Sans Mono",monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden}
+body{background:var(--paper);color:var(--ink);font-family:var(--serif);position:relative}
+#field{position:absolute;left:520px;top:34px;width:716px;height:732px;border:1px solid var(--ink)}
+.h{position:absolute;color:#fff;mix-blend-mode:difference;font-family:var(--serif);font-weight:700;letter-spacing:-.065em;line-height:.78;white-space:nowrap;z-index:5;pointer-events:none}
+.h1{left:22px;top:62px;font-size:258px}
+.h2{left:150px;top:236px;font-size:226px;font-weight:400;font-style:italic;transform:rotate(-4deg);transform-origin:left bottom;letter-spacing:-.07em}
+.nav{position:absolute;left:30px;top:16px;font-family:var(--mono);font-size:13px;z-index:6;display:flex;gap:0}
+.nav a{color:var(--link);margin-right:10px}
+.nav span{margin-right:10px}
+.copy{position:absolute;left:30px;top:522px;width:430px;font-size:17.5px;line-height:1.25;z-index:6;background:var(--paper);padding:2px 0}
+.copy b{background:var(--hi);font-weight:400}
+.copy a{color:var(--link)}
+.meta{position:absolute;left:30px;top:440px;font-family:var(--mono);font-size:12px;line-height:1.45;z-index:6;width:330px}
+.meta u{text-decoration:none;border-bottom:1px solid #000}
+.thumbs{position:absolute;left:30px;top:658px;display:flex;gap:14px;z-index:6}
+.th{width:134px}
+.th canvas{display:block;width:104px;height:104px;border:1px solid #000}
+.th p{font-family:var(--mono);font-size:9.5px;line-height:1.3;margin-top:4px}
+.stk{position:absolute;right:12px;top:640px;z-index:8;background:var(--red);color:#fff;font-family:var(--mono);font-size:13px;font-weight:700;padding:14px 16px;transform:rotate(7deg);border-radius:50%;width:126px;height:126px;display:grid;place-items:center;text-align:center;line-height:1.25}
+.cta{position:absolute;left:30px;top:492px;z-index:7;font-family:var(--serif);font-size:17px}
+.cta a{color:var(--link)}
+.ctl{position:absolute;left:1128px;top:42px;z-index:6;background:#fff;border:1px solid #000;font-family:var(--mono);font-size:11px;padding:6px 8px;line-height:1.4}
+.ctl input{vertical-align:middle;margin-right:4px}
+.vt{position:absolute;left:1243px;top:34px;writing-mode:vertical-rl;font-family:var(--mono);font-size:11px;z-index:6;white-space:nowrap}
+.cap{position:absolute;left:540px;bottom:18px;font-family:var(--mono);font-size:11px;z-index:6;background:#fff;padding:0 4px}
+</style>
+</head>
+<body>
+<div class="nav"><a href="#">index</a><span>/</span><a href="#">works</a><span>/</span><a href="#">seeds</a><span>/</span><a href="#">code</a><span>/</span><a href="#">cart (0)</a></div>
+
+<canvas id="field" width="1432" height="1464"></canvas>
+
+<div class="h h1">Plotter</div>
+<div class="h h2">theory</div>
+
+<div class="meta">EDITION 3/9 &nbsp; SEED <u>0x4F2A</u><br>A2 / 120 gsm / Pilot G-2 0.38 black<br>pen lifts: 41,206 &nbsp; time: 11h 20m</div>
+<div class="cta"><a href="#">Buy a seed →</a> &nbsp; <a href="#">read the code</a> &nbsp; <a href="#">commission</a></div>
+<p class="copy">We write programs that draw. A machine holds a pen, follows the rules and <b>never once hesitates</b>. Each print is one run of one seed, signed, numbered, and impossible to reproduce by hand.</p>
+
+<div class="thumbs">
+  <div class="th"><canvas id="t1" width="260" height="260"></canvas><p>fig.1 truchet<br>seed 0x2B / 14 pens</p></div>
+  <div class="th"><canvas id="t2" width="260" height="260"></canvas><p>fig.2 packing<br>seed 0x91 / 3,200 rings</p></div>
+  <div class="th"><canvas id="t3" width="260" height="260"></canvas><p>fig.3 interference<br>seed 0x07 / 48 lines</p></div>
+</div>
+
+<div class="ctl"><input type="checkbox" checked id="ck"><label for="ck">tomorrow’s drawing<br>will differ</label></div>
+<div class="vt">PLOTTER THEORY — STUDIO FOR PEN-DRAWN ALGORITHMS — AMSTERDAM / BRNO — NO CAMERAS, NO SCREENS, ONLY INK</div>
+<div class="stk">seed<br>0x4F2A<br>run 41,206</div>
+<div class="cap">fig.0 — flow field, 6,400 strokes, no two alike</div>
+
+<script>
+(function(){
+  var seed=4242;function rnd(){seed=(seed*1664525+1013904223)%4294967296;return seed/4294967296}
+  // value noise
+  var N=256,perm=[],vals=[];for(var i=0;i<N;i++){vals.push(rnd());perm.push(i)}
+  for(var i=N-1;i>0;i--){var j=Math.floor(rnd()*(i+1)),t=perm[i];perm[i]=perm[j];perm[j]=t}
+  function h(x,y){return vals[perm[(perm[x&255]+y)&255]]}
+  function sm(t){return t*t*(3-2*t)}
+  function noise(x,y){var xi=Math.floor(x),yi=Math.floor(y),xf=x-xi,yf=y-yi;
+    var a=h(xi,yi),b=h(xi+1,yi),c=h(xi,yi+1),d=h(xi+1,yi+1),u=sm(xf),v=sm(yf);
+    return a+(b-a)*u+(c-a)*v+(a-b-c+d)*u*v}
+  function fbm(x,y){return noise(x,y)*.6+noise(x*2.1,y*2.1)*.3+noise(x*4.3,y*4.3)*.1}
+
+  var c=document.getElementById('field'),g=c.getContext('2d'),W=c.width,H=c.height;
+  g.fillStyle='#fff';g.fillRect(0,0,W,H);g.lineCap='round';
+  var cx=W*.46,cy=H*.62;
+  for(var k=0;k<6400;k++){
+    var x=rnd()*W,y=rnd()*H,col=rnd()<.07?'#ff2d12':'#000',pts=[];
+    g.beginPath();g.moveTo(x,y);
+    var len=60+rnd()*160;
+    for(var s=0;s<len;s++){
+      var a=fbm(x*.0021,y*.0021)*Math.PI*5.2;
+      x+=Math.cos(a)*2.6;y+=Math.sin(a)*2.6;
+      if(x<0||y<0||x>W||y>H)break;
+      var d=Math.hypot(x-cx,y-cy);if(d<150)break;
+      g.lineTo(x,y);
+    }
+    g.strokeStyle=col;g.globalAlpha=col=='#000'?.62:.9;g.lineWidth=col=='#000'?1.1:1.5;g.stroke();
+  }
+  g.globalAlpha=1;
+  // concentric rings in the hole
+  for(var r=10;r<150;r+=6){g.beginPath();g.arc(cx+Math.sin(r/20)*6,cy,r,0,6.283);g.strokeStyle=r%18==4?'#ff2d12':'#000';g.lineWidth=1.2;g.stroke();}
+  g.fillStyle='#ff2d12';g.beginPath();g.arc(cx,cy,5,0,6.283);g.fill();
+
+  // thumbnails
+  function T(id,fn){var cv=document.getElementById(id),q=cv.getContext('2d');q.fillStyle='#fff';q.fillRect(0,0,260,260);q.strokeStyle='#000';q.lineWidth=2.2;q.lineCap='round';fn(q);}
+  T('t1',function(q){var n=10,s=260/n;for(var i=0;i<n;i++)for(var j=0;j<n;j++){var x=i*s,y=j*s;q.beginPath();
+    if(rnd()<.5){q.arc(x,y,s/2,0,Math.PI/2);q.moveTo(x+s,y+s);q.arc(x+s,y+s,s/2,Math.PI,Math.PI*1.5)}
+    else{q.arc(x+s,y,s/2,Math.PI/2,Math.PI);q.moveTo(x,y+s);q.arc(x,y+s,s/2,-Math.PI/2,0)}
+    q.strokeStyle=rnd()<.1?'#ff2d12':'#000';q.stroke();}});
+  T('t2',function(q){var cs=[];for(var t=0;t<900&&cs.length<46;t++){var r=8+rnd()*34,x=r+rnd()*(260-2*r),y=r+rnd()*(260-2*r),ok=true;
+    for(var i=0;i<cs.length;i++){if(Math.hypot(cs[i][0]-x,cs[i][1]-y)<cs[i][2]+r+3){ok=false;break}}if(ok)cs.push([x,y,r])}
+    cs.forEach(function(o,idx){q.strokeStyle=idx%9==0?'#ff2d12':'#000';for(var r=o[2];r>2;r-=4){q.beginPath();q.arc(o[0],o[1],r,0,6.283);q.lineWidth=1.3;q.stroke()}});});
+  T('t3',function(q){q.fillStyle='#fff';for(var l=0;l<30;l++){var y0=24+l*7.6;q.beginPath();
+    for(var x=10;x<=250;x+=2){var d=(x-130)/130,amp=Math.exp(-d*d*5)*30*(0.5+0.5*Math.sin(l*1.7)),y=y0-amp*Math.abs(Math.sin(x*.09+l*.6));x==10?q.moveTo(x,y):q.lineTo(x,y);}
+    q.lineTo(250,y0+40);q.lineTo(10,y0+40);q.closePath();q.fill();q.beginPath();
+    for(var x=10;x<=250;x+=2){var d=(x-130)/130,amp=Math.exp(-d*d*5)*30*(0.5+0.5*Math.sin(l*1.7)),y=y0-amp*Math.abs(Math.sin(x*.09+l*.6));x==10?q.moveTo(x,y):q.lineTo(x,y);}
+    q.strokeStyle=l==22?'#ff2d12':'#000';q.lineWidth=1.4;q.stroke();}});
+})();
+</script>
+</body>
+</html>

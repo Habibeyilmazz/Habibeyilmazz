@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Crayon Corner School</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sniglet:wght@800&family=Patrick+Hand&display=swap" rel="stylesheet">
+<style>
+:root{--page:#fffdf2;--rule:#bcd8f2;--margin:#f4a6a6;--red:#e8412c;--blue:#2f6fe0;--yellow:#fcc419;--green:#32b06b;--purple:#8a52cc;--ink:#2b2a3a;--orange:#ff8a1f;
+--display:'Sniglet','Arial Rounded MT Bold','Trebuchet MS',sans-serif;--hand:'Patrick Hand','Comic Sans MS',cursive}
+*{box-sizing:border-box;margin:0}
+html,body{width:1280px;height:800px;overflow:hidden}
+body{background:var(--page);color:var(--ink);font-family:var(--hand);position:relative;
+background-image:linear-gradient(transparent 39px,var(--rule) 39px,var(--rule) 41px,transparent 41px);background-size:100% 40px;background-position:0 20px}
+.margin{position:absolute;left:118px;top:0;bottom:0;width:3px;background:var(--margin);opacity:.9}
+.holes{position:absolute;left:34px;top:0;bottom:0;width:44px}
+.holes i{position:absolute;left:0;width:44px;height:44px;border-radius:50%;background:#e9e4d4;box-shadow:inset 3px 4px 7px rgba(0,0,0,.25)}
+nav{position:absolute;top:22px;left:150px;right:56px;display:flex;justify-content:space-between;align-items:center;z-index:5}
+.logo{font-family:var(--display);font-size:34px;display:flex;align-items:center;gap:10px;color:var(--ink)}
+.logo svg{width:44px;height:44px}
+.links{display:flex;gap:26px;font-size:24px;align-items:center}
+.links .go{background:var(--yellow);padding:6px 20px 8px;border-radius:30px 14px 28px 12px/14px 28px 12px 30px;border:3px solid var(--ink);transform:rotate(-2deg)}
+.hero{position:absolute;left:150px;top:112px;width:600px;z-index:3}
+.hello{font-size:30px;color:var(--blue);transform:rotate(-2deg);display:inline-block}
+h1{font-family:var(--display);font-weight:800;font-size:106px;line-height:.98;margin-top:2px;letter-spacing:-.01em;filter:url(#crayon)}
+h1 span{display:inline-block}
+p.lead{font-size:29px;line-height:40px;margin-top:20px;max-width:530px}
+.btns{display:flex;gap:18px;margin-top:20px;align-items:center}
+.btn{white-space:nowrap;font-family:var(--display);font-size:24px;padding:13px 26px 15px;border:4px solid var(--ink);color:#fff;background:var(--red);border-radius:40px 16px 36px 14px/16px 36px 14px 40px;box-shadow:5px 6px 0 var(--ink)}
+.btn.b{background:#fff;color:var(--ink)}
+.worksheet{position:absolute;right:60px;top:100px;width:420px;height:520px;background:#fff;transform:rotate(3deg);box-shadow:0 18px 30px rgba(40,40,80,.22);padding:26px 28px;z-index:3;border:2px solid #ece6d0}
+.tape{position:absolute;width:120px;height:36px;background:rgba(252,196,25,.55);top:-16px;left:150px;transform:rotate(-4deg);clip-path:polygon(0 10%,5% 0,10% 12%,15% 0,100% 0,96% 50%,100% 100%,0 100%,4% 50%)}
+.worksheet h3{font-family:var(--display);font-size:28px;color:var(--purple)}
+.worksheet .q{font-size:25px;margin-top:2px}
+.ducks{position:absolute;left:0;top:118px;width:420px;height:260px}
+.sum{position:absolute;left:28px;right:28px;bottom:26px;display:flex;align-items:center;gap:12px;font-family:var(--display);font-size:46px}
+.box{width:78px;height:68px;border:4px solid var(--ink);border-radius:18px 8px 16px 10px;display:grid;place-items:center;color:var(--green);font-family:var(--hand);font-size:60px;transform:rotate(-2deg)}
+.star{position:absolute;right:34px;top:592px;width:150px;height:150px;transform:rotate(-12deg);z-index:6;filter:drop-shadow(0 6px 8px rgba(0,0,0,.25))}
+.star text{font-family:var(--display)}
+.note{position:absolute;left:830px;top:640px;font-size:30px;color:var(--purple);transform:rotate(-4deg);z-index:4;display:flex;gap:6px;align-items:flex-end}
+.note svg{width:90px;height:60px;order:2}
+.stats{position:absolute;left:150px;bottom:34px;display:flex;gap:16px;z-index:4;font-size:22px}
+.stats div{background:#fff;border:3px solid var(--ink);padding:6px 16px 8px;border-radius:24px 10px 22px 12px/12px 22px 10px 24px;box-shadow:3px 4px 0 var(--ink)}
+.stats b{font-family:var(--display);font-size:26px;color:var(--blue)}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+  <filter id="crayon" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="3" result="w"/>
+    <feDisplacementMap in="SourceGraphic" in2="w" scale="4" result="d"/>
+    <feTurbulence type="fractalNoise" baseFrequency="1.1" numOctaves="2" seed="8" result="g"/>
+    <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.6 2.15" result="m"/>
+    <feComposite in="d" in2="m" operator="in"/>
+  </filter>
+</defs></svg>
+<div class="margin"></div>
+<div class="holes"><i style="top:90px"></i><i style="top:330px"></i><i style="top:570px"></i></div>
+<nav>
+  <div class="logo"><svg viewBox="0 0 44 44"><path d="M14 36 28 6l6 4-10 30z" fill="#e8412c" stroke="#2b2a3a" stroke-width="3" stroke-linejoin="round"/><path d="M14 36l-3 6 8-3z" fill="#fcc419" stroke="#2b2a3a" stroke-width="2.5" stroke-linejoin="round"/></svg>Crayon Corner</div>
+  <div class="links"><span>Classes</span><span>Teachers</span><span>Parents</span><span class="go">Join free</span></div>
+</nav>
+<section class="hero">
+  <span class="hello">Online school for ages 5 to 9</span>
+  <h1><span style="color:var(--red)">L</span><span style="color:var(--orange);transform:rotate(-4deg)">e</span><span style="color:var(--green)">a</span><span style="color:var(--blue);transform:rotate(3deg)">r</span><span style="color:var(--purple)">n</span> <span style="color:var(--ink)">out</span><br><span style="color:var(--blue)">l</span><span style="color:var(--red);transform:rotate(4deg)">o</span><span style="color:var(--green)">u</span><span style="color:var(--purple);transform:rotate(-3deg)">d</span><span style="color:var(--orange)">!</span></h1>
+  <p class="lead">Live, tiny classes in reading, maths and science. Every kid gets a teacher who knows their name and their favourite dinosaur.</p>
+  <div class="btns"><a class="btn">Book a free class</a><a class="btn b">Meet teachers</a></div>
+</section>
+
+<section class="worksheet">
+  <div class="tape"></div>
+  <h3>Today's mission</h3><div class="q">How many ducks are in the pond?</div>
+  <svg class="ducks" viewBox="0 0 420 260" filter="url(#crayon)">
+    <ellipse cx="210" cy="170" rx="190" ry="78" fill="#7cc4ff" stroke="#2f6fe0" stroke-width="5"/>
+    <path d="M70 170q20-14 40 0M280 190q22-14 44 0M170 208q18-12 36 0" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <g id="duck"><path d="M96 150c0-30 40-30 46-6 12-2 16 10 10 18-14 16-50 14-56-12z" fill="#fcc419" stroke="#2b2a3a" stroke-width="4" stroke-linejoin="round"/><path d="M142 138l16 4-16 6z" fill="#ff8a1f" stroke="#2b2a3a" stroke-width="3"/><circle cx="132" cy="134" r="3.5" fill="#2b2a3a"/></g>
+    <g transform="translate(-70 -26)"><use href="#duck"/></g>
+    <g transform="translate(14 -34)"><use href="#duck"/></g>
+    <g transform="translate(110 -34)"><use href="#duck"/></g>
+    <g transform="translate(196 -2)"><use href="#duck"/></g>
+    <g transform="translate(60 46)"><use href="#duck"/></g>
+  </svg>
+  <div class="sum"><span>=</span><div class="box">5</div><span style="color:var(--green);font-size:34px">great!</span></div>
+</section>
+
+<svg class="star" viewBox="-80 -80 160 160"><path d="M0-72 21-24 72-20 33 14 44 66 0 38-44 66-33 14-72-20-21-24z" fill="#fcc419" stroke="#2b2a3a" stroke-width="5" stroke-linejoin="round"/><circle cx="-14" cy="-6" r="5" fill="#2b2a3a"/><circle cx="14" cy="-6" r="5" fill="#2b2a3a"/><path d="M-14 12q14 14 28 0" stroke="#2b2a3a" stroke-width="5" fill="none" stroke-linecap="round"/><text y="62" text-anchor="middle" font-size="0">.</text></svg>
+<div class="note"><svg viewBox="0 0 90 60" fill="none" stroke="#8a52cc" stroke-width="4" stroke-linecap="round"><path d="M6 8C30 6 62 18 80 48M80 48l-4-18M80 48l-18-8"/></svg>gold stars for<br>trying hard!</div>
+<div class="stats"><div><b>1,800</b> kids</div><div><b>9</b> kids per class, max</div><div><b>4.9</b> parent rating</div></div>
+</body></html>

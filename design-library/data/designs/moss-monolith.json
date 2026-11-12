@@ -1,0 +1,232 @@
+{
+  "category": {
+    "id": "moss-monolith",
+    "name": "Moss & Monolith",
+    "tagline": "stone, paper and living green",
+    "description": "Calm, material-led layouts: raw concrete, white gallery walls, soft botanical collage and fashion plates on oat paper. Sparse type, deliberate gaps and a single focal object per page. For architects, galleries, wellness brands and stylists who let the work speak.",
+    "vibes": [
+      "minimal",
+      "elegant",
+      "organic",
+      "artistic"
+    ],
+    "accent": "#5f7a4e"
+  },
+  "designs": [
+    {
+      "id": "brandt-monolith",
+      "name": "Brandt Monolith",
+      "descriptor": "board-formed concrete x architecture studio",
+      "summary": "A split screen: a light-weight grotesk headline and a monospaced project index on grey paper, facing a single cast-concrete tower with a lamplit slit.",
+      "keywords": [
+        "board-formed concrete texture",
+        "50/50 split layout",
+        "monospaced project index",
+        "dimension line annotation",
+        "crosshair registration marks",
+        "one slot of warm light"
+      ],
+      "vibes": [
+        "minimal",
+        "serious",
+        "cool",
+        "artistic"
+      ],
+      "best_for": [
+        "architecture studios",
+        "design engineers",
+        "property developers"
+      ],
+      "palette": [
+        "#dcdad5",
+        "#c7c4be",
+        "#161616",
+        "#8a8781",
+        "#f0dfae"
+      ],
+      "references": [
+        {
+          "title": "Website design for an architectural company",
+          "url": "https://www.dribbble.com/shots/23460453-Website-design-for-an-architectural-company",
+          "source": "dribbble"
+        },
+        {
+          "title": "Minimalist architecture portfolio essentials",
+          "url": "https://www.portfoliobox.com/magazine/essential-elements-of-minimalist-architecture-portfolio",
+          "source": "other"
+        },
+        {
+          "title": "Arch studio website and brand identity",
+          "url": "https://contra.com/p/YmMNYgWN-arch-studio-website-and-brand-identity-development",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Draw the tower as flat SVG polygons: a lit front face, a darker receding side face and one cantilevered slab. Create the formwork look with feTurbulence stretched along y (baseFrequency '.9 .012'), thresholded with feColorMatrix and laid over the face with multiply, plus a 22px repeating 1px-line pattern. Keep the page strictly monochrome and let one small warm rectangle be the only colour. Headline is Inter Tight weight 200 at 118px with -0.055em tracking; the table uses hairline top borders and mono labels.",
+      "image": "assets/designs/brandt-monolith.png",
+      "mockup": "designs-src/brandt-monolith/index.html",
+      "fonts": {
+        "display": "Inter Tight",
+        "body": "Inter Tight",
+        "mono": "DM Mono"
+      }
+    },
+    {
+      "id": "oru-gallery-void",
+      "name": "Oru Gallery Void",
+      "descriptor": "white cube x ink painting",
+      "summary": "An empty gallery wall with a window of light, one ink enso on washi and a tiny museum label. Type stays at three sizes and the whitespace does the work.",
+      "keywords": [
+        "diagonal window light on wall",
+        "single hung artwork",
+        "museum wall label",
+        "tiny grotesk nav",
+        "italic serif title",
+        "floor reflection"
+      ],
+      "vibes": [
+        "minimal",
+        "light",
+        "elegant",
+        "artistic"
+      ],
+      "best_for": [
+        "galleries and museums",
+        "artist portfolios",
+        "auction and print houses"
+      ],
+      "palette": [
+        "#f2f1ed",
+        "#e2e0da",
+        "#0e0e0e",
+        "#8c8a84",
+        "#f7f5ef"
+      ],
+      "references": [
+        {
+          "title": "Hotel Mono, monochrome minimal typography concept",
+          "url": "https://dribbble.com/mathieuserrano/collections/3436117-Divers-inspiration",
+          "source": "dribbble"
+        },
+        {
+          "title": "Webflow architecture studio theme for minimalists",
+          "url": "https://webflow.com/website/architecture-studio-portfolio-theme",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Paint the wall with a vertical gradient and two stacked translucent white parallelograms (linear-gradient at 112deg with hard stops) for the window light. The artwork is an SVG paper panel with feTurbulence washi fibre, hung with a layered box-shadow (tight contact shadow plus a long soft drop). Draw the brush ring as a variable-width polygon in JS, rough its edges with feDisplacementMap and cut thin paper-coloured dry-brush arcs through it. Use only 12px, 15px and 46px type sizes.",
+      "image": "assets/designs/oru-gallery-void.png",
+      "mockup": "designs-src/oru-gallery-void/index.html",
+      "fonts": {
+        "display": "Newsreader",
+        "body": "Albert Sans"
+      }
+    },
+    {
+      "id": "fernhill-clay-spa",
+      "name": "Fernhill Clay Spa",
+      "descriptor": "cut-paper botanical x wellness retreat",
+      "summary": "Sage-green ground, a chunky rounded serif and pill-shaped controls beside a pebble-shaped collage of layered ferns, a clay sun and a stack of stones.",
+      "keywords": [
+        "cut-paper fern collage",
+        "pebble blob shape",
+        "pill nav and buttons",
+        "stacked stones",
+        "paper grain overlay",
+        "clay and moss palette"
+      ],
+      "vibes": [
+        "organic",
+        "friendly",
+        "warm",
+        "handcrafted"
+      ],
+      "best_for": [
+        "spas and retreats",
+        "herbal and skincare brands",
+        "ceramics studios"
+      ],
+      "palette": [
+        "#cdd5bb",
+        "#2e4631",
+        "#587a4a",
+        "#d79a84",
+        "#f3efe3"
+      ],
+      "references": [
+        {
+          "title": "Willow Wellness, earthy neutral wellness site",
+          "url": "https://www.designrush.com/best-designs/websites/willow-wellness-website-design",
+          "source": "other"
+        },
+        {
+          "title": "Laura Waterhouse, holistic therapy site with organic aesthetics",
+          "url": "https://www.designrush.com/best-designs/websites/laura-waterhouse-website-design",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Clip the collage to an asymmetric cubic-bezier pebble path and offset a thin outline copy of it behind for a print-misregistration feel. Generate each frond in JS as a curved rachis path with alternating leaflets whose size follows a sine curve, in six greens, with a feDropShadow under the sun and stones. Multiply a tiny inline SVG noise tile across the whole page for paper grain. Make every UI element fully rounded and keep the headline at 92px with -0.025em tracking, one word in clay.",
+      "image": "assets/designs/fernhill-clay-spa.png",
+      "mockup": "designs-src/fernhill-clay-spa/index.html",
+      "fonts": {
+        "display": "Young Serif",
+        "body": "Figtree"
+      }
+    },
+    {
+      "id": "lindqvist-lookbook",
+      "name": "Lindqvist Lookbook",
+      "descriptor": "oat paper x fashion portfolio",
+      "summary": "A wide-tracked Italiana wordmark above three staggered portrait plates of paper-cut silhouettes that run off the bottom edge, with a quiet index column at left.",
+      "keywords": [
+        "extra-wide tracked wordmark",
+        "staggered portrait plates",
+        "bleeding off bottom edge",
+        "paper-cut figure silhouettes",
+        "oat and espresso palette",
+        "numbered caption on each plate"
+      ],
+      "vibes": [
+        "elegant",
+        "artistic",
+        "warm",
+        "luxury"
+      ],
+      "best_for": [
+        "stylists and photographers",
+        "fashion designers",
+        "creative directors"
+      ],
+      "palette": [
+        "#dad1c4",
+        "#efe9df",
+        "#251c17",
+        "#b98a82",
+        "#4d4036"
+      ],
+      "references": [
+        {
+          "title": "Luxury Fashion Website Concept Design",
+          "url": "https://contra.com/p/AWkrYeWL-luxury-fashion-website-concept-design",
+          "source": "other"
+        },
+        {
+          "title": "Louis Vuitton Collectibles on Awwwards",
+          "url": "https://www.awwwards.com/sites/louis-vuitton-collectibles",
+          "source": "awwwards"
+        },
+        {
+          "title": "Luxury Editorial Website for Atelier Noir",
+          "url": "https://contra.com/p/qXBrBvEg-luxury-editorial-website-for-atelier-noir",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Set the wordmark in a thin display face at 112px with 0.17em letter-spacing and matching left padding so it centres optically. Position three plates absolutely with different tops and heights, each taller than the remaining viewport so they crop at the fold. Build each figure from a handful of SVG shapes (head ellipse, neck, a single coat, cape or trouser silhouette) with one linear gradient for fabric and one radial light on the backdrop. Captions are 10px caps with the plate number first.",
+      "image": "assets/designs/lindqvist-lookbook.png",
+      "mockup": "designs-src/lindqvist-lookbook/index.html",
+      "fonts": {
+        "display": "Italiana",
+        "body": "Instrument Sans"
+      }
+    }
+  ]
+}

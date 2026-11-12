@@ -1,0 +1,234 @@
+{
+  "category": {
+    "id": "press-room-pulp",
+    "name": "Press Room Pulp",
+    "tagline": "ink, paper and the smell of the print shop",
+    "description": "Websites that borrow from the physical print workflow: risograph overprints, newsprint broadsheets, photocopied zines and press proofs with crop marks. Grain, misregistration and ink-on-stock colour make screens feel tactile. Best for studios, publishers, makers and any brand that wants to feel printed rather than rendered.",
+    "vibes": [
+      "editorial",
+      "handcrafted",
+      "warm",
+      "retro"
+    ],
+    "accent": "#ff48a0"
+  },
+  "designs": [
+    {
+      "id": "twin-drum-riso",
+      "name": "Twin Drum Riso",
+      "descriptor": "risograph x halftone",
+      "summary": "Two spot inks overprint on warm stock, with a canvas-drawn halftone sun and a serif headline that mixes pink and blue like a real two-drum print.",
+      "keywords": [
+        "pink and blue overprint",
+        "halftone dot gradients",
+        "misregistered shapes",
+        "paper grain overlay",
+        "serif headline in spot colour",
+        "mono spec labels"
+      ],
+      "vibes": [
+        "creative",
+        "handcrafted",
+        "warm",
+        "bold"
+      ],
+      "best_for": [
+        "print studios",
+        "indie publishers",
+        "zine shops",
+        "illustrators"
+      ],
+      "palette": [
+        "#efe9dc",
+        "#1c1a2e",
+        "#ff48a0",
+        "#2447e0",
+        "#ffd23f"
+      ],
+      "fonts": {
+        "display": "Young Serif",
+        "body": "Space Mono",
+        "mono": "Space Mono"
+      },
+      "image": "assets/designs/twin-drum-riso.png",
+      "mockup": "designs-src/twin-drum-riso/index.html",
+      "references": [
+        {
+          "title": "Riso-style editorial landing templates (Kombai gallery)",
+          "url": "https://kombai.com/gallery/inspirations/panel-pop/",
+          "source": "other"
+        },
+        {
+          "title": "Editorial landing pages collection on Dribbble",
+          "url": "https://dribbble.com/thejasonsanders/collections/5112616-CAS",
+          "source": "dribbble"
+        }
+      ],
+      "how_to_build": "Draw halftone dots on a canvas by looping a rotated grid and scaling each circle by a gradient function, one layer per ink at different screen angles. Set the canvas to mix-blend-mode: multiply so pink and blue overprint into plum. Add an SVG feTurbulence grain over the page with multiply, and keep text colours as flat spot inks."
+    },
+    {
+      "id": "harbour-ledger-salmon",
+      "name": "Harbour Ledger Salmon",
+      "descriptor": "financial daily x newsprint",
+      "summary": "A salmon-pink financial newspaper front page in bottle green ink, with a Bodoni masthead, drop cap, freight index chart and a ticker column.",
+      "keywords": [
+        "salmon newsprint ground",
+        "Bodoni masthead",
+        "bottle-green single ink",
+        "drop cap and justified columns",
+        "framed line chart",
+        "dotted price ticker"
+      ],
+      "vibes": [
+        "editorial",
+        "serious",
+        "warm",
+        "data-driven"
+      ],
+      "best_for": [
+        "newsletters",
+        "financial media",
+        "research publications",
+        "industry data products"
+      ],
+      "palette": [
+        "#f5d5c0",
+        "#0d3a2c",
+        "#b3261e",
+        "#efc8b0"
+      ],
+      "fonts": {
+        "display": "Bodoni Moda",
+        "body": "Source Serif 4",
+        "mono": "IBM Plex Mono"
+      },
+      "image": "assets/designs/harbour-ledger-salmon.png",
+      "mockup": "designs-src/harbour-ledger-salmon/index.html",
+      "references": [
+        {
+          "title": "Editorial Swiss and newspaper style guides on Pinterest-style boards (design-taste)",
+          "url": "https://design-taste-web.vercel.app/pin/minimalist-editorial-swiss-style-editorial-design-cultural-institution-4e9b85c5",
+          "source": "other"
+        },
+        {
+          "title": "Media and editorial website design (Tubik)",
+          "url": "https://tubikstudio.com/blog/media-editorial-website-design/",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Use a one-ink palette: a tinted paper background and a single dark green for type, rules and fills, with red only for movement. Build the layout with a 3-column CSS grid separated by 1px rules, a thick-thin double rule under the masthead and a CSS column-count body with ::first-letter drop cap. Set Bodoni Moda with a mid opsz so hairlines survive at headline size, and draw the chart as inline SVG with tabular mono labels."
+    },
+    {
+      "id": "photocopy-club-zine",
+      "name": "Photocopy Club Zine",
+      "descriptor": "xerox collage x ransom note",
+      "summary": "A grey photocopy sheet with a ransom-note masthead, taped halftone cassette, typewriter copy, a highlighter swipe and a red rubber stamp.",
+      "keywords": [
+        "ransom-note cut-out letters",
+        "photocopy noise and streaks",
+        "masking tape strips",
+        "highlighter yellow",
+        "typewriter text on paper scraps",
+        "rubber stamp"
+      ],
+      "vibes": [
+        "creative",
+        "handcrafted",
+        "bold",
+        "youthful"
+      ],
+      "best_for": [
+        "zine distros",
+        "record labels",
+        "independent bookstores",
+        "protest and community groups"
+      ],
+      "palette": [
+        "#d9d8d2",
+        "#141414",
+        "#ffe83a",
+        "#d8261c",
+        "#f4f3ee"
+      ],
+      "fonts": {
+        "display": "Anton",
+        "body": "Courier Prime",
+        "mono": "Special Elite"
+      },
+      "image": "assets/designs/photocopy-club-zine.png",
+      "mockup": "designs-src/photocopy-club-zine/index.html",
+      "references": [
+        {
+          "title": "Brutalist editorial spreads (zine and photocopy roots)",
+          "url": "https://thomashardwickdesign.myportfolio.com/brutalist-editorial-spreads",
+          "source": "other"
+        },
+        {
+          "title": "Brutalist editorial fashion landing page",
+          "url": "https://enter.converge.ai/marketplace/templates/f84b1635f1f2414998ae0fca817fec87",
+          "source": "other"
+        },
+        {
+          "title": "Magazine and newspaper sites on maxibestof",
+          "url": "https://maxibestof.one/websites/magazine-newspaper-blog",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Generate the masthead with a few lines of JS: wrap each letter in an inline-block with a random font, background (white, black, yellow), size and slight rotation. Cut-out scraps are absolutely positioned blocks with small rotations and hard offset shadows. A multiply-blended feTurbulence noise layer plus faint vertical gradient streaks gives the photocopier feel; the cassette is inline SVG with a halftone pattern and a contrast filter."
+    },
+    {
+      "id": "registro-kraft-proof",
+      "name": "Registro Kraft Proof",
+      "descriptor": "press proof x kraft stock",
+      "summary": "A trimmed white page floating on kraft board, surrounded by crop marks, registration targets, slug lines and CMYK colour bars, with an overprinting circle diagram as the hero.",
+      "keywords": [
+        "kraft board background",
+        "crop and registration marks",
+        "CMYK colour bar",
+        "dashed fold line",
+        "multiply-blended process circles",
+        "mono slug text"
+      ],
+      "vibes": [
+        "editorial",
+        "handcrafted",
+        "warm",
+        "creative"
+      ],
+      "best_for": [
+        "print shops",
+        "packaging studios",
+        "paper brands",
+        "graphic design portfolios"
+      ],
+      "palette": [
+        "#bf9f72",
+        "#f6f1e6",
+        "#1d140d",
+        "#00a3dd",
+        "#e5097f",
+        "#ffd500"
+      ],
+      "fonts": {
+        "display": "Bricolage Grotesque",
+        "body": "DM Mono",
+        "mono": "DM Mono"
+      },
+      "image": "assets/designs/registro-kraft-proof.png",
+      "mockup": "designs-src/registro-kraft-proof/index.html",
+      "references": [
+        {
+          "title": "Swiss and editorial layout guide (Readymag Almanac)",
+          "url": "https://readymag.com/almanac/grid/practice",
+          "source": "other"
+        },
+        {
+          "title": "Editorial design guide for 2026",
+          "url": "https://madegooddesigns.com/editorial-design-guide/",
+          "source": "other"
+        }
+      ],
+      "how_to_build": "Fill the viewport with a kraft colour and a stretched fibre texture from feTurbulence with a low horizontal frequency. Place the content sheet as an inner box with a soft contact shadow, then draw crop marks as 1.5px absolutely positioned lines and registration targets with ::before/::after crosshairs. Overlap three SVG circles with mix-blend-mode: multiply for live CMY mixing, and use tight negative tracking on a heavy grotesque for the headline."
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Northlight — agent workspace under aurora</title>
+<meta name="viewport" content="width=1280">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Red+Hat+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: a polar night sky. Aurora curtains fill the top two-thirds, a dark ridge line carries a left-aligned headline, and a frosted-glass agent run floats on the right edge. */
+:root{
+  --night:#03060d; --teal:#2de2c0; --jade:#7dffa8; --rose:#e65bd0; --ice:#e8f3f2; --mute:#8aa3a6;
+  --glass:rgba(10,20,28,.52); --glass-line:rgba(180,255,240,.16);
+  --display:'Bricolage Grotesque','Inter',system-ui,sans-serif; --mono:'Red Hat Mono','DejaVu Sans Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--night)}
+body{font-family:var(--display);color:var(--ice);position:relative}
+canvas{position:absolute;inset:0}
+nav{position:absolute;left:56px;right:56px;top:28px;display:flex;align-items:center;gap:36px;font-size:14.5px;z-index:4}
+.logo{font-weight:600;font-size:21px;letter-spacing:-.02em;display:flex;align-items:center;gap:10px;margin-right:auto}
+.logo i{width:20px;height:20px;border-radius:50%;background:conic-gradient(from 200deg,var(--teal),var(--jade),var(--rose),var(--teal));display:block;box-shadow:0 0 18px rgba(45,226,192,.55)}
+nav a{color:#b8cfd0}
+.pill{padding:9px 18px;border-radius:99px;background:rgba(255,255,255,.08);border:1px solid var(--glass-line);backdrop-filter:blur(8px);color:var(--ice)}
+.hero{position:absolute;left:56px;top:374px;width:720px;z-index:4}
+.chip{display:inline-flex;gap:10px;align-items:center;font-family:var(--mono);font-size:12px;color:var(--teal);margin-bottom:20px;letter-spacing:.04em}
+.chip b{width:6px;height:6px;border-radius:50%;background:var(--teal);box-shadow:0 0 10px var(--teal)}
+h1{font-weight:300;font-size:64px;line-height:1;letter-spacing:-.042em;text-shadow:0 2px 40px rgba(3,6,13,.8)}
+h1 em{font-style:normal;font-weight:600;background:linear-gradient(95deg,var(--teal),var(--jade) 45%,#f1a6e8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{margin-top:22px;font-size:17.5px;line-height:1.55;color:#b9cfcf;max-width:520px;font-weight:300}
+.cta{display:flex;gap:12px;margin-top:28px}
+.cta .p{padding:14px 24px;border-radius:99px;background:var(--ice);color:#04100f;font-weight:600;font-size:15px;box-shadow:0 0 40px rgba(45,226,192,.35)}
+.cta .s{padding:14px 22px;border-radius:99px;border:1px solid var(--glass-line);background:var(--glass);backdrop-filter:blur(10px);font-size:15px}
+.run{position:absolute;right:56px;top:226px;width:398px;z-index:4;border-radius:20px;background:var(--glass);border:1px solid var(--glass-line);backdrop-filter:blur(22px);box-shadow:0 30px 80px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.12);padding:20px 20px 18px}
+.run header{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;color:var(--mute);margin-bottom:14px}
+.run header b{color:var(--ice);font-weight:500}
+.prompt{font-size:15.5px;line-height:1.45;margin-bottom:16px;font-weight:400}
+.step{display:flex;gap:12px;align-items:flex-start;padding:10px 0;border-top:1px solid rgba(180,255,240,.09);font-size:13.5px;color:#cfe4e3}
+.step em{font-style:normal;font-family:var(--mono);font-size:11px;color:var(--mute);display:block;margin-top:2px}
+.ok,.run-s,.wait{flex:none;width:18px;height:18px;border-radius:50%;margin-top:1px;display:grid;place-items:center;font-size:10px}
+.ok{background:rgba(45,226,192,.18);color:var(--teal);border:1px solid rgba(45,226,192,.5)}
+.run-s{border:1.5px solid var(--jade);border-top-color:transparent;transform:rotate(30deg)}
+.wait{border:1px dashed #4d6568}
+.bar{height:3px;border-radius:3px;background:rgba(255,255,255,.1);margin-top:14px;overflow:hidden}
+.bar i{display:block;width:62%;height:100%;background:linear-gradient(90deg,var(--teal),var(--jade),var(--rose))}
+.foot{position:absolute;left:56px;right:56px;bottom:24px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;color:#5b7477;z-index:4;letter-spacing:.04em}
+</style>
+</head>
+<body>
+<canvas id="sky" width="1280" height="800"></canvas>
+<nav>
+  <div class="logo"><i></i>northlight</div>
+  <a>Agents</a><a>Workflows</a><a>Pricing</a><a>Customers</a><span class="pill">Open workspace</span>
+</nav>
+<section class="hero">
+  <div class="chip"><b></b>NORTHLIGHT 3 · long-running agents, now generally available</div>
+  <h1>Work that keeps going<br>while you <em>sleep.</em></h1>
+  <p class="sub">Hand Northlight a goal and a budget. It plans, runs tools, checks its own work and leaves you a finished draft by morning.</p>
+  <div class="cta"><span class="p">Start your first run</span><span class="s">Watch 2-min demo</span></div>
+</section>
+<aside class="run">
+  <header><b>run_7f3a · Q3 churn review</b><span>04:12 elapsed</span></header>
+  <p class="prompt">Find why enterprise churn rose in Q3 and draft a one-page memo for Monday.</p>
+  <div class="step"><span class="ok">✓</span><div>Pulled 4,210 cancelled-account records<em>warehouse.query · 38s</em></div></div>
+  <div class="step"><span class="ok">✓</span><div>Clustered 612 support threads into 7 themes<em>analysis.cluster · 1m 52s</em></div></div>
+  <div class="step"><span class="run-s"></span><div>Checking pricing-change timeline against exits<em>running · est. 1m left</em></div></div>
+  <div class="step"><span class="wait"></span><div style="color:#7a9496">Draft memo and cite every figure</div></div>
+  <div class="bar"><i></i></div>
+</aside>
+<div class="foot"><span>trusted by teams at 1,900 companies</span><span>65.3°N 17.1°W · kp index 5</span></div>
+<script>
+(function(){
+  const c=document.getElementById('sky'),x=c.getContext('2d'),W=1280,H=800;
+  function h(i){let v=Math.sin(i*91.7)*43758.5453;return v-Math.floor(v);}
+  // sky gradient
+  let g=x.createLinearGradient(0,0,0,H);g.addColorStop(0,'#02040a');g.addColorStop(.55,'#061220');g.addColorStop(1,'#03060d');x.fillStyle=g;x.fillRect(0,0,W,H);
+  for(let i=0;i<260;i++){const a=0.15+h(i+3)*0.7;x.fillStyle='rgba(220,240,240,'+a+')';const s=h(i+9)>0.93?1.6:0.9;x.fillRect(h(i)*W,h(i+50)*H*0.75,s,s);}
+  // aurora curtains
+  x.globalCompositeOperation='lighter';
+  const ribbons=[{y:300,amp:70,f:0.0042,ph:0.6,hgt:300,col:[45,226,192],a:.55},{y:280,amp:90,f:0.0031,ph:2.1,hgt:340,col:[110,255,170],a:.4},{y:330,amp:60,f:0.0057,ph:4.0,hgt:260,col:[230,91,208],a:.28}];
+  x.filter='blur(3px)';
+  ribbons.forEach((r,ri)=>{
+    for(let px=-10;px<W+10;px+=2){
+      const wob=Math.sin(px*r.f+r.ph)*r.amp+Math.sin(px*r.f*2.3+r.ph*1.7)*r.amp*0.35;
+      const yb=r.y+wob+ (px/W)*(ri===1?-40:30);
+      const stripe=0.55+0.45*Math.sin(px*0.071+ri*1.3)*Math.sin(px*0.013+ri);
+      const hh=r.hgt*(0.45+0.55*Math.abs(Math.sin(px*0.0061+r.ph)))*(0.7+0.3*stripe);
+      const gr=x.createLinearGradient(0,yb-hh,0,yb+14);
+      const c0='rgba('+r.col.join(',')+',';
+      gr.addColorStop(0,c0+'0)');gr.addColorStop(.7,c0+(r.a*0.35*stripe)+')');gr.addColorStop(.93,c0+(r.a*stripe)+')');gr.addColorStop(1,c0+'0)');
+      x.fillStyle=gr;x.fillRect(px,yb-hh,2.4,hh+14);
+    }
+  });
+  x.filter='none';x.globalCompositeOperation='source-over';
+  // ridge silhouette + reflection haze
+  x.fillStyle='#03060d';x.beginPath();x.moveTo(0,H);
+  let yy=0;for(let px=0;px<=W;px+=8){yy=640+Math.sin(px*0.006+1)*28+Math.sin(px*0.017)*14+Math.sin(px*0.0021+3)*40;x.lineTo(px,yy);}
+  x.lineTo(W,H);x.closePath();x.fill();
+  const gg=x.createLinearGradient(0,380,0,700);gg.addColorStop(0,'rgba(3,6,13,0)');gg.addColorStop(1,'rgba(3,6,13,.88)');x.fillStyle=gg;x.fillRect(0,380,W,320);
+  // text-safe darkening on the left
+  const lg=x.createRadialGradient(240,560,20,240,560,520);lg.addColorStop(0,'rgba(3,6,13,.75)');lg.addColorStop(1,'rgba(3,6,13,0)');x.fillStyle=lg;x.fillRect(0,0,W,H);
+  // film grain to prevent banding
+  const id=x.getImageData(0,0,W,H),d=id.data;for(let i=0;i<d.length;i+=4){const n=(Math.random()-.5)*7;d[i]+=n;d[i+1]+=n;d[i+2]+=n;}x.putImageData(id,0,0);
+})();
+</script>
+</body>
+</html>

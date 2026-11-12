@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Photocopy Club Distro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Special+Elite&family=Playfair+Display:ital,wght@0,900;1,700&family=Courier+Prime:wght@400;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+<style>
+/* Layout: cut-and-paste collage on a grey photocopy sheet: ransom-note masthead, taped cassette plate, typed column, highlighter strip */
+:root{
+  --sheet:#d9d8d2; --toner:#141414; --hl:#ffe83a; --stamp:#d8261c; --white:#f4f3ee;
+  --anton:'Anton','Impact',sans-serif; --type:'Special Elite','Courier New',monospace; --cour:'Courier Prime','Courier New',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden;background:var(--sheet);color:var(--toner);font-family:var(--cour)}
+.noise{position:absolute;inset:0;z-index:20;pointer-events:none;mix-blend-mode:multiply;opacity:.7;
+ background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' seed='9'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1.4 -.55'/></filter><rect width='400' height='400' filter='url(%23n)'/></svg>")}
+.streak{position:absolute;top:0;bottom:0;left:1090px;width:7px;background:linear-gradient(#0000,#0003 20%,#0000 60%,#0002);z-index:19}
+.streak.b{left:96px;width:3px}
+header{position:absolute;top:26px;left:34px;right:34px;display:flex;justify-content:space-between;align-items:center;font-family:var(--type);font-size:15px}
+header span{background:var(--white);padding:4px 10px;transform:rotate(-1deg);box-shadow:2px 2px 0 #0003}
+header nav{display:flex;gap:18px}
+header nav span:nth-child(2){transform:rotate(1.5deg);background:var(--hl)}
+header nav span:nth-child(3){transform:rotate(-2deg)}
+.mast{position:absolute;left:30px;top:84px;width:760px;display:flex;flex-wrap:wrap;gap:6px 4px;align-items:flex-end}
+.mast i{font-style:normal;line-height:1;display:inline-block;padding:2px 9px 0;box-shadow:2px 3px 0 #0002}
+.mast .br{flex-basis:100%;height:0}
+.tape{position:absolute;width:112px;height:34px;background:rgba(255,246,150,.72);box-shadow:0 1px 3px #0004;z-index:6}
+.plate{position:absolute;right:56px;top:94px;width:392px;height:342px;background:var(--white);padding:14px;transform:rotate(3deg);box-shadow:4px 6px 0 #0003;z-index:3}
+.plate svg{display:block;width:100%;height:100%;filter:contrast(1.7) grayscale(1)}
+.plate .cap{position:absolute;left:14px;bottom:-30px;font-family:var(--type);font-size:13px;background:var(--hl);padding:2px 8px;transform:rotate(-2deg)}
+.typed{position:absolute;left:42px;top:420px;width:490px;background:var(--white);padding:22px 26px 22px;transform:rotate(-1.2deg);box-shadow:3px 4px 0 #0003;font-family:var(--type);font-size:16.5px;line-height:1.5}
+.typed b{background:var(--hl);font-weight:400;padding:0 3px}
+.typed s{text-decoration-thickness:2px}
+.cut{position:absolute;left:580px;top:470px;width:330px;background:var(--toner);color:var(--white);padding:16px 18px 18px;transform:rotate(1.8deg);z-index:4}
+.cut h3{font-family:var(--anton);font-weight:400;font-size:44px;line-height:1;letter-spacing:.01em;text-transform:uppercase}
+.cut p{font-family:var(--cour);font-size:14px;margin-top:8px;line-height:1.4}
+.btnrow{position:absolute;left:42px;bottom:36px;display:flex;gap:18px;align-items:center}
+.btn{font-family:var(--anton);font-size:25px;letter-spacing:.06em;text-transform:uppercase;padding:12px 22px 10px;border:4px solid var(--toner);background:var(--hl);transform:rotate(-1.5deg);box-shadow:5px 5px 0 var(--toner)}
+.btn.o{background:var(--white);transform:rotate(1deg);box-shadow:5px 5px 0 var(--toner)}
+.stamp{position:absolute;right:92px;bottom:86px;width:196px;height:196px;border:6px double var(--stamp);border-radius:50%;color:var(--stamp);display:flex;align-items:center;justify-content:center;text-align:center;font-family:var(--anton);font-size:30px;line-height:1;text-transform:uppercase;transform:rotate(-16deg);z-index:7;mix-blend-mode:multiply;opacity:.88}
+.stamp small{display:block;font-family:var(--cour);font-weight:700;font-size:13px;letter-spacing:.1em;margin-top:6px}
+.strip{position:absolute;left:0;right:0;bottom:0;height:30px;background:var(--toner);color:var(--sheet);font-family:var(--anton);font-size:17px;letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;overflow:hidden;white-space:nowrap;z-index:8}
+.arrow{position:absolute;left:520px;top:386px;z-index:9;font-family:var(--type);font-size:15px;transform:rotate(-6deg)}
+</style></head><body>
+<div class="noise"></div><div class="streak"></div><div class="streak b"></div>
+<header><span>Photocopy Club &mdash; est. 2009</span><nav><span>Catalogue</span><span>Submit a zine</span><span>Stockists</span><span>Basket (3)</span></nav></header>
+<div class="mast" id="mast"></div>
+<div class="tape" style="left:790px;top:78px;transform:rotate(-24deg)"></div>
+<div class="plate">
+  <svg viewBox="0 0 360 300">
+    <defs><pattern id="h" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(30)"><circle cx="2.5" cy="2.5" r="1.4" fill="#000"/></pattern>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#555"/></linearGradient></defs>
+    <rect width="360" height="300" fill="#bbb"/>
+    <rect x="0" y="200" width="360" height="100" fill="url(#h)"/>
+    <rect x="30" y="50" width="300" height="190" rx="14" fill="#111"/>
+    <rect x="44" y="64" width="272" height="100" rx="6" fill="#eee"/>
+    <rect x="44" y="64" width="272" height="100" rx="6" fill="url(#h)" opacity=".5"/>
+    <circle cx="112" cy="116" r="34" fill="#111"/><circle cx="248" cy="116" r="34" fill="#111"/>
+    <circle cx="112" cy="116" r="22" fill="#eee"/><circle cx="248" cy="116" r="22" fill="#eee"/>
+    <g stroke="#111" stroke-width="3"><path d="M112 94v44M90 116h44M248 94v44M226 116h44"/></g>
+    <rect x="144" y="100" width="72" height="32" fill="#eee" stroke="#111" stroke-width="3"/>
+    <path d="M60 240 L82 190 H278 L300 240Z" fill="#333"/>
+    <circle cx="96" cy="215" r="9" fill="#ddd"/><circle cx="264" cy="215" r="9" fill="#ddd"/>
+    <text x="52" y="184" font-family="Anton" font-size="14" fill="#eee" letter-spacing="2">C-60 &#183; SIDE A &#183; DUBBED AT WORK</text>
+  </svg>
+  <div class="cap">fig. 1 &mdash; our first (and only) mixtape</div>
+</div>
+<div class="tape" style="left:500px;top:420px;transform:rotate(12deg)"></div>
+<div class="typed">
+  <p>Zines are <b>free speech with a staple</b> in the spine. We make, copy and post them for people who have something to say and a lunch-break to say it in.</p>
+  <p style="margin-top:12px">312 titles. 40p a copy. <s>No algorithms</s> No nonsense. Every parcel hand-stamped, folded wrong on purpose.</p>
+</div>
+<div class="arrow">&larr; start reading here</div>
+<div class="cut"><h3>New this week</h3><p>&ldquo;How to Leave a Group Chat&rdquo; &middot; Issue 14<br>&ldquo;Bins of Hackney&rdquo; &middot; photocopied photos<br>&ldquo;Nap Manifesto&rdquo; &middot; 8 pp.</p></div>
+<div class="btnrow"><div class="btn">Browse the pile</div><div class="btn o">Make your own</div></div>
+<div class="stamp"><div>Copied<br>not<br>sorry<small>&#9733; 100% TONER &#9733;</small></div></div>
+<div class="strip"><span id="mq"></span></div>
+<script>
+const fonts=["'Anton'","'Playfair Display'","'Special Elite'","'Rubik Mono One'","'Courier Prime'"];
+const bgs=['#f4f3ee','#141414','#ffe83a','#f4f3ee','#141414','#cfcec8'];
+const word=(w,seed,size)=>{
+  const m=document.getElementById('mast');let r=seed;
+  const rnd=()=>{r=(r*9301+49297)%233280;return r/233280};
+  for(const ch of w){
+    if(ch==='|'){const b=document.createElement('div');b.className='br';m.appendChild(b);continue}
+    const i=document.createElement('i');i.textContent=ch;
+    const f=fonts[Math.floor(rnd()*fonts.length)],bg=bgs[Math.floor(rnd()*bgs.length)];
+    i.style.fontFamily=f+',serif';i.style.background=bg;
+    i.style.color=(bg==='#141414')?'#f4f3ee':'#141414';
+    if(f.includes('Playfair'))i.style.fontWeight=900;
+    if(f.includes('Courier'))i.style.fontWeight=700;
+    i.style.fontSize=(size*(0.82+rnd()*0.36))+'px';
+    i.style.transform='rotate('+((rnd()-.5)*9)+'deg) translateY('+((rnd()-.5)*10)+'px)';
+    m.appendChild(i);
+  }
+};
+word('KEEP|COPYING',7,98);
+document.getElementById('mq').textContent=('MAKE ZINES ★ STAPLE THEM ★ GIVE THEM AWAY ★ ').repeat(8);
+</script>
+</body></html>

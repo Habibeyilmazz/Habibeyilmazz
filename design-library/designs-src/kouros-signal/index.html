@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Agalma — Kouros Signal</title>
+<meta name="viewport" content="width=1280">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,900;1,6..96,500;1,6..96,800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: cold-stone page, giant serif thesis left, glitch-sliced marble bust bleeding off right, mono catalogue labels. */
+:root{
+  --stone:#d8dad6; --ink:#0c0d10; --cyan:#00e5ff; --magenta:#ff2bd6; --bone:#f1efe9;
+  --display:"Bodoni Moda","Didot","Bodoni 72",Georgia,serif;
+  --mono:"Space Mono","JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1280px;height:800px;overflow:hidden}
+body{background:var(--stone);color:var(--ink);font-family:var(--mono);position:relative}
+.key{position:absolute;left:0;top:0;width:100%;height:16px;background:var(--ink);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M2 14V2h12v10H6V6h4' fill='none' stroke='%23d8dad6' stroke-width='2'/%3E%3C/svg%3E");}
+nav{position:absolute;left:56px;right:56px;top:40px;display:flex;align-items:center;justify-content:space-between;font-size:12px;letter-spacing:.14em;text-transform:uppercase;z-index:5}
+.logo{font-weight:700;font-size:15px;letter-spacing:.3em;display:flex;gap:10px;align-items:center}
+.logo i{display:block;width:16px;height:16px;border:2px solid var(--ink);transform:rotate(45deg);position:relative}
+.logo i:after{content:"";position:absolute;inset:3px;background:var(--magenta);mix-blend-mode:multiply}
+nav ul{display:flex;gap:34px;list-style:none}
+nav li:first-child{border-bottom:2px solid var(--ink);padding-bottom:3px}
+.live{display:flex;gap:8px;align-items:center}
+.live b{width:8px;height:8px;background:var(--magenta);display:block}
+.hero{position:absolute;left:56px;top:122px;width:700px;z-index:4}
+.eyebrow{font-size:12px;letter-spacing:.16em;text-transform:uppercase;display:flex;gap:16px;margin-bottom:26px}
+.eyebrow span+span:before{content:"/";margin-right:16px;opacity:.5}
+h1{font-family:var(--display);font-weight:900;font-size:122px;line-height:.86;letter-spacing:-.035em}
+h1 em{font-weight:500;font-style:italic;letter-spacing:-.04em}
+.gl{position:relative;display:inline-block}
+.gl:before,.gl:after{content:attr(data-t);position:absolute;left:0;top:0;white-space:nowrap}
+.gl:before{color:var(--cyan);transform:translate(-6px,0);clip-path:polygon(0 18%,100% 18%,100% 46%,0 46%);mix-blend-mode:multiply}
+.gl:after{color:var(--magenta);transform:translate(7px,0);clip-path:polygon(0 58%,100% 58%,100% 80%,0 80%);mix-blend-mode:multiply}
+.lede{margin-top:34px;width:430px;font-size:14px;line-height:1.65}
+.lede b{background:var(--ink);color:var(--stone);padding:0 5px;font-weight:400}
+.cta{margin-top:30px;display:flex;gap:14px}
+.btn{font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;padding:17px 24px;border:2px solid var(--ink);display:flex;gap:14px;align-items:center}
+.btn.p{background:var(--ink);color:var(--stone);box-shadow:6px 6px 0 var(--cyan)}
+.btn.g{background:transparent}
+.statue{position:absolute;right:-30px;top:96px;width:640px;height:860px;z-index:2}
+.fig{position:absolute;right:56px;top:96px;width:222px;font-size:10.5px;line-height:1.55;letter-spacing:.06em;text-transform:uppercase;z-index:6;border-left:2px solid var(--ink);padding-left:12px;background:var(--stone)}
+.fig b{display:block;color:var(--ink);font-size:11px}
+.fig s{text-decoration:none;color:var(--magenta);font-weight:700}
+.bar{position:absolute;left:0;right:0;bottom:0;height:92px;background:var(--ink);color:var(--stone);display:grid;grid-template-columns:repeat(4,1fr);z-index:7}
+.bar div{padding:22px 56px 0 28px;border-left:1px solid #3b3d44;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#9a9ca3}
+.bar div:first-child{padding-left:56px;border-left:0}
+.bar strong{display:block;font-family:var(--display);font-weight:500;font-size:34px;letter-spacing:-.01em;color:var(--bone);text-transform:none;margin-bottom:4px;line-height:1}
+.bar strong sup{font-size:12px;font-family:var(--mono);color:var(--cyan);margin-left:4px;letter-spacing:.08em}
+.grain{position:absolute;inset:0;z-index:9;pointer-events:none;opacity:.22;mix-blend-mode:multiply}
+.scan{position:absolute;inset:0;z-index:8;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(12,13,16,.07) 0 1px,transparent 1px 4px)}
+@keyframes jit{0%,100%{transform:translateX(0)}50%{transform:translateX(var(--d))}}
+.sl{animation:jit 2.6s steps(2) infinite}
+@media (prefers-reduced-motion:reduce){.sl{animation:none}}
+</style>
+</head>
+<body>
+<div class="key"></div>
+<nav>
+  <div class="logo"><i></i>AGALMA</div>
+  <ul><li>Cast Hall</li><li>Scans</li><li>Loans</li><li>Index</li></ul>
+  <div class="live"><b></b>Archive live — Athens / Zürich</div>
+</nav>
+
+<svg class="statue" viewBox="0 0 400 540" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+  <defs>
+    <linearGradient id="skin" x1="0" x2="1" y1="0" y2="0.2">
+      <stop offset="0" stop-color="#bfc1bd"/><stop offset=".42" stop-color="#f6f4ee"/><stop offset=".72" stop-color="#e3e1da"/><stop offset="1" stop-color="#8f9290"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" x2="1"><stop offset="0" stop-color="#a7a9a5"/><stop offset=".5" stop-color="#e5e3dc"/><stop offset="1" stop-color="#7d807f"/></linearGradient>
+    <radialGradient id="socket" cx=".5" cy=".4" r=".7"><stop offset="0" stop-color="#5d6061"/><stop offset="1" stop-color="#b0b2ae"/></radialGradient>
+    <filter id="marble" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency=".012 .03" numOctaves="4" seed="7" result="n"/>
+      <feColorMatrix in="n" type="matrix" values="0 0 0 0 .3  0 0 0 0 .33  0 0 0 0 .36  1 0 0 0 0" result="v0"/>
+      <feComponentTransfer in="v0" result="veins"><feFuncA type="table" tableValues="0 0 0 0 0 .5 .0 0 0 0 0 0"/></feComponentTransfer>
+      <feComposite in="veins" in2="SourceAlpha" operator="in" result="v2"/>
+      <feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3" result="g"/>
+      <feColorMatrix in="g" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 -.12" result="gr"/>
+      <feComposite in="gr" in2="SourceAlpha" operator="in" result="g2"/>
+      <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="v2"/><feMergeNode in="g2"/></feMerge>
+    </filter>
+    <filter id="cy"><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 .9  0 0 0 0 1  0 0 0 1 0"/></filter>
+    <filter id="mg"><feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 .17  0 0 0 0 .84  0 0 0 1 0"/></filter>
+    <g id="bust" filter="url(#marble)">
+      <!-- chest + drape -->
+      <path d="M-20 560 C-10 440 70 392 150 380 L250 380 C330 392 410 440 420 560 Z" fill="url(#skin)"/>
+      <path d="M150 380 C170 420 230 420 250 380 C240 400 160 400 150 380Z" fill="#8f9290" opacity=".55"/>
+      <path d="M40 470 C100 430 160 440 200 520 M360 470 C300 430 240 440 200 520 M120 560 C130 500 160 470 200 460 M280 560 C270 500 240 470 200 460" fill="none" stroke="#6f7271" stroke-width="2.2" opacity=".55"/>
+      <!-- neck -->
+      <path d="M160 270 L160 392 C180 410 220 410 240 392 L240 270 Z" fill="url(#skin)"/>
+      <path d="M240 270 L240 392 C232 400 226 402 218 404 L218 280Z" fill="#7b7e7c" opacity=".35"/>
+      <path d="M170 350 C190 362 210 362 230 350" fill="none" stroke="#7b7e7c" stroke-width="2" opacity=".5"/>
+      <!-- ears -->
+      <ellipse cx="119" cy="190" rx="9" ry="22" fill="#cfcfca"/><ellipse cx="281" cy="190" rx="9" ry="22" fill="#a8aaa6"/>
+      <!-- face -->
+      <path d="M121 160 C121 98 158 66 200 66 C242 66 279 98 279 160 C279 226 252 290 200 306 C148 290 121 226 121 160Z" fill="url(#skin)"/>
+      <path d="M279 160 C279 226 252 290 200 306 C230 280 244 230 246 160 C246 120 238 94 224 80 C262 92 279 120 279 160Z" fill="#6f7271" opacity=".22"/>
+      <!-- brow, eyes (blank), nose, mouth -->
+      <path d="M142 160 C158 148 178 148 192 158 M208 158 C222 148 242 148 258 160" fill="none" stroke="#6b6e6d" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M148 174 C160 164 178 164 190 174 C178 184 160 184 148 174Z" fill="url(#socket)"/>
+      <path d="M210 174 C222 164 240 164 252 174 C240 184 222 184 210 174Z" fill="url(#socket)"/>
+      <path d="M200 166 C198 192 194 206 188 224 C196 232 204 232 212 224 C206 206 202 192 200 166Z" fill="#cfcfca"/>
+      <path d="M212 190 C214 206 216 216 212 226" fill="none" stroke="#6b6e6d" stroke-width="2.2" opacity=".6"/>
+      <path d="M180 256 C192 252 208 252 220 256 C208 266 192 266 180 256Z" fill="#9b9d9a"/>
+      <path d="M182 256 C194 258 206 258 218 256" fill="none" stroke="#5b5e5d" stroke-width="2"/>
+      <path d="M190 280 C196 284 204 284 210 280" fill="none" stroke="#6b6e6d" stroke-width="2" opacity=".6"/>
+      <!-- hair -->
+      <g id="curls"></g>
+    </g>
+  </defs>
+
+  <!-- chromatic ghosts -->
+  <g style="mix-blend-mode:multiply" opacity=".9"><use href="#bust" filter="url(#cy)" transform="translate(-13 0)"/></g>
+  <g style="mix-blend-mode:multiply" opacity=".85"><use href="#bust" filter="url(#mg)" transform="translate(12 3)"/></g>
+  <!-- base -->
+  <use href="#bust"/>
+
+  <!-- displaced slices (patch bg then shifted copy) -->
+  <g clip-path="url(#c1)"><rect x="-100" y="112" width="600" height="14" fill="#d8dad6"/><g class="sl" style="--d:-14px"><use href="#bust" transform="translate(46 0)"/></g></g>
+  <g clip-path="url(#c2)"><rect x="-100" y="208" width="600" height="8" fill="#d8dad6"/><use href="#bust" transform="translate(-58 0)"/></g>
+  <g clip-path="url(#c3)"><rect x="-100" y="286" width="600" height="22" fill="#d8dad6"/><g class="sl" style="--d:18px"><use href="#bust" transform="translate(30 0)"/></g></g>
+  <g clip-path="url(#c4)"><rect x="-100" y="418" width="600" height="13" fill="#d8dad6"/><use href="#bust" transform="translate(-40 0)"/></g>
+  <clipPath id="c1"><rect x="-100" y="112" width="600" height="14"/></clipPath>
+  <clipPath id="c2"><rect x="-100" y="208" width="600" height="8"/></clipPath>
+  <clipPath id="c3"><rect x="-100" y="286" width="600" height="22"/></clipPath>
+  <clipPath id="c4"><rect x="-100" y="418" width="600" height="13"/></clipPath>
+
+  <!-- pixel-sorted streaks -->
+  <g id="streaks"></g>
+</svg>
+
+<div class="hero">
+  <div class="eyebrow"><span>Plate 41</span><span>3D-scanned antiquities</span><span>est. 2019</span></div>
+  <h1>The marble<br><span class="gl" data-t="remembers">remembers</span><br><em>the signal.</em></h1>
+  <p class="lede">Agalma holds <b>14,206</b> museum-grade scans of Greek and Roman sculpture, kept with the errors the lasers made. Browse the cast hall, license a mesh, or borrow a broken one.</p>
+  <div class="cta"><div class="btn p">Enter the cast hall <span>→</span></div><div class="btn g">Browse scans</div></div>
+</div>
+
+<div class="fig"><b>Fig. 41 — Kouros</b>Attica, c. 590 BCE<br>Parian marble, h. 1.94 m<br>Scan error <s>3.2%</s><br>Rows 148–164 displaced</div>
+
+<div class="bar">
+  <div><strong>14,206</strong>Scans catalogued</div>
+  <div><strong>0.02<sup>MM</sup></strong>Surface resolution</div>
+  <div><strong>63</strong>Partner museums</div>
+  <div><strong>Open</strong>Loan licences, 2027</div>
+</div>
+<div class="scan"></div>
+<svg class="grain" width="1280" height="800"><filter id="gf"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" seed="11"/><feColorMatrix values="0 0 0 0 .1  0 0 0 0 .1  0 0 0 0 .12  0 0 0 .9 -.2"/></filter><rect width="100%" height="100%" filter="url(#gf)"/></svg>
+
+<script>
+(function(){
+  var g=document.getElementById('curls'),s='';
+  function ring(R,r,a0,a1,n,cy,sy){for(var i=0;i<=n;i++){var a=a0+(a1-a0)*i/n,x=200+Math.cos(a)*R,y=cy+Math.sin(a)*R*sy;
+    s+='<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="'+r+'" fill="url(#hair)" stroke="#6f7271" stroke-width="1.6" stroke-opacity=".7"/>';
+    s+='<path d="M'+(x-r*.5).toFixed(1)+' '+(y-r*.1).toFixed(1)+' a'+(r*.5)+' '+(r*.5)+' 0 1 1 '+(r*.6).toFixed(1)+' '+(r*.5).toFixed(1)+'" fill="none" stroke="#6f7271" stroke-width="1.3" opacity=".6"/>';}}
+  ring(92,19,Math.PI*0.9,Math.PI*2.1,22,168,1.12);
+  ring(72,17,Math.PI*1.0,Math.PI*2.0,16,152,.98);
+  ring(52,16,Math.PI*1.12,Math.PI*1.88,10,128,.78);
+  g.innerHTML=s;
+  var st='',c=['#00e5ff','#ff2bd6','#0c0d10','#00e5ff'];
+  var rows=[[112,126,150,3,0],[40,118,210,2,1],[190,222,130,3,3],[70,300,260,2,0],[150,312,120,4,1],[30,440,190,2,2],[210,436,160,3,0]];
+  rows.forEach(function(r){st+='<rect x="'+r[0]+'" y="'+r[1]+'" width="'+r[2]+'" height="'+r[3]+'" fill="'+c[r[4]]+'" opacity=".85"/>'; });
+  // pixel-sort blocks
+  for(var i=0;i<26;i++){var x=95+i*7,h=20+((i*37)%46);st+='<rect x="'+x+'" y="224" width="6" height="'+h+'" fill="'+(i%3?'#ff2bd6':'#00e5ff')+'" opacity="'+(0.15+((i*13)%10)/22)+'"/>';}
+  document.getElementById('streaks').innerHTML=st;
+})();
+</script>
+</body>
+</html>
